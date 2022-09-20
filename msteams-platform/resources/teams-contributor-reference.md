@@ -1,20 +1,20 @@
 ---
 title: Contribuir a este contenido
-description: Obtenga información sobre los pasos para crear y publicar Teams documentación
+description: Obtenga información sobre los pasos para crear y publicar documentación de Teams
 author: surbhigupta
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: contributor-guide
-ms.openlocfilehash: 165f5df18395d329aa2f383d2f07e6f7ff3afdcf
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 5a9b2f16b23eaa4879062c104a85b223564cc10c
+ms.sourcegitcommit: dccb48902e08484692ab927415bcd3d61dc50db2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143084"
+ms.lasthandoff: 09/19/2022
+ms.locfileid: "67806764"
 ---
 # <a name="contribute-to-teams-documentation"></a>Contribuir a este contenido
 
-La documentación de Teams forma parte de la biblioteca de documentación técnica **de Microsoft Docs**. El contenido se organiza en grupos denominados docsets, cada uno de los cuales representa un grupo de documentos relacionados administrados como una sola entidad. Los artículos del mismo conjunto de documentos tienen la misma extensión de ruta de acceso de dirección URL que **docs.microsoft.com**. Por ejemplo, `/docs.microsoft.com/microsoftteams/...` es el principio de la ruta de acceso del archivo docset de Teams. Los artículos de Teams se escriben en la sintaxis de Markdown y se hospedan en GitHub.
+La documentación de Teams forma parte de la biblioteca de documentación técnica **de Microsoft Docs**. El contenido se organiza en grupos denominados docsets, cada uno de los cuales representa un grupo de documentos relacionados administrados como una sola entidad. Los artículos del mismo conjunto de documentos tienen la misma extensión de ruta de acceso de dirección URL después de `learn.microsoft.com`. Por ejemplo, `/learn.microsoft.com/microsoftteams/...` es el principio de la ruta de acceso del archivo docset de Teams. Los artículos de Teams se escriben en la sintaxis de Markdown y se hospedan en GitHub.
 
 ## <a name="set-up-your-workspace"></a>Configurar el área de trabajo
 

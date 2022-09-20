@@ -6,16 +6,16 @@ ms.author: v-amprasad
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: fe78407c0a269d26a63e23efe5a04a1cd0d83e4b
-ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
+ms.openlocfilehash: 5f0aa26276c2db7651fac473049cac0aa75f14dd
+ms.sourcegitcommit: dccb48902e08484692ab927415bcd3d61dc50db2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67616978"
+ms.lasthandoff: 09/19/2022
+ms.locfileid: "67806860"
 ---
-# <a name="add-capabilities-to-microsoft-teams-apps"></a>Adición de funcionalidades a aplicaciones de Microsoft Teams
+# <a name="add-capabilities-to-teams-apps"></a>Adición de funcionalidades a aplicaciones de Teams
 
-Agregar funcionalidades con Teams Toolkit le ayuda a incluir características adicionales en la aplicación de Teams existente. La ventaja de agregar más funcionalidades es que puede agregar más funciones a la aplicación agregando automáticamente códigos fuente mediante el kit de herramientas de Teams. También puede elegir diferentes funcionalidades en función del proyecto que haya creado en la aplicación de Teams. En la tabla siguiente se enumeran las funcionalidades de aplicación de Teams:
+Agregar funcionalidades con Teams Toolkit le ayuda a incluir características adicionales en la aplicación de Microsoft Teams existente. La ventaja de agregar más funcionalidades es que puede agregar más funciones a la aplicación agregando automáticamente códigos fuente mediante el kit de herramientas de Teams. También puede elegir diferentes funcionalidades en función del proyecto que haya creado en la aplicación de Teams. En la tabla siguiente se enumeran las funcionalidades de aplicación de Teams:
 
 |Funcionalidad|Descripción|Otras funcionalidades admitidas|
 |--------|-------------|-----------------|

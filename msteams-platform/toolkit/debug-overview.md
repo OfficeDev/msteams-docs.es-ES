@@ -7,22 +7,28 @@ ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: fcb1ceae7f49109ba3936c7c12258f2fe4d1e01c
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: d2bdebcb75a9e145cbb874b2d7cc263c78050e07
+ms.sourcegitcommit: dccb48902e08484692ab927415bcd3d61dc50db2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67781022"
+ms.lasthandoff: 09/19/2022
+ms.locfileid: "67806925"
 ---
-# <a name="debug-your-microsoft-teams-app"></a>Depuración de la aplicación de Microsoft Teams
+# <a name="debug-your-teams-app"></a>Depurar la aplicación de Teams
 
-Teams Toolkit le ayuda a depurar y obtener una vista previa de la aplicación de Teams. La depuración es el proceso de comprobar, detectar y corregir problemas o errores para garantizar que el programa se ejecuta correctamente en Teams.
+
+Teams Toolkit le ayuda a depurar y obtener una vista previa de la aplicación de Microsoft Teams. La depuración es el proceso de comprobar, detectar y corregir problemas o errores para garantizar que el programa se ejecuta correctamente en Teams.
 
 ::: zone pivot="visual-studio-code"
+
+## <a name="debug-your-teams-app-for-visual-studio-code"></a>Depuración de la aplicación de Teams para Visual Studio Code
+
+Teams Toolkit en Microsoft Visual Studio Code automatiza el proceso de depuración. Puede detectar errores y corregirlos, así como obtener una vista previa de la aplicación teams. También puede personalizar la configuración de depuración para crear la pestaña o el bot.
 
 ## <a name="debug-your-microsoft-teams-app-for-visual-studio-code"></a>Depuración de la aplicación de Microsoft Teams para Visual Studio Code
 
 Teams Toolkit en Visual Studio Code automatiza el proceso de depuración. Puede detectar errores y corregirlos, así como obtener una vista previa de la aplicación teams. También puede personalizar la configuración de depuración para crear la pestaña o el bot.
+
 Durante el proceso de depuración:
 
 * El kit de herramientas de Teams inicia automáticamente los servicios de aplicaciones, inicia depuradores y descarga localmente la aplicación de Teams.
@@ -203,7 +209,7 @@ El kit de herramientas de Teams usa la depuración de varios destinos de Visual 
 
 ::: zone pivot="visual-studio"
 
-## <a name="debug-your-microsoft-teams-app-using-visual-studio"></a>Depuración de la aplicación de Microsoft Teams mediante Visual Studio
+## <a name="debug-your-teams-app-using-visual-studio"></a>Depuración de la aplicación de Teams mediante Visual Studio
 
 Teams Toolkit automatiza los servicios de inicio de aplicaciones, inicia la depuración y carga en paralelo la aplicación de Teams. Después de la depuración, puede obtener una vista previa de la aplicación de Teams en el cliente web de Teams. También puede personalizar la configuración de depuración para usar los puntos de conexión del bot o las variables de entorno para cargar la aplicación configurada. Visual Studio permite depurar la pestaña, el bot y la extensión de mensaje. Durante el proceso de depuración, Teams Toolkit admite las siguientes características de depuración:
 
@@ -312,6 +318,3 @@ Puede iniciar la aplicación de Teams como una aplicación web en lugar de ejecu
 * [usar el kit de herramientas de Teams para aprovisionar recursos en la nube](provision.md)
 * [Implementar en la nube](deploy.md)
 * [Vista previa y personalización del manifiesto de la aplicación de Teams](TeamsFx-preview-and-customize-app-manifest.md)
-* [Aprovisionamiento de recursos en la nube mediante Visual Studio](provision-cloud-resources.md)
-* [Implementación de una aplicación de Teams en la nube mediante Visual Studio](deploy-teams-app.md)
-* [Edición del manifiesto de aplicación de Teams mediante Visual Studio](VS-TeamsFx-preview-and-customize-app-manifest.md)

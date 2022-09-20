@@ -102,7 +102,7 @@
           href: toolkit/install-Teams-Toolkit.md
         - name: Exploración del kit de herramientas de Teams
           href: toolkit/explore-Teams-Toolkit.md
-        - name: Preparación para compilar aplicaciones mediante el kit de herramientas de Microsoft Teams
+        - name: Preparación para compilar aplicaciones mediante el kit de herramientas de Teams
           href: toolkit/build-environments.md
         - name: Uso del kit de herramientas de Teams para crear la aplicación
           items:
@@ -164,8 +164,6 @@
           href: toolkit/faq.md
     - name: CLI del kit de herramientas de Teams
       href: toolkit/TeamsFx-CLI.md
-    - name: Generador de Yeoman para Teams (GitHub)
-      href: 'https://github.com/pnp/generator-teams'
     - name: Portal para desarrolladores de Teams
       items:
         - name: Información general
@@ -180,6 +178,8 @@
       href: 'https://github.com/Microsoft/botbuilder-js'
     - name: Bot Framework de .NET para bots y extensiones de mensaje (GitHub)
       href: 'https://github.com/Microsoft/botbuilder-dotnet'
+    - name: Generador de Yeoman para Teams (GitHub)
+      href: 'https://github.com/pnp/generator-teams'
     - name: SDK de Microsoft Graph
       href: /graph/sdks/sdks-overview
     - name: SDK heredados

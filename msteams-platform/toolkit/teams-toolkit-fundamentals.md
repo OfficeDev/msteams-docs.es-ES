@@ -7,12 +7,12 @@ ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/24/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: 95a42e4bd2064bc1ce4b775f13ba990890bc6776
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: bdcf92b52956eee6db21eb03d115a494c0f063e9
+ms.sourcegitcommit: dccb48902e08484692ab927415bcd3d61dc50db2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67780733"
+ms.lasthandoff: 09/19/2022
+ms.locfileid: "67806776"
 ---
 # <a name="teams-toolkit-overview"></a>Información general del kit de herramientas de Teams
 
@@ -131,10 +131,11 @@ Las siguientes operaciones no se admiten en Teams Toolkit for Visual Studio toda
 * [Espacio de nombres Microsoft.TeamsFx.Conversation](/../dotnet/api/Microsoft.TeamsFx.Conversation)
 * [Espacio de nombres Microsoft.TeamsFx.Helper](/../dotnet/api/Microsoft.TeamsFx.Helper)
 
+::: zone-end
+
 ## <a name="see-also"></a>Vea también
 
 * [Creación de una nueva aplicación de Teams en Visual Studio](create-new-teams-app-for-Visual-Studio.md)
 * [Aprovisionamiento de recursos en la nube mediante Visual Studio](provision-cloud-resources.md)
 * [Implementación de una aplicación de Teams en la nube mediante Visual Studio](deploy-teams-app.md)
 
-::: zone-end
