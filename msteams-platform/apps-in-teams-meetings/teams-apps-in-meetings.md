@@ -6,12 +6,12 @@ ms.topic: overview
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.date: 04/07/2022
-ms.openlocfilehash: 30f5929524e9ae7391fef556d353be6d2461c987
-ms.sourcegitcommit: 990a36fb774e614146444d4adaa2c9bcdb835998
+ms.openlocfilehash: b62c2312524c1844b9b40b32d2d21ecdd2db43dc
+ms.sourcegitcommit: 08bd7f1b9c654b95d3639ca88052c9ca9a8c3f67
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67232256"
+ms.lasthandoff: 09/20/2022
+ms.locfileid: "67833658"
 ---
 # <a name="apps-for-teams-meetings-and-calls"></a>Aplicaciones para reuniones y llamadas de Teams
 
@@ -19,11 +19,12 @@ Las reuniones permiten la colaboración, la asociación, la comunicación inform
 
 > [!Note]
 >
-> Actualmente, las aplicaciones para reuniones instantáneas, llamadas uno a uno y llamadas grupales solo están disponibles en [versión preliminar para desarrolladores públicos](~/resources/dev-preview/developer-preview-intro.md).
+> Las aplicaciones para reuniones instantáneas, reuniones programadas de canales públicos, llamadas uno a uno y llamadas grupales solo están disponibles actualmente en [versión preliminar para desarrolladores públicos](../resources/dev-preview/developer-preview-intro.md).
 
 Teams admite el acceso a las aplicaciones durante la reunión para los siguientes tipos de reunión:
 
 * [**Reuniones programadas**](https://support.microsoft.com/office/schedule-a-meeting-in-teams-943507a9-8583-4c58-b5d2-8ec8265e04e5#ID0EFBD=Desktop): reuniones programadas a través del calendario de Teams.
+* [**Reuniones de canales programadas**](https://support.microsoft.com/office/schedule-a-meeting-in-teams-943507a9-8583-4c58-b5d2-8ec8265e04e5#ID0EFBD=Desktop): reuniones programadas a través de canales públicos de Teams.
 * [**Llamadas uno a uno**](https://support.microsoft.com/office/start-a-call-from-a-chat-in-teams-f5138c9d-df4c-43d8-9cf6-53400c1a7798): llamadas iniciadas en el chat uno a uno.
 * [**Llamadas de grupo**](https://support.microsoft.com/office/start-a-call-from-a-chat-in-teams-f5138c9d-df4c-43d8-9cf6-53400c1a7798): llamadas iniciadas en el chat de grupo.
 * [**Reuniones instantáneas**](https://support.microsoft.com/office/start-an-instant-meeting-in-teams-ff95e53f-8231-4739-87fa-00b9723f4ef5): reuniones iniciadas mediante el botón **Reunirse ahora** en el calendario de Teams.
@@ -40,7 +41,7 @@ Visite la [tienda teams](https://go.microsoft.com/fwlink/p/?LinkID=2183121) y ex
 >
 > * Actualmente, cuando se agrega una tercera persona a una llamada uno a uno, la llamada se eleva a una llamada de grupo que significa que se inicia una nueva sesión. Las aplicaciones agregadas a la llamada uno a uno no están disponibles en la llamada de grupo. Sin embargo, se pueden agregar de nuevo.
 >
-> * Actualmente, las experiencias de aplicación no se admiten en las reuniones del canal de Teams (reuniones programadas y reuniones instantáneas).
+> * Actualmente, las experiencias de aplicación no se admiten en las reuniones de canales instantáneos de Teams.
 
 En la siguiente ilustración se ofrece una idea de las características de extensibilidad de la aplicación de reunión:
 
@@ -48,11 +49,11 @@ En la siguiente ilustración se ofrece una idea de las características de exten
 
 En este artículo se proporciona información general sobre la extensibilidad de aplicaciones de reunión, las referencias de API, la habilitación y configuración de aplicaciones para reuniones y las escenas personalizadas del Modo conferencia en Teams.
 
-- **Ampliar la aplicación de reunión**: mejore la experiencia de reunión mediante la característica de extensibilidad de reuniones. Esta característica permite integrar las aplicaciones en reuniones. También incluye diferentes fases del ciclo de vida de una reunión donde poder integrar pestañas, bots y extensiones de mensajes. Puede identificar varios roles de participante y tipos de usuario, obtener eventos de reunión y generar diálogos en la reunión.
-- **Configurar aplicaciones para reuniones**: para personalizar Teams con aplicaciones para reuniones, habilite las aplicaciones para reuniones de Teams actualizando el manifiesto de la aplicación y configurando también las aplicaciones para escenarios de reunión.
-- **Personalizar con escenas del modo junto**: la nueva característica de escenas de modo juntos personalizada permite a los usuarios colaborar en una reunión con su equipo en un solo lugar.
-- **Personalizar el permiso de aplicación en el canal compartido: si la aplicación comparte información importante en el canal compartido, puede personalizar el permiso de aplicación para miembros externos. Los permisos de aplicación en [canales compartidos](../concepts/build-and-test/Shared-channels.md) siguen la lista de aplicaciones del equipo host y la directiva de aplicación del inquilino del host.
-- **Recuperar transcripciones de reuniones**: puede acceder a las transcripciones de reuniones y recuperarla en un escenario posterior a la reunión. Configure la aplicación para obtener transcripciones automáticamente para una reunión programada y úselas para obtener conclusiones, análisis inteligentes y mucho más.
+* **Ampliar la aplicación de reunión**: mejore la experiencia de reunión mediante la característica de extensibilidad de reuniones. Esta característica permite integrar las aplicaciones en reuniones. También incluye diferentes fases del ciclo de vida de una reunión donde poder integrar pestañas, bots y extensiones de mensajes. Puede identificar varios roles de participante y tipos de usuario, obtener eventos de reunión y generar diálogos en la reunión.
+* **Configurar aplicaciones para reuniones**: para personalizar Teams con aplicaciones para reuniones, habilite las aplicaciones para reuniones de Teams actualizando el manifiesto de la aplicación y configurando también las aplicaciones para escenarios de reunión.
+* **Personalizar con escenas del modo junto**: la nueva característica de escenas de modo juntos personalizada permite a los usuarios colaborar en una reunión con su equipo en un solo lugar.
+* **Personalizar el permiso de aplicación en el canal compartido**: si la aplicación comparte información importante en el canal compartido, puede personalizar el permiso de aplicación para miembros externos. Los permisos de aplicación en [canales compartidos](../concepts/build-and-test/Shared-channels.md) siguen la lista de aplicaciones del equipo host y la directiva de aplicación del inquilino del host.
+* **Recuperar transcripciones de reuniones**: puede acceder a las transcripciones de reuniones y recuperarla en un escenario posterior a la reunión. Configure la aplicación para obtener transcripciones automáticamente para una reunión programada y úselas para obtener conclusiones, análisis inteligentes y mucho más.
 
 ## <a name="next-step"></a>Paso siguiente
 
