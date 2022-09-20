@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.date: 04/07/2022
-ms.openlocfilehash: 8277e0fb947ac109f3482c31613c01fd924fa139
-ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
+ms.openlocfilehash: c151217bc2a93de9337688b562b9f63f142c09fa
+ms.sourcegitcommit: 08bd7f1b9c654b95d3639ca88052c9ca9a8c3f67
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2022
-ms.locfileid: "67435016"
+ms.lasthandoff: 09/20/2022
+ms.locfileid: "67833728"
 ---
 # <a name="meeting-apps-api-references"></a>Referencias API de aplicaciones de reuniones
 
@@ -355,7 +355,7 @@ Use el ejemplo siguiente para configurar la propiedad `webApplicationInfo` del m
 >
 > * El bot puede recibir automáticamente eventos de inicio o finalización de reuniones de todas las reuniones creadas en todos los canales agregando `ChannelMeeting.ReadBasic.Group` al manifiesto para el permiso RSC.
 >
-> * Para una llamada `organizer` uno a uno es el iniciador del chat y para las llamadas grupales `organizer` es el iniciador de llamadas.
+> * Para una llamada `organizer` uno a uno es el iniciador del chat y para las llamadas grupales `organizer` es el iniciador de llamadas. Para las `organizer`reuniones de canal público es la persona que creó la publicación del canal.
 
 ### <a name="query-parameter"></a>Parámetro de consulta
 
@@ -416,6 +416,33 @@ El cuerpo de la respuesta JSON para la API de Detalles de la Reunión es el sigu
              "tenantId": "<Tenant ID>" 
          }
     } 
+    ```
+
+* **Reuniones programadas del canal:**
+
+    ```json
+    { 
+        "details": { 
+        "msGraphResourceId": "MSoxNmUwYjdiYi05M2Q1LTQzNTItOTllMC0yM2VlNWYyZmZmZTIqMTY2MDc1ODYwNzc0MCoqMTk6a0RtQkpEWFZsYWl0QWhHcVB2SzBtRExZbHVTWnJub01WX1MxeFNkTjQxNDFAdGhyZWFkLnRhY3Yy", 
+        "scheduledStartTime": "2022-08-17T18:00:00Z", 
+        "scheduledEndTime": "2022-08-17T18:30:00Z", 
+        "type": "ChannelScheduled", 
+        "id": "MCMxOTprRG1CSkRYVmxhaXRBaEdxUHZLMG1ETFlsdVNacm5vTVZfUzF4U2RONDE0MUB0aHJlYWQudGFjdjIjMTY2MDc1ODYwNzc0MA==", 
+        "joinUrl": "https://teams.microsoft.com/l/meetup-join/19%3akDmBJDXVlaitAhGqPvK0mDLYluSZrnoMV_S1xSdN4141%40thread.tacv2/1660758607740?context=%7b%22Tid%22%3a%229f044231-b634-4bdd-b29d-2776e3dbd699%22%2c%22Oid%22%3a%2216e0b7bb-93d5-4352-99e0-23ee5f2fffe2%22%7d", 
+        "title": "Test channel meeting"
+    }, 
+    "conversation": { 
+        "isGroup": true, 
+        "conversationType": "channel", 
+        "id": "19:kDmBJDXVlaitAhGqPvK0mDLYluSZrnoMV_S1xSdN4141@thread.tacv2;messageid=1660758607740"
+    }, 
+    "organizer": { 
+        "tenantId": "9f044231-b634-4bdd-b29d-2776e3dbd699", 
+        "objectId": "16e0b7bb-93d5-4352-99e0-23ee5f2fffe2", 
+        "id": "29:1q4D6ekLXEAALkrqyLXUIcwtVSdXx31bf6vMdfahmkTb9euYVYSsN9x4133pXLV_I2idpVriFe40e19XEZt57bQ", 
+        "aadObjectId": "16e0b7bb-93d5-4352-99e0-23ee5f2fffe2"
+    }
+    }
     ```
 
 * **Llamadas uno a uno:**
@@ -503,7 +530,7 @@ El cuerpo de la respuesta JSON para la API de Detalles de la Reunión es el sigu
 | **details.scheduledEndTime** | Hora de finalización programada de la reunión, en UTC. |
 | **details.joinUrl** | Dirección URL usada para unirse a la reunión. |
 | **details.title** | El título de la reunión. |
-| **details.type** | Tipo de reunión (GroupCall, OneToOneCall, Adhoc, Broadcast, MeetNow, Recurring, Scheduled o Unknown). |
+| **details.type** | Tipo de reunión (GroupCall, ChannelScheduled, OneToOneCall, Adhoc, Broadcast, MeetNow, Recurring, Scheduled o Unknown). |
 | **conversation.isGroup** | Boolean que indica si la conversación tiene más de dos participantes. |
 | **conversation.conversationType** | Tipo de conversación. |
 | **conversation.id** | Identificador de chat de reunión. |
