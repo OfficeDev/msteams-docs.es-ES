@@ -5,12 +5,12 @@ description: En este módulo, aprenderá a agregar un vínculo que se desplegue 
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 50dc2ee5a6ba8b8578e2947c5a85303be5bac5f5
-ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
+ms.openlocfilehash: 48c015050efe469446aea9016a33effe8ad3ba3a
+ms.sourcegitcommit: 6ea8c3fe0ccea0204285ea5f994913d173925ffd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/11/2022
-ms.locfileid: "67312226"
+ms.lasthandoff: 09/20/2022
+ms.locfileid: "67833393"
 ---
 # <a name="add-link-unfurling"></a>Añadir una extensión de enlace
 
@@ -22,6 +22,7 @@ Este documento le guía sobre cómo agregar un vínculo desplegándose al manifi
 >
 > * Actualmente, la apertura de enlaces no es compatible con clientes móviles.
 > * El resultado de la apertura del enlace se almacena en caché durante 30 minutos.
+> * Los comandos de extensión de mensajería no son necesarios para la desplegamiento de vínculos. Sin embargo, debe haber al menos un comando en el manifiesto, ya que es una propiedad obligatoria en las extensiones de mensajería. Para obtener más información, consulte [Redacción de extensiones](/microsoftteams/platform/resources/schema/manifest-schema).
 
 La extensión de mensajes de Azure DevOps usa la apertura de vínculos para buscar direcciones URL pegadas en el área de redacción de mensajes que apuntan a un elemento de trabajo. En la imagen siguiente, un usuario pegó una dirección URL para un elemento de Azure DevOps que la extensión de mensaje ha resuelto en una tarjeta:
 
