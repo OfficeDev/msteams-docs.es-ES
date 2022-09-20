@@ -2,15 +2,19 @@
   href: mstdd-landing.yml
 - name: Novedades
   href: whats-new.md
+  displayName: 'Teams platform features, latest updates, RSS feed, deprecated'
 - name: Glosario
   href: get-started/glossary.md
+  displayName: 'App tray, terminologies, definitions'
 - name: Información general
   expanded: false
   items:
     - name: Aplicación de Teams adaptable
       href: overview.md
+      displayName: Why build apps with Microsoft Teams platform
     - name: De ideas a la aplicación de Teams
       href: overview-story.md
+      displayName: Teams app user experience
     - name: Explorar las características de la plataforma de Teams
       href: overview-explore.md
     - name: La solución de Teams
@@ -20,6 +24,7 @@
   items:
     - name: Información general
       href: get-started/get-started-overview.md
+      displayName: First Teams app
     - name: Cree su primera aplicación de pestaña con JavaScript
       href: sbs-gs-javascript.yml
     - name: Cree su primera aplicación de bot con JavaScript
@@ -44,20 +49,25 @@
   items:
     - name: Información general
       href: concepts/app-fundamentals-overview.md
+      displayName: 'Government Community Cloud (GCC), Department of Defense (DOD), GCC-High'
     - name: Entender el caso de uso
       href: concepts/design/understand-use-cases.md
+      displayName: 'App scope, Teams app features, capabilities'
     - name: Asignar el caso de uso a las características de Teams
       href: concepts/design/map-use-cases.md
     - name: Lista de comprobación de planeamiento de la aplicación de Teams
       href: concepts/design/planning-checklist.md
+      displayName: 'HTTPs, localhost, host your Teams app'
     - name: Planear pestañas con capacidad de respuesta para dispositivo móvil de Teams
       href: concepts/design/plan-responsive-tabs-for-teams-mobile.md
     - name: Planear la monetización de la aplicación
       href: concepts/design/plan-to-monetize.md
+      displayName: 'Subscription, In-app purchases, Free trials, Test preview'
 - name: Diseño de la aplicación
   items:
     - name: Información general
       href: concepts/design/design-teams-app-overview.md
+      displayName: 'Design principles, Figma, UI Kit, UI library'
     - name: Comprender el proceso de diseño
       href: concepts/design/design-teams-app-process.md
     - name: Sistema de diseño
@@ -92,6 +102,7 @@
           href: concepts/design/activity-feed-notifications.md
     - name: Personalización de aplicaciones
       href: concepts/design/enable-app-customization.md
+      displayName: 'Customize your app, update app name, branding, hide and unhide app'
 - name: Herramientas y SDK
   items:
     - name: Kit de herramientas de Teams
@@ -108,6 +119,7 @@
           items:
             - name: Requisitos previos para crear la aplicación de Teams
               href: toolkit/tools-prerequisites.md
+              displayName: Accounts to build your Teams app
             - name: Creación de un proyecto de aplicación de Teams
               href: toolkit/create-new-project.md
             - name: Desarrollo de la aplicación de Teams
@@ -116,6 +128,7 @@
                   href: toolkit/TeamsFx-multi-env.md
                 - name: Creación de una aplicación de funcionalidad múltiple
                   href: toolkit/add-capability.md
+                  displayName: Multiple capabilities app
                 - name: Creación de recursos en la nube basados en funcionalidades
                   href: toolkit/add-resource.md
                 - name: Integración de API de terceros existentes
@@ -230,28 +243,26 @@
   items:
     - name: Información general
       href: tabs/what-are-tabs.md
-      displayName: 'Adaptive Cards, channel or group tabs, conversational tabs, SSO capabiity, custom tab'
+      displayName: 'Webpages embedded in Microsoft Teams, declare custom tab in app manifest'
     - name: Requisitos previos
       href: tabs/how-to/tab-requirements.md
-      displayName: 'iFrame, X-Frame-Options, clickjacking, SameSite cookie, Node.js, ngrok'
+      displayName: clickjacking
     - name: Crear una pestaña personal
       href: tabs/how-to/create-personal-tab.md
-      displayName: 'App generator, secure tunnel to your tab, Reorder static personal tabs'
+      displayName: 'App generator, Reorder static personal tabs'
     - name: Crear una pestaña de canal
       href: tabs/how-to/create-channel-group-tab.md
-      displayName: 'Secure tunnel to your tab, channel or group tab with ASP.NET Core'
     - name: Creación de una página de contenido
       href: tabs/how-to/create-tab-pages/content-page.md
-      displayName: 'Task module, code integration, native loading indicator property, access additional content, TeamsJS'
+      displayName: 'Loading indicator, personal-scoped custom tab, channel or group custom tab'
     - name: Crear una página de configuración
       href: tabs/how-to/create-tab-pages/configuration-page.md
-      displayName: 'Secured HTTPs endpoints, context data for your tab, tabs on mobile'
     - name: Crear una página de eliminación
       href: tabs/how-to/create-tab-pages/removal-page.md
       displayName: 'Reconfigure tab, register remove handler'
     - name: Pestañas en dispositivos móviles
       href: tabs/design/tabs-mobile.md
-      displayName: 'Authentication on mobile, with low bandwhidht and intermittent connections, testng and debugging on mobile devices'
+      displayName: Teams store apps approved by Microsoft for mobile
     - name: Obtención del contexto de Teams para la pestaña
       href: tabs/how-to/access-teams-context.md
       displayName: 'User context, authenticaion flow from Microsoft Azure Active Deirecotry, retrieve context, theme changes'
@@ -263,21 +274,19 @@
       displayName: 'Slow load times, iFrame constartints, invoke activities, task module, task fetch, task submit, authentication'
     - name: Expansión del vínculo de la pestaña y vista de fases
       href: tabs/tabs-link-unfurling.md
-      displayName: 'Deep link, invoke stage view, tab information property'
+      displayName: Tab in stage view
     - name: Crear pestañas de conversación
       href: tabs/how-to/conversational-tabs.md
-      displayName: 'New converstaion, channel and static tabs'
     - name: Cambios del margen de pestaña
       href: resources/removing-tab-margins.md
-      displayName: 'margins align, UI Kit desings, extra padding effect,'
+      displayName: 'margins align, extra padding effect, size of the tab margins'
 - name: Crear bots
   items:
     - name: Información general
       href: bots/what-are-bots.md
-      displayName: 'Right mix of cards, text, and task modules, bot activity handlers, rate limiting'
     - name: Bots y SDK
       href: bots/bot-features.md
-      displayName: Multi-turn experiences in chat
+      displayName: 'Bot samples, advantages of bots, bot with Power Virtual Agents, Microsoft Bot Framework'
     - name: Controladores de actividad de bots
       href: bots/bot-basics.md
       displayName: 'Bot logic, core Bot Framework handlers'
@@ -285,9 +294,10 @@
       items:
         - name: Información general
           href: bots/how-to/conversations/conversation-basics.md
+          displayName: Messages sent between your Microsoft Teams bot and one or more user
         - name: Mensajes en conversaciones de bot
           href: bots/how-to/conversations/conversation-messages.md
-          displayName: 'Picture messages, attribution for bot message'
+          displayName: 'Picture messages, attribution for bot message, status code responses, app localization using bot and tab.'
           items:
             - name: Recibir todos los mensajes de canal con RSC
               href: bots/how-to/conversations/channel-messages-with-rsc.md
@@ -295,10 +305,10 @@
           href: bots/how-to/create-a-bot-commands-menu.md
         - name: Canal y conversaciones de chat de grupo con un bot
           href: bots/how-to/conversations/channel-and-group-conversations.md
-          displayName: 'Entities collection, OAuthPrompt,'
+          displayName: Teams conversational bots
         - name: Eventos de conversación en el bot de Teams
           href: bots/how-to/conversations/subscribe-to-conversation-events.md
-          displayName: Message reaction events
+          displayName: 'Message reaction events, event handling for install and uninstall events'
         - name: Mensajes proactivos
           href: bots/how-to/conversations/send-proactive-messages.md
         - name: Formatear los mensajes del bot
@@ -306,17 +316,17 @@
           displayName: 'Interactive elements, UTF-16'
         - name: Actualización y eliminación de mensajes enviados desde el bot
           href: bots/how-to/update-and-delete-bot-messages.md
-          displayName: 'Poll updates, asychronous state change,'
         - name: Solicitar encabezados del bot
           href: bots/how-to/conversations/request-headers-of-the-bot.md
     - name: Obtención del contexto específico de Teams para un bot
       href: bots/how-to/get-teams-context.md
-      dispalyName: Fetch the roster
+      dispalyName: Fetch roster or user profile
     - name: Envío y recepción de archivos mediante el bot
       href: bots/how-to/bots-filesv4.md
+      displayName: File consent and upload files to Teams from a bot
     - name: Optimizar un bot con la limitación de volumen en Teams
       href: bots/how-to/rate-limit.md
-      displayName: 'handle rate limit, detect transient exceptions, per thread limit'
+      displayName: 'handle rate limit, detect transient exceptions, per thread limit, exponential backoff'
     - name: Llamadas y reuniones en el bot
       items:
         - name: Información general
@@ -326,6 +336,7 @@
           displayName: 'Active and dominant speakers, SILK and G.722 for audio and H.264 for video,'
         - name: Registro de llamadas y bots de reuniones
           href: bots/calls-and-meetings/registering-calling-bot.md
+          displayName: 'How Bot can create call, join meeting and transfer call'
         - name: Notificaciones de llamadas entrantes
           href: bots/calls-and-meetings/call-notifications.md
           displayName: 'Redirects for region affinity, GeoDNS resolution'
@@ -344,13 +355,13 @@
       items:
         - name: Definir comandos de acción
           href: messaging-extensions/how-to/action-commands/define-action-command.md
-          displayName: 'Command invoke locations, static list of parameters, command to your app manifest'
+          displayName: 'Command invoke locations, static list of parameters, action command manually'
         - name: Crear y enviar el módulo de tareas
           href: messaging-extensions/how-to/action-commands/create-task-module.md
-          displayName: 'Initial invoke request, respond to fetchTask'
+          displayName: 'Initial invoke request, respond to fetchTask, payload activity'
         - name: Responder a la acción de envío del módulo de tareas
           href: messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md
-          displayName: 'Respond to initial submit action, configure the poll, attribution for bot messages'
+          displayName: 'Respond to initial submit action, configure the poll, attribution for bot messages, submit action'
     - name: Comandos de búsqueda
       items:
         - name: Definición de comandos de búsqueda
@@ -359,20 +370,20 @@
           href: messaging-extensions/how-to/search-commands/respond-to-search.md
         - name: Acciones universales para extensiones de mensajes basadas en búsqueda
           href: messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md
-          displayName: Handle tap actions
+          displayName: 'Handle tap actions, Just-in-time install, JIT'
     - name: Añadir una extensión de enlace
       href: messaging-extensions/how-to/link-unfurling.md
-      displayName: Through wildcards
+      displayName: Domain listings can include wildcards
 - name: Compilar aplicaciones para reuniones y llamadas de Teams
   items:
     - name: Información general
       href: apps-in-teams-meetings/teams-apps-in-meetings.md
     - name: Aplicaciones de reuniones unificadas
       href: apps-in-teams-meetings/meeting-app-extensibility.md
-      displayName: 'Chat tab, poll survey, guest access'
+      displayName: 'Chat tab, poll survey, user access, federated users'
     - name: Habilitar y configurar las aplicaciones para reuniones
       href: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
-      displayName: 'Access, organizer, meeting token generator app, channels, organizer'
+      displayName: 'meeting token generator app, meeting scenario'
     - name: Referencias API de aplicaciones de reuniones
       href: apps-in-teams-meetings/API-references.md
       displayName: 'CART URL, channel, permissions, access, audio state'
@@ -380,10 +391,9 @@
       items:
         - name: Información general
           href: graph-api/meeting-transcripts/overview-transcripts.md
-          displayName: 'Access, permissions'
         - name: Obtener información de los participantes por id. de reunión e id. de participante.
           href: graph-api/meeting-transcripts/fetch-id.md
-          displayName: 'Access, permisssions, chat entity'
+          displayName: 'Obtain meeting details using user-level notification, tenant-level notification'
         - name: Obtener transcripciones
           href: /graph/api/resources/calltranscript
     - name: Colaboración mejorada con Live Share
@@ -397,7 +407,6 @@
               href: apps-in-teams-meetings/teams-live-share-quick-start.md
             - name: Tutorial de Dice Roller
               href: apps-in-teams-meetings/teams-live-share-tutorial.md
-              displayName: 'Fluid container, static view'
         - name: Funcionalidades principales
           href: apps-in-teams-meetings/teams-live-share-capabilities.md
           displayName: Ephemeral data structures
@@ -410,27 +419,25 @@
               href: sbs-teams-live-share.yml
             - name: Servicio de Azure Fluid Relay personalizado
               href: apps-in-teams-meetings/teams-live-share-how-to/how-to-custom-azure-fluid-relay.md
-              displayName: Access
         - name: Preguntas más frecuentes sobre Live Share
           href: apps-in-teams-meetings/teams-live-share-faq.md
     - name: Escenas personalizadas en modo conjunto en Teams
       href: apps-in-teams-meetings/teams-together-mode.md
-      displayName: 'Single vitrual scene, organizer'
+      displayName: 'Single vitrual scene, scene studio'
 - name: Crear webhooks y conectores
   items:
     - name: Información general
       href: webhooks-and-connectors/what-are-webhooks-and-connectors.md
     - name: Crear webhooks salientes
       href: webhooks-and-connectors/how-to/add-outgoing-webhook.md
-      displayName: 'HMAC security token, access, channel'
+      displayName: HMAC security token
     - name: Crear webhooks entrantes
       href: webhooks-and-connectors/how-to/add-incoming-webhook.md
-      displayName: 'Access, permissions'
     - name: Crear Conectores de Office 365
       href: webhooks-and-connectors/how-to/connectors-creating.md
     - name: Crear y enviar mensajes
       href: webhooks-and-connectors/how-to/connectors-using.md
-      displayName: 'Access, settings, configuration'
+      displayName: 'Send messages using cURL and PowerShell, Rate limiting for connectors'
 - name: Crear módulos de tareas y tarjetas
   items:
     - name: Información general
@@ -442,41 +449,39 @@
           displayName: 'People picker, type-ahead'
         - name: Tipos de tarjetas
           href: task-modules-and-cards/cards/cards-reference.md
-          displayName: 'Flexible layout, receipt card, carousel card, setting'
+          displayName: 'Flexible layout, receipt card, carousel card, Hero card, List card, Card collections, Thumbnail card, Receipt card'
         - name: Dar formato a tarjetas en Microsoft Teams
           href: task-modules-and-cards/cards/cards-format.md
           displayName: 'Information masking, background, extension, notification'
         - name: Acciones de tarjeta
           href: task-modules-and-cards/cards/cards-actions.md
+          displayName: 'openUrl, messageBack, imBack, invoke, signin'
         - name: Selector de usuarios en Tarjetas adaptables
           href: task-modules-and-cards/cards/people-picker.md
           displayName: 'Setting, channel, static typeahead'
         - name: Búsqueda de escritura anticipada en Tarjetas adaptables
           href: task-modules-and-cards/cards/dynamic-search.md
+          displayName: Static and dynamic typeahead search
         - name: Acciones universales para tarjetas adaptables
           items:
             - name: Información general
               href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/overview.md
-              displayName: 'Access, extension, channel, communication'
             - name: Trabajar con Acciones universales para tarjetas adaptables
               href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-universal-actions-for-adaptive-cards.md
-              displayName: 'Setting, channels,'
             - name: Vistas específicas de usuario
               href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/User-Specific-Views.md
               displayName: 'Poll creator controls, channel, extension'
             - name: Flujos de trabajo secuenciales
               href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Sequential-Workflows.md
-              displayName: Channel
             - name: Tarjetas actualizadas
               href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Up-To-Date-Views.md
     - name: Crear módulos de tareas
       items:
         - name: Información general
           href: task-modules-and-cards/what-are-task-modules.md
-          displayName: Channel
         - name: Invocar y descartar módulos de tareas
           href: task-modules-and-cards/task-modules/invoking-task-modules.md
-          displayName: 'Access, module sizing'
+          displayName: 'JavaScript task modules,keyboard and accessility guidelines, module sizing'
         - name: Uso de módulos de tareas en pestañas
           href: task-modules-and-cards/task-modules/task-modules-tabs.md
         - name: Uso de módulos de tareas desde los bots
@@ -485,50 +490,41 @@
   items:
     - name: Información general
       href: concepts/authentication/authentication.md
-      displayName: Access
+      displayName: Authentication method
     - name: Pestañas
       items:
         - name: Habilitación del inicio de sesión único para la aplicación de pestañas
           items:
             - name: Información general
               href: tabs/how-to/authentication/tab-sso-overview.md
-              displayName: 'Cookies, channel, access, permissions'
             - name: "Registrar la aplicación de pestaña en Azure\_AD"
               href: tabs/how-to/authentication/tab-sso-register-aad.md
-              displayName: 'Access, permissions, configurations, browser, extension'
             - name: Agregar código para habilitar el inicio de sesión único
               href: tabs/how-to/authentication/tab-sso-code.md
-              displayName: 'Extension, access, permissions'
             - name: Actualizar el manifiesto de la aplicación para el SSO y versión preliminar de la aplicación
               href: tabs/how-to/authentication/tab-sso-manifest.md
-              displayName: 'Access, permissions'
             - name: "Conceder permisos y ámbitos a Microsoft\_Graph"
               href: tabs/how-to/authentication/tab-sso-graph-api.md
-              displayName: 'Access, permissions, channel, browser, configuration, delegated'
+              displayName: Configure authentication for different platforms
             - name: Solucionar problemas con la autenticación SSO
               href: tabs/how-to/authentication/tab-sso-troubleshooting.md
-              displayName: 'Access, permissions, configurations'
         - name: Uso de la autenticación de IdP de OAuth de terceros
           items:
             - name: Información general
               href: tabs/how-to/authentication/auth-flow-tab.md
-              displayName: 'Access, configuration'
             - name: Configuración de la autenticación de IdP de OAuth de terceros
               href: tabs/how-to/authentication/auth-tab-aad.md
-              displayName: 'Access, configuration, cookies'
             - name: Utilizar proveedores OAuth externos
               href: tabs/how-to/authentication/auth-oauth-provider.md
     - name: Bots
       items:
         - name: Flujo de autenticación en bots
           href: bots/how-to/authentication/auth-flow-bot.md
-          displayName: Access
         - name: Agregar autenticación a un bot
           href: bots/how-to/authentication/add-authentication.md
-          displayName: 'Configuration, delegate, emulator, tunneling, channels'
+          displayName: 'Create an authentication-enabled bot, deploy the bot to Azure and associate it with an identity provider, integrate the bot within Microsoft Teams'
         - name: Usar autenticación SSO
           href: bots/how-to/authentication/auth-aad-sso-bots.md
-          displayName: 'Acces, permissions, configuration, settings'
     - name: Extensiones de mensajes
       items:
         - name: Agregar autenticación a la extensión de mensaje
@@ -536,25 +532,21 @@
           displayName: Configuration
         - name: Habilitar SSO para extensiones de mensaje
           href: messaging-extensions/how-to/enable-SSO-auth-me.md
-          displayName: 'Setting, extensions'
 - name: Integrar las funcionalidades del dispositivo
   items:
     - name: Información general
       href: concepts/device-capabilities/device-capabilities-overview.md
-      displayName: 'Access, premissions'
+      displayName: 'Camera, microphone, gallery, QR, barcode scanner, location'
     - name: Solicitar permisos de dispositivos para la aplicación de Teams
       href: concepts/device-capabilities/native-device-permissions.md
     - name: Permisos de dispositivo para el explorador
       href: concepts/device-capabilities/browser-device-permissions.md
     - name: Integrar capacidades multimedia
       href: concepts/device-capabilities/media-capabilities.md
-      displayName: 'Access, permissions, whiteboard, configuration'
     - name: Integrar la función de escáner de código QR o de códigos de barras
       href: concepts/device-capabilities/qr-barcode-scanner-capability.md
-      displayName: 'Access, permissions, configuration'
     - name: Integrar capacidades de ubicación
       href: concepts/device-capabilities/location-capability.md
-      displayName: 'Access, permissions, configurations'
 - name: Usar los datos de Teams con Microsoft Graph
   items:
     - name: Información general
@@ -568,65 +560,61 @@
       displayName: 'Access, report, MSAL2'
     - name: Consentimiento específico del recurso
       href: graph-api/rsc/resource-specific-consent.md
-      displayName: 'Access, permissions, delegated, channel, organizer, notifications'
+      displayName: 'Permissions, delegated'
     - name: Instalación proactiva de aplicaciones con Graph API para enviar mensajes
       href: graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
-      displayName: 'Permissions, delegated, channel, notifications'
     - name: Importar mensajes de terceros
       href: graph-api/import-messages/import-external-messages-to-teams.md
-      displayName: 'Permission, channel, communications, setting'
     - name: Ejemplos de código
       href: 'https://github.com/OfficeDev/microsoft-teams-samples#graph-apis'
 - name: "Ampliar la aplicación en todo Microsoft\_365"
   items:
     - name: Información general
       href: m365-apps/overview.md
-      displayName: 'Access, permissions, channel, extensions'
+      displayName: 'Outlook, and Office as application hosts'
     - name: Requisitos previos
       href: m365-apps/prerequisites.md
-      displayName: 'Channel, configuration, settings, extensions'
     - name: Habilitar una pestaña personal de Teams para Office y Outlook
       href: m365-apps/extend-m365-teams-personal-tab.md
-      displayName: 'Access, permissions, channel, report, browser'
+      displayName: 'Microoft 365, Office 365'
     - name: Habilitar una extensión de mensaje de Teams para Outlook
       href: m365-apps/extend-m365-teams-message-extension.md
-      displayName: 'Access, channel, report, communication'
+      displayName: 'Microoft 365, Office 365'
     - name: Publicar aplicaciones de Teams para Microsoft 365
       href: m365-apps/publish.md
-      displayName: 'Access, permissions, channel, extensions'
 - name: Probar la aplicación
   items:
     - name: Información general
       href: concepts/build-and-test/test-app-overview.md
-      displayName: 'Access, settings'
+      displayName: 'Prepare your Microsoft 365 tenant, add test data to your Microsoft 365 tenant'
     - name: Preparar el espacio empresarial de Microsoft 365
       href: concepts/build-and-test/prepare-your-o365-tenant.md
+      displayName: 'Basic, Standard, Enterprise E1, E3, and E5, developer, Education, Education Plus, and Education E5'
     - name: Elegir una configuración de prueba y depurar la aplicación de Teams
       href: concepts/build-and-test/debug.md
-      displayName: 'Access, configuration, browser, channel'
+      displayName: 'Purely hosted, locally hosted, cloud hosted'
     - name: Añadir datos de prueba al entorno
       href: concepts/build-and-test/test-data.md
-      displayName: 'Permissions, channel'
+      displayName: Allow users to upload apps
     - name: Pestañas
       items:
         - name: DevTools para pestañas de Microsoft Teams
           href: tabs/how-to/developer-tools.md
-          displayName: 'Access, cache, configuration, browser'
     - name: Bots
       items:
         - name: Probar y depurar el bot localmente con el IDE
-          displayName: 'Channel, extensions'
+          displayName: Bot Emulator
           href: bots/how-to/debug/locally-with-an-ide.md
         - name: Depurar el bot con el middleware de inspección
           href: /azure/bot-service/bot-service-debug-inspection-middleware
-          displayName: Channels
         - name: Depurar el bot de llamadas y reuniones de forma local
           href: bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md
-          displayName: 'Configuration, setting, notification'
+          displayName: signaling
     - name: Microsoft Graph
       items:
         - name: Probar permisos de consentimientos específicos de recursos
           href: graph-api/rsc/test-resource-specific-consent.md
+          displayName: Postman app
         - name: Consentimiento específico del recurso para el archivo de prueba JSON del equipo
           href: graph-api/rsc/test-team-rsc-json-file.md
         - name: Consentimiento específico del recurso para el archivo de prueba JSON del chat
@@ -635,16 +623,15 @@
   items:
     - name: Información general
       href: concepts/deploy-and-publish/apps-publish-overview.md
-      displayName: 'configure install options, valid app package'
+      displayName: configure default install options
     - name: Configurar las opciones de instalación predeterminadas para la aplicación de Teams
       href: concepts/deploy-and-publish/add-default-install-scope.md
       displayName: 'default install scope, default capability for shared scopes'
     - name: Crear un paquete de aplicación de Microsoft Teams
       href: concepts/build-and-test/apps-package.md
-      displayName: 'App manifest, host your app'
+      displayName: 'Host your app, HTTPS, cloud server'
     - name: "Cargar la aplicación en Microsoft\_Teams"
       href: concepts/deploy-and-publish/apps-upload.md
-      displayName: 'Manage, access, update, and remove your app'
     - name: Publicar en la organización
       href: /MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
       displayName: 'App catalog, allow and block apps'
@@ -652,32 +639,34 @@
       items:
         - name: Información general
           href: concepts/deploy-and-publish/appsource/publish.md
-          displayName: 'Commercial marketplace, deep functional and experience tests, publish through concierge service, rapid approval, prior app submission, post app submission'
+          displayName: 'Rapid app approval, approve, publisher verification, What to expect after you submit your app,'
         - name: Revisar las instrucciones de validación de la tienda
           href: concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
-          displayName: 'Value proposition, app package and store listing, advertising, stacked text, Fluent UI components, whiteboarding apps, message spamming, Avatars,'
+          displayName: 'Value proposition, advertising, stacked text, whiteboarding apps, message spamming, Avatars, commercial marketplace certification policies'
         - name: Crear una cuenta de desarrollador del Centro de partners
           href: concepts/deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md
-          displayName: 'Update Apple app store,app acquisition on mobile'
+          displayName: 'Update Apple App Store Connect Team ID on Partner Center, app acquisition on mobile'
         - name: Preparar el envío de la tienda de Microsoft Teams
           href: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md
-          displayName: 'Testing instructions, publisher verification, attestation'
+          displayName: 'Testing instructions, store listing'
         - name: Enviar la aplicación
           href: /office/dev/store/add-in-submission-guide?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
         - name: Resolver problemas si se produce un error en el envío de la tienda de Microsoft Teams
           href: concepts/deploy-and-publish/appsource/resolve-submission-issues.md
+          displayName: 'Resubmit your app, multiple submission failures, Microsoft concierge'
         - name: Mantener la aplicación publicada
           href: concepts/deploy-and-publish/appsource/post-publish/overview.md
-          displayName: 'Promote your app, stop selling'
+          displayName: 'Promote your app, stop selling, stop app distribution'
         - name: Parámetros de clasificación de la tienda de Microsoft Teams
           href: concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md
+          displayName: 'Microsoft Publisher Agreement, app update or new release, user engagement data,'
         - name: Razones comunes del error de validación de la aplicación
           href: concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md
 - name: Rentabilizar la aplicación
   items:
     - name: Información general
       href: concepts/deploy-and-publish/appsource/prepare/monetize-overview.md
-      displayName: 'Pricing model, SaaS offer, In-app purchases'
+      displayName: 'Pricing model, SaaS offer, purchase experience'
     - name: Incluir una oferta de SaaS con la aplicación de Teams
       href: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
       displayName: 'Transactable Software-as-a-Service, Recloud app'
@@ -699,14 +688,17 @@
   items:
     - name: Información general
       href: samples/integrate-web-apps-overview.md
+      displayName: Low code platforms
     - name: Consideraciones para la integración de Teams
       href: samples/integrating-web-apps.md
+      displayName: 'Multitenancy, Sharepoint'
     - name: Crear un asistente virtual
       href: samples/virtual-assistant.md
     - name: Aplicaciones de Power Platform
       items:
         - name: Información general
           href: samples/teams-low-code-solutions.md
+          displayName: 'Power BI, Power Apps, Power Automate, Project Oakdale'
         - name: Añadir un bot de chat de Power Virtual Agents
           href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
     - name: Controles de colaboración
@@ -749,14 +741,18 @@
           href: samples/collaboration-controls-limitations.md
     - name: Plantillas de aplicaciones para Microsoft Teams
       href: samples/app-templates.md
+      displayName: 'Champion Management Platform, Company Communicator, FAQ Plus, Icebreaker, Microsoft 365 Learning Pathways, Microsoft Teams Emergency Operations Center (TEOC), Tournaments of Teams'
     - name: Conectores de turnos listos para producción
       href: samples/shifts-wfm-connectors.md
+      displayName: 'Teams Shifts Workforce management (WFM),'
     - name: Moodle LMS
       items:
         - name: Información general
           href: resources/moodle-overview.md
+          displayName: 'Facilitate hybrid remote meetings, Personalize meeting panels, Automate facility, Build Citizen developer apps'
         - name: Complementos de Microsoft 365
           href: resources/m365-plugins/m365-plugins-overview.md
+          displayName: 'OpenID Connect, Microsoft 365 integration, Microsoft 365 Repository, Teams Meeting, Teams Theme, OneNOte, Microsoft Block, oEmbed Filter'
         - name: Aplicaciones de asociados para Moodle
           href: resources/partner-apps-for-moodle.md
         - name: Instalar Moodle LMS
@@ -769,12 +765,14 @@
           href: concepts/build-and-test/share-to-teams-overview.md
         - name: Compartir en Teams desde aplicaciones web
           href: concepts/build-and-test/share-to-teams-from-web-apps.md
+          displayName: Share to Teams for Education
         - name: Compartir en Teams desde una aplicación personal o una pestaña
           href: concepts/build-and-test/Share-to-Teams-from-personal-app-or-tab.md
     - name: Añadir una pestaña de Teams a SharePoint
       href: tabs/how-to/tabs-in-sharepoint.md
     - name: Crear vínculos profundos
       href: concepts/build-and-test/deep-links.md
+      displayName: Navigate within your app
     - name: Integrar Selector de personas
       href: concepts/device-capabilities/people-picker-capability.md
 - name: Recursos
@@ -785,18 +783,15 @@
           href: concepts/build-and-test/apps-localization.md
         - name: Localizar la referencia de esquema JSON
           href: resources/schema/localization-schema.md
-          displayName: 'Notification, setting'
     - name: Usar autenticación silenciosa en Azure AD
       href: tabs/how-to/authentication/auth-silent-aad.md
-      displayName: 'Access, cache, report'
     - name: Atributo de cookies SameSite
       href: resources/samesite-cookie-update.md
-      displayName: 'Cookies, configuration, browser, chat'
+      displayName: Cookies
     - name: Contribuir a este contenido
       href: resources/teams-contributor-reference.md
     - name: Solucionar problemas de la aplicación de Microsoft Teams
       href: resources/troubleshoot.md
-      displayName: 'Channel, chat, settings, browser, domain'
 - name: Soporte técnico y comentarios
   href: feedback.md
-  displayName: 'Channel, chat, report, extensions'
+  displayName: 'Developer community help, questions, suggestions, contact, issues'
