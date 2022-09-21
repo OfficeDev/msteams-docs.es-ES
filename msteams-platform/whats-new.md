@@ -3,12 +3,12 @@ title: Novedades y actualizaciones para desarrolladores de Teams
 description: ¿Cuáles son las nuevas características para desarrolladores de Microsoft Teams introducidas y las actualizaciones de las características existentes?
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 8f057c4f16fb1c22e1bebcaaef0396ab55fec107
-ms.sourcegitcommit: 08bd7f1b9c654b95d3639ca88052c9ca9a8c3f67
+ms.openlocfilehash: b5ca7ab2aa0a2861b8cc9d402e30eec5409b9aff
+ms.sourcegitcommit: 31032e3dee47232c3f8fc9ed1f2168cc0cbcfb7e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/20/2022
-ms.locfileid: "67833742"
+ms.lasthandoff: 09/21/2022
+ms.locfileid: "67858905"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores en Microsoft Teams
 
@@ -169,7 +169,7 @@ Explore las actualizaciones de las versiones anteriores de GA que se enumeran aq
 
 | **Date** | **Actualizar** | **Buscar aquí** |
 | -------- | --------- | ------------------ |
-|30/11/2020|Integración de la plataforma de identidad con el Kit de herramientas de Teams y Visual Studio Code para pestañas |[Autenticación de inicio de sesión único con el kit de herramientas de Teams y Visual Studio Code para pestañas](toolkit/visual-studio-code-tab-sso.md)|
+|30/11/2020|Integración de la plataforma de identidad con el Kit de herramientas de Teams y Visual Studio Code para pestañas |[Autenticación de inicio de sesión único con el kit de herramientas de Teams y Visual Studio Code para pestañas](toolkit/add-single-sign-on.md)|
 |16/11/2020|Manifiesto de la aplicación de Teams actualizado a la versión 1.8.|[Referencia: esquema de manifiesto para Microsoft Teams](resources/schema/manifest-schema.md)|
 |10/11/2020|Pautas de diseño de los bots de Teams |[Directrices de diseño de bots](bots/design/bots.md)|
 |30/09/2020|Ahora se puede enviar y recibir archivos a los bots en los dispositivos móviles |[Enviar y recibir archivos a través del bot](resources/bot-v3/bots-files.md)|
@@ -184,7 +184,7 @@ Explore las actualizaciones de las versiones anteriores de GA que se enumeran aq
 |20/07/2020|Herramienta de validación de aplicaciones de Teams para los envíos de AppSource |[Herramienta de validación de aplicaciones de Teams](concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)
 |15/07/2020|Crear un asistente virtual para Teams |[Asistente virtual para Microsoft Teams](samples/virtual-assistant.md)|
 |14/07/2020|Presentación de la documentación de un indicador de carga nativo |[Mostrar un indicador de carga nativo](tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator)
-|01/07/2020|Comience a compilar aplicaciones para Teams con el Kit de herramientas de Visual Studio Code |[Crear aplicaciones con el kit de herramientas de Microsoft Teams y Visual Studio Code](toolkit/visual-studio-code-overview.md) |
+|01/07/2020|Comience a compilar aplicaciones para Teams con el Kit de herramientas de Visual Studio Code |[Crear aplicaciones con el kit de herramientas de Microsoft Teams y Visual Studio Code](sbs-gs-javascript.yml) |
 |01/07/2020|Inicio de sesión único para pestañas GA para clientes web y de escritorio de Teams |[Inicio de sesión único (SSO)](tabs/how-to/authentication/tab-sso-overview.md)|
 |05/06/2020| Esquema de manifiesto actualizado a la versión 1.7.| [Referencia: esquema de manifiesto para Microsoft Teams](resources/schema/manifest-schema.md)|
 |18/05/2020|Integre Power Virtual Agents con Teams. |[Integrar un bot de chat de Power Virtual Agents con Microsoft Teams](bots/how-to/add-power-virtual-agents-bot-to-teams.md)|

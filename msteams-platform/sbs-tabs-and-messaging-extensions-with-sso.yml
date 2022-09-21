@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: Obtenga más información sobre la autenticación de SSO para pestañas.
   ms.custom: mvc
   ms.localizationpriority: high
-  ms.openlocfilehash: c0e9ff9397c2afd70ab7de1a03b4fb04727dcec3
-  ms.sourcegitcommit: dccb48902e08484692ab927415bcd3d61dc50db2
+  ms.openlocfilehash: 7932c22485aaeffc39bd1339e92740afe51396e6
+  ms.sourcegitcommit: 31032e3dee47232c3f8fc9ed1f2168cc0cbcfb7e
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 09/19/2022
-  ms.locfileid: "67806867"
+  ms.lasthandoff: 09/21/2022
+  ms.locfileid: "67858933"
 items:
 - durationInMinutes: 1
   content: "El inicio de sesión único de Azure Active Directory (SSO de Azure AD) ayuda a autenticar a los usuarios en Teams. \n\n**Aspectos clave de la guía paso a paso del inicio de sesión único de Azure AD para pestañas y extensiones de mensajes**:\n\n * Después del primer inicio de sesión, el inicio de sesión único de Azure AD permite al usuario iniciar sesión automáticamente.\n * Permite al usuario iniciar sesión en otros dispositivos sin escribir de nuevo las credenciales de inicio de sesión.\n * Obtiene el token para el usuario que ha iniciado sesión.   \n\nEsta guía paso a paso le ayuda a crear pestañas y extensiones de mensajes que habilitan la autenticación de SSO de Azure AD. Verá la siguiente salida:\n\n  ![Imagen de felicitación](~/assets/images/Tab-ME-SSO/hello-megan-profile245.png)   \n"
