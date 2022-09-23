@@ -6,12 +6,12 @@ ms.topic: overview
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.date: 04/07/2022
-ms.openlocfilehash: b62c2312524c1844b9b40b32d2d21ecdd2db43dc
-ms.sourcegitcommit: 08bd7f1b9c654b95d3639ca88052c9ca9a8c3f67
+ms.openlocfilehash: a462c3e4f5e6aef332fbb0b05cce8b1f2fa7d5a7
+ms.sourcegitcommit: b9ec2a17094cb8b24c3017815257431fb0a679d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/20/2022
-ms.locfileid: "67833658"
+ms.lasthandoff: 09/23/2022
+ms.locfileid: "67990892"
 ---
 # <a name="apps-for-teams-meetings-and-calls"></a>Aplicaciones para reuniones y llamadas de Teams
 
@@ -36,8 +36,6 @@ Los usuarios pueden agregar aplicaciones a la reunión mediante la opción de su
 Visite la [tienda teams](https://go.microsoft.com/fwlink/p/?LinkID=2183121) y explore las aplicaciones diseñadas específicamente para reuniones.
 
 > [!Note]
->
-> * Actualmente, la adición de una aplicación no se admite en dispositivos móviles. Sin embargo, un usuario puede ver la aplicación y compartirla para realizar la fase desde el móvil.
 >
 > * Actualmente, cuando se agrega una tercera persona a una llamada uno a uno, la llamada se eleva a una llamada de grupo que significa que se inicia una nueva sesión. Las aplicaciones agregadas a la llamada uno a uno no están disponibles en la llamada de grupo. Sin embargo, se pueden agregar de nuevo.
 >

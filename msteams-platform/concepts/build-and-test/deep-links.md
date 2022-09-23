@@ -3,12 +3,12 @@ title: Crear vínculos profundos
 description: En este artículo, aprenderá a crear vínculos profundos y a navegar por dichos vínculos en las aplicaciones de Microsoft Teams con pestañas.
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: f3c5859ed124d173d617a75694ac5b9179e1181c
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: ea279c9bd4883507df4f56fbf514080940da52b4
+ms.sourcegitcommit: b9ec2a17094cb8b24c3017815257431fb0a679d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67780887"
+ms.lasthandoff: 09/23/2022
+ms.locfileid: "67991004"
 ---
 # <a name="create-deep-links"></a>Crear vínculos profundos
 
@@ -258,7 +258,7 @@ Los parámetros de consulta son:
 * `content`: un campo opcional para el campo de detalles de la reunión.
 
 > [!NOTE]
-> En estos momentos, no se puede especificar la ubicación. Debe especificar la diferencia horaria con UTC, que significa zonas horarias al generar las horas de inicio y finalización.
+> Currently, specifying the location isn't supported. You must specify the UTC offset, it means time zones when generating your start and end times.
 
 Para usar este vínculo profundo con el bot, puede especificarlo como destino de la dirección URL en el botón de la tarjeta o pulsar la acción a través del tipo de acción `openUrl`.
 
@@ -348,7 +348,7 @@ El siguiente formato de vínculo profundo se puede usar en un bot, conector o ta
 
 Los parámetros de consulta son:
 
-* `fileId`: Identificador de archivo único de Sharepoint Online, también conocido como `sourcedoc`. Por ejemplo, `1FA202A5-3762-4F10-B550-C04F81F6ACBD`.
+* `fileId`: Unique file ID from Sharepoint Online, also known as `sourcedoc`. For example,`1FA202A5-3762-4F10-B550-C04F81F6ACBD`.
 * `tenantId`: identificador de inquilino como `0d9b645f-597b-41f0-a2a3-ef103fbd91bb`.
 * `fileType`: tipo de archivo admitido, como docx, pptx, xlsx y pdf.
 * `objectUrl`: dirección URL del objeto del archivo. El formato es `https://{tenantName}.sharepoint.com/sites/{TeamName}/SharedDocuments/{ChannelName}/FileName.ext`. Por ejemplo, `https://microsoft.sharepoint.com/teams/(filepath)`.
@@ -385,7 +385,7 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 
 ### <a name="deep-linking-to-an-app"></a>Vinculación profunda a una aplicación
 
-Cree vínculos profundos para la aplicación después de que la aplicación aparezca en la tienda de Teams. Para crear un vínculo para iniciar Teams, anexe el identificador de aplicación a la siguiente dirección URL: `https://teams.microsoft.com/l/app/<your-app-id>`. Aparece un cuadro de diálogo para instalar la aplicación.
+Cree vínculos profundos para la aplicación después de que la aplicación aparezca en la tienda de Teams. Para crear un vínculo para iniciar Teams, anexe el identificador de aplicación a la siguiente dirección URL: `https://teams.microsoft.com/l/app/<your-app-id>`. Aparece un cuadro de diálogo para instalar o abrir la aplicación.
 
 > [!NOTE]
 > Si la aplicación se ha aprobado para la plataforma móvil, puede vincularla en profundidad a una aplicación en el móvil. Además, se requiere el id. de equipo de Apple App Store Connect para que el vínculo profundo funcione en Teams-iOS. Para obtener más información, consulte [cómo actualizar el id. de equipo de Apple App Store Connect](../deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md#update-apple-app-store-connect-team-id-on-partner-center).
