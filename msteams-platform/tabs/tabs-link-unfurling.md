@@ -5,12 +5,12 @@ description: Obtenga información sobre la vista de fase, un componente de inter
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: b31f9aa1ad00a0cf255df4aa1976470c3add3551
-ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
+ms.openlocfilehash: c11e65958e14db8f29206ff3585680818c18c5af
+ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2022
-ms.locfileid: "67450453"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68027294"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>Expansión del vínculo de la pestaña y vista de fases
 
@@ -24,7 +24,7 @@ Vista extendida es un componente de interfaz de usuario de pantalla completa que
 
 ## <a name="advantage-of-stage-view"></a>Ventaja de vista extendida
 
-Vista extendida ayuda a proporcionar una experiencia más fluida de visualización de contenido en Teams. Los usuarios pueden abrir y ver el contenido proporcionado por la aplicación sin salir del contexto y pueden anclar el contenido al chat o canal para un acceso rápido futuro, lo que conduce a una mayor interacción del usuario con la aplicación.
+Stage View helps provide a more seamless experience of viewing content in Teams. Users can open and view the content provided by your app without leaving the context, and they can pin the content to the chat or channel for future quick access leading to a higher user engagement with your app.
 
 ## <a name="stage-view-vs-task-module"></a>Vista extendida frente a módulo de tareas
 
@@ -84,13 +84,13 @@ El tipo de solicitud `invoke` debe ser `composeExtension/queryLink`.
 
 A continuación se muestra el proceso para invocar la vista extendida:
 
-* Cuando el usuario selecciona **Ver**, el bot recibe una solicitud de `invoke`. El tipo de solicitud es `composeExtension/queryLink`.
+* When the user selects **View**, the bot receives an `invoke` request. The request type is `composeExtension/queryLink`.
 * `invoke` respuesta del bot contiene una tarjeta adaptable con el tipo `tab/tabInfoAction` en ella.
 * El bot responde con un código de `200`.
 
 > [!NOTE]
-
-> En los clientes móviles de Teams, invocar Vista extendida para aplicaciones distribuidas a través de la [tienda de Teams](/platform/concepts/deploy-and-publish/apps-publish-overview.md) y no tener una experiencia optimizada para moblie abre el explorador web predeterminado del dispositivo. El explorador abre la dirección URL especificada en el parámetro `websiteUrl` del objeto `TabInfo`.
+>
+> On Teams mobile clients, invoking Stage View for apps distributed through the [Teams store](~/concepts/deploy-and-publish/apps-publish-overview.md) and not having a moblie-optimized experience opens the default web browser of the device. The browser opens the URL specified in the `websiteUrl` parameter of the `TabInfo` object.
 
 ## <a name="invoke-stage-view-through-deep-link"></a>Invocación de la Vista extendida a través de un vínculo profundo
 
@@ -141,8 +141,8 @@ Codificado
 |:-----------|:---------|:------------|:-----------------------|
 | `entityId` | Cadena | 64 | Esta propiedad es un identificador único para la entidad que muestra la pestaña. Este campo es obligatorio.|
 | `name` | Cadena | 128 | Esta propiedad es el nombre para mostrar de la pestaña en la interfaz del canal. Este campo es opcional.|
-| `contentUrl` | Cadena | 2048 | Esta propiedad es la dirección URL https:// que apunta a la interfaz de usuario de la entidad que se mostrará en el lienzo de Teams. Este campo es obligatorio.|
-| `websiteUrl?` | Cadena | 2048 | Esta propiedad es la dirección URL de https:// a la que apuntar si un usuario selecciona ver en un explorador. Este campo es obligatorio.|
+| `contentUrl` | Cadena | 2048 | This property is the https:// URL that points to the entity UI to be displayed in the Teams canvas. This is a required field.|
+| `websiteUrl?` | Cadena | 2048 | This property is the https:// URL to point at, if a user selects to view in a browser. This is a required field.|
 | `removeUrl?` | Cadena | 2048 | Esta propiedad es la dirección URL de https:// que apunta a la interfaz de usuario que se mostrará cuando el usuario elimine la pestaña. Se trata de un campo opcional.|
 
 ## <a name="code-sample"></a>Ejemplo de código

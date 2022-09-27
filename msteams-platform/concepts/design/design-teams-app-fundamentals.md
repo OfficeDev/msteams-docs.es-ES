@@ -5,16 +5,16 @@ author: heath-hamilton
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.topic: overview
-ms.openlocfilehash: 472af955ba5a508ea2fa892d9ece94977bdfb660
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 654bc49cfc671b849e3b88aae1eefa5d1bbaef02
+ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558838"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68026979"
 ---
 # <a name="microsoft-teams-app-design-system"></a>Sistema de diseño de aplicaciones de Microsoft Teams
 
-Obtenga información rápida sobre los conceptos básicos del diseño de aplicaciones de Teams. Puede encontrar una guía completa y ejemplos en el <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">Kit de interfaz de usuario de Microsoft Teams (Figma)</a>.
+Obtenga información rápida sobre los conceptos básicos del diseño de aplicaciones de Teams. Puede encontrar una guía completa y ejemplos en el [Kit de interfaz de usuario de Microsoft Teams (Figma)](https://www.figma.com/community/file/916836509871353159).
 
 ## <a name="layout"></a>Diseño
 
@@ -42,7 +42,7 @@ Obtenga información rápida sobre los conceptos básicos del diseño de aplicac
 
       Un avatar es una representación gráfica de una persona, equipo, bot o entidad en Teams. A menudo se usa un grupo de avatares para transmitir actividad en directo o representar una lista de una manera que conserve el espacio vertical. 
 
-      * <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">Ver instrucciones completas de avatares (Figma)</a>
+      * [Ver instrucciones completas de avatares (Figma)](https://www.figma.com/community/file/916836509871353159)
 
    :::column-end:::
    :::column span="1":::
@@ -62,7 +62,7 @@ Obtenga información rápida sobre los conceptos básicos del diseño de aplicac
 
       También puede usar los iconos de interfaz de usuario de Fluent en toda la aplicación:
 
-      * <a href="https://www.figma.com/community/file/836835755999342788" target="_blank">Obtener el conjunto de iconos de Fluent más reciente (Figma)</a>
+      * [Obtener el conjunto de iconos de Fluent más reciente (Figma)](https://www.figma.com/community/file/836835755999342788)
       * [Implementar los iconos (interfaz de usuario de Fluent)](https://developer.microsoft.com/fluentui#/styles/web/icons)
 
    :::column-end:::
@@ -81,7 +81,7 @@ Obtenga información rápida sobre los conceptos básicos del diseño de aplicac
 
       Teams usa la interfaz de usuario de Segoe para su rampa de tipos y sus diferentes tamaños de fuente y pesos para ayudar a crear jerarquías y garantizar la legibilidad.
 
-      * <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">Ver instrucciones completas de tipo (Figma)</a>
+      * [Ver instrucciones completas de tipo (Figma)](https://www.figma.com/community/file/916836509871353159)
       * [Implementar la tipografía (interfaz de usuario de Fluent)](https://developer.microsoft.com/fluentui#/styles/web/typography)
 
    :::column-end:::
@@ -100,7 +100,7 @@ Obtenga información rápida sobre los conceptos básicos del diseño de aplicac
 
       La versión web y la versión de escritorio de Teams admiten temas predeterminados (claros, oscuros y de contraste alto), mientras que la versión móvil de Teams admite temas claros y oscuros. Cada tema de Teams tiene su propia combinación de colores.
 
-      * <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">Ver instrucciones completas de colores y tokens de color disponibles (Figma)</a>
+      * [Ver instrucciones completas de colores y tokens de color disponibles (Figma)](https://www.figma.com/community/file/916836509871353159)
       * [Implementar los colores (interfaz de usuario de Fluent)](https://fluentsite.z22.web.core.windows.net/0.51.7/colors)
 
    :::column-end:::
@@ -118,7 +118,7 @@ Obtenga información rápida sobre los conceptos básicos del diseño de aplicac
 
       Puede usar la forma y la elevación para crear una jerarquía adicional en la aplicación. 
 
-      * <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">Ver instrucciones completas de forma y elevación (Figma)</a>
+      * [Ver instrucciones completas de forma y elevación (Figma)](https://www.figma.com/community/file/916836509871353159)
       * [Implementar la forma y la elevación (interfaz de usuario de Fluent)](https://developer.microsoft.com/fluentui#/styles/web/elevation)
 
    :::column-end:::
@@ -137,7 +137,7 @@ Obtenga información rápida sobre los conceptos básicos del diseño de aplicac
 
       Para sentirse parte de Teams, la copia de la aplicación en general debe seguir estos [principios de voz de Microsoft](/style-guide/brand-voice-above-all-simple-human): cálido y relajado, nítido y claro, y listo para ayudar.
 
-      * <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">Ver instrucciones completas de copia y contenido, incluida la escritura para bots (Figma)</a>
+      * [Ver instrucciones completas de copia y contenido, incluida la escritura para bots (Figma)](https://www.figma.com/community/file/916836509871353159)
 
    :::column-end:::
    :::column span="1":::

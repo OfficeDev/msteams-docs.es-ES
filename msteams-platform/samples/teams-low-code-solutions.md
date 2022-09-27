@@ -5,12 +5,12 @@ description: Obtenga información sobre las soluciones de código bajo y sin có
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: 0cee1547424df7952f2ba9864981814871a511f7
-ms.sourcegitcommit: 31032e3dee47232c3f8fc9ed1f2168cc0cbcfb7e
+ms.openlocfilehash: 05553535f146316dddef311a9a7c2f859fedc3f8
+ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2022
-ms.locfileid: "67858912"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68027231"
 ---
 # <a name="create-low-code-custom-apps-for-teams"></a>Creación de aplicaciones personalizadas de código bajo para Teams
 
@@ -43,7 +43,7 @@ La nueva [aplicación Power Apps](https://go.microsoft.com/fwlink/?linkid=214337
 
 ### <a name="-teams-and-power-automate"></a>✔ Teams y Power Automate
 
-Puede [crear flujos para automatizar tareas de trabajo repetitivas](https://flow.microsoft.com/connectors/shared_teams/microsoft-teams/) directamente en el entorno de Teams con la [aplicación Power Automate en Teams](/power-automate/flows-teams). Puede [desencadenar un flujo desde cualquier mensaje de Microsoft Teams](/power-automate/trigger-flow-teams-message) y [usar tarjetas adaptables dentro de Power Automate](/power-automate/create-adaptive-cards). Además, puede crear flujos para personalizar y agregar más valor a Microsoft Teams desde la nueva [aplicación de Power Apps](https://go.microsoft.com/fwlink/?linkid=2143539) en Teams.
+Puede [crear flujos para automatizar tareas de trabajo repetitivas](https://flow.microsoft.com/connectors/shared_teams/microsoft-teams/) directamente en el entorno de Teams con la [aplicación Power Automate en Teams](/power-automate/teams/install-teams-app). Puede [desencadenar un flujo desde cualquier mensaje de Microsoft Teams](/power-automate/trigger-flow-teams-message) y [usar tarjetas adaptables dentro de Power Automate](/power-automate/create-adaptive-cards). Además, puede crear flujos para personalizar y agregar más valor a Microsoft Teams desde la nueva [aplicación de Power Apps](https://go.microsoft.com/fwlink/?linkid=2143539) en Teams.
 
 ### <a name="-teams-and-power-virtual-agents"></a>✔ Teams y Power Virtual Agents
 

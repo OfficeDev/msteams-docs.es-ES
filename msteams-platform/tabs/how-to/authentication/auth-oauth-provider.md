@@ -3,12 +3,12 @@ title: Usar proveedores de OAuth externos
 description: Autentique a los usuarios de la aplicación mediante proveedores de OAuth externos y aprenda a agregarla al explorador externo.
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: ca88471405fa06713261d56eaf94179c7896d8c4
-ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
+ms.openlocfilehash: 4892dc23174e34015a02a9afff64269e01871fb5
+ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2022
-ms.locfileid: "67605057"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68027322"
 ---
 # <a name="use-external-oauth-providers"></a>Usar proveedores de OAuth externos
 
@@ -31,7 +31,7 @@ En la tabla siguiente se proporciona la lista de parámetros de `authenticate()`
 | --- | --- |
 |`isExternal` | El tipo de parámetro es booleano, que indica que la ventana de autenticación se abre en un explorador externo.|
 |`height` |Alto preferido para el elemento emergente. El valor se puede omitir si está fuera de los límites aceptables.|
-|`url`  <br>|Dirección URL del servidor de aplicaciones 3P para el elemento emergente de autenticación, con los dos marcadores de posición de parámetro siguientes:</br> <br> - `oauthRedirectMethod`: Pasar marcador de posición en `{}`. Este marcador de posición se reemplaza por el vínculo profundo o la página web por la plataforma de Teams, que informa al servidor de aplicaciones si la llamada procede de la plataforma móvil.</br> <br> - `authId`: este marcador de posición se reemplaza por UUID. El servidor de aplicaciones lo usa para mantener la sesión.| 
+|`url`  <br>|Dirección URL del servidor de aplicaciones 3P para el elemento emergente de autenticación, con los dos marcadores de posición de parámetro siguientes:</br> <br> - `oauthRedirectMethod`: Pass placeholder in `{}`. This placeholder is replaced by deeplink or web page by Teams platform, which informs app server if the call is coming from mobile platform.</br> <br> - `authId`: este marcador de posición se reemplaza por UUID. El servidor de aplicaciones lo usa para mantener la sesión.|
 |`width`|Ancho preferido para el elemento emergente. El valor se puede omitir si está fuera de los límites aceptables.|
 
 Para obtener más información sobre los parámetros, vea la función [authenticate(AuthenticatePopUpParameters).](/javascript/api/@microsoft/teams-js/authentication#@microsoft-teams-js-authentication-authenticate)
@@ -39,7 +39,8 @@ Para obtener más información sobre los parámetros, vea la función [authentic
 ## <a name="add-authentication-to-external-browsers"></a>Agregar autenticación a exploradores externos
 
 > [!NOTE]
-> * Actualmente, puede agregar autenticación a exploradores externos solo para pestañas en dispositivos móviles. 
+>
+> * Actualmente, puede agregar autenticación a exploradores externos solo para pestañas en dispositivos móviles.
 > * Use la versión beta del SDK de JS para aprovechar la funcionalidad. Las versiones beta están disponibles a través de [NPM](https://www.npmjs.com/package/@microsoft/teams-js/v/1.12.0-beta.2).
 
 La siguiente imagen proporciona el flujo para agregar autenticación a exploradores externos:
@@ -53,7 +54,6 @@ La siguiente imagen proporciona el flujo para agregar autenticación a explorado
    La aplicación 3P llama a la función SDF `authentication.authenticate` con `isExternal` establecido como true para iniciar el proceso de inicio de sesión de autenticación externo.
 
    El `url` pasado contiene marcadores de posición para `{authId}` y `{oauthRedirectMethod}`.  
-
 
     ```JavaScript
     import { authentication } from "@microsoft/teams-js";
@@ -102,7 +102,7 @@ La siguiente imagen proporciona el flujo para agregar autenticación a explorado
 
 5. Inicie sesión en el explorador externo.
 
-   El usuario inicia sesión en el explorador externo. Los proveedores de OAuth redirigen de nuevo a `redirect_uri` con el código de autenticación y el objeto de estado.
+   User signs in to the external browser. The OAuth providers redirects back to the `redirect_uri` with the auth code and the state object.
 
 6. El servidor de aplicaciones 3P comprueba y responde a Teams.
 
@@ -126,7 +126,7 @@ La siguiente imagen proporciona el flujo para agregar autenticación a explorado
    return res.redirect(`msteams://teams.microsoft.com/l/auth-callback?authId=${state.authId}&result=${req.query.code}`)
    ```
 
- 8. Teams llama a la devolución de llamada correcta y envía el resultado.
+8. Teams llama a la devolución de llamada correcta y envía el resultado.
 
     Teams llama a la devolución de llamada correcta y envía el resultado (código de autenticación) a la aplicación 3P. La aplicación 3P recibe el código en la devolución de llamada correcta y usa el código para recuperar el token y, a continuación, la información del usuario y actualizar la interfaz de usuario.
 
@@ -138,5 +138,5 @@ La siguiente imagen proporciona el flujo para agregar autenticación a explorado
 
 ## <a name="see-also"></a>Vea también
 
-* [Configurar proveedores de identidades](../../../concepts/authentication/configure-identity-provider.md)
+* [Configurar proveedores de identidades](~/concepts/authentication/authentication.md)
 * [Flujo de autenticación de Microsoft Teams para pestañas](auth-flow-tab.md)

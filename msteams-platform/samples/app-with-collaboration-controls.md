@@ -5,12 +5,12 @@ description: En este módulo, aprenderá a crear una aplicación basada en model
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
-ms.openlocfilehash: b5300a66fa8a5948a2081e90e8ad138858d38f3f
-ms.sourcegitcommit: 0bb822b30739e4a532a36764dad2dbf35a81ba29
+ms.openlocfilehash: e712c55dd4543edda9115751be09d81d1795f02b
+ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67179511"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68027343"
 ---
 # <a name="create-a-new-model-driven-app-with-collaboration-controls-for-teams"></a>Creación de una nueva aplicación controlada por modelos con controles de colaboración para Teams
 
@@ -45,7 +45,7 @@ Los controles de colaboración están diseñados para [aplicaciones basadas en m
 
    :::image type="content" source="../assets/images/collaboration-control/new-activity.png" alt-text="En la captura de pantalla se describe cómo crear una nueva actividad.":::
 
-1. Seleccione **Guardar**.
+1. Haga clic en **Guardar**.
 
 1. Una vez que haya terminado de crear la tabla, puede personalizarla agregando columnas adicionales, relaciones y mucho más (opcional).
 
@@ -190,9 +190,9 @@ Use las instrucciones siguientes para recuperar el identificador de sitio de Sha
          :::image type="content" source="../assets/images/collaboration-control/graph-permissions.png" alt-text="La captura de pantalla es un ejemplo que muestra el Explorador de Graph.":::
 
      1. Asegúrese de reemplazar el nombre de host por el nombre de host y la ruta de acceso relativa a la ruta de acceso del sitio y realice una llamada de grafo a `https://graph.microsoft.com/v1.0/sites/{hostname}:/{relative-path-to-site}`. A continuación se muestra un ejemplo:
-         1. Si la dirección URL del sitio = <https://myhostname.sharepoint.com/sites/MySiteName>
-         1. Hostname = myhostname.sharepoint.com
-         1. Ruta de acceso relativa al sitio = sites/MySiteName
+         1. Si la dirección URL del sitio = `https://myhostname.sharepoint.com/sites/MySiteName`
+         1. Nombre de host = `myhostname.sharepoint.com`
+         1. Ruta de acceso relativa al sitio = `sites/MySiteName`
 
               :::image type="content" source="../assets/images/collaboration-control/graph-call.png" alt-text="La captura de pantalla es un ejemplo que muestra la llamada a Graph.":::
 

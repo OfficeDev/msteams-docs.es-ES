@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 8002b5ddf2fcb403978587819855468915813684
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
-ms.translationtype: HT
+ms.openlocfilehash: 26e6982cf7b00d21fb8a15e0d8f194ac8d08ac7d
+ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558327"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68027000"
 ---
 # <a name="design-your-tab-for-microsoft-teams"></a>Diseñar la pestaña para Microsoft Teams
 
@@ -58,11 +58,11 @@ Hay un breve proceso de configuración para agregar una aplicación como un cana
 |Contador|Descripción|
 |----------|-----------|
 |1|**Logotipo de la aplicación**: logotipo de aplicación a todo color de la aplicación.|
-|2 |**Nombre de la aplicación**: nombre completo de la aplicación.|
-|3 |**iframe**: espacio dinámico para el contenido de la aplicación (por ejemplo, configuración de pestañas o autenticación).|
-|4 |**Acerca del vínculo**: abre un cuadro de diálogo que muestra más información sobre la aplicación, como una descripción completa, los permisos requeridos por la aplicación y los vínculos a la directiva de privacidad y los términos de servicio.|
-|5 |**Botón Cerrar**: cierra el cuadro de diálogo.|
-|6 |**Opción Notificar a los miembros del equipo**: el cuadro de diálogo pregunta a los usuarios si quieren crear una publicación para que otros sepan que agregaron una pestaña.|
+|2|**Nombre de la aplicación**: nombre completo de la aplicación.|
+|3|**iframe**: espacio dinámico para el contenido de la aplicación (por ejemplo, configuración de pestañas o autenticación).|
+|4|**Acerca del vínculo**: abre un cuadro de diálogo que muestra más información sobre la aplicación, como una descripción completa, los permisos requeridos por la aplicación y los vínculos a la directiva de privacidad y los términos de servicio.|
+|5|**Botón Cerrar**: cierra el cuadro de diálogo.|
+|6|**Opción Notificar a los miembros del equipo**: el cuadro de diálogo pregunta a los usuarios si quieren crear una publicación para que otros sepan que agregaron una pestaña.|
 |7 |**Botón Atrás**: va al paso anterior en función de dónde se abrió el cuadro de diálogo.|
 |8 |**Botón Guardar**: completa la configuración de la pestaña.|
 
@@ -101,8 +101,8 @@ Las pestañas proporcionan una experiencia web a pantalla completa en Teams dond
 |Contador|Descripción|
 |----------|-----------|
 |1|**Nombre de la pestaña**: etiqueta de navegación para la pestaña.|
-|2 |**Chat de pestaña**: abre un chat que permite a los usuarios tener una conversación junto al contenido.|
-|3 |**webview**: muestra el contenido de la aplicación.|
+|2|**Chat de pestaña**: abre un chat que permite a los usuarios tener una conversación junto al contenido.|
+|3|**webview**: muestra el contenido de la aplicación.|
 
 #### <a name="desktop"></a>Escritorio
 
@@ -111,9 +111,9 @@ Las pestañas proporcionan una experiencia web a pantalla completa en Teams dond
 |Contador|Descripción|
 |----------|-----------|
 |1|**Nombre de la pestaña**: etiqueta de navegación para la pestaña.|
-|2 |**Desbordamiento de pestaña**: abre acciones de pestaña, como cambiar el nombre y quitar.|
-|3 |**Chat de pestaña**: abre un chat a la derecha que permite a los usuarios tener una conversación junto al contenido.|
-|4 |**iframe**: muestra el contenido de la aplicación.|
+|2|**Desbordamiento de pestaña**: abre acciones de pestaña, como cambiar el nombre y quitar.|
+|3|**Chat de pestaña**: abre un chat a la derecha que permite a los usuarios tener una conversación junto al contenido.|
+|4|**iframe**: muestra el contenido de la aplicación.|
 
 ### <a name="design-a-tab-with-ui-templates-and-advanced-components"></a>Diseñar una pestaña con plantillas de interfaz de usuario y componentes avanzados
 
@@ -171,10 +171,10 @@ Puede incluir opciones para cambiar el nombre, quitar o modificar una pestaña.
 |Contador|Descripción|
 |----------|-----------|
 |1|**Abrir en el explorador**: abre la aplicación en el explorador predeterminado del dispositivo.|
-|2 |**Copiar víncula**: los usuarios pueden copiar y compartir un vínculo a la pestaña.|
-|3 |**Configuración**: (opcional) modificar la configuración de una pestaña después de agregarla.|
-|4 |**Cambiar nombre**: los usuarios pueden dar a la pestaña un nombre que sea significativo para el canal, chat o reunión.|
-|5 |**Eliminar**: quita la pestaña del canal, chat o reunión.|
+|2|**Copiar víncula**: los usuarios pueden copiar y compartir un vínculo a la pestaña.|
+|3|**Configuración**: (opcional) modificar la configuración de una pestaña después de agregarla.|
+|4|**Cambiar nombre**: los usuarios pueden dar a la pestaña un nombre que sea significativo para el canal, chat o reunión.|
+|5|**Eliminar**: quita la pestaña del canal, chat o reunión.|
 
 #### <a name="desktop"></a>Escritorio
 
@@ -183,8 +183,8 @@ Puede incluir opciones para cambiar el nombre, quitar o modificar una pestaña.
 |Contador|Descripción|
 |----------|-----------|
 |1|**Configuración**: (opcional) permite a los usuarios modificar la configuración de una pestaña después de agregarla.|
-|2 |**Cambiar nombre**: los usuarios pueden dar a la pestaña un nombre que sea significativo para el canal, chat o reunión.|
-|3 |**Quitar**: quita la pestaña del canal, chat o reunión.|
+|2|**Cambiar nombre**: los usuarios pueden dar a la pestaña un nombre que sea significativo para el canal, chat o reunión.|
+|3|**Quitar**: quita la pestaña del canal, chat o reunión.|
 
 ## <a name="tab-notifications-and-deep-linking"></a>Notificaciones de pestaña y vinculación en profundidad
 
@@ -270,7 +270,7 @@ Quite los pasos innecesarios para agregar una pestaña.
 
 #### <a name="do-take-advantage-of-teams-color-tokens"></a>Qué hacer: Aprovechar los tokens de color de Teams
 
-Cada tema de Teams tiene su propia combinación de colores. Para controlar los cambios de tema de forma automática, use los <a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank">tokens de color (Fluent UI)</a> en su diseño.
+Cada tema de Teams tiene su propia combinación de colores. Para controlar los cambios de tema de forma automática, use los [tokens de color (Fluent UI)](https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme) en su diseño.
 
    :::column-end:::
    :::column span="":::

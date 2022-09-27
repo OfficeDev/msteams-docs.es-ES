@@ -6,12 +6,12 @@ ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 8fb28eeed3b3de73fa5646ec51f23b4ae5421954
-ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
+ms.openlocfilehash: c4e1b595a226095485e88448c8bd25006c0c58ca
+ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2022
-ms.locfileid: "67605071"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68027336"
 ---
 # <a name="create-a-channel-tab"></a>Crear una pestaña de canal
 
@@ -252,9 +252,9 @@ Estos son los pasos para crear una pestaña de canal o grupo:
 
 1. En Visual Studio, seleccione **F5** o elija **Iniciar depuración** en el menú **Depurar** de la aplicación para comprobar si la aplicación se ha cargado correctamente. En un explorador, vaya a las siguientes direcciones URL:
 
-    * <https://localhost:3978/>
-    * <https://localhost:3978/privacy>
-    * <https://localhost:3978/tou>
+    * `https://localhost:3978/`
+    * `https://localhost:3978/privacy`
+    * `https://localhost:3978/tou`
 
 <details>
 <summary><b>Revisar el código fuente</b></summary>
@@ -475,9 +475,9 @@ Estos son los pasos para crear una pestaña de canal o grupo:
 
 1. En Visual Studio, seleccione **F5** o elija **Iniciar depuración** en el menú **Depurar** de la aplicación para comprobar si la aplicación se ha cargado correctamente. En un explorador, vaya a las siguientes direcciones URL:
 
-    * <https://localhost:3978/>
-    * <https://localhost:3978/privacy>
-    * <https://localhost:3978/tou>
+    * `https://localhost:3978/`
+    * `https://localhost:3978/privacy`
+    * `https://localhost:3978/tou`
 
 <details>
 <summary><b>Revisar el código fuente</b></summary>

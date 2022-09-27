@@ -3,12 +3,12 @@ title: 'Documentación para desarrolladores de Microsoft Teams: glosario'
 description: Obtenga información sobre los términos usados en la documentación para desarrolladores de Microsoft Teams
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 2cf9b4c3533b86e45247316e9c6a9da8517494d2
-ms.sourcegitcommit: 937ea793889fc1efa9ec6a52374d5098be1117e0
+ms.openlocfilehash: c8a9a663244803efb113c09857e21523218108d2
+ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2022
-ms.locfileid: "67653164"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68027329"
 ---
 # <a name="glossary"></a>Glosario
 
@@ -20,7 +20,7 @@ Términos y definiciones comunes que se usan en la documentación para desarroll
 | --- | --- |
 | [Comando de acción](../messaging-extensions/how-to/action-commands/define-action-command.md) | Tipo de aplicación de extensión de mensajería que usa un elemento emergente para recopilar o mostrar información. <br>**Vea también**: [Extensión de mensajería](#m); [Comandos de búsqueda](#s) |
 | [Tarjetas adaptables](../task-modules-and-cards/what-are-cards.md) | Fragmento de código de contenido accionable agregado a una conversación por un bot o extensión de mensajería. Use texto, gráficos y botones con estas tarjetas para una comunicación fluida. |
-| [Usuario anónimo](../apps-in-teams-meetings/meeting-app-extensibility.md#user-types-in-a-meeting) | Un tipo de participante en una reunión de Teams que no tiene una identidad de Azure AD y no está federado con un inquilino. Son como usuarios externos en una reunión.<br>**Vea también**: [Usuario federado](#f) |
+| [Usuario anónimo](../apps-in-teams-meetings/meeting-app-extensibility.md#user-types-in-a-meeting) | A type of participant in a Teams meeting who doesn't have an Azure AD identity and isn't federated with a tenant. They are like external users in a meeting. <br>**Vea también**: [Usuario federado](#f) |
 | [Catálogo de aplicaciones](../toolkit/publish.md) | Un sitio que almacena aplicaciones de SharePoint y Office para el uso interno de una organización. <br>**Vea también**: [SPFx](#s) |
 | [Manifiesto de la aplicación](../resources/schema/manifest-schema.md) | El manifiesto de la aplicación de Teams describe cómo se integra la aplicación en el producto de Microsoft Teams. El manifiesto debe cumplir con el [esquema de manifiesto](https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json). |
 | [Paquete de la aplicación](../concepts/build-and-test/apps-package.md) | Un paquete de aplicación de Teams es un archivo ZIP que contiene el archivo de manifiesto de la aplicación, el icono de color y el icono de esquema. |
@@ -36,7 +36,7 @@ Términos y definiciones comunes que se usan en la documentación para desarroll
 
 | Término | Definición |
 | --- | --- |
-| [Blazor](../get-started/get-started-overview.md) | Marco web gratuito y de código abierto que permite a los desarrolladores crear aplicaciones web con C# y HTML. Lo está desarrollando Microsoft. |
+| [Blazor](../get-started/get-started-overview.md) | A free and open-source web framework that enables developers to create web apps using C# and HTML. It's being developed by Microsoft. |
 | [Bíceps](../toolkit/provision.md) | Lenguaje declarativo, lo que significa que los elementos pueden aparecer en cualquier orden. A diferencia de los lenguajes imperativos, el orden de los elementos no afecta a cómo se procesa la implementación. |
 | [Bot](../bots/what-are-bots.md) | Un bot es una aplicación que ejecuta tareas repetitivas programadas. <br> **Vea también**: [Bot de conversación](#c); [Bot de chat](#c) |
 | [Bot emulador](../bots/how-to/debug/locally-with-an-ide.md#use-the-bot-emulator) | Una aplicación de escritorio que le permite probar y depurar bots, ya sea de forma local o remota. |
@@ -78,7 +78,7 @@ Términos y definiciones comunes que se usan en la documentación para desarroll
 
 | Término | Definición |
 | --- | --- |
-| [Cuenta de desarrollador de E5](../toolkit/accounts.md) | Suscripción de desarrollador de E5 para crear aplicaciones para ampliar Microsoft 365. Incluye 25 licencias de usuario, incluido el administrador, solo con fines de desarrollo.  <br>**Vea también**: [Cuenta de Microsoft 365](#m) |
+| [Cuenta de desarrollador de E5](../toolkit/tools-prerequisites.md#accounts-to-build-your-teams-app) | Suscripción de desarrollador de E5 para crear aplicaciones para ampliar Microsoft 365. Incluye 25 licencias de usuario, incluido el administrador, solo con fines de desarrollo.  <br>**Vea también**: [Cuenta de Microsoft 365](#m) |
 | [Punto de entrada](../concepts/app-fundamentals-overview.md) | Un punto de acceso, como equipo, canal y chat, para una aplicación de Teams donde los usuarios pueden usar la aplicación. |
 | [Entorno](../toolkit/teamsfx-multi-env.md) | Una característica del kit de herramientas de Teams que le permite crear y usar varios entornos de desarrollo para el proyecto de aplicación. Hay dos entornos de desarrollo que el kit de herramientas de Teams crea de forma predeterminada, el entorno local y el entorno de desarrollo. <br>**Vea también**: [Entorno local](#l); [Entorno de desarrollo](#d) |
 
@@ -104,7 +104,7 @@ Términos y definiciones comunes que se usan en la documentación para desarroll
 | --- | --- |
 | [Proveedor de identidad](../concepts/authentication/authentication.md) | Entidad que almacena y proporciona credenciales al usuario. También permite a los usuarios registrarse por sí mismos.  <br>**Vea también**: [Autenticación](#a) |
 | [Webhook entrante](../webhooks-and-connectors/how-to/add-incoming-webhook.md) | Permite que una aplicación externa comparta contenido en canales de Teams. Estos webhooks se usan como herramientas de seguimiento y notificación. <br>**Vea también**: [Webhook](#w); [Webhook saliente](#o) |
-| [Experiencia de la aplicación durante la reunión](../apps-in-teams-meetings/meeting-app-extensibility.md#in-meeting-app-experience) | Una fase del ciclo de vida de una reunión de Teams. Con la experiencia de la aplicación durante la reunión, puedes interactuar con los participantes durante la reunión mediante las aplicaciones y el cuadro de diálogo durante la reunión.<br>**Vea también**: [Ciclo de vida de la reunión](#m) |
+| [Experiencia de la aplicación durante la reunión](../apps-in-teams-meetings/meeting-app-extensibility.md#in-meeting-app-experience) | A stage of Teams meeting lifecycle. With the in-meeting app experience, you can engage participants during the meeting by using apps and the in-meeting dialog box. <br>**Vea también**: [Ciclo de vida de la reunión](#m) |
 
 ## <a name="l"></a>L
 
@@ -113,7 +113,7 @@ Términos y definiciones comunes que se usan en la documentación para desarroll
 | [Apertura de vínculos](../messaging-extensions/how-to/link-unfurling.md) | Característica que se usa con la extensión de mensajería y la reunión para expandir vínculos pegados en un área de redacción de mensajes. Los vínculos se expanden para mostrar información adicional sobre el vínculo en tarjetas adaptables o en la vista de la fase de reunión. |
 | [Entorno local](../toolkit/TeamsFx-multi-env.md#create-new-environment) | Un entorno de desarrollo predeterminado creado por el kit de herramientas de Teams.  <br>**Vea también**: [Entorno](#e); [Entorno de desarrollo](#d) |
 | [Área de trabajo local](../sbs-gs-spfx.yml) | La opción predeterminada para ejecutar y depurar una aplicación de Teams en Visual Studio Code que se crea con SPFx. <br>**Vea también**: [Workbench](#w); [Teams workbench](#t) |
-| [Funcionalidad de ubicación](../concepts/device-capabilities/location-capability.md) | Una funcionalidad de dispositivo que puede integrar con la aplicación para conocer la ubicación geográfica del usuario de la aplicación para obtener una experiencia de colaboración mejorada. Esta funcionalidad actualmente solo está disponible para los clientes de dispositivos móviles de Teams.<br>**Vea también**: [Funcionalidad](#c); [Funcionalidad multimedia](#m); [Funcionalidad del dispositivo](#d); [Teams Móvil](#t) |
+| [Funcionalidad de ubicación](../concepts/device-capabilities/location-capability.md) | A device capability that you can integrate with your app to know the geographical location of the app user for an enhanced collaborative experience. This feature is currently available only for Teams mobile clients only. <br>**Vea también**: [Funcionalidad](#c); [Funcionalidad multimedia](#m); [Funcionalidad del dispositivo](#d); [Teams Móvil](#t) |
 | [Aplicaciones de código bajo](../samples/teams-low-code-solutions.md) | Una aplicación personalizada de Teams creada desde cero con Microsoft Power Platform que requiere poca o ninguna codificación, y que se puede desarrollar e implementar rápidamente. |
 
 ## <a name="m"></a>M
@@ -124,11 +124,11 @@ Términos y definiciones comunes que se usan en la documentación para desarroll
 | [Bot de reunión](../bots/calls-and-meetings/calls-meetings-bots-overview.md) | Bots que interactúan con llamadas y reuniones de Teams mediante el uso compartido de pantalla, vídeo y voz en tiempo real. <br>**Vea también**: [Bot de llamada](#c); [Bot de chat](#c) |
 | [Ciclo de vida de la reunión](../apps-in-teams-meetings/meeting-app-extensibility.md#meeting-lifecycle) | Abarca desde la experiencia de aplicación previa a la reunión, en la reunión y posterior a la reunión. Se pueden integrar pestañas, bots y extensiones de mensajería en cada fase del ciclo de vida de la reunión. <br>**Vea también**: [Experiencia en la reunión](#i) |
 | [Fase de reunión](../sbs-meetings-stage-view.yml) | Una característica de la aplicación de extensión de reunión. Es un espacio compartido accesible para todos los participantes durante la reunión. Ayuda a los participantes a interactuar y colaborar con el contenido de la aplicación en tiempo real. <br>**Vea también**: [Vista fase](#s) |
-| [Extensión de mensajería](../messaging-extensions/what-are-messaging-extensions.md) | Las extensiones de mensajería son métodos abreviados para insertar contenido de la aplicación o realizar una acción en un mensaje. Puede usar una extensión de mensajería sin salir de la conversación. <br>**Vea también**: [Comandos de búsqueda](#s); [Comandos de acción](#a) |
+| [Extensión de mensajería](../messaging-extensions/what-are-messaging-extensions.md) | Message extensions are shortcuts for inserting app content or acting on a message. You can use a message extension without navigating away from the conversation. <br>**Vea también**: [Comandos de búsqueda](#s); [Comandos de acción](#a) |
 | [Extensión de reunión](../apps-in-teams-meetings/design/designing-apps-in-meetings.md) | Una aplicación diseñada para usarse durante el ciclo de vida de la reunión para que sea más productiva, como pizarra, panel y mucho más. |
 | [Cuenta de Microsoft 365](../toolkit/accounts.md#microsoft-365-developer-account-types) | La cuenta de Microsoft 365 incluye 25 licencias de usuario, incluido el administrador, solo con fines de desarrollo. |
 | [Programa de desarrolladores de Microsoft 365](../toolkit/tools-prerequisites.md)| El programa para desarrolladores de Microsoft 365 le ayuda a crear aplicaciones que amplían Microsoft 365. |
-| [Explorador de Microsoft Graph](../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md) | La puerta de enlace a los datos y la inteligencia a Microsoft 365.Proporciona un modelo de programación unificado que puede usar para aprovechar la gran cantidad de datos en Microsoft 365, Enterprise Mobility + Security y Windows 10. |
+| [Explorador de Microsoft Graph](../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md) | The gateway to data and intelligence in Microsoft 365. It provides a unified programmability model that you can use to access data in Microsoft 365, Windows 10, and Enterprise Mobility + Security. |
 | [Microsoft Teams](../overview.md) | Microsoft Teams es un software de colaboración en grupo que se puede usar para ayudar a los equipos a trabajar juntos de forma remota. |
 | [Plataforma de Microsoft Teams](../concepts/app-fundamentals-overview.md) | La plataforma para desarrolladores de Microsoft Teams facilita a los desarrolladores la integración de sus propias aplicaciones y servicios con Teams. |
 | [Microsoft Teams de interfaz de usuario](../concepts/design/design-teams-app-ui-templates.md#microsoft-teams-ui-library) | La biblioteca de interfaz de usuario de Microsoft Teams le ayuda a ver y probar plantillas de interfaz de usuario de Teams individuales y componentes relacionados en el explorador. |
@@ -151,7 +151,7 @@ Términos y definiciones comunes que se usan en la documentación para desarroll
 | [Aplicación personal](../concepts/design/personal-apps.md) | Una aplicación personal es una aplicación de Teams con un ámbito personal. Se centra en las interacciones con un único usuario. Puede ser un bot de conversación para participar en conversaciones uno a uno con un usuario o una pestaña personal que proporcione una experiencia web insertada, o ambas. <br>**Vea también**: [Aplicación compartida](#s) |
 | [Power Virtual Agents](../bots/how-to/add-power-virtual-agents-bot-to-teams.md) | Una solución de interfaz gráfica guiada sin código que permite a todos los miembros de su equipo crear bots de chat enriquecidos y conversacionales que se integren fácilmente con la plataforma de Teams. |
 | [Mensajes proactivos](../bots/how-to/conversations/send-proactive-messages.md) | Un mensaje enviado por un bot que no está en respuesta a una solicitud de un usuario, como mensajes de bienvenida, notificaciones y mensajes programados. |
-| [Aprovisionar](../toolkit/provision.md) | Proceso que crea recursos en Azure y Microsoft 365 para la aplicación, pero no se copia ningún código (HTML, CSS, JavaScript, etc.) en los recursos. Es un requisito previo para la implementación.<br>**Vea también**: [Implementar](#d) |
+| [Aprovisionar](../toolkit/provision.md) | A process that creates resources in Azure and Microsoft 365 for your app, but no code (HTML, CSS, JavaScript, etc.) is copied to the resources. It's a prerequisite to deployment. <br>**Vea también**: [Implementar](#d) |
 
 ## <a name="r"></a>R
 
@@ -168,12 +168,12 @@ Términos y definiciones comunes que se usan en la documentación para desarroll
 | [Comandos de búsqueda](../messaging-extensions/how-to/search-commands/define-search-command.md) | Tipo de aplicación de extensión de mensajería que permite a los usuarios buscar sistemas externos e incluir el resultado de la búsqueda en un mensaje mediante una tarjeta. <br>**Vea también**: [Extensiones de mensajería](#m); [Comandos de acción](#a) |
 | [Flujo de trabajo secuencial](../task-modules-and-cards/cards/universal-actions-for-adaptive-cards/sequential-workflows.md) | Flujo de trabajo que permite a un bot llevar a cabo una conversación con un usuario en función de la respuesta del usuario. |
 | [Aplicación compartida](../concepts/extensibility-points.md#shared-app-experiences) | Una aplicación que existe en un equipo, canal o chat donde los usuarios pueden colaborar e interactuar. <br>**Vea también:** Aplicación personal |
-| [Colección de sitios de SharePoint](../sbs-gs-spfx.yml) | Un sitio de colecciones para las aplicaciones de SharePoint. Debe tener una cuenta de administrador para este sitio para poder implementar la aplicación basada en SPFx en el sitio de SharePoint.<br>**Vea también**: SPFx |
+| [Colección de sitios de SharePoint](../sbs-gs-spfx.yml) | A collection site for SharePoint apps. You need to have an administrator account for this site before you can deploy your SPFx-based app on the SharePoint site. <br>**Vea también**: SPFx |
 | [Instalación de prueba](../toolkit/publish.md#publish-to-individual-scope-or-sideload-permission) | Proceso en el que se carga una aplicación de Teams al cliente de Teams para probarla en el entorno de Teams antes de distribuirla. |
 | [SidePanel](../sbs-meetings-sidepanel.yml) | Característica de la aplicación de reunión de Teams que le permite personalizar experiencias en una reunión que permiten a los organizadores y moderadores tener un conjunto diferente de vistas y acciones. |
 | [SPFx](../sbs-gs-spfx.yml) | SharePoint Framework (SPFx) es un modelo de desarrollo para crear soluciones del lado cliente para Microsoft Teams y SharePoint. |
 | SSO | Acrónimo de Inicio de sesión único, un método de autenticación en el que un usuario necesita iniciar sesión en un servicio independiente de una plataforma de software (como Microsoft 365) solo una vez. Después, el usuario puede acceder a todos los servicios sin tener que volver a realizar la autenticación. <br>**Vea también**: [Autenticación](#a) |
-| [Vista de fase](../sbs-meetings-stage-view.yml) | Un componente de interfaz de usuario que le permite representar el contenido que se abre en pantalla completa en Teams y se ancla como una pestaña. Se invoca para mostrar contenido web dentro de Teams. Tenga en cuenta que *no* es lo mismo que la fase de reunión. <br>**Vea también**: [Fase de reunión](#m) |
+| [Vista de fase](../sbs-meetings-stage-view.yml) | A user interface component that lets you render the content that is opened in full screen in Teams and pinned as a tab. It's invoked to surface web content within Teams. Note that it is *not* the same as meeting stage. <br>**Vea también**: [Fase de reunión](#m) |
 | [Aplicación independiente](../samples/integrating-web-apps.md) | Una aplicación de página única o grande y compleja. El usuario puede usar algunos aspectos de él en Teams. <br>**Vea también**: [Colaboración aap](#c) |
 | [Búsqueda estática](../task-modules-and-cards/cards/dynamic-search.md) | Método de búsqueda de escritura anticipada que permite a los usuarios buscar desde valores especificados previamente en la carga de tarjetas adaptables. <br>**Vea también**: [Búsqueda dinámica](#d) |
 | [Directrices de validación de la tienda](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) | Un conjunto de directrices específicas de Teams para validar una aplicación antes de que se pueda enviar a la tienda de Teams. <br>**Vea también**: [Tienda de Teams](#t) |
@@ -186,9 +186,9 @@ Términos y definiciones comunes que se usan en la documentación para desarroll
 | [Chat de pestaña](../tabs/how-to/conversational-tabs.md) | Tipo de pestaña que permite a un usuario tener una experiencia de conversación centrada en pestañas dinámicas. |
 | [Módulos de tareas](../task-modules-and-cards/what-are-task-modules.md) | Una característica de la aplicación de Teams para crear un elemento emergente modal para completar tareas, mostrar vídeos o panel. |
 | [Discusión del subproceso](../tabs/design/tabs.md#thread-discussion) | Una conversación publicada en un canal o chat entre usuarios. <br>**Vea también** [Conversación](#c); [Canal](#c) |
-| [Teams](../overview.md) | Microsoft Teams es la aplicación más sofisticada de mensajería para su organización. Se trata de un espacio de trabajo pensado para la colaboración en tiempo real y la comunicación, las reuniones y el uso compartido de archivos y aplicaciones. |
+| [Teams](../overview.md) | Microsoft Teams is the ultimate message app for your organization. It's a workspace for real-time collaboration and communication, meetings, file and app sharing. |
 | [Kit de herramientas de Teams](../toolkit/teams-toolkit-fundamentals.md) | El kit de herramientas de Microsoft Teams le permite crear aplicaciones personalizadas de Teams directamente desde el entorno de Visual Studio Code.  |
-| [TeamsFx](../toolkit/teamsfx-cli.md) | TeamsFx es una interfaz de línea de comandos basada en texto que acelera el desarrollo de aplicaciones de Teams. También se denomina CLI de TeamsFx.|
+| [TeamsFx](../toolkit/teamsfx-cli.md) | TeamsFx is a text-based command line interface that accelerates Teams application development. It's also called TeamsFx CLI.|
 | [TeamsFx SDK](../toolkit/teamsfx-sdk.md) | El SDK de TeamsFx está preconfigurado en un proyecto con scaffolding mediante el kit de herramientas de TeamsFx o la CLI. |
 | [SDK de TeamsJS](../tabs/how-to/using-teams-client-sdk.md) | El SDK de TeamsJS le permite crear experiencias hospedadas en Teams. A partir de TeamsJS v.2.0.0, puede ampliar las aplicaciones de Teams para que se ejecuten en Outlook y Office. |
 | [Teams para dispositivos móviles](../concepts/design/plan-responsive-tabs-for-teams-mobile.md) | Microsoft Teams está disponible como una aplicación móvil. |
@@ -213,7 +213,7 @@ Términos y definiciones comunes que se usan en la documentación para desarroll
 
 | Término | Definición |
 | --- | --- |
-| [URL del sitio web](../tabs/design/tabs-mobile.md) | Propiedad del archivo de manifiesto de la aplicación (`websiteUrl`) que vincula la aplicación al sitio web de la organización o a la página de aterrizaje del producto correspondiente. Es una configuración obligatoria para el cliente de dispositivos móviles de Teams. <br>**Vea también**: [Manifiesto de la aplicación](#a); [Teams para dispositivos móviles](#t) |
+| [URL del sitio web](../tabs/design/tabs-mobile.md) | A property in the app manifest file (`websiteUrl`) that links the app to the website of the organization or landing page of the relevant product. It's a mandatory configuration for Teams mobile client. <br>**Vea también**: [Manifiesto de la aplicación](#a); [Teams para dispositivos móviles](#t) |
 | [Aplicación web](../samples/integrate-web-apps-overview.md) | Una aplicación que se ejecuta en un servidor web. Se puede integrar con la Plataforma de Microsoft Teams. |
 | [Webhook](../webhooks-and-connectors/what-are-webhooks-and-connectors.md) | Es una característica de una aplicación de Teams que se usa para integrarla con aplicaciones externas. <br>**Vea también**: Webhook entrante; webhook saliente |
 | [Elemento web](../sbs-gs-spfx.yml) | Componente de interfaz de usuario que se usa para crear una página o un sitio en una aplicación de Teams creada con Visual Studio Code y SharePoint Framework. <br>**Vea también**: [SPFx](#s) |

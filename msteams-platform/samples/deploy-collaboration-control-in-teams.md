@@ -5,12 +5,12 @@ description: En este módulo, aprenderá a implementar la aplicación con el con
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
-ms.openlocfilehash: 0ea4f1c25a84ec1bcbefc379e5021815a5bea650
-ms.sourcegitcommit: 0bb822b30739e4a532a36764dad2dbf35a81ba29
+ms.openlocfilehash: 75a2aa9d09247ac152c31df02f2bb8d4fb507619
+ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67179409"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68027308"
 ---
 # <a name="deploy-collaboration-controls-to-microsoft-teams"></a>Implementación de controles de colaboración en Microsoft Teams
 
@@ -21,7 +21,7 @@ Actualmente, los controles de colaboración funcionan mejor en Microsoft Teams. 
 
 ## <a name="configure-the-app-for-teams"></a>Configuración de la aplicación para Teams
 
-La aplicación que ha creado en [la creación de una aplicación controlada por modelos](/samples/app-with-collaboration-controls.md#create-a-model-driven-application) solo tiene un único panel izquierdo y no hay comandos complejos. Por lo tanto, antes de agregar la aplicación a Teams, puede ocultar el panel izquierdo y hacer una vista de encabezado más comprensible.
+La aplicación que ha creado en [la creación de una aplicación controlada por modelos](~/samples/app-with-collaboration-controls.md#create-a-model-driven-application) solo tiene un único panel izquierdo y no hay comandos complejos. Por lo tanto, antes de agregar la aplicación a Teams, puede ocultar el panel izquierdo y hacer una vista de encabezado más comprensible.
 
 > [!NOTE]
 > No habilite los pasos siguientes si desea mostrar el panel izquierdo y el encabezado de alta densidad a los usuarios.
@@ -151,6 +151,6 @@ A continuación se requieren para permitir que los usuarios ejecuten las aplicac
 
 1. Seleccione los roles [creados en un rol de seguridad](#create-a-security-role).
 
-1. Seleccione **Guardar**.
+1. Haga clic en **Guardar**.
 
 Para obtener más información sobre los privilegios de rol, consulte [Configuración de la seguridad del usuario en un entorno](/power-platform/admin/database-security).

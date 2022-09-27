@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.localizationpriority: high
 ms.author: surbhigupta
 ms.topic: conceptual
-ms.openlocfilehash: ab456458c5e7ec5b71ae02c4071d86365f4805cf
-ms.sourcegitcommit: 2d2a08f671c3d19381403ba1af5dff1f06bb4dd6
+ms.openlocfilehash: bb85c9c7d00fea47796e171cc1a0175367462942
+ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2022
-ms.locfileid: "67338903"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68027084"
 ---
 # <a name="designing-your-microsoft-teams-message-extension"></a>Diseñe su extensión de mensajería de Microsoft Teams
 
@@ -117,7 +117,7 @@ En los siguientes escenarios se muestran las principales formas en las que los u
 
 ### <a name="insert-content-into-a-message"></a>Insertar contenido en un mensaje
 
-**1. Seleccionar una extensión de mensajería**. Los usuarios pueden buscar el contenido que quieran compartir desde el cuadro de redacción.
+**1. Select a message extension**. Users can search for the content they want to share from the compose box.
 
 #### <a name="mobile"></a>Móvil
 
@@ -127,7 +127,7 @@ En los siguientes escenarios se muestran las principales formas en las que los u
 
 :::image type="content" source="../../assets/images/messaging-extension/insert-content-search.png" alt-text="El ejemplo muestra a un usuario que busca contenido para insertar desde el cuadro de redacción.":::
 
-**2. Insertar contenido**. Una vez publicado, otros usuarios pueden responder o seleccionar el contenido para ver más información en su aplicación.
+**2. Insert content**. Once posted, others can reply or select the content to see more information in your app.
 
 #### <a name="mobile"></a>Móvil
 
@@ -161,7 +161,7 @@ Las extensiones de mensajería también permiten insertar enlaces enriquecidos d
 
 :::image type="content" source="../../assets/images/messaging-extension/paste-preview-link.png" alt-text="El ejemplo muestra a un usuario pegando un vínculo en el cuadro de diálogo.":::
 
-**2. Insertar contenido**. Si la aplicación reconoce la dirección URL en el cuadro de redacción, esta representará el vínculo como una tarjeta que proporciona una vista previa completa del contenido web. (Consulte [Directrices de diseño de tarjetas adaptables](../../task-modules-and-cards/cards/design-effective-cards.md) para más información).
+**2. Insert content**. If your app recognizes the URL in the compose box, it renders the link as a card that provides a content-rich preview of the web content. (See [Adaptive Cards design guidelines](../../task-modules-and-cards/cards/design-effective-cards.md) for more information.)
 
 #### <a name="mobile"></a>Móvil
 
@@ -230,7 +230,7 @@ Use estas recomendaciones para crear una experiencia de aplicación de calidad.
 
 #### <a name="do-integrate-with-single-sign-on"></a>Qué hacer: Integración con el inicio de sesión único
 
-SSO hace que el proceso de inicio de sesión sea más fácil, rápido y seguro. Además, si un usuario ya ha iniciado sesión en su aplicación personal, no tendrá que volver a iniciar sesión para acceder a la extensión de mensajería.
+SSO makes the sign-in process easier, faster, and secure. Also, if a user has already signed in to your personal app, they don’t have to also sign in again to access the message extension.
 
    :::column-end:::
    :::column span="":::
@@ -276,7 +276,7 @@ Si su extensión de mensajería requiere comandos de acción, mantenga el módul
 
 #### <a name="do-take-advantage-of-teams-color-tokens"></a>Qué hacer: Aprovechar los tokens de color de Teams
 
-Cada tema de Teams tiene su propia combinación de colores. Para controlar los cambios de tema de forma automática, use los <a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank">tokens de color (Fluent UI)</a> en su diseño.
+Cada tema de Teams tiene su propia combinación de colores. Para controlar los cambios de tema de forma automática, use los [tokens de color (Fluent UI)](https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme) en su diseño.
 
    :::column-end:::
    :::column span="":::

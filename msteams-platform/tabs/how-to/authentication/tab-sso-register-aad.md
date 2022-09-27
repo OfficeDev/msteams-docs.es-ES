@@ -4,12 +4,12 @@ description: Configure el inicio de sesión único (SSO) con Azure AD mediante l
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: pestañas de autenticación de teams Microsoft Azure Active Directory (Azure AD) ámbito de inquilino de SSO de token de acceso
-ms.openlocfilehash: 4cbe07c37a12ef3f2902c2a2760ed07ed99e4af6
-ms.sourcegitcommit: 937ea793889fc1efa9ec6a52374d5098be1117e0
+ms.openlocfilehash: 92b974840262fedb268aa7c160aa28fc0a33e2cb
+ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2022
-ms.locfileid: "67653202"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68027098"
 ---
 # <a name="register-your-tab-app-in-azure-ad"></a>Registrar la aplicación de pestaña en Azure AD
 
@@ -154,8 +154,8 @@ Para configurar el ámbito y autorizar aplicaciones cliente de confianza, necesi
     >
     >   | Si el nombre del recurso base usado es | La dirección URL será... | El formato es compatible con... |
     >   | --- | --- | --- |
-    >   | *demoapplication* | **<https://demoapplication.example.net>** | Todas las plataformas|
-    >   | *DemoApplication* | **<https://DemoApplication.example.net>** | Solo para escritorio, web e iOS. No es compatible con Android. |
+    >   | *demoapplication* | `https://demoapplication.example.net` | Todas las plataformas|
+    >   | *DemoApplication* | `https://DemoApplication.example.net` | Solo para escritorio, web e iOS. No es compatible con Android. |
     >
     >    Use la opción en minúsculas *demoapplication* como nombre de recurso base.
 
