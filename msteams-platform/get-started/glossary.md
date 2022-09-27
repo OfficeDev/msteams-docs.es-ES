@@ -3,12 +3,12 @@ title: 'Documentación para desarrolladores de Microsoft Teams: glosario'
 description: Obtenga información sobre los términos usados en la documentación para desarrolladores de Microsoft Teams
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: c8a9a663244803efb113c09857e21523218108d2
-ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
+ms.openlocfilehash: 53682fd717faf623c77b706d30896519e2754dae
+ms.sourcegitcommit: df3b507a3834fd7c9d4bb1d1098df267998414d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 09/27/2022
-ms.locfileid: "68027329"
+ms.locfileid: "68027515"
 ---
 # <a name="glossary"></a>Glosario
 
@@ -78,7 +78,7 @@ Términos y definiciones comunes que se usan en la documentación para desarroll
 
 | Término | Definición |
 | --- | --- |
-| [Cuenta de desarrollador de E5](../toolkit/tools-prerequisites.md#accounts-to-build-your-teams-app) | Suscripción de desarrollador de E5 para crear aplicaciones para ampliar Microsoft 365. Incluye 25 licencias de usuario, incluido el administrador, solo con fines de desarrollo.  <br>**Vea también**: [Cuenta de Microsoft 365](#m) |
+| [Cuenta de desarrollador de E5](../toolkit/tools-prerequisites.md) | Suscripción de desarrollador de E5 para crear aplicaciones para ampliar Microsoft 365. Incluye 25 licencias de usuario, incluido el administrador, solo con fines de desarrollo.  <br>**Vea también**: [Cuenta de Microsoft 365](#m) |
 | [Punto de entrada](../concepts/app-fundamentals-overview.md) | Un punto de acceso, como equipo, canal y chat, para una aplicación de Teams donde los usuarios pueden usar la aplicación. |
 | [Entorno](../toolkit/teamsfx-multi-env.md) | Una característica del kit de herramientas de Teams que le permite crear y usar varios entornos de desarrollo para el proyecto de aplicación. Hay dos entornos de desarrollo que el kit de herramientas de Teams crea de forma predeterminada, el entorno local y el entorno de desarrollo. <br>**Vea también**: [Entorno local](#l); [Entorno de desarrollo](#d) |
 
