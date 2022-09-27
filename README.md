@@ -1,4 +1,4 @@
-## <a name="about-microsoft-teams-and-the-docs"></a>Acerca de Microsoft Teams y los documentos
+## <a name="about-microsoft-teams-and-its-documentation"></a>Acerca de Microsoft Teams y su documentación
 
 Microsoft Teams es una plataforma de comunicaciones basada en la nube que combina diferentes servicios de colaboración, como chat, reuniones, llamadas y archivos. Teams está bien integrado en Microsoft 365 y combina varias cargas de trabajo en un sistema unificado de comunicación y colaboración. Además, Teams ofrece funcionalidades de integración para otras herramientas y productos de terceros.
 
@@ -6,9 +6,9 @@ Obtenga documentación, código de ejemplo, tutoriales y mucho más para ayudarl
 
 ## <a name="how-to-contribute"></a>Cómo contribuir
 
-La documentación de Teams forma parte de la biblioteca de documentación técnica de Microsoft Docs. El contenido se organiza en grupos denominados docsets, cada uno de los cuales representa un grupo de documentos relacionados administrados como una sola entidad. Puede formular preguntas, proporcionar sugerencias o proporcionar actualizaciones. Consulte [cómo contribuir a la documentación de Teams](https://learn.microsoft.com/microsoftteams/platform/resources/teams-contributor-reference/).
+La documentación de Microsoft Teams forma parte de la biblioteca de documentación técnica de Microsoft Learn. El contenido se organiza en grupos denominados docsets, cada uno de los cuales representa un grupo de documentos relacionados administrados como una sola entidad. Puede formular preguntas, proporcionar sugerencias o proporcionar actualizaciones. Consulte [cómo contribuir a la documentación de Teams](https://learn.microsoft.com/microsoftteams/platform/resources/teams-contributor-reference/).
 
-Para contribuir a Microsoft Docs, consulte la [introducción a la guía de colaboradores](https://learn.microsoft.com/contribute/).
+Para contribuir a Microsoft Learn, consulte la [introducción a la guía de colaboradores](https://learn.microsoft.com/contribute/).
 
 Para más información sobre los estándares y la guía de estilo de Microsoft, consulte [Guía de estilo de Microsoft](https://learn.microsoft.com/style-guide/welcome/).
 

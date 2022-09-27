@@ -3,23 +3,23 @@ title: Empaquetar la aplicación
 description: Obtenga información sobre cómo empaquetar la aplicación de Microsoft Teams con iconos para probar, cargar y publicar en la tienda.
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.openlocfilehash: 5d46eec7f32ccb18e861f32769bb2ecb87842abf
-ms.sourcegitcommit: 90e6397684360c32e943eb711970494be355b225
-ms.translationtype: HT
+ms.openlocfilehash: 03f1df6af15b5e07dd71bcec22838ecff53d4c7f
+ms.sourcegitcommit: 377a4b712b50a211851aeecc1029414939945390
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2022
-ms.locfileid: "66695323"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68044689"
 ---
 # <a name="create-teams-app-package"></a>Crear un paquete de aplicación de Teams
 
-Necesita un paquete de aplicación, pero planea distribuir la aplicación de Microsoft Teams. Un paquete válido es un archivo ZIP que contiene lo siguiente:
+Necesita un paquete de aplicación para distribuir la aplicación de Microsoft Teams. Un paquete válido es un archivo ZIP que contiene lo siguiente:
 
 * **Manifiesto de aplicación**: describe cómo se configura la aplicación, incluidas sus funcionalidades, los recursos necesarios y otros atributos importantes.
 * **Iconos de la aplicación**: cada paquete requiere un icono de color y contorno para la aplicación.
 
 ## <a name="teams-doesnt-host-your-app"></a>Teams no hospeda su aplicación
 
-Cuando un usuario instala la aplicación en Teams, instala un paquete de aplicación que solo contiene un archivo de configuración (también conocido como manifiesto de aplicación) y los iconos de la aplicación. La lógica y el almacenamiento de datos de la aplicación se hospedan en otro lugar, como localhost durante el desarrollo y Azure Web Services. Teams accede a estos recursos a través de HTTPS.
+Cuando un usuario instala la aplicación en Teams, instala un paquete de aplicación que solo contiene un archivo de configuración (también conocido como manifiesto de aplicación) y los iconos de la aplicación. La lógica y el almacenamiento de datos de la aplicación se hospedan en otro lugar, por ejemplo, en localhost durante el desarrollo y en los servicios web de Azure. Teams accede a estos recursos a través de HTTPS.
 
 :::image type="content" source="../../assets/images/teams-app-host.png" alt-text="Ilustración que muestra el hospedaje de aplicaciones para aplicación de Teams":::
 

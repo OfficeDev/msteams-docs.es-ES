@@ -5,12 +5,12 @@ ms.topic: how-to
 author: surbhigupta
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: ab833f3472091d6727ad584c923a83cae2842c0c
-ms.sourcegitcommit: 024be23411bc0f2573d19f48f9266021f9b76f0d
+ms.openlocfilehash: ffa7cdb0fabf07254c90590fe94fe2347c35658c
+ms.sourcegitcommit: 377a4b712b50a211851aeecc1029414939945390
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2022
-ms.locfileid: "67488288"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68044682"
 ---
 # <a name="upload-your-app-in-teams"></a>Cargar la aplicación en Microsoft Teams
 
@@ -21,7 +21,7 @@ Puede cargar lateralmente las aplicaciones de Microsoft Teams sin tener que publ
 * Ha creado una aplicación para un pequeño conjunto de usuarios, como el grupo de trabajo.
 
 > [!NOTE]
-> Al realizar la instalación de prueba de la aplicación varias veces se muestra más de una instancia para las extensiones de mensajería.
+> La transferencia local de la aplicación de extensión de mensajería varias veces muestra más de una instancia para las extensiones de mensajería.
 
 > [!IMPORTANT]
 >
@@ -50,21 +50,22 @@ Puede transferir localmente la aplicación a un equipo, chat, reunión o para su
 1. Seleccione el archivo .zip del paquete de la aplicación.
 1. Agregue la aplicación a Teams según sus necesidades:</br>
 
-   a. Seleccione **Agregar** para agregar su aplicación personal.</br> B. Use el menú desplegable para agregar la aplicación a un equipo o chat.
+   a. Select **Add** to add your personal app.</br>
+   b. Use the dropdown menu to add your app to a Team or chat.
 
     :::image type="content" source="~/assets/images/publish-app/teams-app-detail.png" alt-text="Descripción de la aplicación":::
 
 ## <a name="troubleshoot"></a>Solucionar problemas
 
-Si la aplicación no se puede transferir localmente o hay problemas para cargarla, compruebe las siguientes opciones:
+Si la aplicación no puede transferirse localmente o encuentra algún problema para cargar, compruebe las siguientes opciones:
 
 1. Asegúrese de haber seguido todas las instrucciones para [crear el paquete de la aplicación](../../concepts/build-and-test/apps-package.md).
 1. [Validar el paquete de la aplicación](https://dev.teams.microsoft.com/appvalidation.html).
-1. Asegúrese de que el manifiesto de la aplicación coincide con el último [esquema](../../resources/schema/manifest-schema.md).
+1. Asegúrese de que el manifiesto de la aplicación coincide con el [esquema](../../resources/schema/manifest-schema.md) más reciente.
 
 ## <a name="manage-your-apps"></a>Administrar las aplicaciones
 
-Administrar las aplicaciones permite a los usuarios tener un lugar dedicado para administrar, actualizar y quitar sus aplicaciones, permisos y suscripciones en el cliente de Teams. Los usuarios pueden instalar las aplicaciones desde **Administrar las aplicaciones**.
+Manage your apps allows users to have a dedicated place to manage, update and remove their apps, permissions, and subscriptions on the Teams client. The users can install the apps from **Manage your apps**.
 
 ### <a name="access-your-app"></a>Acceder a la aplicación
 
@@ -92,7 +93,7 @@ Si hay una actualización disponible para la aplicación, la opción **Actualiza
 
      :::image type="content" source="~/assets/images/publish-app/update-available.png" alt-text="Actualizar la aplicación Teams.":::
 
-1. Seleccione **Ver actualización**, aparecerá una ventana con la opción de actualización.
+1. Seleccione **Ver actualización**. Aparece una ventana con la opción de actualización.
 1. Seleccione el botón **Actualizar** para actualizar la aplicación.
 
      :::image type="content" source="~/assets/images/publish-app/update-window.png" alt-text="Actualizar la aplicación Teams en administrar aplicaciones.":::
@@ -115,7 +116,7 @@ Para quitar la aplicación de Teams, siga estos pasos:
 
 > [!NOTE]
 >
-> * No puede eliminar por completo la actividad del bot personal. Si elimina la aplicación y la vuelve a agregar, la nueva comunicación con el bot se anexa a la conversación anterior con él.
+> * You can't remove personal bot activity entirely. If you remove the app and add it again, new communication with the bot appends to the previous conversation with it.
 > * Actualmente, no puede migrar la aplicación personalizada a la tienda de Teams. Si desea mostrar su aplicación en la tienda de Teams, consulte [Publicar su aplicación en la tienda de Microsoft Teams](appsource/publish.md).
 
 ## <a name="next-step"></a>Paso siguiente
