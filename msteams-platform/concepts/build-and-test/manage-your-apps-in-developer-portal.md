@@ -4,12 +4,12 @@ description: En este artículo, aprenderá a configurar, distribuir y administra
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 82b755408aa633768ff5a0c01a1c347cadb6a0a7
-ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
+ms.openlocfilehash: 02b9272c2c0d325501c28d150ac728230ac65255
+ms.sourcegitcommit: 9ebb516ac448627e1deb42e18703791fc2ad583d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2022
-ms.locfileid: "67435079"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68098921"
 ---
 # <a name="manage-your-apps-in-developer-portal"></a>Administre sus aplicaciones en el Portal para desarrolladores
 
@@ -56,7 +56,7 @@ En la sección **Configurar** , puede ver los siguientes componentes para admini
   * Extensión de reunión
   * Notificación de fuente de actividad
 * **Permisos**: esta sección le permite conceder permisos de dispositivo, permisos de equipo, permisos de chat o reunión y permisos de usuario para la aplicación.
-* **Inicio de sesión único**: puede configurar la aplicación para autenticar a los usuarios con el inicio de sesión único (SSO).
+* **Inicio de sesión único**: bot registrado en Azure AD admite Sign-On único (SSO). Si un bot está registrado en Bot Framework Portal (o en el Portal para desarrolladores en Bot Management), esos bots no admiten el inicio de sesión único y debe registrar el bot en Azure AD para admitir el inicio de sesión único. Para un bot registrado en Azure AD, agregue el **URI del identificador de aplicación**. Para obtener el URI del identificador de aplicación de Azure AD, consulte Uso de la [autenticación de SSO para bots](../../bots/how-to/authentication/auth-aad-sso-bots.md).
 * **Idiomas**: puede configurar o cambiar el idioma de la aplicación.
 * **Dominio**: puede agregar los dominios para cargar las aplicaciones en el cliente de Teams (por ejemplo: *.example.com).
 
