@@ -1,16 +1,16 @@
 ---
 title: Versión preliminar de prueba para aplicaciones monetizadas
 author: v-ypalikila
-description: Aprenda a crear y probar las ofertas de la versión preliminar de SaaS para la aplicación Teams antes de publicar la oferta. Puede probar la experiencia de compra de un extremo a otro para sus aplicaciones monetizadas en Teams.
+description: Cree y pruebe las ofertas de la versión preliminar de SaaS para la aplicación Teams antes de publicar la oferta. Cree un identificador de oferta en versión preliminar, configure la aplicación con el identificador de la oferta en versión preliminar y realice la transferencia local.
 ms.topic: conceptual
 ms.author: v-ypalikila
 ms.localizationpriority: high
-ms.openlocfilehash: 3637ca7d8c488b106ec570ea75cdc67b44d90600
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
-ms.translationtype: HT
+ms.openlocfilehash: 98b9876a93fe6040cf66a16475fe7fdacf98a520
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558747"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100794"
 ---
 # <a name="test-preview-for-monetized-apps"></a>Versión preliminar de prueba para aplicaciones monetizadas
 
@@ -33,13 +33,13 @@ Puede generar el identificador de la oferta de versión preliminar desde el vín
       :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-monetized-apps-preview-offer-id.png" alt-text="Id. de oferta de versión preliminar" :::
 
     > [!NOTE]
-    > A diferencia de un identificador de oferta pública, el identificador de la oferta de versión preliminar se puede reconocer con el sufijo *-preview*. Por ejemplo, **publisherId.offerId-preview**.
+    > Unlike a public offer ID, the Preview offer ID can be recognized with the *-preview* suffix. For example, **publisherId.offerId-preview**.
 
 ## <a name="configure-your-app-with-the-preview-offer-id"></a>Configuración de la aplicación con el identificador de la oferta de versión preliminar
 
 Antes de empezar, inicie sesión en el **Portal para desarrolladores** con una cuenta de desarrollador con **público de versión preliminar** para que los usuarios vean sus planes de suscripción en la tienda de Teams.
 
-Después de generar el identificador de la oferta de versión preliminar, vincule el identificador de la oferta a la aplicación de Teams. Para vincular el identificador de la oferta:
+After you've generated your Preview offer ID, link the offer ID to your Teams app. To link the offer ID:
 
 1. Vaya al [Portal para desarrolladores](https://dev.teams.microsoft.com/) e inicie sesión con sus credenciales de desarrollador.
 1. Seleccione **Aplicaciones** en el panel izquierdo.

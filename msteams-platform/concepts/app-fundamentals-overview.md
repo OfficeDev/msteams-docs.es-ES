@@ -1,22 +1,22 @@
 ---
 title: Información general sobre el planeamiento de la aplicación
 author: heath-hamilton
-description: Presente los elementos de la planificación de una aplicación, comprendiendo los casos de uso, las funcionalidades de la aplicación y otras características de Teams.
+description: Descripción de las características de uso y aplicaciones de Microsoft Teams, asignar casos de uso, planear pestañas con capacidad de respuesta para dispositivos móviles. Conozca las características y la disponibilidad de Teams para GCC, GCC-High y DOD.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: c859c20c900b4fcf8a5797c79881b0aba0a86b93
-ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
-ms.translationtype: HT
+ms.openlocfilehash: eb72d4296ee6b91bae1775ad79eef06139abb59e
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "67058245"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100423"
 ---
 # <a name="plan-your-app-with-teams-features"></a>Planear la aplicación con las características de Teams
 
 Crear una aplicación impresionante para Teams consiste en encontrar la combinación adecuada de características para satisfacer las necesidades de los usuarios. El diseño, las características y las funcionalidades de una aplicación se derivan de este propósito.
 
-En esencia, Teams es una plataforma de colaboración. También es una plataforma social, es nativamente multiplataforma, se sitúa en el centro de Office 365 y ofrece un lienzo personal para que usted pueda crear aplicaciones.
+At its heart, Teams is a collaboration platform. It's also a social platform, is natively cross-platform, sits at the heart of Office 365, and offers a personal canvas for you to create apps.
 
 En esta sección, aprenderá a:
 
@@ -76,7 +76,7 @@ En la tabla siguiente se incluyen las características y la disponibilidad de Te
 |-------------|---------|---|---|
 | Aplicaciones propiedad de Teams como en aplicaciones desarrolladas internamente | ✔️ La aplicación está habilitada si tiene GCC | ✔️ La aplicación está habilitada si tiene GCC-High | ✔️ La aplicación está habilitada si tiene DOD |
 | Aplicaciones de Microsoft | ✔️ Aplicaciones de Microsoft compatibles con GCC | ✔️ Aplicaciones de Microsoft compatibles con GCC-High | ✔️ Aplicaciones de Microsoft compatibles con DOD |
-| Aplicaciones de 3P o de terceros | ✔️ Hay aplicaciones de terceros disponibles. Deshabilitado de forma predeterminada y el administrador de inquilinos usa su discreción para habilitarlo. | ❌ | ❌ |
+| Aplicaciones de 3P o de terceros | ✔️ Third-party apps are available. Disabled by default and tenant admin use their own discretion to enable it. | ❌ | ❌ |
 | Bots | ✔️ | ❌ | ❌ |
 | Aplicaciones de pestaña Personalizadas o Lob |  ✔️ | ✔️ | ✔️ |
 | Aplicaciones de instalación de prueba:  | ✔️ | ❌ | ❌ |

@@ -1,15 +1,15 @@
 ---
 title: Referencia del esquema de manifiesto de versión preliminar del desarrollador público
-description: Obtenga información sobre el archivo de manifiesto de ejemplo y la descripción de todos sus componentes compatibles con Microsoft Teams.
+description: Obtenga información sobre cómo habilitar la versión preliminar del desarrollador. Esquema de manifiesto de versión preliminar del desarrollador público de ejemplo para Microsoft Teams.
 ms.topic: reference
 ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: c019b686d27df4927ca721f36bacb5018c5ad596
-ms.sourcegitcommit: b9ec2a17094cb8b24c3017815257431fb0a679d0
+ms.openlocfilehash: 5122ab4c0d2a3668c8ca7568a3ce65ee69b980a8
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2022
-ms.locfileid: "67990927"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100297"
 ---
 # <a name="public-developer-preview-manifest-schema-for-teams"></a>Versión preliminar pública de esquema de manifiesto para desarrolladores de Teams
 

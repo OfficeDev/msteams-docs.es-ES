@@ -1,16 +1,16 @@
 ---
 title: Parámetros de clasificación de la tienda de Microsoft Teams
-description: Obtenga información sobre cómo la tienda de Microsoft Teams clasifica los resultados de búsqueda de aplicaciones en la tienda mediante un conjunto de parámetros de clasificación para ofrecer resultados de búsqueda relevantes a los usuarios.
+description: Descripción de los parámetros de clasificación de la tienda de Microsoft Teams. Los parámetros principales que se usan para determinar la ubicación de la aplicación son los datos de uso históricos, los datos de interacción del usuario, la calidad y los valores de la aplicación, la relevancia de la udiencia y la actualización de la aplicación.
 ms.topic: reference
 ms.localizationpriority: high
 author: v-ypalikila
 ms.author: v-ypalikila
-ms.openlocfilehash: 3a667247e0e67e4454effe2226e8775ac3fa0c3e
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
-ms.translationtype: HT
+ms.openlocfilehash: 558ac86814ddb61660ca2409418754fd33730c7b
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66190002"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100339"
 ---
 # <a name="microsoft-teams-store-ranking-parameters"></a>Parámetros de clasificación de la tienda de Microsoft Teams
 

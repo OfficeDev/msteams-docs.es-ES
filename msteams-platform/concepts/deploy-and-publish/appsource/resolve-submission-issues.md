@@ -1,18 +1,18 @@
 ---
 title: Resolución de problemas con el envío de la tienda
-description: En este artículo, aprenderá a solucionar y corregir problemas con el envío de la tienda de Microsoft Teams.
+description: Obtenga información sobre cómo solucionar y corregir problemas con el envío de la tienda de Microsoft Teams. Obtenga ayuda directamente de Microsoft, resuelva problemas y vuelva a enviar la aplicación.
 ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: medium
-ms.openlocfilehash: 5faf2d3622e88febe9522f5e2df6716ec2680cca
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: daa64a7f21071632b7c0728bf51829ca9540ebce
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503875"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100283"
 ---
-# <a name="resolve-issues-if-your-teams-store-submission-fails"></a>Resolución de problemas si se produce un error en el envío de la tienda de Teams
+# <a name="resolve-issues-if-your-teams-store-submission-fails"></a>Resolver problemas si se produce un error en el envío de la tienda de Microsoft Teams
 
 Las aplicaciones publicadas en la tienda de Microsoft Teams deben cumplir las [directrices de validación de la tienda Teams y las](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) [directivas de Marketplace comercial](/legal/marketplace/certification-policies).
 

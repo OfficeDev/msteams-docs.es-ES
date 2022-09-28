@@ -1,27 +1,27 @@
 ---
 title: Crear aplicaciones para la plataforma Microsoft Teams
 author: heath-hamilton
-description: Obtenga información general sobre cómo los desarrolladores pueden ampliar las características de Microsoft Teams con aplicaciones personalizadas.
+description: Obtenga información sobre Microsoft Teams, por qué debe crear aplicaciones en la plataforma Teams y cómo las aplicaciones de Teams ayudan a satisfacer las necesidades empresariales.
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 05/24/2021
-ms.openlocfilehash: f894262918004e643370963ad8e67ef3183927b8
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
-ms.translationtype: HT
+ms.openlocfilehash: 143f316a6f5153185e78b2efa4ec1db3dc9c1fa6
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558432"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100206"
 ---
 # <a name="teams-app-that-fits"></a>Aplicación de Teams adaptable
 
 Microsoft Teams ofrece una colección de aplicaciones proporcionadas por Microsoft o por servicios externos. Las aplicaciones de Teams pueden ser pestañas, bots, extensiones de mensajería o cualquier combinación de las tres. Estas aplicaciones hacen que la experiencia de colaboración en Teams sea aún mejor.
 
-Una aplicación puede ser personal o compartida. Una aplicación personal permite la comunicación individual y una aplicación compartida permite a varios usuarios compartir espacio de la aplicación para colaborar.
+Apps can be personal or shared. A personal app enables a one-on-one communication, and a shared app lets multiple users share app space to collaborate.
 
 ## <a name="driving-organizational-goals"></a>Impulsar objetivos de la organización
 
-La colaboración y la comunicación son clave para una organización. La comunicación concisa, la integración con los servicios necesarios y la accesibilidad sobre la marcha es el motivo por el que las organizaciones eligen con cada vez mayor frecuencia confiar en las aplicaciones.
+Collaboration and communication are key for an organization. Concise communication, integration with necessary services, and on-the-go accessibility is why organizations are increasingly choosing to rely on apps.
 
 Las organizaciones las usan para conectarse con sus clientes, proporcionar servicios y compartir información. Pero hay más. Las aplicaciones son un lugar de reunión para que las personas trabajen en conjunto. Una buena aplicación ayuda a crear un entorno que cohesiona tanto las necesidades externas como internas de la empresa.
 
@@ -47,7 +47,7 @@ Por ello, Teams es más adecuado para cumplir las necesidades de aplicación:
 
 - **Comunicación y colaboración**
 
-    La mayoría de las aplicaciones de Teams que tienen éxito implican extraer información de otro sistema, hablar sobre ello y permitir que los usuarios puedan tomar medidas. Teams permite realizar todas estas tareas directamente desde el cliente de Teams. Incluso podrá enviar la información a cierto público en función de un evento o acción en un sistema externo.
+    Most successful Teams apps involve pulling information from another system, having a conversation about it, and letting users to take action. Teams lets you do all these tasks directly within the Teams client. You can even push information to a targeted audience based on an event or action in an external system.
 
 - **Interacciones sociales**
 
@@ -57,7 +57,7 @@ Por ello, Teams es más adecuado para cumplir las necesidades de aplicación:
 
 - **Procesos empresariales comunes**
 
-    Las tareas como crear y compartir un informe de llamadas de ventas, realizar un seguimiento de la escala de tiempo del proyecto, reservar recursos comunes, enviar solicitudes del departamento de soporte técnico, son tareas repetitivas. En este sentido, las aplicaciones de Teams son eficaces.
+    Tasks like creating and sharing a sales call report, tracking your project timeline, reserving common resources, submitting help desk requests are repetitive tasks. They make for effective Teams apps.
 
     Además de automatizar los flujos de trabajo repetitivos, puede usar aplicaciones para solventar los problemas de comunicación. Un bot de chat puede reemplazar fácilmente a los correos electrónicos y llamadas telefónicas que se hacen a los departamentos de TI o recursos humanos.
 

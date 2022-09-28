@@ -1,16 +1,16 @@
 ---
 title: Crear un webhook entrante
 author: laujan
-description: En este módulo, aprenderá a agregar Webhook entrante a la aplicación de Teams y a publicar las solicitudes externas a Teams para usarlo
+description: Cree webhook entrante en la aplicación Teams y publique solicitudes externas en Teams. Quitar webhook entrante. Código de ejemplo(C#, Node.js) para enviar la tarjeta mediante el webhook entrante.
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 4dd4790f6ff545b01999be7911129a53ab12c72d
-ms.sourcegitcommit: b9ec2a17094cb8b24c3017815257431fb0a679d0
+ms.openlocfilehash: c439a7147ea4fe76e2cd1778396b4936a6313a23
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2022
-ms.locfileid: "67990948"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100479"
 ---
 # <a name="create-incoming-webhooks"></a>Crear webhooks entrantes
 

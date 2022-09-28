@@ -1,16 +1,16 @@
 ---
 title: Descripción de los casos de uso y las características de Teams de la aplicación
 author: heath-hamilton
-description: En este artículo, aprenderá las funcionalidades de la aplicación Microsoft Teams, planeará y comprenderá las características y la aplicación de Teams, así como los problemas de usuario que resolvería la aplicación de Teams.
+description: 'Obtenga información sobre las capacidades de aplicaciones de Microsoft Teaams: pestañas, bots, extensiones de reunión, extensiones de mensajes, conectores de webhook, experiencia de aplicación personal, experiencia de aplicación compartida.'
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 64eff648f1d44d5f7534083939822c26c4ae825f
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
-ms.translationtype: HT
+ms.openlocfilehash: 8a78fe23f244fc37d7bbeda5f854b3cbeb800303
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558446"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100458"
 ---
 # <a name="understand-your-use-cases"></a>Entender los casos de uso
 
@@ -31,7 +31,7 @@ Si va a cumplir los requisitos de usuario con la aplicación, primero debe compr
 
 ## <a name="microsoft-teams-app-features"></a>Características de aplicaciones de Microsoft Teams
 
-Hay varias maneras de ampliar Teams para que cada aplicación sea única. Oferta de características de aplicaciones de Teams:
+There are multiple ways to extend Teams so every app is unique. Teams app features offer:
 
 - [Capacidades de la aplicación](#app-capabilities)
 - [Ámbito de la aplicación](#app-scope)

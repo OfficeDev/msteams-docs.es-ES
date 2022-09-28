@@ -1,16 +1,16 @@
 ---
 title: Responder a la acción de envío del módulo de tareas
 author: surbhigupta
-description: En este módulo, aprenderá a responder al módulo de tareas para enviar la acción desde un comando de acción de extensión de mensajería con un mensaje proactivo y mucho más.
+description: Obtenga información sobre cómo responder a la acción de envío del módulo de tareas desde un comando de acción de extensión de mensaje con un mensaje proactivo. Defina comandos de búsqueda y responda a las búsquedas.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 8bb61750d9b8cc52008e30e3b37b901a018915e7
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 827c939080aa2eff182115966351356b0d71e3a9
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144029"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100486"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>Responder a la acción de envío del módulo de tareas
 
@@ -204,7 +204,7 @@ El método de respuesta es el mismo que [responder al evento inicial`fetchTask`]
 ## <a name="bot-response-with-adaptive-card"></a>Respuesta del bot con tarjeta adaptable
 
 > [!NOTE]
-> El requisito previo para obtener la respuesta del bot con una tarjeta adaptable es que debe agregar el objeto `bot` al manifiesto de la aplicación y definir el ámbito necesario para el bot. Use el mismo identificador que la extensión de mensaje para el bot.
+> The prerequisite to get the bot response with an Adaptive card is that you must add the `bot` object to your app manifest, and define the required scope for the bot. Use the same ID as your message extension for your bot.
 
 También puede responder a `submitAction` mediante la inserción de un mensaje con una tarjeta adaptable en el canal con un bot. El usuario puede obtener una vista previa del mensaje antes de enviarlo. Esto resulta útil en escenarios en los que se recopila información de los usuarios antes de crear una respuesta de tarjeta adaptable o cuando se actualiza la tarjeta después de que alguien interactúe con ella.
 
@@ -595,7 +595,7 @@ La sección siguiente es una descripción de las entidades de la matriz `OnBehal
 |`itemId`|Entero|Describe la identificación del elemento. Su valor debe ser `0`.|
 |`mentionType`|Cadena|Describe la mención de una “persona”.|
 |`mri`|Cadena|Identificador de recurso de mensaje (MRI) de la persona en cuyo nombre se envía el mensaje. El nombre del remitente del mensaje aparecería como”"\<user\> a \<bot name\>“.|
-|`displayName`|Cadena|Nombre de la persona. Se usa como reserva en caso de que la resolución de nombres no esté disponible.|
+|`displayName`|Cadena|Name of the person. Used as fallback in case name resolution is unavailable.|
   
 ## <a name="code-sample"></a>Ejemplo de código
 

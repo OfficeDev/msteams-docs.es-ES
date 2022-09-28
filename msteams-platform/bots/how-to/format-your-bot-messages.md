@@ -1,16 +1,16 @@
 ---
 title: Formatear los mensajes del bot
 author: surbhigupta
-description: En este módulo, aprenderá a agregar formato y estilos enriquecidos a los mensajes del bot, como tachado, lista ordenada y desordenada, hipervínculo, vínculo de imagen, etc.
+description: Obtenga información sobre cómo dar formato y aplicar estilo a los mensajes del bot, como tachado, lista ordenada y desordenada, hipervínculo o vínculo de imagen. Descripción de la compatibilidad multiplataforma.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 63c201e2126181793ce09a962b5352fb3418cff2
-ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
+ms.openlocfilehash: 4e3b777ba5e94c8bac541d0178122f16f218eba0
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2022
-ms.locfileid: "67363497"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100185"
 ---
 # <a name="format-your-bot-messages"></a>Formatear los mensajes del bot
 

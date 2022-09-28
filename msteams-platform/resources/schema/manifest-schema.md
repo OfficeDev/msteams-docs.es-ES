@@ -1,14 +1,14 @@
 ---
 title: Referencia del esquema de manifiesto
-description: En este artículo, tendrá el esquema de manifiesto para la referencia de Microsoft Teams, el esquema y el manifiesto completo de ejemplo.
+description: En este artículo, tendrá la versión más reciente del esquema de manifiesto público para la referencia, el esquema y el manifiesto completo de ejemplo de Microsoft Teams.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: b1795af69256eec27e34917cad0b24924f490083
-ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
+ms.openlocfilehash: 23bdb87bd1f5f3ea1fadb2527f64b5bebec0b157
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2022
-ms.locfileid: "68026972"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100171"
 ---
 # <a name="app-manifest-schema-for-teams"></a>Esquema del manifiesto de la aplicación de Teams
 

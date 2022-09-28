@@ -1,16 +1,16 @@
 ---
 title: Definir comandos de acción de extensión de mensajería
 author: surbhigupta
-description: En este módulo, aprenderá a definir comandos de acción de extensión de mensajería con el ejemplo de manifiesto de aplicación en Microsoft Teams.
+description: Aprenda a definir comandos de acción de extensión de mensajería con el ejemplo de manifiesto de aplicación en Microsoft Teams. Ejemplo (.NET, Node.js) cómo definir comandos de acción, crear módulo de tareas y responder a la acción de envío del módulo de tareas.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 45dbdabc744a58eb031c6e9a9f7415ecdf18cdcb
-ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
+ms.openlocfilehash: cb7d8512b6e8de980778733c39b19e7c1d63fae6
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2022
-ms.locfileid: "67604860"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100738"
 ---
 # <a name="define-message-extension-action-commands"></a>Definir comandos de acción de extensión de mensajería
 
@@ -77,7 +77,7 @@ Si la extensión de mensaje se invoca desde el cuadro de redacción o directamen
 
 ## <a name="add-the-action-command-to-your-app-manifest"></a>Agregar el comando de acción al manifiesto de la aplicación
 
-Para agregar el comando de acción al manifiesto de la aplicación, debe agregar un nuevo objeto `composeExtension` al nivel superior del JSON del manifiesto de aplicación. Puede hacerlo de una de las siguientes formas:
+To add the action command to the app manifest, you must add a new `composeExtension` object to the top level of the app manifest JSON. You can use one of the following ways to do so:
 
 * [Creación de un comando de acción mediante el Portal para desarrolladores](#create-an-action-command-using-developer-portal)
 * [Crear un comando de acción manualmente](#create-an-action-command-manually)
@@ -119,7 +119,7 @@ Para crear un comando de acción:
 
    :::image type="content" source="../../../assets/images/tdp/add-domain.PNG" alt-text="Captura de pantalla que muestra cómo agregar un dominio válido a la extensión de mensajería para las desplegadas de vínculos.":::
 
-1. Haga clic en **Guardar**.
+1. Seleccione **Guardar**.
 
    :::image type="content" source="../../../assets/images/tdp/add-a-command-save.PNG" alt-text="Captura de pantalla que muestra cómo guardar toda la configuración y los parámetros de la extensión de mensaje.":::
 
@@ -149,9 +149,9 @@ Si usa una lista estática de parámetros, también debe agregar los parámetros
 
 | Nombre de propiedad | Objetivo | ¿Es obligatoria? | Versión mínima del manifiesto |
 |---|---|---|---|
-| `parameters` | Esta propiedad describe la lista estática de parámetros para el comando. Usar solo cuando `fetchTask` es `false`. | No | 1.0 |
+| `parameters` | This property describes the static list of parameters for the command. Only use when `fetchTask` is `false`. | No | 1.0 |
 | `parameter.name` | Esta propiedad describe el nombre del parámetro. Esto se envía al servicio en la solicitud del usuario. | Sí | 1.0 |
-| `parameter.description` | Esta propiedad describe los propósitos del parámetro o el ejemplo del valor que se debe proporcionar. Este valor aparece en la interfaz de usuario. | Sí | 1.0 |
+| `parameter.description` | This property describes the parameter’s purposes or example of the value that should be provided. This value appears in the UI. | Sí | 1.0 |
 | `parameter.title` | Esta propiedad es un título o etiqueta de parámetro descriptivo corto. | Sí | 1.0 |
 | `parameter.inputType` | Esta propiedad se establece en el tipo de entrada requerido. Los valores posibles incluyen `text`, `textarea`, `number`, `date`, `time`, `toggle`. El valor predeterminado se establece en `text`. | No | 1.4 |
 

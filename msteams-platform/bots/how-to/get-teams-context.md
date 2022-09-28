@@ -1,16 +1,16 @@
 ---
 title: Obtención del contexto específico de Teams para un bot
 author: surbhigupta
-description: Obtenga información sobre cómo obtener el contexto específico de Teams para el bot, incluida la lista de conversaciones, los detalles de un miembro o equipo, la lista de canales y los ejemplos de código.
+description: Obtenga el contexto específico de Teams para el bot, capture el perfil de usuario, obtenga un solo miembro, el equipo y la lista de canales en los detalles de un equipo. Ejemplo al crear un subproceso de canal.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: 70079b1aa7db17c6fd76bc4c28832ea0b07d345d
-ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
+ms.openlocfilehash: a2d884809a538d16b5c5a1e62e2a064fbeaa2a76
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2022
-ms.locfileid: "67605078"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100143"
 ---
 # <a name="get-teams-specific-context-for-your-bot"></a>Obtención del contexto específico de Teams para un bot
 

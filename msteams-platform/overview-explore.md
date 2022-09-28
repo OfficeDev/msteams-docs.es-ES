@@ -1,17 +1,17 @@
 ---
 title: Exploración de Teams como plataforma para crear aplicaciones
 author: heath-hamilton
-description: Obtenga información general sobre cómo explorar las características de la plataforma de Microsoft Teams para la aplicación en el escritorio y el móvil.
+description: Características de la plataforma de Microsoft Teams para la aplicación en dispositivos móviles y de escritorio. Pestañas, bots, extensión de mensajería, webhook, conectores, Microsoft Graph o tarjetas adaptables.
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 11/02/2021
-ms.openlocfilehash: 8843cb92657161234d6e5f6d1eae1bd66bdc6041
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
-ms.translationtype: HT
+ms.openlocfilehash: b49c4013184b11f686e460cd23441acf1b4faff1
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558831"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100311"
 ---
 # <a name="explore-teams-platform-features"></a>Explorar las características de la plataforma Teams
 
@@ -23,7 +23,7 @@ Con Teams, puede compilar la aplicación en un entorno con muchas característic
 
 | Característica | Descripción | Útil para |
 | --- | --- | --- |
-|Pestañas | Las pestañas son páginas web compatibles con Teams insertadas en Microsoft Teams. Puede agregarlas como parte de un canal dentro de un equipo, un chat de grupo o una aplicación personal para un usuario individual. | Pestaña personal, pestaña de canal o grupo, vista de fase y apertura de vínculos. |
+|Pestañas | Tabs are Teams-aware webpages embedded in Microsoft Teams. You can add them as part of a channel inside a team, group chat, or personal app for an individual user. | Pestaña personal, pestaña de canal o grupo, vista de fase y apertura de vínculos. |
 | Bots | Un bot también se conoce como bot de chat o bot de conversación. Se trata de una aplicación que ejecuta tareas automatizadas simples y repetitivas realizadas por los usuarios. Una interacción de bot puede ser una pregunta y una respuesta rápidas, o puede ser una conversación compleja que proporcione acceso a los servicios. | Servicio de atención al cliente, información sobre el tiempo, reservar cenas o facilitar información sobre viajes. |
 | Extensión de mensajería | Las extensiones de mensajería permiten a los usuarios interactuar con el cliente de Teams del servicio web. Buscan o inician acciones en un sistema externo. Puede enviar el resultado de la interacción al cliente de Teams como una tarjeta con formato enriquecido. | Reserve un recurso y permita que el canal esté al corriente de la franja horaria reservada. Busque un elemento de trabajo y compártalo con el grupo como tarjeta adaptable. Cree un error en su sistema de seguimiento basado en un mensaje de Teams, asigne ese error a un usuario y envíe una tarjeta al hilo de conversación con los detalles del error. |
 |Extensiones de reunión | Puede crear aplicaciones para que las reuniones sean más productivas. | Pida a los usuarios que completen una encuesta durante una llamada o envíe un aviso rápido que no interrumpa el flujo de la reunión. |

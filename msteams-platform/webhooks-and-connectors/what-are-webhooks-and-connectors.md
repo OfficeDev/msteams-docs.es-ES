@@ -1,16 +1,16 @@
 ---
 title: Webhooks y conectores
 author: clearab
-description: En este módulo, comprenderá cómo los webhooks y los conectores pueden conectar los servicios web al cliente de Teams.
+description: Obtenga información sobre cómo los webhooks y los conectores ayudan a conectar los servicios web a los canales y equipos de Microsoft Teams. Obtenga información sobre los webhooks entrantes, salientes y los conectores de Office 365.
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: bb453367eb0d8f4c2c1a54681d67dc38fb3e0358
-ms.sourcegitcommit: ef545fac5c0dbe970d81f53b1631930e9196eba3
+ms.openlocfilehash: 94c84b577dfb20cb823167d3af84f5460bb87554
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2022
-ms.locfileid: "67991652"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100451"
 ---
 # <a name="webhooks-and-connectors"></a>Webhooks y conectores
 
@@ -43,7 +43,7 @@ Obtenga más información sobre las diferencias entre el bot de notificación y 
 | &nbsp; | Bot de notificación |  Webhook entrante |
 | --- | --- | --- |
 | ¿Qué es? | Una aplicación de Teams | Una característica de Teams |
-| Instalación necesaria | Yes | No |
+| Instalación necesaria | Sí | No |
 | Escenarios adecuados | • Recibir notificaciones y mensajes periódicamente, por ejemplo, recibir notificaciones diarias de tareas del equipo. <br>  • Recibir notificaciones y mensajes basados en eventos reales. Por ejemplo, una vez que los compañeros de equipo cargan archivos, recibe notificaciones. | Comunicarse con aplicaciones externas y recibir notificaciones y mensajes de otras aplicaciones. |
 | Configuración del ámbito | • Canal de Teams <br> • Chat en grupo <br> • Chat personal | Canal de Teams |
 | Proceso de mensaje | Un bot de notificación funciona como una aplicación de Teams. Puede definir la lógica de negocios para procesar datos y mostrar datos en un formato personalizado. | Webhook es una característica de Teams en lugar de una aplicación de Teams, por lo que solo recibe y muestra datos sin procesamiento. |

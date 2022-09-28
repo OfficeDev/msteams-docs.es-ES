@@ -5,12 +5,12 @@ ms.author: surbhigupta
 description: En este módulo, aprenderá a usar el SDK de cliente de JavaScript de Microsoft Teams, que puede ayudarle a crear experiencias de aplicación hospedadas en <iframe> Teams, Office y Outlook.
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.openlocfilehash: a3d1785dc96284e858d14bbef8b8acc0d466b1bc
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: ca5a02a067c44aaeab52bdde3c7be3a45c6797df
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67781069"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100157"
 ---
 # <a name="teams-javascript-client-sdk"></a>SDK para cliente de JavaScript en Teams
 
@@ -38,10 +38,10 @@ En la tabla siguiente se enumeran las funciones de pestañas y cuadros de diálo
 
 |Funcionalidad | Soporte del host | Notas |
 |-----------|--------------|-------|
-| aplicación | Teams, Outlook, Office | Espacio de nombres que representa la inicialización y el ciclo de vida de la aplicación. |
+| aplicación | Teams, Outlook, Office, aplicación de Office para Android | Espacio de nombres que representa la inicialización y el ciclo de vida de la aplicación. |
 | appInitialization| | Obsoleto. Reemplazado por el espacio de nombres de `app`. |
 | appInstallDialog | Teams||
-| autenticación | Teams, Outlook, Office | |
+| autenticación | Teams, Outlook, Office, aplicación de Office para Android | |
 | calendar | Outlook ||
 | llamada | Teams||
 | chat |Teams||
@@ -49,7 +49,7 @@ En la tabla siguiente se enumeran las funciones de pestañas y cuadros de diálo
 | Ubicación |Teams| Vea las notas en [Permisos de la aplicación](#app-permissions).|
 | mail | Outlook (solo para escritorio de Windows)||
 | medios |Teams| Vea las notas en [Permisos de la aplicación](#app-permissions).|
-| páginas | Teams, Outlook, Office | Espacio de nombres que representa la navegación de la página. Vea las notas en [Vinculación en profundidad](#deep-linking). |
+| páginas | Teams, Outlook, Office, aplicación de Office para Android | Espacio de nombres que representa la navegación de la página. Vea las notas en [Vinculación en profundidad](#deep-linking). |
 | people |Teams||
 | configuración || Obsoleto. Reemplazado por `pages.config`.|
 | uso compartido | Teams||
@@ -143,7 +143,7 @@ Para obtener más información, vea [Extienda la aplicación de Teams en Microso
 
 ### <a name="callbacks-converted-to-promises"></a>Callbacks convertidas a promises
 
-Las API de Teams que anteriormente tomaban un parámetro de devolución de llamada fueron actualizados para devolver un objeto JavaScript de [Promesa](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). Estas incluyen las siguientes API:
+Las API de Teams que anteriormente tomaban un parámetro de callback se han actualizado para devolver un objeto JavaScript [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). Entre ellas se incluyen las siguientes API:
 
 ```js
 app.getContext, app.initialize, appInstallDialog.openAppInstallDialog, app.openLink, authentication.authenticate, authentication.getAuthToken, authentication.getUser, authentication.registerAuthenticationHandlers was removed to support using Promises, calendar.openCalendarItem, calendar.composeMeeting, call.startCall, chat.getChatMembers, conversations.openConversation, location.getLocation, location.showLocation, mail.openMailItem, mail.composeMail, pages.backStack.navigateBack, pages.navigateCrossDomain, pages.navigateToTab, pages.tabs.getMruTabInstances, pages.tabs.getTabInstances, pages.getConfig, pages.config.setConfig, pages.backStack.navigateBack, people.selectPeople, teams.fullTrust.getConfigSetting, teams.fullTrust.joinedTeams.getUserJoinedTeams
@@ -232,7 +232,7 @@ Puede comprobar la compatibilidad del host de una funcionalidad determinada en t
 
 El nombre del host en el que se ejecuta la aplicación se expone como una propiedad *hostName* en la interfaz Context (`app.Context.app.host.name`), que se puede consultar en tiempo de ejecución llamando a `getContext`. También está disponible como un [valor de marcador de posición de dirección URL](./access-teams-context.md#get-context-by-inserting-url-placeholder-values) `{hostName}`. El procedimiento recomendado es usar el mecanismo *hostName* con moderación:
 
-* **No** suponga que cierta funcionalidad está o no está disponible en un host según el valor de la propiedad *hostName*. En su lugar, compruebe la compatibilidad con la funcionalidad (`isSupported`).
+* **Don't** assume certain functionality is or isn't available in a host based on the *hostName* property value. Instead, check for capability support (`isSupported`).
 * **No** use *hostName* para realizar llamadas a la API. En su lugar, compruebe la compatibilidad con la funcionalidad (`isSupported`).
 * **Use** el *hostName* para diferenciar el tema de la aplicación en función del host en el que se ejecuta. Por ejemplo, puede usar el color púrpura de Microsoft Teams como color de énfasis principal cuando se ejecuta en Teams y el azul de Outlook cuando se ejecuta en Outlook.
 * **Use***hostName* para diferenciar los mensajes que se muestran al usuario en función del host en el que se ejecuta. Por ejemplo, muestre *Administrar las tareas en Office* cuando se ejecute en Office en la web y *Administrar las tareas en Teams* cuando se ejecute en Teams.
@@ -446,7 +446,7 @@ Si va a actualizar una aplicación de Teams para que se ejecute en Office y Outl
 # <a name="teams-toolkit"></a>[Kit de herramientas de Teams](#tab/manifest-teams-toolkit)
 
 1. Abra la *Paleta de comandos*: `Ctrl+Shift+P`
-1. Ejecute el comando **Teams: Actualizar el manifiesto de Teams para admitir las aplicaciones de Outlook y Office** y seleccione el archivo de manifiesto de la aplicación. Se harán cambios.
+1. Run **Teams: Upgrade Teams manifest to support Outlook and Office apps** command and select your app manifest file. Changes will be made in place.
 
 # <a name="manual-steps"></a>[Pasos manuales](#tab/manifest-manual)
 

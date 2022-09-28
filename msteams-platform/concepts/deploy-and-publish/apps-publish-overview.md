@@ -1,16 +1,16 @@
 ---
 title: 'Información general: distribución de la aplicación'
-description: En este artículo, aprenderá las opciones para publicar la aplicación Microsoft Teams, cargar e implementar la aplicación y GCC.
+description: Aprenda a distribuir, publicar la aplicación en la tienda de Microsoft Teams o en su organización. Comprenda cómo los puntos de conexión de la aplicación deben cumplir con los requisitos de su organización de Government Community Cloud (GCC).
 ms.topic: conceptual
 author: v-rpatkur
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: b194e435ec6152993ce1269875d431ab4ef03aef
-ms.sourcegitcommit: 377a4b712b50a211851aeecc1029414939945390
+ms.openlocfilehash: df17129ce1e51093351683ad01db3be9e65c5770
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2022
-ms.locfileid: "68044675"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100724"
 ---
 # <a name="distribute-your-microsoft-teams-app"></a>Distribución de la aplicación de Microsoft Teams
 

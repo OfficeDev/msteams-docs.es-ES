@@ -1,15 +1,15 @@
 ---
 title: Novedades y actualizaciones para desarrolladores de Teams
-description: ¿Cuáles son las nuevas características para desarrolladores de Microsoft Teams introducidas y las actualizaciones de las características existentes?
+description: Obtenga información sobre las nuevas características para desarrolladores de Microsoft Teams y las actualizaciones de las características existentes, las notas de desuso y los cambios. Suscríbase a la fuente RSS para obtener las actualizaciones más recientes.
 ms.topic: reference
 ms.localizationpriority: high
 zone_pivot_groups: What-new-features
-ms.openlocfilehash: 2540738b2001363c6bc4466bcaa0b4754d4935cc
-ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
+ms.openlocfilehash: f10194e224aee438472a4487ede3db49792bf77c
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2022
-ms.locfileid: "68027187"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100164"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores en Microsoft Teams
 

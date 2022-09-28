@@ -1,16 +1,16 @@
 ---
 title: Definición de comandos de búsqueda de extensión de mensaje
 author: surbhigupta
-description: En este módulo, obtenga información sobre las ubicaciones de invocación de comandos de búsqueda y cómo crear un comando de búsqueda para extensiones de mensajería.
+description: Obtenga información sobre los comandos de búsqueda de extensión de mensaje para aplicaciones de Teams, para crear un comando de búsqueda a través del manifiesto de la aplicación y manualmente.
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: f562763cc84979874fac612f125b536fa9e6bc36
-ms.sourcegitcommit: 19f3e4e9088d0a07c9b567e76640d498b9d1981f
+ms.openlocfilehash: f774ae4ce0e4198a8e676080b87c33c8ecec3f3f
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67786965"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100899"
 ---
 # <a name="define-message-extension-search-commands"></a>Definición de comandos de búsqueda de extensión de mensaje
 
@@ -77,7 +77,7 @@ En la imagen siguiente se muestra la adición de comandos para la extensión de 
 
    :::image type="content" source="../../../assets/images/tdp/add-domain.PNG" alt-text="Captura de pantalla que muestra cómo agregar un dominio válido a la extensión de mensajería para la desplegamiento de vínculos.":::
 
-1. Haga clic en **Guardar**.
+1. Seleccione **Guardar**.
 
    :::image type="content" source="../../../assets/images/tdp/add-a-command-save.PNG" alt-text="Captura de pantalla que muestra cómo guardar toda la configuración y los parámetros de la extensión de mensaje.":::
 

@@ -1,17 +1,17 @@
 ---
 title: Eventos de conversación
 author: WashingtonKayaker
-description: Cómo trabajar con eventos de conversación del bot de Microsoft Teams, actualizaciones de eventos de canal, eventos de miembros del equipo y eventos de reacción de mensajes con ejemplos de código.
+description: Trabaje con eventos de conversación del bot de Microsoft Teams, actualizaciones de eventos de canal, eventos de miembros del equipo y eventos de reacción de mensajes con ejemplos (.NET, Node.js, Python).
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: conversación de reacción del mensaje del canal de eventos
-ms.openlocfilehash: d7bdd35f887c9f59000139aa36352b0b416465c6
-ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
+ms.openlocfilehash: 6bf1be094afc778317f2e4d5a7657514d35b9777
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67616999"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100360"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Eventos de conversación en el bot de Teams
 

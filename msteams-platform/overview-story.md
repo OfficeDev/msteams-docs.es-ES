@@ -1,17 +1,17 @@
 ---
 title: 'Información general: caso de usuario para la plataforma de Microsoft Teams'
 author: heath-hamilton
-description: Obtenga información general sobre la historia del usuario sobre cómo la idea de la aplicación se ajusta a los requisitos de usuario para Microsoft Teams plataforma.
+description: Obtenga información sobre cómo las aplicaciones de Microsoft Teams ayudan a los usuarios en el entorno de Teams. Comprenda el usuario, el problema, los requisitos de la aplicación, las ventajas y la solución centrada en el usuario.
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 11/02/2021
-ms.openlocfilehash: c85fe155500f695fe74edcf0c155526bc446411a
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
-ms.translationtype: HT
+ms.openlocfilehash: 905e357438e9913b64fd46c60a645d0d3d5d3cb0
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66557984"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100710"
 ---
 # <a name="from-ideas-to-teams-app"></a>De ideas a aplicación de Teams
 

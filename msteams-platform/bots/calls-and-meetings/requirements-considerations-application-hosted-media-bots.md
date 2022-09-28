@@ -1,19 +1,19 @@
 ---
 title: Requisiciones y consideraciones para bots multimedia hospedados en la aplicación
-description: Obtenga información sobre los requisitos y consideraciones importantes, así como las consideraciones de escalabilidad y rendimiento relacionadas con la creación de bots multimedia hospedados en aplicaciones para Teams
+description: Obtenga información sobre cómo crear bots multimedia hospedados en aplicaciones para Microsoft Teams, escalabilidad y rendimiento. Consulte ejemplos de diferentes escenarios de medios remotos y locales.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 11/16/2018
-ms.openlocfilehash: 5ba9f630e75bd9271eda66a93e69d8506e2b368c
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: 8643575f2fcb64cbfe6349c32d0b1b3df98ea31e
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150795"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100878"
 ---
 # <a name="requirements-and-considerations-for-application-hosted-media-bots"></a>Requisiciones y consideraciones para bots multimedia hospedados en la aplicación
 
-Un bot multimedia hospedado en la aplicación requiere la [`Microsoft.Graph.Communications.Calls.Media` biblioteca .NET](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/) para acceder a las secuencias multimedia de audio y vídeo. El bot debe implementarse en una máquina local de Windows Server o en un sistema operativo (SO) invitado de Windows Server en Azure.
+An application-hosted media bot requires the [`Microsoft.Graph.Communications.Calls.Media` .NET library](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/) to access the audio and video media streams. The bot must be deployed on a Windows Server on-premises machine or a Windows Server guest Operating System (OS) in Azure.
 
 > [!NOTE]
 >
@@ -39,7 +39,7 @@ En la sección siguiente se proporcionan detalles sobre dónde se encuentran las
 
 ## <a name="real-time-media-calls-stay-where-theyre-created"></a>Las llamadas multimedia en tiempo real permanecen donde se crean
 
-Las llamadas multimedia en tiempo real permanecen en el equipo donde se crearon. Se ancla una llamada multimedia en tiempo real a la instancia de máquina virtual (VM) que aceptó o inició la llamada. Los medios de una llamada de Teams o de reunión fluyen a esa instancia de máquina virtual, y los medios que el bot envía a Teams también deben originarse desde esa máquina virtual. Si hay llamadas multimedia en tiempo real en curso cuando se detiene la máquina virtual, esas llamadas finalizan repentinamente. Si el bot tiene conocimiento previo del apagado de la máquina virtual pendiente, puede finalizar las llamadas.
+Las llamadas multimedia en tiempo real permanecen en el equipo donde se crearon. Se ancla una llamada multimedia en tiempo real a la instancia de máquina virtual (VM) que aceptó o inició la llamada. Los medios de una llamada o reunión de Teams fluyen a esa instancia de máquina virtual y los medios que el bot envía a Teams también deben originarse en esa máquina virtual. Si hay llamadas multimedia en tiempo real en curso cuando se detiene la máquina virtual, esas llamadas finalizan repentinamente. Si el bot tiene conocimiento previo del apagado de la máquina virtual pendiente, puede finalizar las llamadas.
 
 En la próxima sección se proporcionan detalles sobre la accesibilidad de los bots multimedia hospedados en la aplicación.
 

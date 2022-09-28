@@ -1,21 +1,21 @@
 ---
 title: Información general sobre como rentabilizar la aplicación
-description: Obtenga información sobre cómo monetizar la aplicación de Microsoft Teams. Incluye la elección un modelo de precios con la oferta de Saas.
+description: Monetice la aplicación. Los modelos de precios admitidos son pruebas gratuitas, compras desde la aplicación e incluyen una oferta de SaaS con la aplicación.
 author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 9b684fccb108b733a63ae6b61e002bc24bde32ef
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
-ms.translationtype: HT
+ms.openlocfilehash: 67dfa765d27327cee15977d17dfecf955cae8bca
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66485513"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100584"
 ---
 # <a name="monetize-your-app"></a>Rentabilizar la aplicación
 
 La Tienda de aplicaciones de Microsoft Teams proporciona características que le permiten monetizar sus aplicaciones y obtener clientes interactuando con sus usuarios. En los temas de esta sección se muestra cómo compilar estas características en la aplicación.
-
+ 
 ## <a name="choose-a-pricing-model"></a>Elegir un modelo de precios
 
 :::row:::

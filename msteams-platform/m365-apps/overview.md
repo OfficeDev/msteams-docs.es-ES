@@ -1,16 +1,16 @@
 ---
 title: Ampliar las aplicaciones de Teams en Microsoft 365 (versión preliminar)
-description: En este artículo, aprenderá a compilar, actualizar y ampliar las experiencias de aplicaciones de Teams y a crear aplicaciones que se usan en otras áreas de uso elevado de Microsoft 365.
+description: Obtenga información sobre cómo compilar, actualizar y ampliar la aplicación de Teams en Microsoft M365 (Teams, Outlook y Office como hosts de aplicaciones). Envío de Microsoft AppSource.
 ms.date: 05/24/2022
 ms.topic: Conceptual
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: fec2a91d250044e638783ecb25175771a60f3cdd
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: 835af580a23a5fa4bcf99bf5fd2f091d076df489
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67781076"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100625"
 ---
 # <a name="extend-teams-apps-across-microsoft-365"></a>Ampliar las aplicaciones de Teams en Microsoft 365
 
@@ -22,7 +22,7 @@ La plataforma de aplicaciones de Teams continúa evolucionando y expandiéndose 
 
 |          | Elemento de manifiesto de aplicación | Soporte técnico de Teams |Compatibilidad con Outlook* | Soporte técnico de Office* | Notas |
 |--|--|--|--|--|--|
-| [**Pestañas**](../tabs/what-are-tabs.md) (ámbito personal)    |`staticTabs`  | Web, Escritorio, Móvil | Web (versión dirigida), escritorio (canal beta) | Web (versión dirigida), escritorio (canal beta)| El ámbito de canal y grupo aún no se admite para Microsoft 365. Consulte [las notas](../tabs/how-to/using-teams-client-sdk.md#microsoft-365-support-running-teams-apps-in-office-and-outlook).
+| [**Pestañas**](../tabs/what-are-tabs.md) (ámbito personal)    |`staticTabs`  | Web, Escritorio, Móvil | Web (versión dirigida), escritorio (canal beta) | Web (versión dirigida), escritorio (canal beta), móvil (Android)| El ámbito de canal y grupo aún no se admite para Microsoft 365. Consulte [las notas](../tabs/how-to/using-teams-client-sdk.md#microsoft-365-support-running-teams-apps-in-office-and-outlook).
 | [**Extensiones de mensaje**](../messaging-extensions/what-are-messaging-extensions.md) (basadas en búsqueda)| `composeExtensions` | Web, Escritorio, Móvil| Web (versión dirigida), escritorio (canal beta)| - |Todavía no se admite la acción basada en Microsoft 365. Consulte [las notas](extend-m365-teams-message-extension.md#preview-your-message-extension-in-outlook). |
 | [**Complementos de Office**](/office/dev/add-ins/develop/json-manifest-overview) (versión preliminar) | `extensions` | - | Web, Escritorio | - | Solo está disponible en [la versión del manifiesto devPreview](../resources/schema/manifest-schema-dev-preview.md) . Consulte [las notas](#office-add-ins-preview).|
 
@@ -38,6 +38,10 @@ Para obtener instrucciones sobre el manifiesto de la aplicación de Teams y la g
 Para llegar a los usuarios donde se encuentran, justo en el contexto de su trabajo, amplíe la aplicación web como una aplicación de pestaña personal de Teams que también se ejecuta en Outlook y Office.
 
 :::image type="content" source="images/outlook-office-teams-personal-tab.png" alt-text="La captura de pantalla es un ejemplo que muestra la pestaña Personal que se ejecuta en Outlook, Office y Teams.":::
+
+En el móvil, puede probar y depurar la pestaña personal de Teams que se ejecuta en la aplicación de Office para Android.
+
+:::image type="content" source="images/office-mobile-personal-tab.png" alt-text="La captura de pantalla es un ejemplo que muestra la pestaña personal que se ejecuta en Office.":::
 
 También puede ampliar las extensiones de mensajes de Teams basadas en búsqueda a Outlook en la Web y escritorio de Windows, lo que permite a los clientes buscar y compartir resultados a través del área de redacción de mensajes de Outlook, además de los clientes de Microsoft Teams.
 

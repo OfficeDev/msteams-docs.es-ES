@@ -1,20 +1,20 @@
 ---
 title: Ampliar una aplicación de pestaña personal de Teams en Microsoft 365
-description: En este artículo, aprenderá a ampliar una aplicación de pestaña personal de Teams en Microsoft 365 actualizando la pestaña personal para que se ejecute tanto en Outlook como en Office.
+description: Actualice la aplicación personal para que se ejecute en Outlook y Office. Actualice el manifiesto y el SDK de TeamsJS V2, modifique la seguridad del consentimiento y actualice el registro de aplicaciones de Azure AD para el inicio de sesión único.
 ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: ac9e9f9ecff238fc39c916f6b2975f1062fa2744
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: cb6b7ee27e95045c218805181531ad96a1357f89
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67781212"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100775"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>Ampliar una pestaña personal de Teams en Microsoft 365
 
-Las pestañas personales proporcionan una excelente manera de mejorar la experiencia de Microsoft Teams. Con las pestañas personales, puede proporcionar a un usuario acceso a su aplicación directamente en Teams, sin que el usuario tenga que salir de la experiencia ni volver a iniciar sesión. Con esta versión preliminar, las pestañas personales pueden iluminarse dentro de otras aplicaciones Microsoft 365. En este tutorial se muestra el proceso de tomar una pestaña personal de Teams existente y actualizarla para que se ejecute en las experiencias de escritorio y web de Outlook, así como en Office en la Web (office.com).
+Las pestañas personales proporcionan una excelente manera de mejorar la experiencia de Microsoft Teams. Con las pestañas personales, puede proporcionar a un usuario acceso a su aplicación directamente en Teams, sin que el usuario tenga que salir de la experiencia ni volver a iniciar sesión. Con esta versión preliminar, las pestañas personales pueden iluminarse dentro de otras aplicaciones Microsoft 365. En este tutorial se muestra el proceso de tomar una pestaña personal de Teams existente y actualizarla para que se ejecute en las experiencias web y de escritorio de Outlook y Office, así como en la aplicación de Office para Android.
 
 La actualización de la aplicación personal para que se ejecute en Outlook y Office implica estos pasos:
 
@@ -141,8 +141,12 @@ Si la aplicación usa encabezados de [directiva de seguridad de contenido](https
     |Web de Teams |5e3ce6c0-2b1f-4285-8d4b-75ee78787346 |
     |Web de Office  |4765445b-32c6-49b0-83e6-1d93765276ca|
     |Escritorio de Office  | 0ec893e0-5785-4de6-99da-4ed124e5296c |
+    |Office Mobile  | d3590ed6-52b3-4102-aeff-aad2292ab01c |
     |Escritorio de Outlook, móvil | d3590ed6-52b3-4102-aeff-aad2292ab01c |
     |Outlook web | bc59ab01-8403-45c6-8796-ac3ef710b3e3|
+
+    > [!NOTE]
+    > Algunas aplicaciones cliente de Microsoft 365 comparten identificadores de cliente.
 
 ## <a name="sideload-your-app-in-teams"></a>Transferir localmente la aplicación en Teams
 
@@ -164,7 +168,7 @@ El último paso para ejecutar la aplicación en Office y Outlook es transferir l
 
     :::image type="content" source="images/teams-upload-custom-app.png" alt-text="Opción &quot;Cargar una aplicación personalizada&quot; en Teams":::
 
-Después de transferirla localmente a Teams, la pestaña personal está disponible en Outlook y Office. Asegúrese de iniciar sesión con las mismas credenciales que usó para iniciar sesión en Teams para transferir localmente la aplicación.
+Después de transferirla localmente a Teams, la pestaña personal está disponible en Outlook y Office. Debe iniciar sesión con las mismas credenciales que usó para transferir localmente la aplicación en Teams. Al ejecutar la aplicación de Office para Android, debe reiniciar la aplicación para usar la aplicación de pestaña personal desde la aplicación de Office.
 
 Puedes anclar la aplicación para obtener acceso rápido o encontrarla en los puntos suspensivos (**...**) entre las aplicaciones recientes en la barra lateral de la izquierda. Anclar una aplicación en Teams no la ancla como una aplicación en Office o Outlook.
 
@@ -215,6 +219,19 @@ Para obtener una vista previa de la aplicación que se ejecuta en Outlook en la 
 
     :::image type="content" source="images/office-web-more-apps.png" alt-text="Haga clic en la opción &quot;Más aplicaciones&quot; en la barra lateral de office.com para ver las pestañas personales instaladas.":::
 
+### <a name="office-app-for-android"></a>Aplicación de Office para Android
+
+> [!NOTE]
+> Antes de instalar la aplicación, realice [los pasos necesarios para instalar la versión beta de la aplicación de Office más reciente](prerequisites.md#mobile) y formar parte del programa beta.
+
+Para ver la aplicación que se ejecuta en la aplicación de Office para Android:
+
+1. Inicie la aplicación de Office e inicie sesión con su cuenta de inquilino de desarrollo. Si la aplicación de Office para Android ya se estaba ejecutando antes de transferir localmente la aplicación en Teams, deberá reiniciarla para verla entre las aplicaciones instaladas.
+1. Seleccione el icono **Aplicaciones** . La aplicación de instalación local aparece entre las aplicaciones instaladas.
+1. Seleccione el icono de la aplicación para iniciar la aplicación en la aplicación de Office para Android.
+
+:::image type="content" source="images/office-mobile-apps.png" alt-text="Pulse en la opción &quot;Aplicaciones&quot; en la barra lateral de la aplicación de Office para ver las pestañas personales instaladas.":::
+
 ## <a name="troubleshooting"></a>Solución de problemas
 
 Actualmente, se admite un subconjunto de tipos y funcionalidades de aplicaciones de Teams en los clientes de Outlook y Office. Esta compatibilidad se expande con el tiempo.
@@ -239,14 +256,35 @@ Tras la primera ejecución de depuración local en Office o Outlook, se le pedir
 
 Proporcione comentarios e informe de cualquier problema con la experiencia de depuración del kit de herramientas de Teams en [Microsoft Teams Framework (TeamsFx).](https://github.com/OfficeDev/TeamsFx/issues)
 
+#### <a name="mobile-debugging"></a>Depuración móvil
+
+La depuración del kit de herramientas de Teams (`F5`) todavía no se admite con la aplicación de Office para Android. A continuación se muestra cómo depurar de forma remota la aplicación que se ejecuta en la aplicación de Office para Android:
+
+1. Si depura mediante un dispositivo Android físico, conéctelo a la máquina de desarrollo y habilite la opción para la [depuración USB](https://developer.android.com/studio/debug/dev-options). Esto está habilitado de forma predeterminada con el emulador de Android.
+1. Inicie la aplicación de Office desde el dispositivo Android.
+1. Abra el perfil **Me > Settings (Configuración de Me >) > Allow debugging (Permitir depuración**) y active la opción **Enable remote debugging (Habilitar depuración remota**).
+
+    :::image type="content" source="images/office-android-enable-remote-debugging.png" alt-text="Captura de pantalla que muestra habilitar la depuración remota":::
+
+1. Salga **de Configuración**.
+1. Salga de la pantalla del perfil.
+1. Seleccione **Aplicaciones** e inicie la aplicación de prueba para ejecutarla en la aplicación de Office.
+1. Asegúrese de que el dispositivo Android está conectado a la máquina de desarrollo. Desde la máquina de desarrollo, abra el explorador en su página de inspección de DevTools. Por ejemplo, vaya a `edge://inspect/#devices` en Microsoft Edge para mostrar una lista de WebView de Android habilitado para depuración.
+1. Busque con la dirección URL de la pestaña y seleccione **Inspeccionar** para iniciar la `Microsoft Teams Tab` depuración de la aplicación con DevTools.
+
+    :::image type="content" source="images/office-android-debug.png" alt-text="captura de pantalla que muestra la lista de vistas web en devtool":::
+
+1. Depure la aplicación de pestaña en Android WebView. De la misma manera que [depura de forma remota](/microsoft-edge/devtools-guide-chromium/remote-debugging) un sitio web normal en un dispositivo Android.
+
 ## <a name="code-sample"></a>Ejemplo de código
 
 | **Nombre de ejemplo** | **Descripción** | **Node.js** |
 |---------------|--------------|--------|
 | Lista de tareas pendientes | Lista de tareas pendientes editable con sso creado con React y Azure Functions. Solo funciona en Teams (use esta aplicación de ejemplo para probar el proceso de actualización descrito en este tutorial). | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend)  |
 | Lista de tareas pendientes (Microsoft 365) | Lista de tareas pendientes editable con sso creado con React y Azure Functions. Funciona en Teams, Outlook, Office. | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend-M365)|
-| Editor de imágenes (Microsoft 365) | Cree, edite, abra y guarde imágenes mediante Microsoft Graph API. Funciona en Teams, Outlook, Office. | [Ver](https://github.com/OfficeDev/m365-extensibility-image-editor) |
+| Editor de imágenes (Microsoft 365) | Cree, edite, abra y guarde imágenes mediante Microsoft Graph API. Funciona en Teams, Outlook, Office. | [View](https://github.com/OfficeDev/m365-extensibility-image-editor) |
 | Página de inicio de ejemplo (Microsoft 365) | Muestra la autenticación sso y las funcionalidades del SDK de TeamsJS como disponibles en distintos hosts. Funciona en Teams, Outlook, Office. | [View](https://github.com/OfficeDev/microsoft-teams-library-js/tree/main/apps/sample-app) |
+| Aplicación Northwind Orders | Muestra cómo usar el SDK de Microsoft TeamsJS V2 para ampliar la aplicación de Teams a otras aplicaciones host de M365. Funciona en Teams, Outlook, Office. Optimizado para dispositivos móviles.| [View](https://github.com/microsoft/app-camp/tree/main/experimental/ExtendTeamsforM365) |
 
 ## <a name="next-step"></a>Paso siguiente
 

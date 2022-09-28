@@ -1,16 +1,16 @@
 ---
 title: Ofrecer mantenimiento y soporte técnico de su aplicación publicada
-description: Obtenga información sobre cómo mantener la aplicación publicada de Microsoft Teams y qué pensar una vez que la tienda aparece en la tienda de Teams y AppSource.
+description: Aprenda a mantener la aplicación de Microsoft Teams publicada y qué hacer después de que la tienda aparezca en la tienda de Teams y AppSource. Analice el uso de la aplicación, publique actualizaciones, promueva la aplicación y complete la certificación de Microsoft 365.
 ms.topic: conceptual
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 3e73725bcfd1f51cc2f1ab82ba7437b205028c09
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
-ms.translationtype: HT
+ms.openlocfilehash: f05613a54ea87660611bb4a4d66d2f88f9ee3b46
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66484848"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100332"
 ---
 # <a name="maintain-your-published-microsoft-teams-app"></a>Mantener la aplicación publicada de Microsoft Teams
 
@@ -35,7 +35,7 @@ Asegúrese de lo siguiente al publicar actualizaciones:
 
 * No cambie el identificador de la aplicación.
 * Incremente el número de versión de la aplicación.
-* En Centro de partners, no seleccione **Agregar una nueva aplicación** para realizar la actualización. Vaya a la página de la aplicación en su lugar.
+* In Partner Center, don't select **Add a new app** to do the update. Go to your app's page instead.
 
 ### <a name="app-updates-requiring-user-consent"></a>Actualizaciones de aplicaciones que requieren el consentimiento del usuario
 
@@ -50,7 +50,7 @@ Sin embargo, si realiza cualquiera de los siguientes cambios en la aplicación, 
 * Agregar una pestaña personal
 * Agregar un canal y una pestaña de grupo.
 * Agregar un conector.
-* Modificar la configuración relacionada con el registro de aplicaciones de Microsoft Azure Active Directory (Azure AD). Para más información, consulte [`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo).
+* Modify configurations related to your Microsoft Azure Active Directory (Azure AD) app registration. For more information, see [`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo).
 
 ## <a name="fix-issues-with-your-published-app"></a>Corrección de problemas con la aplicación publicada
 

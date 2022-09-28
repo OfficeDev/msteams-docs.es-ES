@@ -1,16 +1,16 @@
 ---
 title: Responder a consultas de comandos de búsqueda
 author: surbhigupta
-description: En este módulo, aprenderá a responder al comando de búsqueda desde una extensión de mensaje en una aplicación Microsoft Teams mediante ejemplos de código y ejemplos.
+description: Obtenga información sobre cómo responder al comando de búsqueda desde una extensión de mensaje en una aplicación de Microsoft Teams. Comprenda cómo responder a la solicitud del usuario.
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: 99720d4f914cd507f6fff2bce2386eb1a67622af
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: bc1034db9a5b63d861f1abbe98f22c73556710b2
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143707"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100563"
 ---
 # <a name="respond-to-search-command"></a>Responder a consultas de comandos de búsqueda
 
@@ -94,7 +94,7 @@ El servicio debe responder con los resultados que coincidan con la consulta del 
 
 ### <a name="response-card-types-and-previews"></a>Tipos y vistas previas de tarjetas de respuesta
 
-Teams admite los siguientes tipos de tarjeta:
+Teams admite los siguientes tipos de tarjetas:
 
 * [Tarjeta miniatura](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
 * [Tarjeta de héroe](~/task-modules-and-cards/cards/cards-reference.md#hero-card)

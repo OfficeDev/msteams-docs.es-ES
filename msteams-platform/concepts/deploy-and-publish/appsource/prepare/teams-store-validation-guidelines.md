@@ -1,16 +1,16 @@
 ---
 title: Directrices de validación de la tienda de Microsoft Teams
-description: En este artículo, encontrará las directrices que deben seguir todas las aplicaciones enviadas a la tienda de Teams (AppSource).
+description: Sepa cómo aumentar las posibilidades de que la aplicación pase el proceso de envío de la tienda de Microsoft Teams. Comprenda las correcciones obligatorias y sugeridas. Explore las directrices de validación.
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 65b59c42050d1523b13448ed1ed598914d64969c
-ms.sourcegitcommit: 377a4b712b50a211851aeecc1029414939945390
+ms.openlocfilehash: ed428ba714f5e6cf409f7ded25e8b0df22cd61a4
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2022
-ms.locfileid: "68044703"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100304"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Directrices de validación de la tienda de Microsoft Teams
 

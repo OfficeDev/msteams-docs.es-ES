@@ -1,16 +1,16 @@
 ---
 title: Crear y enviar el módulo de tareas
 author: surbhigupta
-description: En este módulo, aprenderá a controlar la acción de invocación inicial y a responder con un módulo de tareas desde un comando de extensión de mensajería de acción.
+description: Obtenga información sobre cómo crear y enviar módulos de tareas. Controle la acción de invocación inicial y responda con un módulo de tareas desde un comando de extensión de mensaje de acción.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 58b5d246c113262fa478a36246a224a52d160154
-ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
+ms.openlocfilehash: d6e85a52af435d131bea0a700ccf13b536a30b9a
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "67035187"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100318"
 ---
 # <a name="create-and-send-task-module"></a>Crear y enviar el módulo de tareas
 
@@ -22,7 +22,7 @@ Puede crear el módulo de tareas mediante una tarjeta adaptable o una vista web 
 
 ## <a name="the-initial-invoke-request"></a>La solicitud de invocación inicial
 
-En el proceso de la solicitud de invocación inicial, el servicio recibe un objeto `Activity` de tipo `composeExtension/fetchTask` y debe responder con un objeto `task` que contenga una tarjeta adaptable o una dirección URL a la vista web incrustada. Junto con las propiedades de actividad del bot estándar, la carga de invocación inicial contiene los siguientes metadatos de solicitud:
+In the process of the initial invoke request, your service receives an `Activity` object of type `composeExtension/fetchTask`, and you must respond with a `task` object containing either an Adaptive Card or a URL to the embedded web view. Along with the standard bot activity properties, the initial invoke payload contains the following request metadata:
 
 |Nombre de propiedad|Objetivo|
 |---|---|
@@ -238,7 +238,7 @@ Las propiedades de la actividad de carga cuando se invoca un módulo de tareas d
 |`ChannelData.legacy. replyToId`| Obtiene o establece el identificador del mensaje para el que este mensaje es una respuesta. |
 |`value.commandId` | Contiene el identificador del comando que se invocó. |
 |`value.commandContext` | Contexto que desencadenó el evento. Debe ser `compose`. |
-|`value.context.theme` | El tema de cliente del usuario, útil para el formato de vista web incrustada. Debe ser `default`, `contrast` o `dark`. |
+|`value.context.theme` | El tema de cliente del usuario, útil para el formato de vista web incrustada. Debe ser `default`, `contrast`o `dark`. |
 
 ### <a name="example"></a>Ejemplo
 
@@ -410,7 +410,7 @@ Las propiedades de la actividad de carga cuando se invoca un módulo de tareas d
 |`channelData.source.name`| Nombre de origen desde el que se invoca el módulo de tareas. |
 |`value.commandId` | Contiene el identificador del comando que se invocó. |
 |`value.commandContext` | Contexto que desencadenó el evento. Debe ser `compose`. |
-|`value.context.theme` | El tema de cliente del usuario, útil para el formato de vista web incrustada. Debe ser `default`, `contrast` o `dark`. |
+|`value.context.theme` | El tema de cliente del usuario, útil para el formato de vista web incrustada. Debe ser `default`, `contrast`o `dark`. |
 
 ### <a name="example"></a>Ejemplo
 

@@ -1,14 +1,14 @@
 ---
 title: Versión preliminar para desarrolladores públicos para Microsoft Teams
-description: En este artículo, conocerá las características disponibles en la versión preliminar pública para desarrolladores de Microsoft Teams y el manifiesto de la aplicación de la versión preliminar para desarrolladores.
+description: Una versión preliminar para desarrolladores (beta) es un programa público para explorar y probar las próximas características para su posible inclusión en la aplicación de Microsoft Teams.
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: 92d85eea70b04f1a5a0f8c7505c7cb5986556052
-ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
-ms.translationtype: HT
+ms.openlocfilehash: dd0583f453e93a0127bf4cbcc29a6a56dec6655a
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/11/2022
-ms.locfileid: "67312201"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100290"
 ---
 # <a name="public-developer-preview-for-teams"></a>Versión preliminar pública para desarrolladores de Teams
 

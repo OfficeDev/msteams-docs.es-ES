@@ -1,14 +1,14 @@
 ---
 title: Permisos de dispositivo para el explorador
-description: Obtenga información sobre cómo devolver de forma segura los permisos del dispositivo, como el acceso de cámara o micrófono para aplicaciones en el cliente web.
+description: La aplicación que requiere permisos de dispositivo, como el acceso a la cámara o al micrófono, ahora requiere que los usuarios concedan permiso manualmente en un nivel por aplicación en el explorador web.
 localization_priority: medium
 ms.topic: how-to
-ms.openlocfilehash: ac4695d119b04ee71334ccb2baa820c0e15bff88
-ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
+ms.openlocfilehash: a9df46a3bacd66b32efceaf2f2069e92c2cc64a3
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "67035082"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100577"
 ---
 # <a name="device-permissions-for-the-browser"></a>Permisos de dispositivo para el explorador
 

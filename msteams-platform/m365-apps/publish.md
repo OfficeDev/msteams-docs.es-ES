@@ -1,20 +1,20 @@
 ---
 title: Publicar aplicaciones de Teams para Microsoft 365
-description: En este artículo, sabe cómo hacer que las aplicaciones de Teams habilitadas para Microsoft 365 sean reconocibles para los usuarios de Teams, Outlook y Office.
+description: Obtenga información sobre cómo hacer que las aplicaciones de Teams habilitadas para Microsoft 365 sean reconocibles para los usuarios en Teams, Outlook y Office. Conozca la distribución multiinquilino y multiinquilino.
 ms.date: 05/24/2022
 ms.topic: conceptual
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: c99114ed397b9c20f699ffee165189ec7c4fd26d
-ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
+ms.openlocfilehash: 01806f5aa7e3a5b0cb79cb6a2562cbf104f031bb
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "66919819"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100941"
 ---
 # <a name="publish-teams-apps-for-microsoft-365"></a>Publicar aplicaciones de Teams para Microsoft 365
 
-Las aplicaciones de Teams habilitadas para Microsoft 365 se admiten para su uso en producción en Microsoft Teams. Puede distribuir estas aplicaciones a audiencias en versión preliminar que *usen las versiones* de versión dirigida de outlook.com y office.com, y la compilación *del canal beta* de Outlook para el escritorio de Windows. Las opciones de distribución y los procesos de las aplicaciones de Teams habilitadas para Microsoft 365 son las mismas que para las aplicaciones tradicionales de Teams.
+Microsoft Teams admite aplicaciones de Teams habilitadas para Microsoft 365 para producción. Puede distribuir estas aplicaciones a la audiencia que use las versiones de versión de *destino*  (versión preliminar de desarrollo) de Outlook.com y Office.com, la compilación del *canal* beta de Outlook para el escritorio de Windows y la compilación del Canal actual de Office (versión preliminar de desarrollo) de la aplicación de Office para Android. Las opciones de distribución y los procesos de las aplicaciones de Teams habilitadas para Microsoft 365 son las mismas que para las aplicaciones tradicionales de Teams.
 
 Una vez publicada, la aplicación se podrá detectar como una aplicación instalable desde las tiendas de aplicaciones de Outlook y Office, además de la tienda de Teams. La aplicación usa los permisos definidos en Teams en Outlook y Office. Los administradores de Teams pueden [administrar el acceso a las aplicaciones de Teams en Microsoft 365](/MicrosoftTeams/manage-third-party-teams-apps) para los usuarios de su organización.
 

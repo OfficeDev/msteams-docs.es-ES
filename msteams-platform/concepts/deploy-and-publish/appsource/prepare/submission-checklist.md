@@ -1,16 +1,16 @@
 ---
 title: Preparar el envío de la tienda
-description: Aprender los pasos finales antes de enviar la aplicación de Microsoft Teams para que aparezca en la tienda. Aprender a validar el paquete de la aplicación y mucho más.
+description: Aprender los pasos finales antes de enviar la aplicación de Microsoft Teams para que aparezca en la tienda. Aprenda a validar el paquete de la aplicación. Sepa cómo actualizar el id. de equipo de Apple App Store Connect en el Centro de partners.
 ms.topic: how-to
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 9413469579d4d010c76ecfd42a2eb66936c80a0c
-ms.sourcegitcommit: 3baca27a93e5a68eaaa52810700076f08f4c88a8
+ms.openlocfilehash: 373fee0b0c0b132357596e495014dc4535205b64
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2022
-ms.locfileid: "67605770"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100444"
 ---
 # <a name="prepare-your-teams-store-submission"></a>Preparar el envío de la tienda de Microsoft Teams
 
@@ -33,7 +33,7 @@ La herramienta de validación de aplicaciones de Microsoft Teams ayuda a identif
 1. Vaya a la [herramienta de validación de aplicaciones de Microsoft Teams](https://dev.teams.microsoft.com/appvalidation.html). (Nota: La herramienta también está disponible en [Portal para desarrolladores para Teams](~/concepts/build-and-test/teams-developer-portal.md)
 1. Carga el paquete de la aplicación para ejecutar las pruebas automatizadas.
 1. Vaya a la **lista de comprobación preliminar** y revise los casos de prueba que son difíciles de automatizar.
-1. [Arreglar problemas con la configuración](~/resources/schema/manifest-schema.md) o la aplicación general. Estos problemas se producirán si las pruebas automatizadas dan errores o si no ha cumplido con todos los criterios de la lista de comprobación.
+1. [Fix issues with your configurations](~/resources/schema/manifest-schema.md) or app in general. These issues occur if the automated tests give you errors or you haven't met all the criteria in the checklist.
 
 ## <a name="compile-testing-instructions"></a>Compilar instrucciones de prueba
 
@@ -97,7 +97,7 @@ Debe tener una descripción corta y larga de su aplicación.
 
 #### <a name="short-description"></a>Descripción breve
 
-Un resumen conciso de la aplicación que deberá ser original, atractivo y dirigido a la audiencia de destino. Mantenga la descripción corta como una sola frase.
+A concise summary of your app that should be original, engaging, and directed at your target audience. Keep the short description to one sentence.
 
 :::row:::
 
@@ -167,7 +167,7 @@ Para conocer los procedimientos recomendados, consulte los siguientes recursos:
 
 ### <a name="create-a-video"></a>Crear un vídeo
 
-Un vídeo en la descripción podría ser la forma más eficaz de transmitir por qué la gente debería usar su aplicación. Aborde las siguientes cuestiones en un vídeo:
+A video in your listing can be the most effective way to communicate why people should use your app. Address the following questions in a video:
 
 * ¿Para quién es la aplicación?
 * ¿Qué problemas puede resolver la aplicación?
@@ -179,7 +179,7 @@ Puede agregar una dirección URL para el vídeo de YouTube o Vimeo.
 #### <a name="best-practices-for-videos"></a>Procedimientos recomendados para vídeos
 
 * Mantenga el vídeo entre 60 y 90 segundos.
-* Busque la calidad. En una descripción, los usuarios verán el vídeo antes que las capturas de pantalla.
+* Aim for quality. In a listing, users will see your video before screenshots.
 * Comunique el valor del producto de forma narrativa.
 * Muestre cómo funciona el producto.
 

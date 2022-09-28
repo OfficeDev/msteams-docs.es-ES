@@ -1,16 +1,16 @@
 ---
 title: Incluir una oferta de SaaS con la aplicación
-description: En este artículo, aprenderá a monetizar su aplicación de Microsoft Teams con el modelo de precios basado en suscripciones e incluir una oferta de SaaS en dicha aplicación.
+description: Aprenda a monetizar la aplicación de Microsoft Teams mediante la venta de planes de suscripción directamente desde la descripción de la tienda de Teams. Descripción de la experiencia de compra de administración, usuario final y aplicación de publicación.
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: e9182df9f6c3c5d7f84654022e658ac6d670e50d
-ms.sourcegitcommit: 209b9942c02b5affdd995348902114d3b9805c61
-ms.translationtype: HT
+ms.openlocfilehash: 3fe41b635f9789e7f96eeb41f17526205924dadf
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2022
-ms.locfileid: "67288188"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100640"
 ---
 # <a name="include-a-saas-offer-with-your-teams-app"></a>Incluir una oferta de SaaS con la aplicación de Teams
 
@@ -69,7 +69,7 @@ Para obtener instrucciones completas y referencias de API, consulte la documenta
 
 * Con las ofertas SaaS comercializables para Teams aplicaciones, los planes de suscripción (licencias) deben asignarse a usuarios individuales en lugar de a grupos o a toda una organización.
 * Cuando se asigne un plan de suscripción a los usuarios, infórmeles de ello a través de un bot o correo electrónico de Teams. En su comunicación, incluya información sobre cómo agregar la aplicación a Teams y empezar.
-* Admitir la idea de varios administradores. En otras palabras, varios usuarios de la misma organización pueden comprar y administrar sus propias suscripciones.
+* Apoye la opción de varios administradores. En otras palabras, que varios usuarios de la misma organización puedan comprar y administrar sus propias suscripciones.
 
 ## <a name="build-a-landing-page-for-subscription-management"></a>Crear una página de aterrizaje para la administración de suscripciones
 
@@ -109,7 +109,7 @@ Consulte [Crear una oferta SaaS](/azure/marketplace/create-new-saas-offer) para 
 
     * En **Integración con Microsoft 365**, agregue el vínculo AppSource a la descripción de la aplicación. Este paso garantiza que los usuarios puedan comprar sus planes de suscripción en AppSource además de en Teams.
 
-1. Almacene el publicador y los identificadores de la oferta. (Los necesitará más adelante para vincular la oferta a la aplicación en el Portal para desarrolladores).
+1. Almacene su editor y ofrezca los id. (los necesitará más adelante para vincular la oferta a su aplicación en el Portal de desarrolladores).
 
 1. Publique su oferta en el marketplace.
 

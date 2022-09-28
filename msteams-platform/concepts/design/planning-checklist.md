@@ -1,16 +1,15 @@
 ---
 title: Preguntas para ayudar a planear el desarrollo de aplicaciones de Teams
 author: heath-hamilton
-description: Aprenda a planear la aplicación mediante la lista de comprobación para asegurarse de que el plan cubre los detalles importantes del desarrollo de aplicaciones.
-ms.topic: conceptual
+description: Aprenda a planear la aplicación mediante la lista de comprobación para asegurarse de que el plan cubre los detalles importantes del desarrollo de aplicaciones. Planear el ciclo de vida de la aplicación. Planee hospedar la aplicación de Teams.
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: dd33aa3dbef8579f06d951138739301f5886b70e
-ms.sourcegitcommit: 2d2a08f671c3d19381403ba1af5dff1f06bb4dd6
+ms.openlocfilehash: 932e8ea564a6cc47bb2b8dbe4e01256d0688cefa
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2022
-ms.locfileid: "67338770"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100717"
 ---
 # <a name="teams-app-planning-checklist"></a>Lista de comprobación de planeamiento de la aplicación de Teams
 
@@ -106,9 +105,9 @@ Crear una aplicación impresionante para Teams consiste en encontrar la combinac
 
 | # | Considere: |
 | --- | --- |
-| 1 | ¿La información que presenta la aplicación, ya sea en ficha o a través de un bot, es relevante y útil para la mayoría de los miembros de un equipo? Por ejemplo, la aplicación Scrum. |
+| 1 | Is the information presented by the app, either in tab or through a bot, relevant and useful for most of the members in a Team? For example, Scrum app. |
 | 2 | ¿Podría cambiar el contexto de la aplicación en función del equipo al que se agregue? Por ejemplo, las tareas de Planner son diferentes para distintos equipos. |
-| 3 | ¿Es posible que todos los miembros de un rol que necesiten colaborar formen parte de un único equipo? Por ejemplo, agentes que trabajan en la solución de un vale. |
+| 3 | Is it possible that all members in a persona who need to collaborate are a part of a single team? For example, agents working on a ticket. |
 
 </details>
 <br>

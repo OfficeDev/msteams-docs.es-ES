@@ -1,15 +1,15 @@
 ---
 title: Crear y enviar mensajes
 author: laujan
-description: En este módulo, aprenderá a usar conectores de Office 365 y a crear y enviar mensajes accionables en Microsoft Teams
+description: Cree mensajes accionables, envíe mensajes a través del webhook entrante, Office 365 Connector, cURL o PowerShell. Enviar tarjetas adaptables. Transacción basada en el tiempo.
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 5014c23d13dd8f0b1c694c144e936c624c602d40
-ms.sourcegitcommit: dccb48902e08484692ab927415bcd3d61dc50db2
+ms.openlocfilehash: ce7f2dd8eba6aaa98156ea118a9724dcd79fd989
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2022
-ms.locfileid: "67806783"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100465"
 ---
 # <a name="create-and-send-messages"></a>Crear y enviar mensajes
 
@@ -258,10 +258,10 @@ En la tabla siguiente se proporcionan los detalles de la transacción basada en 
 | 7200 | 150  |
 | 86400  | 1800  |
 
-Una [lógica de reintento con interrupción exponencial](/azure/architecture/patterns/retry) puede mitigar la restricción de velocidad en casos en que las solicitudes superen los límites en un segundo. Siga los [procedimientos recomendados](../../bots/how-to/rate-limit.md) para evitar alcanzar los límites de velocidad.
+A [retry logic with exponential back-off](/azure/architecture/patterns/retry) can mitigate rate limiting for cases where requests are exceeding the limits within a second. Follow [best practices](../../bots/how-to/rate-limit.md) to avoid hitting the rate limits.
 
 > [!NOTE]
-> Una [lógica de reintento con retroceso exponencial](/azure/architecture/patterns/retry) puede mitigar la limitación de velocidad en los casos en los que las solicitudes superan los límites en un segundo. Consulte [respuestas HTTP 429](../../bots/how-to/rate-limit.md#handle-http-429-responses) para evitar alcanzar los límites de velocidad.
+> A [retry logic with exponential back-off](/azure/architecture/patterns/retry) can mitigate rate limiting for cases where requests are exceeding the limits within a second. Refer [HTTP 429 responses](../../bots/how-to/rate-limit.md#handle-http-429-responses) to avoid hitting the rate limits.
 
 ```csharp
 // Please note that response body needs to be extracted and read 

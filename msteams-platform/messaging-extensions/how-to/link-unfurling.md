@@ -1,16 +1,16 @@
 ---
 title: Apertura de vínculos
 author: surbhigupta
-description: En este módulo, aprenderá a agregar un vínculo que se desplegue con la extensión de mensajería en una aplicación de Teams con el manifiesto de aplicación o manualmente mediante ejemplos y ejemplos de código.
+description: Agregue un vínculo que se desplegue con la extensión de mensajería en una aplicación de Microsoft Teams con el manifiesto de la aplicación o manualmente. Agregue el vínculo desplegándose mediante el Portal para desarrolladores. Cómo actualizar el código del servicio web para controlar la solicitud de invocación.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 48c015050efe469446aea9016a33effe8ad3ba3a
-ms.sourcegitcommit: 6ea8c3fe0ccea0204285ea5f994913d173925ffd
+ms.openlocfilehash: 57d3ed45bebfc221f376bf7e08aef73a5b4c40ae
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/20/2022
-ms.locfileid: "67833393"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100633"
 ---
 # <a name="add-link-unfurling"></a>Añadir una extensión de enlace
 
@@ -45,7 +45,7 @@ Para agregar una apertura de enlace al manifiesto de la aplicación, agregue una
 1. Abra **el Portal para desarrolladores** en el cliente de Microsoft Teams y, a continuación, seleccione la pestaña **Aplicaciones** .
 1. Cargue el manifiesto de la aplicación.
 1. En la página **Extensión de mensajería** , en **Características de la aplicación**, seleccione el bot existente o cree un bot nuevo.
-1. Haga clic en **Guardar**.
+1. Seleccione **Guardar**.
 1. Seleccione **Agregar un dominio** en la sección **Vínculos de vista previa** y escriba dominio válido.
 1. Seleccione **Agregar**. En la imagen siguiente se explica el proceso:
 
