@@ -6,12 +6,12 @@ ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 5e24b4c6209d2e0c719a6613272876206dc0e173
-ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
+ms.openlocfilehash: 498a003e8fdc58d1eb0d9db4abb7b4b151143a19
+ms.sourcegitcommit: 275bb05daee25ae710238cbd49f588e6da1ffdf1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2022
-ms.locfileid: "67450404"
+ms.lasthandoff: 09/29/2022
+ms.locfileid: "68158684"
 ---
 # <a name="create-a-personal-tab"></a>Crear una pestaña personal
 
@@ -130,7 +130,8 @@ Estos son los pasos para crear una pestaña personal:
     * **¿Necesita compatibilidad con el inicio de sesión único de Microsoft Azure Active Directory (Azure AD) para la pestaña?**
 
       Elija **no** incluir compatibilidad con el inicio de sesión único de Azure AD para la pestaña. El valor predeterminado es sí, escriba **n**.
-
+    > [!NOTE]
+    > En una pestaña, la página principal de la pestaña aparece solo cuando el usuario selecciona el botón Atrás (o se mueve fuera de la pestaña) y vuelve a la página principal. La pestaña no mantiene ni conserva el estado anterior por diseño.
     </details>
 
 ### <a name="add-a-content-page-to-the-personal-tab"></a>Agregar una página de contenido a la pestaña personal
