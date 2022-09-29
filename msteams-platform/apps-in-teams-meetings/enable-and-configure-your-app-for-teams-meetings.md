@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.date: 04/07/2022
-ms.openlocfilehash: b01155abe9ec421310b169c7a2b50c49e211b4b7
-ms.sourcegitcommit: 08bd7f1b9c654b95d3639ca88052c9ca9a8c3f67
+ms.openlocfilehash: d0e7cf82685588977beb426ec6cc2ed75b2249c6
+ms.sourcegitcommit: 600d3b13d47ca42ab5ba7abf18bccc7e912180e4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/20/2022
-ms.locfileid: "67833711"
+ms.lasthandoff: 09/29/2022
+ms.locfileid: "68158823"
 ---
 # <a name="enable-and-configure-apps-for-meetings"></a>Habilitar y configurar las aplicaciones para reuniones
 
@@ -177,7 +177,7 @@ Además, puede agregar la imagen de visualización de Teams y la tarjeta de cont
 
 La fase de reunión compartida permite a los participantes de la reunión interactuar con el contenido de la aplicación y colaborar en él en tiempo real. Puede compartir sus aplicaciones en la fase de reunión colaborativa de las siguientes maneras:
 
-* [Comparta toda la aplicación en fase](#share-entire-app-to-stage) mediante el botón compartir en fase en el cliente de Teams.
+* [Comparta toda la aplicación para realizar la fase](#share-entire-app-to-stage) mediante el botón compartir para realizar la fase en el panel lateral de la reunión del cliente de Teams o a través de [vínculos profundos](~/concepts/build-and-test/deep-links.md#generate-a-deep-link-to-share-content-to-stage-in-meetings).
 * [Comparta partes específicas de la aplicación en fase](#share-specific-parts-of-the-app-to-stage) mediante API en el SDK de cliente de Teams.
 
 ##### <a name="share-entire-app-to-stage"></a>Compartir toda la aplicación en fase
@@ -190,18 +190,18 @@ Para compartir toda la aplicación en fase, debe configurar `meetingStage` y `me
 
 ```json
 "configurableTabs": [
-    {
+   {
       "configurationUrl": "https://contoso.com/teamstab/configure",
       "canUpdateConfiguration": true,
       "scopes": [
-        "groupchat"
-      ],
+         "groupchat"
+        ],
       "context":[
-        "meetingSidePanel",
-        "meetingStage"
-     ]
+         "meetingSidePanel",
+         "meetingStage"
+        ]
     }
-  ]
+]
 ```
 
 Para obtener más información, vea [manifiesto de aplicación](../resources/schema/manifest-schema-dev-preview.md#configurabletabs).

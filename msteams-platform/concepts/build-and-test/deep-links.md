@@ -3,12 +3,12 @@ title: Crear vínculos profundos
 description: En este artículo, aprenderá a crear vínculos profundos y a navegar por dichos vínculos en las aplicaciones de Microsoft Teams con pestañas.
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: ea279c9bd4883507df4f56fbf514080940da52b4
-ms.sourcegitcommit: b9ec2a17094cb8b24c3017815257431fb0a679d0
+ms.openlocfilehash: e41fd72f7560de856988f45e02b63444f58888a5
+ms.sourcegitcommit: 600d3b13d47ca42ab5ba7abf18bccc7e912180e4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2022
-ms.locfileid: "67991004"
+ms.lasthandoff: 09/29/2022
+ms.locfileid: "68158856"
 ---
 # <a name="create-deep-links"></a>Crear vínculos profundos
 
@@ -383,7 +383,7 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 }
 ```
 
-### <a name="deep-linking-to-an-app"></a>Vinculación profunda a una aplicación
+## <a name="deep-linking-to-an-app"></a>Vinculación profunda a una aplicación
 
 Cree vínculos profundos para la aplicación después de que la aplicación aparezca en la tienda de Teams. Para crear un vínculo para iniciar Teams, anexe el identificador de aplicación a la siguiente dirección URL: `https://teams.microsoft.com/l/app/<your-app-id>`. Aparece un cuadro de diálogo para instalar o abrir la aplicación.
 
@@ -408,9 +408,9 @@ Los parámetros de consulta son:
 
 Ejemplo: `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&TaskList`
 
-### <a name="navigate-to-an-audio-or-audio-video-call"></a>Vinculación profunda a una llamada de audio o de audio y vídeo
+## <a name="navigate-to-an-audio-or-audio-video-call"></a>Vinculación profunda a una llamada de audio o de audio y vídeo
 
-Puede crear vínculos profundos para invocar solo audio o llamadas de audio y vídeo a un único usuario o grupo de usuarios, especificando el tipo de llamada y los participantes. Antes de realizar la llamada, el cliente de Teams solicita una confirmación para realizar la llamada. Si hay una llamada grupal, puede llamar a un conjunto de usuarios de VoIP y a un conjunto de usuarios de RTC en la misma invocación de vínculo profundo.
+Puede crear vínculos profundos para invocar solo audio o llamadas de audio y vídeo a un único usuario o grupo de usuarios, especificando el tipo de llamada y los participantes. Antes de realizar la llamada, el cliente de Teams solicita una confirmación para realizar la llamada. En el caso de una llamada de grupo, puede llamar a un conjunto de usuarios de VoIP y a un conjunto de usuarios RTC en la misma invocación de vínculo profundo.
 
 En el caso de una videollamada, el cliente pedirá confirmación y activará el vídeo del autor de la llamada para la llamada. El receptor de la llamada tiene la opción de responder solo a través de audio o con audio y vídeo, a través de la ventana de notificación de llamadas de Teams.
 
@@ -430,7 +430,78 @@ else { /* handle case where capability isn't supported */ }
 
 ```
 
-#### <a name="generate-a-deep-link-to-a-call"></a>Generar un vínculo profundo a una llamada
+## <a name="generate-a-deep-link-to-share-content-to-stage-in-meetings"></a>Generación de un vínculo profundo para compartir contenido para realizar una fase en las reuniones
+
+También puede generar un vínculo profundo para [compartir la aplicación para realizar la fase](~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#share-entire-app-to-stage) e iniciar o unirse a una reunión.
+
+> [!Note]
+> El vínculo profundo para compartir contenido para la fase de reunión solo se admite en el cliente de escritorio de Teams.
+
+Cuando un usuario que forma parte de una reunión en curso selecciona un vínculo profundo en una aplicación, la aplicación se comparte en la fase y aparece una ventana emergente de permisos. Los usuarios pueden conceder permisos a los participantes, como la edición conjunta de un documento o la colaboración con una aplicación.
+
+:::image type="content" source="../../assets/images/intergrate-with-teams/screenshot-of-pop-up-permission.png" alt-text="La captura de pantalla es un ejemplo que muestra una ventana emergente de permisos.":::
+
+Cuando el usuario no está en una reunión, se redirige al usuario al calendario de Teams, donde el usuario necesita unirse a una reunión o una reunión instantánea (Reunirse ahora).
+
+:::image type="content" source="../../assets/images/intergrate-with-teams/Instant-meetnow-pop-up.png" alt-text="La captura de pantalla es un ejemplo que muestra una ventana emergente cuando no hay ninguna reunión en curso.":::
+
+Una vez que el usuario inicia una reunión instantánea (Reunirse ahora), puede agregar participantes e interactuar con la aplicación.
+
+:::image type="content" source="../../assets/images/intergrate-with-teams/Screenshot-ofmeet-now-option-pop-up.png" alt-text="La captura de pantalla es un ejemplo que muestra una opción para agregar participantes y cómo interactuar con la aplicación.":::
+
+Para agregar un vínculo profundo para compartir contenido en el escenario, debe tener un contexto de aplicación. El contexto de la aplicación permite al cliente de Teams capturar el manifiesto de la aplicación y comprobar si es posible el uso compartido en el escenario. A continuación se muestra un ejemplo de contexto de aplicación.
+
+* `{ "appSharingUrl" : "https://teams.microsoft.com/extensibility-apps/meetingapis/view", "appId": "9ec80a73-1d41-4bcb-8190-4b9eA9e29fbb" , "useMeetNow": false }`
+
+Los parámetros de consulta para el contexto de la aplicación son:
+
+* `appID`: es el identificador que se puede obtener del manifiesto de la aplicación.
+* `appSharingUrl`: la dirección URL que debe compartirse en el escenario debe ser un dominio válido definido en el manifiesto de la aplicación. Si la dirección URL no es un dominio válido, aparecerá un cuadro de diálogo de error para proporcionar al usuario una descripción del error.
+* `useMeetNow`: incluye un parámetro booleano que puede ser true o false.
+  * **True** : cuando el `UseMeetNow` valor es true y no hay ninguna reunión en curso, se iniciará una nueva reunión meet now. Cuando haya una reunión en curso, se omitirá este valor.
+
+  * **False** : el valor predeterminado de `UseMeetNow` es false, lo que significa que cuando se comparte un vínculo profundo en la fase y no hay ninguna reunión en curso, aparecerá un elemento emergente de calendario. Cuando hay una reunión en curso, el uso compartido se puede realizar directamente.
+
+Asegúrese de que todos los parámetros de consulta estén correctamente codificados mediante URI y que el contexto de la aplicación tenga que codificarse dos veces en la dirección URL final. A continuación, se muestra un ejemplo.
+
+```json
+var appContext= JSON.stringify({ "appSharingUrl" : "https://teams.microsoft.com/extensibility-apps/meetingapis/view", "appId": "9cc80a93-1d41-4bcb-8170-4b9ec9e29fbb", "useMeetNow":false })
+var encodedContext = encodeURIComponent(appcontext).replace(/'/g,"%27").replace(/"/g,"%22")
+var encodedAppContext = encodeURIComponent(encodedContext).replace(/'/g,"%27").replace(/"/g,"%22")
+```
+
+Se puede iniciar un vínculo profundo desde la web de Teams o desde el cliente de escritorio de Teams.
+
+* **Web de Teams** : use el siguiente formato para iniciar un vínculo profundo desde la web de Teams para compartir contenido en el escenario.
+
+    `https://teams.microsoft.com/l/meeting-share?deeplinkId={deeplinkid}&fqdn={fqdn}}&lm=deeplink%22&appContext={encoded app context}`
+
+    Ejemplo: `https://teams.microsoft.com/l/meeting-share?deeplinkId={sampleid}&fqdn=teams.microsoft.com&lm=deeplink%22&appContext=%257B%2522appSharingUrl%2522%253A%2522https%253A%252F%252Fteams.microsoft.com%252Fextensibility-apps%252Fmeetingapis%252Fview%2522%252C%2522appId%2522%253A%25229cc80a93-1d41-4bcb-8170-4b9ec9e29fbb%2522%252C%2522useMeetNow%2522%253Atrue%257D`
+
+    |Vínculo profundo|Formato|Ejemplo|
+    |---------|---------|---------|
+    |Para compartir la aplicación y abrir el calendario de Teams, cuando UseMeeetNow es "false", es el valor predeterminado.|`https://teams.microsoft.com/l/meeting-share?deeplinkId={deeplinkid}&fqdn={fqdn}}&lm=deeplink%22&appContext={encoded app context}`|`https://teams.microsoft.com/l/meeting-share?deeplinkId={sampleid}&fqdn=teams.microsoft.com&lm=deeplink%22&appContext=%257B%2522appSharingUrl%2522%253A%2522https%253A%252F%252Fteams.microsoft.com%252Fextensibility-apps%252Fmeetingapis%252Fview%2522%252C%2522appId%2522%253A%25229cc80a93-1d41-4bcb-8170-4b9ec9e29fbb%2522%252C%2522useMeetNow%2522%253Atrue%257D`|
+    |Para compartir la aplicación e iniciar una reunión instantánea, cuando UseMeeetNow es "true".|`https://teams.microsoft.com/l/meeting-share?deeplinkId={deeplinkid}&fqdn={fqdn}}&lm=deeplink%22&appContext={encoded app context}`|`https://teams.microsoft.com/l/meeting-share?deeplinkId={sampleid}&fqdn=teams.microsoft.com&lm=deeplink%22&appContext=%257B%2522appSharingUrl%2522%253A%2522https%253A%252F%252Fteams.microsoft.com%252Fextensibility-apps%252Fmeetingapis%252Fview%2522%252C%2522appId%2522%253A%25229cc80a93-1d41-4bcb-8170-4b9ec9e29fbb%2522%252C%2522useMeetNow%2522%253Atrue%257D`|
+
+* **Cliente de escritorio de equipo** : use el siguiente formato para iniciar un vínculo profundo desde el cliente de escritorio de Teams para compartir contenido en el escenario.
+
+    `msteams:/l/meeting-share?   deeplinkId={deeplinkid}&fqdn={fqdn}&lm=deeplink%22&appContext={encoded app context}`
+
+    Ejemplo: `msteams:/l/meeting-share?deeplinkId={sampleid}&fqdn=teams.microsoft.com&lm=deeplink%22&appContext=%257B%2522appSharingUrl%2522%253A%2522https%253A%252F%252Fteams.microsoft.com%252Fextensibility-apps%252Fmeetingapis%252Fview%2522%252C%2522appId%2522%253A%25229cc80a93-1d41-4bcb-8170-4b9ec9e29fbb%2522%252C%2522useMeetNow%2522%253Atrue%257D`
+
+    |Vínculo profundo|Formato|Ejemplo|
+    |---------|---------|---------|
+    |Para compartir la aplicación y abrir el calendario de Teams, cuando UseMeeetNow es "false", es el valor predeterminado.|`msteams:/l/meeting-share?   deeplinkId={deeplinkid}&fqdn={fqdn}&lm=deeplink%22&appContext={encoded app context}`|`msteams:/l/meeting-share?deeplinkId={sampleid}&fqdn=teams.microsoft.com&lm=deeplink%22&appContext=%257B%2522appSharingUrl%2522%253A%2522https%253A%252F%252Fteams.microsoft.com%252Fextensibility-apps%252Fmeetingapis%252Fview%2522%252C%2522appId%2522%253A%25229cc80a93-1d41-4bcb-8170-4b9ec9e29fbb%2522%252C%2522useMeetNow%2522%253Atrue%257D`|
+    |Para compartir la aplicación e iniciar una reunión instantánea, cuando UseMeeetNow es "true".|`msteams:/l/meeting-share?   deeplinkId={deeplinkid}&fqdn={fqdn}&lm=deeplink%22&appContext={encoded app context}`|`msteams:/l/meeting-share?deeplinkId={sampleid}&fqdn=teams.microsoft.com&lm=deeplink%22&appContext=%257B%2522appSharingUrl%2522%253A%2522https%253A%252F%252Fteams.microsoft.com%252Fextensibility-apps%252Fmeetingapis%252Fview%2522%252C%2522appId%2522%253A%25229cc80a93-1d41-4bcb-8170-4b9ec9e29fbb%2522%252C%2522useMeetNow%2522%253Atrue%257D`|
+
+Los parámetros de consulta son:
+
+* `deepLinkId`: cualquier identificador usado para la correlación de telemetría.
+* `fqdn`: `fqdn` es un parámetro opcional, que se puede usar para cambiar a un entorno adecuado de una reunión para compartir una aplicación en el escenario. Admite escenarios en los que se produce un recurso compartido de aplicaciones específico en un entorno determinado. El valor predeterminado de es dirección URL de `fqdn` empresa y los valores posibles son `Teams.live.com` para Teams for Life, `teams.microsoft.com`o `teams.microsoft.us`.
+
+Para compartir toda la aplicación para la fase, en el manifiesto de la aplicación, debe configurar `meetingStage` y `meetingSidePanel` , como contextos de marco, consulte [manifiesto de la aplicación](../../resources/schema/manifest-schema.md). De lo contrario, es posible que los asistentes a la reunión no puedan ver el contenido en el escenario.
+
+## <a name="generate-a-deep-link-to-a-call"></a>Generar un vínculo profundo a una llamada
 
 Aunque se recomienda el uso de las API tipeadas de TeamsJS, también puede usar un vínculo profundo creado manualmente para iniciar una llamada.
 
