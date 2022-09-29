@@ -5,12 +5,12 @@ description: Obtenga información sobre cómo usar el SDK de cliente de JavaScri
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 25d8fb9c52e0dee02d8057f1fe4714f7f3f1f613
-ms.sourcegitcommit: 3baca27a93e5a68eaaa52810700076f08f4c88a8
+ms.openlocfilehash: d7bfedc0a439f428287cb1443df2a66fcff670ab
+ms.sourcegitcommit: c74e1e12175969c75e112a580949f96d2610c24e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2022
-ms.locfileid: "67605792"
+ms.lasthandoff: 09/29/2022
+ms.locfileid: "68160639"
 ---
 # <a name="integrate-media-capabilities"></a>Integrar capacidades multimedia
 
@@ -20,9 +20,9 @@ Para una integración eficaz, debe tener una buena comprensión de [los fragment
 
 ## <a name="advantages"></a>Ventajas
 
-La principal ventaja de integrar las funcionalidades de dispositivo en las aplicaciones de Teams es que usa controles nativos de Teams para proporcionar una experiencia enriquecida e inmersiva a los usuarios. En los escenarios siguientes se muestran las ventajas de las funcionalidades multimedia:
+La ventaja de integrar las funcionalidades de dispositivo en las aplicaciones de Teams es que usa controles nativos de Teams para proporcionar una experiencia enriquecida e inmersiva para los usuarios. En los escenarios siguientes se muestran las ventajas de las funcionalidades multimedia:
 
-* Permitir que el usuario capture las simulaciones aproximadas dibujadas en una pizarra física a través del teléfono móvil y use las imágenes capturadas como opciones de sondeo en el chat de grupo de Teams.
+* Permitir al usuario capturar las simulaciones aproximadas dibujadas en una pizarra física a través de su teléfono móvil y usar las imágenes capturadas como opciones de sondeo en el chat de grupo de Teams.
 
 * Permitir al usuario grabar el mensaje de audio y adjuntarlo a un vale de incidente.
 
@@ -69,7 +69,7 @@ En la tabla siguiente se muestra un conjunto de API para habilitar las funcional
 | API      | Descripción   |
 | --- | --- |
 | [**selectMedia**](/javascript/api/@microsoft/teams-js/media#@microsoft-teams-js-media-selectmedia) (**cámara)**| Esta API permite a los usuarios **capture o seleccionar medios de la cámara del dispositivo** y devolverlos a la aplicación web. Los usuarios pueden editar, recortar, girar, anotar o dibujar imágenes antes del envío. En respuesta a `selectMedia`, la aplicación web recibe los identificadores multimedia de las imágenes seleccionadas y una miniatura del medio seleccionado. Esta API se puede configurar aún más a través de la configuración de [ImageProps](/javascript/api/@microsoft/teams-js/media.imageprops). |
-| [**selectMedia**](/javascript/api/@microsoft/teams-js/media#@microsoft-teams-js-media-selectmedia) (**micrófono**)| Establezca [mediaType](/javascript/api/@microsoft/teams-js/media.mediatype) `4` en (Audio) en `selectMedia` la API para acceder a la funcionalidad de micrófono. Esta API también permite a los usuarios grabar audio desde el micrófono del dispositivo y devolver clips grabados a la aplicación web. Los usuarios pueden pausar, volver a grabar y reproducir la vista previa de grabación antes del envío. En respuesta a **selectMedia**, la aplicación web recibe los identificadores multimedia de la grabación de audio seleccionada. <br/> Use `maxDuration` si necesita configurar una duración en minutos para grabar la conversación. La duración actual de la grabación es de 10 minutos, tras lo cual finaliza la grabación.  |
+| [**selectMedia**](/javascript/api/@microsoft/teams-js/media#@microsoft-teams-js-media-selectmedia) (**micrófono**)| Establezca [mediaType](/javascript/api/@microsoft/teams-js/media.mediatype) `4` en (Audio) en `selectMedia` la API para acceder a la funcionalidad de micrófono. Esta API también permite a los usuarios grabar audio desde el micrófono del dispositivo y devolver clips grabados a la aplicación web. Los usuarios pueden pausar, volver a grabar y reproducir la vista previa de grabación antes del envío. En respuesta a **selectMedia**, la aplicación web recibe los identificadores multimedia de las grabaciones de audio seleccionadas. <br/> Use `maxDuration`, si necesita configurar una duración en minutos para grabar la conversación. La duración actual de la grabación es de 10 minutos, tras lo cual finaliza la grabación.  |
 | [**getMedia**](/javascript/api/@microsoft/teams-js/media.media#@microsoft-teams-js-media-media-getmedia)| Esta API recupera los medios capturados por `selectMedia` API en fragmentos, independientemente del tamaño del medio. Estos fragmentos se ensamblan y se devuelven a la aplicación web como un archivo o blob. Dividir los medios en fragmentos más pequeños facilita la transferencia de archivos grandes. |
 | [**viewImages**](/javascript/api/@microsoft/teams-js/media#@microsoft-teams-js-media-viewimages)| Esta API permite al usuario ver imágenes en modo de pantalla completa como una lista desplazable.|
 
@@ -80,7 +80,6 @@ En la imagen siguiente se muestra la experiencia de la aplicación web de `selec
 :::image type="content" source="~/assets/images/tabs/media-capability-mobile2.png" alt-text="Ilustración que muestra la funcionalidad de imagen para dispositivos móviles.":::
 
 > [!NOTE]
->
 > En dispositivos con la versión de Android inferior a 7, la `selectMedia` API inicia la experiencia nativa de la cámara Android en lugar de la experiencia nativa de la cámara de Teams.
 
 En la imagen siguiente se muestra la experiencia de la aplicación web de `selectMedia` la API para la funcionalidad de micrófono:
@@ -383,6 +382,23 @@ Asegúrese de controlar estos errores correctamente en la aplicación de Teams. 
         }
     });
     });
+    ```
+
+## <a name="file-download-on-teams-mobile"></a>Descarga de archivos en el móvil de Teams
+
+Puede configurar una aplicación para permitir que los usuarios descarguen archivos de la vista web en su dispositivo móvil.
+
+>[!NOTE]
+> La descarga de archivos solo se admite en el cliente móvil de Android Teams y solo se pueden descargar archivos no autenticados.
+
+Para habilitarlo, siga estos pasos:
+
+1. Actualice el archivo [manifest.json](../../resources/schema/manifest-schema.md#devicepermissions) de la aplicación de Teams agregando la `devicePermissions` propiedad y especificando `media` como se muestra en el [manifiesto de actualización](#update-manifest).
+
+2. Use el siguiente formato y agregue el atributo de descarga HMTL a la página web:
+
+    ```html
+    <a href="path_to_file" download="download">Download</a>
     ```
 
 ## <a name="see-also"></a>Consulte también

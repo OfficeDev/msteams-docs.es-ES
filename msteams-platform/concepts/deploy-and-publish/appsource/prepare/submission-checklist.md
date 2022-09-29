@@ -5,12 +5,12 @@ ms.topic: how-to
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 373fee0b0c0b132357596e495014dc4535205b64
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 9d850b76bddf288e766bdcc039711ef1d3059df8
+ms.sourcegitcommit: c74e1e12175969c75e112a580949f96d2610c24e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100444"
+ms.lasthandoff: 09/29/2022
+ms.locfileid: "68160716"
 ---
 # <a name="prepare-your-teams-store-submission"></a>Preparar el envío de la tienda de Microsoft Teams
 
@@ -19,7 +19,7 @@ Has diseñado, creado y probado tu aplicación de Microsoft Teams. Ahora estás 
 Vea el siguiente vídeo para obtener más información sobre cómo publicar la aplicación en la tienda de aplicaciones de Microsoft Teams:
 <br>
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4WG3l]
+> [!VIDEO <https://www.microsoft.com/videoplayer/embed/RE4WG3l>]
 <br>
 
 Antes de enviar la aplicación al [Centro de partners](/office/dev/store/use-partner-center-to-submit-to-appsource), debe asegurarse de haber hecho lo siguiente.
@@ -30,7 +30,10 @@ Aunque la aplicación puede estar funcionando en un entorno de prueba, debes com
 
 La herramienta de validación de aplicaciones de Microsoft Teams ayuda a identificar y solucionar problemas antes de enviarlos al Centro de partners. La herramienta comprueba automáticamente las configuraciones de la aplicación en los mismos casos de prueba usados durante la validación de la tienda.
 
-1. Vaya a la [herramienta de validación de aplicaciones de Microsoft Teams](https://dev.teams.microsoft.com/appvalidation.html). (Nota: La herramienta también está disponible en [Portal para desarrolladores para Teams](~/concepts/build-and-test/teams-developer-portal.md)
+1. Vaya a la [herramienta de validación de aplicaciones de Microsoft Teams](https://dev.teams.microsoft.com/appvalidation.html).
+
+   También puede validar la aplicación mediante [el Portal para desarrolladores para Teams.](~/concepts/build-and-test/teams-developer-portal.md)
+
 1. Carga el paquete de la aplicación para ejecutar las pruebas automatizadas.
 1. Vaya a la **lista de comprobación preliminar** y revise los casos de prueba que son difíciles de automatizar.
 1. [Fix issues with your configurations](~/resources/schema/manifest-schema.md) or app in general. These issues occur if the automated tests give you errors or you haven't met all the criteria in the checklist.
@@ -185,18 +188,36 @@ Puede agregar una dirección URL para el vídeo de YouTube o Vimeo.
 
 ### <a name="select-a-category-for-your-app"></a>Seleccionar una categoría para la aplicación
 
-Durante el envío, se le pedirá que clasifique la aplicación. En la siguiente tabla, se asignan categorías de la tienda de Teams a las categorías que aparecen en el [Centro de partners](https://aka.ms/PartnerCenterHomePage).
+Durante el envío, se le pedirá que clasifique la aplicación. Puede clasificar la aplicación en función de las siguientes categorías:
 
-| Categorías de Teams       | Categorías del Centro de partners  |
-|:---------------------|:---------------|
-| Visualización de datos y BI | Análisis, visualización de datos y BI |
-| Herramientas de desarrollo | Herramientas para desarrolladores, administrador de TI |
-| Educación | Educación |
-| Recursos humanos & contratación| Recursos humanos y contratación |
-| Productividad | Administración de contenido, archivos y documentos, productividad, aprendizaje y tutoriales y utilidades |
-| Administración de proyectos | Comunicación, administración de proyectos, flujo de trabajo y administración empresarial |
-| Ventas y soporte | Administración de clientes y contactos, soporte al cliente, administración financiera y ventas y marketing |
-| Social | Galerías de imágenes y vídeo, estilo de vida, noticias y el tiempo, vida social, viajes y navegación |
+|Categories  |
+|--------------|
+| Microsoft |
+| Education |
+| Productividad |
+| Imágenes & galerías de vídeos |
+| Administración de proyectos |
+| Utilidades |
+| Social |
+| Comunicación |
+| Administración de contenido |
+| Archivos & documentos |
+| Administración de flujos de trabajo & empresariales |
+| TI/Administración |
+| Recursos humanos & contratación|
+| Herramientas de desarrollo |
+| Programación de reuniones & |
+| Visualización de datos & BI |
+| Tutorial de & de entrenamiento |
+| Noticias & el tiempo |
+| Asistencia al cliente |
+| Referencia |
+| Marketing & ventas |
+| Apariencia & |
+| Administración de contactos & cliente (CRM) |
+| Administración financiera |
+| Fuentes de & de Mapas |
+| Otros |
 
 ### <a name="localize-your-store-listing"></a>Localización de la descripción de la tienda
 

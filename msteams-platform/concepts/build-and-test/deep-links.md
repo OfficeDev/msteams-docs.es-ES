@@ -3,12 +3,12 @@ title: Crear vínculos profundos
 description: En este artículo, aprenderá a crear vínculos profundos y a navegar por dichos vínculos en las aplicaciones de Microsoft Teams con pestañas.
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: e41fd72f7560de856988f45e02b63444f58888a5
-ms.sourcegitcommit: 600d3b13d47ca42ab5ba7abf18bccc7e912180e4
+ms.openlocfilehash: b02a29b74204e9ef8f61633642bd42cd178c8350
+ms.sourcegitcommit: c74e1e12175969c75e112a580949f96d2610c24e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 09/29/2022
-ms.locfileid: "68158856"
+ms.locfileid: "68160723"
 ---
 # <a name="create-deep-links"></a>Crear vínculos profundos
 
@@ -388,7 +388,7 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 Cree vínculos profundos para la aplicación después de que la aplicación aparezca en la tienda de Teams. Para crear un vínculo para iniciar Teams, anexe el identificador de aplicación a la siguiente dirección URL: `https://teams.microsoft.com/l/app/<your-app-id>`. Aparece un cuadro de diálogo para instalar o abrir la aplicación.
 
 > [!NOTE]
-> Si la aplicación se ha aprobado para la plataforma móvil, puede vincularla en profundidad a una aplicación en el móvil. Además, se requiere el id. de equipo de Apple App Store Connect para que el vínculo profundo funcione en Teams-iOS. Para obtener más información, consulte [cómo actualizar el id. de equipo de Apple App Store Connect](../deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md#update-apple-app-store-connect-team-id-on-partner-center).
+> Si la aplicación se ha aprobado para la plataforma móvil, puede vincularla en profundidad a una aplicación en el móvil. Además, se requiere el id. de equipo de Apple App Store Connect para que el vínculo profundo funcione en Teams-iOS. Para obtener más información, consulte [cómo actualizar el id. de equipo de Apple App Store Connect](../deploy-and-publish/appsource/prepare/update-apple-store-team-connect-id.md).
 
 ### <a name="deep-linking-for-sharepoint-framework-tabs"></a>Vinculación en profundidad para pestañas de SharePoint Framework
 

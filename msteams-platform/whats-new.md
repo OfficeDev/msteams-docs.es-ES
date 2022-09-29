@@ -4,12 +4,12 @@ description: Obtenga información sobre las nuevas características para desarro
 ms.topic: reference
 ms.localizationpriority: high
 zone_pivot_groups: What-new-features
-ms.openlocfilehash: e54f37ae2c330275fb0dd51de34c2f8bcd721bba
-ms.sourcegitcommit: 600d3b13d47ca42ab5ba7abf18bccc7e912180e4
+ms.openlocfilehash: 5aad27389416a5e10920ebc00521274fc8f7d907
+ms.sourcegitcommit: c74e1e12175969c75e112a580949f96d2610c24e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 09/29/2022
-ms.locfileid: "68158830"
+ms.locfileid: "68160730"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores en Microsoft Teams
 
@@ -31,6 +31,7 @@ Características de la plataforma Microsoft Teams que están disponibles para to
 
 **Septiembre de 2022**
 
+* ***29 de septiembre de 2022***: [la aplicación móvil de Teams ahora admite descargas de archivos en dispositivos locales.](concepts/device-capabilities/media-capabilities.md#file-download-on-teams-mobile)
 * ***29 de septiembre de 2022***: [genere un vínculo profundo para compartir contenido para realizar reuniones.](concepts/build-and-test/deep-links.md#generate-a-deep-link-to-share-content-to-stage-in-meetings)
 * ***16 de septiembre de 2022***: [las tarjetas adaptables en las extensiones de mensaje basadas en búsqueda ahora admiten Acciones universales.](messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md)
 * ***06 de septiembre de 2022***: [se han introducido fragmentos de código para capturar vídeos mediante la cámara a través de `selectMedia` la API.](concepts/device-capabilities/media-capabilities.md#code-snippets)
@@ -291,9 +292,10 @@ La versión preliminar para desarrolladores es un programa público que proporci
 
 | **Date** | **Actualizar** | **Buscar aquí** |
 | -------- | --------- | ------------------ |
+| 08/23/2022 | Uso compartido de aplicaciones en la fase de reunión de Teams en dispositivos móviles | Creación de aplicaciones para reuniones y llamadas de Teams > [Habilitar y configurar aplicaciones para reuniones](/microsoftteams/platform/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings) |
 | 08/10/2022 | Aplicaciones para reuniones programadas de canales públicos | Crear aplicaciones para reuniones y llamadas de Teams > [Información general](apps-in-teams-meetings/teams-apps-in-meetings.md) |
 | 03/08/2022 | Silenciar y reactivar el audio de las API para aplicaciones en la fase de reunión de Teams | Crear aplicaciones para reuniones y llamadas de Teams > [Referencias de API de aplicaciones de reuniones](/microsoftteams/platform/apps-in-teams-meetings/api-references?tabs=dotnet) |
-| 02/08/2022| Controles de colaboración para Teams| Integrar con Teams > [Controles de colaboración](samples/collaboration-control.md)|
+| 02/08/2022| Controles de colaboración para Teams| Integrar con Teams > [Controles de colaboración](samples/collaboration-control.md) |
 | 06/30/2022 | Aplicaciones para reuniones instantáneas, llamadas uno a uno y llamadas grupales| Crear aplicaciones para reuniones y llamadas de Teams > [Información general](apps-in-teams-meetings/teams-apps-in-meetings.md)|
 |24/5/2022| Colaboración mejorada con el SDK de Live Share | Creación de aplicaciones para reuniones de Teams > Colaboración mejorada con Live Share > [Información general](apps-in-teams-meetings/teams-live-share-overview.md) |
 | 03/02/2022 | Se ha presentado la versión 1.13 del manifiesto de la aplicación | • Manifiesto de la aplicación > Versión preliminar para desarrolladores públicos > [Esquema de manifiesto](resources/schema/manifest-schema-dev-preview.md) |

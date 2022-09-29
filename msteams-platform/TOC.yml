@@ -649,6 +649,9 @@
         - name: Preparar el envío de la tienda de Microsoft Teams
           href: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md
           displayName: 'Testing instructions, store listing'
+        - name: "Actualización del id. de equipo de Apple\_App\_Store Connect en el Centro de partners"
+          href: concepts/deploy-and-publish/appsource/prepare/update-apple-store-team-connect-id.md
+          displayName: Enable users to install your app on Teams iOS Platform.
         - name: Enviar la aplicación
           href: /office/dev/store/add-in-submission-guide?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
         - name: Resolver problemas si se produce un error en el envío de la tienda de Microsoft Teams
