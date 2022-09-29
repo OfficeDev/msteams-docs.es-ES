@@ -7,12 +7,12 @@ ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/24/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: bdcf92b52956eee6db21eb03d115a494c0f063e9
-ms.sourcegitcommit: dccb48902e08484692ab927415bcd3d61dc50db2
+ms.openlocfilehash: ca65a34796886ff8eb6a0c13aaa11af319739dc8
+ms.sourcegitcommit: 1db4429f34da213aa749e483a4ceb83c14b07de3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2022
-ms.locfileid: "67806776"
+ms.lasthandoff: 09/29/2022
+ms.locfileid: "68158266"
 ---
 # <a name="teams-toolkit-overview"></a>Información general del kit de herramientas de Teams
 
@@ -59,7 +59,7 @@ La tabla siguiente le ayuda a obtener información general del kit de herramient
 | Publicar la aplicación de Teams | Contiene: <br> - Publicación de la aplicación <br> - Administración de la aprobación del administrador <br> - Publicar para almacenar <br> - Integración con el Portal para desarrolladores |
 
 ### <a name="entities-integrated-with-teams-toolkit"></a>Entidades integradas con Teams Toolkit
-
+ 
 Teams Toolkit es una extensión de Visual Studio Code. Se integra con las siguientes entidades dentro del kit de herramientas de Teams, como Azure AD y Microsoft 365, el Portal para desarrolladores y Microsoft Graph. Todas las entidades se integran en Teams Toolkit y ayudan a los usuarios a crear una aplicación.
 
 | Entidades | Descripción |
@@ -133,7 +133,7 @@ Las siguientes operaciones no se admiten en Teams Toolkit for Visual Studio toda
 
 ::: zone-end
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Creación de una nueva aplicación de Teams en Visual Studio](create-new-teams-app-for-Visual-Studio.md)
 * [Aprovisionamiento de recursos en la nube mediante Visual Studio](provision-cloud-resources.md)
