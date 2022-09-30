@@ -5,16 +5,16 @@ description: En este módulo, obtenga información sobre la aplicación de contr
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
-ms.openlocfilehash: 31784cfabccdfa861044e74be533c00f134ea851
-ms.sourcegitcommit: 0bb822b30739e4a532a36764dad2dbf35a81ba29
+ms.openlocfilehash: b15c7972dfc0152d458e4ad895ed6d4f7e45cd4c
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67179410"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243552"
 ---
 # <a name="virtual-tables-web-api"></a>API web de tablas virtuales
 
-Cuando se usa dataverse Web API para recuperar varios registros de una tabla virtual, se pueden incluir parámetros de consulta adicionales para admitir la ordenación, el filtrado y la paginación. Estas características no se admiten uniformemente en las tablas virtuales de controles de colaboración porque se basan en la compatibilidad proporcionada por microsoft Graph API. Consulte referencia de entidad de tablas virtuales para obtener más información sobre lo que admite cada tabla virtual.
+Cuando se usa dataverse Web API para recuperar varios registros de una tabla virtual, se pueden incluir parámetros de consulta adicionales para admitir la ordenación, el filtrado y la paginación. Estas características no se admiten uniformemente en las tablas virtuales de controles de colaboración porque se basan en la compatibilidad proporcionada por microsoft Graph API. Consulte Virtual Tables Entity Reference (Referencia de entidad de tablas virtuales) para obtener más información sobre lo que admite cada tabla virtual.
 
 > [!NOTE]
 > Actualmente, los controles de colaboración solo están disponibles en la [versión preliminar del desarrollador público](~/resources/dev-preview/developer-preview-intro.md).
@@ -38,7 +38,7 @@ Ejemplos:
 
 ## <a name="virtual-table-filtering"></a>Filtrado de tablas virtuales
 
-Con las tablas virtuales, puede usar el parámetro de consulta OData $filter para establecer los criterios para los que se devolverán las filas. Las tablas virtuales se consultan con los mismos operadores de OData compatibles con dataverse Web API.
+Con las tablas virtuales, puede usar el parámetro de consulta OData $filter para establecer los criterios para los que se devuelven las filas. Las tablas virtuales se consultan con los mismos operadores de OData compatibles con dataverse Web API.
 
 * **Operadores de comparación**
 
@@ -81,7 +81,7 @@ not|Negociación lógica |$filter=not contains(m365_name,'Contoso')|
 * Graph (evento)
 
 > [!Note]
-> El filtrado no se admite en todos los atributos de los recursos de Graph correspondientes. Si un usuario intenta filtrar por una tabla virtual con un atributo no admitido, se omitirá este filtro. Este es el mismo comportamiento que dataverse web API en columnas que no admiten el filtrado.
+> El filtrado no se admite en todos los atributos de los recursos de Graph correspondientes. Si un usuario intenta filtrar por una tabla virtual con un atributo no admitido, este filtro se omite. Este es el mismo comportamiento que dataverse web API en columnas que no admiten el filtrado.
 
 Ejemplos:
 
@@ -93,7 +93,7 @@ Ejemplos:
 
 La paginación es un recurso útil para capturar un gran conjunto de registros. La paginación de tabla virtual se puede lograr de tres maneras diferentes.
 
-Puede especificar el tamaño de página mediante el valor de `odata.maxpagesize` preferencia en el encabezado de solicitud. Si el conjunto de resultados abarca varias páginas, la respuesta incluirá la `@odata.nextLink` propiedad . La solicitud y respuesta de ejemplo son las siguientes:
+Puede especificar el tamaño de página mediante el valor de `odata.maxpagesize` preferencia en el encabezado de solicitud. Si el conjunto de resultados abarca varias páginas, la respuesta incluye la `@odata.nextLink` propiedad . La solicitud y respuesta de ejemplo son las siguientes:
 
 # <a name="request"></a>[Solicitud](#tab/request)
 

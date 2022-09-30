@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.custom: m365apps
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: 64caf4784286cd3eaf2c32a28a3fe655ba88bcc7
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 1c808e2ecb15b87781daaf5879e72d415bc1b441
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100957"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243328"
 ---
 # <a name="set-up-your-dev-environment-for-extending-teams-apps-across-microsoft-365"></a>Configure el entorno de desarrollo para ampliar las aplicaciones de Teams en Microsoft 365
 
@@ -84,7 +84,7 @@ Para instalar aplicaciones de Office 365 Canal beta en el entorno de prueba:
 1. Abra Outlook (cliente de escritorio) y configure la cuenta de correo con sus credenciales de inquilino de prueba.
 1. Abrir **Archivo** > **Cuenta de Office** > **Acerca de Outlook** para confirmar que está ejecutando una compilación de Outlook del *Canal beta* de Microsoft 365.
 
-    :::image type="content" source="images/outlook-about-beta-channel.png" alt-text="Vaya a &quot;Acerca de Outlook&quot; desde la cuenta de Office para comprobar que está ejecutando una compilación del Canal beta.":::
+    :::image type="content" source="images/outlook-about-beta-channel.png" alt-text="Vaya a &quot;Acerca de Outlook&quot; desde su cuenta de Office para comprobar que está ejecutando una compilación de canal beta.":::
 
 1. Compruebe que *Microsoft Edge WebView2 Runtime* esté instalado. En Windows, vaya a **Inicio** > **Aplicaciones y características** y busque **webview**:
 
@@ -96,7 +96,7 @@ Para instalar aplicaciones de Office 365 Canal beta en el entorno de prueba:
 
 Puede obtener una vista previa de las pestañas personales de Teams que se ejecutan en la aplicación de Office para Android uniéndose al programa beta.
 
-Para instalar la versión beta de la aplicación de Office más reciente en su dispositivo Android físico o emulador de Android:
+Para instalar la versión beta de la aplicación de Office más reciente, compile en el dispositivo Android físico o en el emulador de Android:
 
 1. Asegúrese de usar un [dispositivo Android compatible con](https://support.google.com/googleplay/answer/1727131) Google Play.
 1. Inicia **Play Store** en tu dispositivo Android.

@@ -5,12 +5,12 @@ description: Aprenda a habilitar la autenticación mediante un proveedor de OAut
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: ff7e4e8d3ffede250bd89ecca7b0e3d8054a646b
-ms.sourcegitcommit: 0ac53c430c055897ecebc129eab49336820c18c2
+ms.openlocfilehash: 6984774ea8738ce2039f61b83891745db0774599
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67618444"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243125"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>Agregar autenticación al bot de Teams
 
@@ -149,7 +149,7 @@ Para agregar el canal de Microsoft Teams:
 
    :::image type="content" source="../../../assets/images/adaptive-cards/select-terms-of-service.png" alt-text="En esta captura de pantalla se muestra cómo establecer los términos si el servicio.":::
 
-1. Haga clic en **Guardar**.
+1. Seleccione **Guardar**.
 
    :::image type="content" source="../../../assets/images/adaptive-cards/select-teams.png" alt-text="En esta captura de pantalla se muestra cómo agregar el canal de Microsoft Teams.":::
 
@@ -170,7 +170,7 @@ En este procedimiento, usará un proveedor de Azure AD; también se pueden usar 
    1. **Nombre**. Escriba el nombre de la aplicación. Un ejemplo podría ser  *BotTeamsIdentity*. Recuerde que el nombre debe ser único.
    1. Seleccione los **tipos de cuenta admitidos** para la aplicación. Seleccione *Cuentas en cualquier directorio organizativo (Cualquier Microsoft Azure Active Directory (Azure AD): multiinquilino) y cuentas personales de Microsoft (por ejemplo, Skype, Xbox).*
    1. Para el **URI de redireccionamiento**:<br/>
-       &#x2713; Seleccione **Web**.<br/>
+       &#x2713;Select **Web**. <br/>
        &#x2713; Establezca la dirección URL en `https://token.botframework.com/.auth/web/redirect`.
    1. Seleccione **Registrar**.
 
@@ -283,7 +283,7 @@ Una vez finalizada la configuración preliminar, vamos a centrarnos en la creaci
 
      [!code-json[appsettings](~/../botbuilder-samples/samples/csharp_dotnetcore/46.teams-auth/appsettings.json?range=1-5)]
 
-1. En el Explorador de soluciones, vaya a la `TeamsAppManifest` carpeta, abra `manifest.json` y establezca `id` y `botId` al **identificador de aplicación del bot** que guardó en el momento del registro del bot.
+1. En el Explorador de soluciones, vaya a la `TeamsAppManifest` carpeta, abra `manifest.json` y establezca `id` y `botId` en el identificador de **aplicación del bot** que guardó en el momento del registro del bot.
 
 # <a name="javascript"></a>[JavaScript](#tab/node-js)
 
@@ -334,7 +334,7 @@ Como alternativa, mientras esté en Visual Studio, puede seguir estos pasos:
 
 1. Seleccione **Crear**.
 1. Si la implementación se completa correctamente, debería verla reflejada en Visual Studio. Además, se muestra una página en el explorador predeterminado que indica *¡El bot está listo!*. La dirección URL será similar a la siguiente: `https://botteamsauth.azurewebsites.net/`. Guárdelo en un archivo.
-1. En el explorador, vaya a la [**Portal de Azure**][azure-portal].
+1. En el explorador, vaya al [**Azure Portal**][azure-portal].
 1. Compruebe el grupo de recursos; el bot debe aparecer junto con los demás recursos. La siguiente imagen es un ejemplo:
 
    :::image type="content" source="../../../assets/images/authentication/auth-bot-app-service-in-group.png" alt-text="En esta captura de pantalla se muestra cómo comprobar el grupo de recursos y el bot.":::
@@ -407,7 +407,7 @@ Después de configurar el mecanismo de autenticación, puede realizar las prueba
 <!--There are several testing scenarios here. Ideally, we'd have a separate article on the what, why, 
 and when for these, and just reference that from here, along with the set of steps that exercises the bot code.-->
 
-1. En el explorador, vaya a la [**Portal de Azure**][azure-portal].
+1. En el explorador, vaya al [**Azure Portal**][azure-portal].
 1. Busque el grupo de recursos.
 1. Seleccione el vínculo del recurso. Se muestra la página de recursos.
 1. En la página de recursos, seleccione **Probar en el chat de web**. El bot se inicia y muestra los saludos predefinidos.
@@ -435,14 +435,14 @@ and when for these, and just reference that from here, along with the set of ste
 ## <a name="install-and-test-the-bot-in-teams"></a>Instalar y probar el bot en Teams
 
 1. En el proyecto de bot, asegúrese de que la carpeta `TeamsAppManifest` contiene el `manifest.json` junto con un `outline.png` y archivos `color.png`.
-1. En Explorador de soluciones, vaya a la carpeta `TeamsAppManifest`. Edite `manifest.json` asignando los siguientes valores:
+1. En Explorador de soluciones, vaya a la `TeamsAppManifest` carpeta . Edite `manifest.json` asignando los siguientes valores:
     1. Asegúrese de que el **identificador de la aplicación del bot** que recibió en el momento del registro del bot esté asignado a `id` y `botId`.
     1. Asigne este valor: `validDomains: [ "token.botframework.com" ]`.
 1. Seleccione y **comprima** los archivos `manifest.json`, `outline.png`y `color.png`.
 1. Abra **Microsoft Teams**.
 1. En el panel izquierdo, en la parte inferior, seleccione el icono **Aplicaciones**.
 1. En el panel derecho, en la parte inferior, seleccione **Cargar una aplicación personalizada**.
-1. Vaya a la carpeta `TeamsAppManifest` y cargue el manifiesto comprimido.
+1. Vaya a la `TeamsAppManifest` carpeta y cargue el manifiesto comprimido.
 Se muestra el asistente siguiente:
 
    :::image type="content" source="../../../assets/images/authentication/auth-bot-teams-upload.png" alt-text="En esta captura de pantalla se muestra un ejemplo del bot después de cargarlo en Teams.":::
@@ -468,7 +468,7 @@ Esto inicia ngrok para escuchar en el puerto que especifique. A cambio, proporci
 1. Copie la dirección HTTPS de reenvío. Debe ser similar a lo siguiente: `https://dea822bf.ngrok.io/`.
 1. Anexar `/api/messages` para obtener `https://dea822bf.ngrok.io/api/messages`. Este es el **punto de conexión de mensajes** del bot que se ejecuta localmente en el equipo y al que se puede acceder a través de la web en un chat en Teams.
 1. Un último paso que se debe realizar es actualizar el punto de conexión de mensajes del bot implementado. En el ejemplo, se implementó el bot en Azure. Se van a realizar estos pasos:
-    1. En el explorador, vaya a la [**Portal de Azure**][azure-portal].
+    1. En el explorador, vaya al [**Azure Portal**][azure-portal].
     1. Seleccione el **registro del bot**.
     1. En el panel izquierdo, seleccione **Configuración**.
     1. En el panel derecho, en el cuadro **Punto de conexión de mensajería**, escriba la dirección URL de ngrok, en el ejemplo, `https://dea822bf.ngrok.io/api/messages`.

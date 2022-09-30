@@ -5,12 +5,12 @@ keywords: Solución de problemas de desarrollo de aplicaciones de teams
 localization_priority: Normal
 ms.topic: troubleshooting
 ms.date: 07/09/2018
-ms.openlocfilehash: ea6a452d3e3ace7c78e29f6829ac124eea8219d6
-ms.sourcegitcommit: 6f1bd36b1071e256bdc14e6ccb31dfdda9ca6d6b
+ms.openlocfilehash: 0b3f4f7b3a38b6e61b4fbc7e58c5ed5897ed427e
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "66048965"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243475"
 ---
 # <a name="troubleshoot-your-microsoft-teams-app"></a>Solucionar problemas de la aplicación de Microsoft Teams
 
@@ -18,7 +18,7 @@ ms.locfileid: "66048965"
 
 ### <a name="accessing-the-devtools"></a>Acceso a DevTools
 
-Puede abrir [DevTools en el cliente Teams](~/tabs/how-to/developer-tools.md) para obtener una experiencia similar a presionar F12 (en Windows) o Command-Option-I (en MacOS) en un explorador.
+Puede abrir [DevTools en el cliente de Teams](~/tabs/how-to/developer-tools.md) para obtener una experiencia similar a presionar F12 (en Windows) o Command-Option-I (en MacOS) en un explorador.
 
 ### <a name="blank-tab-screen"></a>Pantalla de tabulación en blanco
 
@@ -26,6 +26,9 @@ Si no ve el contenido en la vista de pestaña, podría ser:
 
 * el contenido no se puede mostrar en un objeto `<iframe>`.
 * el dominio de contenido no está en la lista [validDomains](~/resources/schema/manifest-schema.md#validdomains) del manifiesto.
+
+> [!NOTE]
+> Aparece una pestaña en blanco cuando la dirección URL de pestaña determinada redirige a la pantalla de inicio de sesión. Las páginas de inicio de sesión no se representan en iFrames como medida de seguridad contra el secuestro de clics. La lógica de autenticación debe usar un método distinto del redireccionamiento.
 
 ### <a name="the-save-button-isnt-enabled-on-the-settings-dialog"></a>El botón Guardar no está habilitado en el cuadro de diálogo de configuración
 
@@ -93,6 +96,6 @@ Motivos comunes de errores de lectura de manifiestos:
 
 ### <a name="another-extension-with-same-id-exists"></a>Existe otra extensión con el mismo identificador
 
-Si intenta cargar de nuevo un paquete actualizado con el mismo identificador, elija el icono **Reemplazar** al final de la fila de tabla de la pestaña en lugar del botón **Upload**.
+Si intenta cargar de nuevo un paquete actualizado con el mismo identificador, elija el icono **Reemplazar** al final de la fila de tabla de la pestaña en lugar del botón **Cargar** .
 
 Si no va a volver a cargar un paquete actualizado, asegúrese de que el identificador sea único.

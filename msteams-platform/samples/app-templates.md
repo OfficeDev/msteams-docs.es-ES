@@ -6,12 +6,12 @@ keywords: Demostración de ejemplos de plantillas de Microsoft Teams
 ms.localizationpriority: medium
 ms.author: lajanuar
 author: surbhigupta
-ms.openlocfilehash: 7f99a15ee8138c029e3ae0c68ae52152f0efc6bb
-ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
+ms.openlocfilehash: 1314221e5962db045a5e75b8dadbcb6a868c959c
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "67058126"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243041"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Plantillas de aplicaciones para Microsoft Teams
 
@@ -83,13 +83,13 @@ La plantilla de aplicación Introducción le permite aportar el poder de los cam
 
 ## <a name="microsoft-teams-emergency-operations-center-teoc"></a>Centro de operaciones de emergencia (TEOC) de Microsoft Teams
 
-La plantilla de solución Del Centro de operaciones de emergencia (TEOC) de Microsoft Teams aprovecha la eficacia de la plataforma microsoft 365 para centralizar la respuesta a incidentes, el uso compartido de información y las comunicaciones de campo mediante servicios eficaces como Listas Microsoft, SharePoint y mucho más. Una solución de código abierto compatible con Microsoft, proporciona funcionalidad básica y se puede ampliar para satisfacer los requisitos específicos de la agencia.
+La plantilla de solución Del Centro de operaciones de emergencia (TEOC) de Microsoft Teams aprovecha la eficacia de la plataforma de Microsoft 365 para centralizar la respuesta a incidentes, el uso compartido de información y las comunicaciones de campo mediante servicios eficaces como Listas Microsoft, SharePoint y mucho más. Una solución de código abierto compatible con Microsoft, proporciona funcionalidad básica y se puede ampliar para satisfacer los requisitos específicos de la agencia.
 
 [Obténgalo en GitHub](https://github.com/OfficeDev/microsoft-teams-emergency-operations-center/)
 
 ## <a name="tournament-of-teams"></a>Torneo de Teams
 
-Los campeones son fundamentales para ayudar a impulsar la adopción y el desarrollo de nuevos torneos, lo que ayuda en sus objetivos empresariales. Asegúrese de aprovechar a los campeones para ayudar a identificar y crear nuevos torneos con temática de adopción e inspirar a su organización a aprender y participar.
+Los campeones son fundamentales para ayudar a impulsar la adopción y el desarrollo de nuevos torneos, lo que ayuda en sus objetivos empresariales. Asegúrese de que aprovecha los campeones para ayudar a identificar y crear nuevos torneos con temática de adopción e inspirar a su organización a aprender y participar.
 
 [Obténgalo en GitHub](https://github.com/OfficeDev/microsoft-teams-apps-tournament-of-teams)
 
@@ -99,7 +99,7 @@ Los ejemplos de código de plantilla de aplicación son una colección de aplica
 
 > [!NOTE]
 >
-> * Microsoft no administra activamente el código fuente. El código fuente completo es de código abierto y puede explorar, bifurcar y modificar el código fuente para satisfacer sus requisitos específicos.
+> * Microsoft is not actively managing the source code. The complete source code is open source and you can explore, fork, and modify the source code to meet your specific requirements.
 > * No debe usar Microsoft Power Platform para crear aplicaciones que se van a publicar en la tienda de aplicaciones de Teams. Las aplicaciones de Microsoft Power Platform solo se pueden publicar en la tienda de aplicaciones de una organización.
 
 En la tabla siguiente se describen ejemplos de código de plantilla de aplicación:  

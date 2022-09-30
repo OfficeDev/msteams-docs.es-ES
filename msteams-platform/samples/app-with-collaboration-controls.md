@@ -5,12 +5,12 @@ description: En este módulo, aprenderá a crear una aplicación basada en model
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
-ms.openlocfilehash: e712c55dd4543edda9115751be09d81d1795f02b
-ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
+ms.openlocfilehash: 119e02f6cc31d8642447e4e7406d461faff3a731
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2022
-ms.locfileid: "68027343"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243062"
 ---
 # <a name="create-a-new-model-driven-app-with-collaboration-controls-for-teams"></a>Creación de una nueva aplicación controlada por modelos con controles de colaboración para Teams
 
@@ -45,7 +45,7 @@ Los controles de colaboración están diseñados para [aplicaciones basadas en m
 
    :::image type="content" source="../assets/images/collaboration-control/new-activity.png" alt-text="En la captura de pantalla se describe cómo crear una nueva actividad.":::
 
-1. Haga clic en **Guardar**.
+1. Seleccione **Guardar**.
 
 1. Una vez que haya terminado de crear la tabla, puede personalizarla agregando columnas adicionales, relaciones y mucho más (opcional).
 
@@ -284,7 +284,7 @@ Para programar una reunión externa con el cliente, seleccione la lista desplega
 
 Los usuarios pueden ver tanto las reuniones internas como las reservas de clientes en su lista de reuniones. Una vez iniciada la reunión, los usuarios pueden unirse seleccionando el botón **Unirse** , que abre la reunión directamente en Microsoft Teams.
 
-A medida que Outlook respalda las reuniones, los usuarios pueden navegar a Bookings o Calendario de Outlook para ver todas las reuniones enumeradas en un solo calendario. Las reuniones internas aparecen en el calendario compartido.
+A medida que Outlook respalda las reuniones, los usuarios pueden ir a Bookings o Calendario de Outlook para ver todas las reuniones enumeradas en un solo calendario. Las reuniones internas aparecen en el calendario compartido.
 
 A continuación se indican los pasos para agregar un calendario compartido a Outlook (opcional):
 

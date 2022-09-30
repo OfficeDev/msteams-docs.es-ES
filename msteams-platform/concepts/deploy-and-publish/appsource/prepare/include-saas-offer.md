@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 3fe41b635f9789e7f96eeb41f17526205924dadf
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 23327ea2765eb5496f8cfb157cdd194fcc13aaf7
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100640"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243258"
 ---
 # <a name="include-a-saas-offer-with-your-teams-app"></a>Incluir una oferta de SaaS con la aplicación de Teams
 
@@ -71,11 +71,128 @@ Para obtener instrucciones completas y referencias de API, consulte la documenta
 * Cuando se asigne un plan de suscripción a los usuarios, infórmeles de ello a través de un bot o correo electrónico de Teams. En su comunicación, incluya información sobre cómo agregar la aplicación a Teams y empezar.
 * Apoye la opción de varios administradores. En otras palabras, que varios usuarios de la misma organización puedan comprar y administrar sus propias suscripciones.
 
+## <a name="manage-license-for-third-party-apps-in-teams"></a>Administración de licencias para aplicaciones de terceros en Teams
+
+Teams permite a los administradores o usuarios independientes de proveedores de software (ISV) administrar licencias SaaS para aplicaciones de terceros compradas en el escaparate de Teams. Los administradores o usuarios de ISV pueden asignar, anular la asignación, usar y realizar un seguimiento de las licencias SaaS fácilmente.
+
+Para habilitar la administración de licencias para una aplicación en Teams, siga estos pasos:
+
+1. [Creación de una oferta en el Centro de partners](#create-an-offer-in-partner-center)
+1. [Actualización de la aplicación de Teams](#update-your-teams-app)
+1. [Después de la compra](#post-purchase)
+1. [Integración con Graph Usage Right API](#integrate-with-graph-usage-right-api)
+
+### <a name="create-an-offer-in-partner-center"></a>Creación de una oferta en el Centro de partners
+
+1. Inicie sesión en el [Centro de partners](https://partner.microsoft.com/) y seleccione **Centro de partners**.
+
+   :::image type="content" source="~/assets/images/first-party-license-mgt/partner-center-home-page.png" alt-text="En las capturas de pantalla se muestra cómo iniciar sesión en la cuenta del Centro de partners.":::
+
+1. En la página **Inicio** , seleccione la pestaña **Ofertas de Marketplace** para definir ofertas de Marketplace comercial.
+
+   :::image type="content" source="~/assets/images/first-party-license-mgt/home-page.png" alt-text="En las capturas de pantalla se muestra la página principal y la pestaña oferta de Marketplace en el Centro de partners.":::
+
+1. Seleccione **Información general** en el panel izquierdo.
+
+1. Seleccione **Nuevo software de oferta** > **como servicio**.
+
+   :::image type="content" source="~/assets/images/first-party-license-mgt/commercial-marketplace.png" alt-text="En las capturas de pantalla se muestra la página de la oferta de Marketplace, donde puede seleccionar una nueva oferta.":::
+
+1. Escriba **Id. de oferta** y **Alias de oferta** y seleccione **Crear**.
+
+   > [!NOTE]
+   > Si va a crear una oferta con fines de prueba, agregue el texto **-ISVPILOT** al final del alias de la oferta. Esto indica al equipo de certificación que la oferta tiene fines de prueba. Microsoft elimina ofertas con **-ISVPILOT** periódicamente. Por lo tanto, no use esta etiqueta por motivos distintos de probar la funcionalidad de administración de licencias.
+
+   :::image type="content" source="~/assets/images/first-party-license-mgt/saas.png" alt-text="En las capturas de pantalla se muestra cómo escribir el identificador de la oferta y el alias de la oferta en el Centro de partners.":::
+
+1. En la página Configuración de la oferta, en Detalles del programa de instalación, active la casilla **Sí, me gustaría que Microsoft administrara las licencias de cliente en mi nombre**.
+
+   :::image type="content" source="~/assets/images/first-party-license-mgt/saas-isvpilot.png" alt-text="En las capturas de pantalla se muestra la página de configuración de la oferta para configurar la licencia que se va a administrar para la aplicación en Teams.":::
+
+   > [!NOTE]
+   >
+   > * Se trata de una configuración única y no se puede cambiar una vez publicada la oferta. Esto permite al cliente administrar licencias para la aplicación en Teams.
+   > * El manifiesto de aplicación solo admite una oferta para una aplicación. Elija una solución de administración de licencias adecuada para todos los planes disponibles en la oferta y no puede cambiar esta opción después de que la oferta se inserte en vivo.
+
+1. Seleccione **Guardar borrador**.
+
+1. Seleccione **Información general del plan** en el panel izquierdo y, a continuación, seleccione **Crear nuevo plan**.
+
+   > [!NOTE]
+   > Debe agregar al menos un plan.
+
+   :::image type="content" source="~/assets/images/first-party-license-mgt/plan-overview.png" alt-text="En las capturas de pantalla se muestra información general del plan para crear un nuevo plan para las aplicaciones en el Centro de partners.":::
+
+1. Escriba Id. de plan y Nombre del plan y, a continuación, seleccione **Crear**.
+
+1. Escriba el **nombre del plan** y la **descripción del plan**.
+
+   > [!NOTE]
+   > La información del plan se muestra en Marketplace de Teams y [Appsource](https://appsource.microsoft.com/) en la lista de ofertas (sección planes).
+
+   :::image type="content" source="~/assets/images/first-party-license-mgt/plan-listing.png" alt-text="En las capturas de pantalla se muestra la página del plan para agregar el nombre del plan y la descripción del plan para la aplicación.":::
+
+1. Seleccione **Guardar borrador**.
+
+1. Seleccione **Precios y disponibilidad** en el panel izquierdo.
+
+1. Agregue los detalles de precios y disponibilidad.
+
+   :::image type="content" source="~/assets/images/first-party-license-mgt/pricing-availability.png" alt-text="En las capturas de pantalla se muestra la página precios y disponibilidad para agregar la oferta de SaaS para la aplicación.":::
+
+1. Seleccione **Guardar borrador**.
+
+1. Seleccione **Información general del plan** en la parte superior de la página para ir a la página de lista que muestra todos los planes que ha creado para esta oferta.
+
+   :::image type="content" source="~/assets/images/first-party-license-mgt/list-of-plans-created.png" alt-text="En las capturas de pantalla se muestra la página de lista de planes con el identificador de servicio, el modelo de precios, la disponibilidad, el estado y la acción.":::
+
+1. Copie el identificador de servicio del plan que creó para integrarlo con Microsoft Graph Usage Rights API.
+
+### <a name="update-your-teams-app"></a>Actualización de la aplicación de Teams
+
+Actualice la aplicación de Teams para que se asigne a la funcionalidad de pago y [asigne la aplicación de Teams](https://aka.ms/TMTG) a su oferta y publicación.
+
+### <a name="post-purchase"></a>Después de la compra
+
+1. Después de la activación, se redirige al cliente desde la página de aterrizaje a Administración de licencias de Teams.
+
+1. Una vez completada correctamente la compra de la suscripción, se redirige al cliente a la página de aterrizaje de la aplicación para la activación de la suscripción. Esta es la experiencia existente para que el usuario compre [aplicaciones monetizadas en Teams](https://aka.ms/TMTG).
+
+1. Una vez que el cliente activa la compra de suscripción en la página de aterrizaje, se redirige al cliente a la página de suscripciones de Teams a través de un vínculo o botón de [dirección URL de redireccionamiento](https://teams.microsoft.com/_#/subscriptionManagement) que el cliente selecciona en la página de aterrizaje del publicador.
+
+### <a name="integrate-with-graph-usage-right-api"></a>Integración con Graph Usage Right API
+
+Integre con Graph Usage Right API para administrar los permisos de usuario en el momento del inicio de la aplicación por parte de un cliente que tenga una licencia de compra. Debe determinar los permisos del usuario para la aplicación con una llamada de Graph a usage rights API.
+
+Puede llamar a graph API para determinar si el usuario que ha iniciado sesión actualmente con una suscripción válida del plan tiene acceso a la aplicación. Para llamar a Graph UsageRight API para comprobar los permisos de usuario, siga estos pasos:
+
+1. Obtener el token de OBO de usuario: [obtener acceso en nombre de un usuario: Microsoft Graph | Microsoft Docs](/graph/auth-v2-user).
+
+1. Llamar a Graph para obtener el identificador de objeto del usuario: [use Microsoft Graph API - Microsoft Graph | Microsoft Docs](/graph/use-the-api).
+
+1. Llame a UsageRights API para determinar que el usuario tiene licencia para el plan [Enumerar uso de usuarioRights - Microsoft Graph beta | Microsoft Docs](/graph/api/user-list-usagerights?view=graph-rest-beta&tabs=http&preserve-view=true).
+
+   > [!NOTE]
+   > Debe tener permisos mínimos `User.Read` para llamar a UsageRights.
+   > La API UsageRights está actualmente en versión beta. Una vez actualizada la versión a V1, los usuarios de ISV deben actualizar de la versión beta a la versión V1.
+
+### <a name="check-license-usage-in-partner-center-analytics"></a>Comprobación del uso de licencias en el análisis del Centro de partners
+
+1. Inicie sesión en el [Centro de partners](https://partner.microsoft.com/).
+1. En el panel izquierdo, vaya a **Marketplace comercial > Analizar licencias de >**.
+1. Seleccione **Planear e inquilino** en el widget de informes para ver el uso de mes.
+
 ## <a name="build-a-landing-page-for-subscription-management"></a>Crear una página de aterrizaje para la administración de suscripciones
 
 Cuando alguien termine de comprar un plan de suscripción para su aplicación en la tienda de Teams, el marketplace le dirigirá a la página de aterrizaje donde podrá administrar la suscripción (por ejemplo, asignar una licencia a un usuario específico de su organización).
 
+Seleccione **No, preferiría administrar las licencias de cliente yo mismo** en tales casos.
+
 Para obtener instrucciones completas, consulte [Crear la página de aterrizaje de la oferta de SaaS](/azure/marketplace/azure-ad-transactable-saas-landing-page).
+
+Cuando alguien termine de comprar un plan de suscripción para la aplicación y quiera permanecer en Teams, sin dirigirlo a la página de aterrizaje, seleccione **Sí, me gustaría que Microsoft administrara las licencias de cliente en mi nombre**.
+
+Para obtener más información, consulte [Administración de licencias de primera persona](/platform/concepts/deploy-and-publish/appsource/prepare/first-party-license-management).
 
 ### <a name="best-practices-for-landing-pages"></a>Procedimientos recomendados para páginas de aterrizaje
 

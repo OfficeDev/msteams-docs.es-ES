@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: Obtenga más información sobre los comandos de búsqueda.
   ms.custom: mvc
   ms.localizationpriority: High
-  ms.openlocfilehash: 178ad0f3ccb5fc6281a47d27ebe9897130a643e9
-  ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
+  ms.openlocfilehash: e015b9fe4f00f988e274bb6e43cbcab7bdebb15f
+  ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 09/27/2022
-  ms.locfileid: "68027238"
+  ms.lasthandoff: 09/30/2022
+  ms.locfileid: "68243594"
 items:
 - durationInMinutes: 1
   content: "Las extensiones de mensaje permiten a los usuarios interactuar con servicios web en el cliente de Microsoft Teams. Ayudan a buscar en un sistema externo desde el área del mensaje de redacción, el cuadro de comandos o directamente desde un mensaje. \n\n**Características clave de la extensión de mensaje basada en búsqueda**\n\n* Permitir a los usuarios buscar sistemas externos.\n* Inserte los resultados de búsqueda en un mensaje en forma de tarjeta.\n\nEsta guía paso a paso le ayuda a crear una extensión de mensaje basada en búsquedas. Verá la siguiente salida:\n\n![Final](~/assets/images/Teams-Messaging-Extensions-Search/final_output.png)\n"

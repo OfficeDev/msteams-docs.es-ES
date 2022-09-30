@@ -5,12 +5,12 @@ description: En este módulo, obtenga información sobre las limitaciones y los 
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
-ms.openlocfilehash: 6961b5fc51cc8aa2a2ad0620c8a8ef5032005f40
-ms.sourcegitcommit: 0bb822b30739e4a532a36764dad2dbf35a81ba29
+ms.openlocfilehash: fe403c566b47be6509ff0d11113c34a8fc667cc9
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67179296"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243391"
 ---
 # <a name="limitations-and-known-issues"></a>Limitaciones y problemas conocidos
 
@@ -22,13 +22,13 @@ A continuación se muestran las limitaciones de los controles de colaboración:
 * Los componentes no se pueden usar en aplicaciones de Canvas.
 * Los componentes solo admiten vistas de pestaña completas.
 
-     :::image type="content" source="../assets/images/collaboration-control/tasks-tab.png" alt-text="Tasks" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/tasks-tab.png" alt-text="En la captura de pantalla se muestran las tareas." border="true":::
 
-* No se respeta la vista de subcuadrícula seleccionada. Se mostrarán todas las tareas, reuniones o notas del registro de colaboración.
+* No se respeta la vista de subcuadrícula seleccionada. Se muestran todas las tareas, reuniones o notas del registro de colaboración.
 
-     :::image type="content" source="../assets/images/collaboration-control/subgrid-view.png" alt-text="vista de subcuadrícula" border= "true":::
+     :::image type="content" source="../assets/images/collaboration-control/subgrid-view.png" alt-text="En la captura de pantalla se muestra la vista de subcuadrícula de las tareas." border= "true":::
 
-* Las actividades agregadas al control de escala de tiempo no aparecen en los componentes, las tareas, las reuniones y las notas creadas en los componentes no se incluyen en el control de escala de tiempo.
+* Las actividades agregadas al control de escala de tiempo no aparecen en los componentes, tareas, reuniones y notas creados en los componentes no se incluyen en el control de escala de tiempo.
 * Los nuevos registros se deben guardar antes de acceder a los componentes; de lo contrario, verá una pantalla vacía.
 * Los componentes no heredan los elementos temáticos del formulario o aplicación al que se agregan.
 * La localización solo está disponible cuando se ejecuta la aplicación dentro de Microsoft Teams.
@@ -36,15 +36,15 @@ A continuación se muestran las limitaciones de los controles de colaboración:
 
 **Administración Center no se actualiza cuando se completa la instalación o actualización**
 
-Al seguir los pasos de instalación en [instalar controles de colaboración](~/samples/install-collaboration-control.md), se le redirigirá al Centro de administración de Power Platform. Se muestra un banner cuando se inicia la instalación, pero no se actualiza cuando se completa la instalación. El estado se muestra durante la instalación y, una vez completada la instalación, puede desaparecer de la lista. Puede ver la lista de soluciones en [https://make.powerapps.com/](https://make.preview.powerapps.com/) para confirmar que la instalación ha finalizado.
+Al seguir los pasos de instalación en [instalar controles de colaboración](~/samples/install-collaboration-control.md), se le redirigirá al Centro de administración de Power Platform. Se muestra un banner cuando se inicia la instalación, pero no se actualiza cuando se completa la instalación. El estado aparece durante la instalación y, cuando se completa, es posible que no esté disponible en la lista. Puede ver la lista de soluciones en [https://make.powerapps.com/](https://make.preview.powerapps.com/) para confirmar que la instalación ha finalizado.
 
-**Visualización durante la instalación:** :::image type="content" source="../assets/images/collaboration-control/view-during-installation.png" alt-text="vista durante la instalación" border="true":::
+**Ver durante la instalación:** :::image type="content" source="../assets/images/collaboration-control/view-during-installation.png" alt-text="la captura de pantalla muestra el proceso durante la instalación." border="true":::
 
-**Ver después de la instalación:** :::image type="content" source="../assets/images/collaboration-control/view-after-installation.png" alt-text="vista después de la instalación" border="true":::
+**Ver después de la instalación:** :::image type="content" source="../assets/images/collaboration-control/view-after-installation.png" alt-text="en la captura de pantalla se muestra la finalización de la instalación." border="true":::
 
 Al actualizar los controles a una versión posterior, se muestra el mismo banner iniciado por la instalación, pero el estado del control permanece instalado incluso una vez completada la actualización. Puede confirmar que la actualización se ha completado comprobando la lista de soluciones en [https://make.powerapps.com/](https://make.preview.powerapps.com/), que debe tardar aproximadamente 15 minutos.
 
-También puede ver en el historial de soluciones específicas que se instaló la versión posterior y, a continuación, se quitó la versión anterior: :::image type="content" source="../assets/images/collaboration-control/history.png" alt-text="Comprobación del historial" border="true":::
+También puede ver en el historial de soluciones específicas que se instaló la versión posterior y, a continuación, se quitó la versión anterior: :::image type="content" source="../assets/images/collaboration-control/history.png" alt-text="en la captura de pantalla se muestra el historial de soluciones específicas de las versiones instaladas y eliminadas." border="true":::
 
 ## <a name="bookings-meetings"></a>Reuniones de Bookings
 
@@ -52,7 +52,7 @@ El control Reuniones admite reuniones de una en una cuando se usa Bookings para 
 
 **El estado de los asistentes a la reunión es incorrecto**
 
-Cuando un asistente va a una reunión, es posible que su estado de respuesta no se muestre correctamente tanto en la vista de agenda como en los detalles de la reunión. La selección del botón de rechazo también puede devolver un mensaje de error en la pantalla.
+Cuando un asistente va a una reunión, es posible que su estado de respuesta no se muestre correctamente tanto en la vista de agenda como en los detalles de la reunión. La selección del botón de rechazo podría devolver un mensaje de error en la pantalla.
 
 ## <a name="tasks"></a>Tareas
 
@@ -62,7 +62,7 @@ El texto del botón "borrar" que se muestra en el filtro Tareas no se traduce.
 
 **Tareas: el menú contextual de cuadrícula aparece recortado**
 
-Cuando, la cuadrícula Tareas se rellena con un número bajo de tareas, el menú contextual de la cuadrícula puede aparecer recortado y requerir el uso de barras de desplazamiento.
+Cuando la cuadrícula Tareas se rellena con un número bajo de tareas, el menú contextual de la cuadrícula puede aparecer recortado y requerir el uso de barras de desplazamiento.
 
 **Tareas: el filtro de búsqueda de palabras clave usa el operador "BeginsWith" para las tareas "Invitado".**
 
@@ -70,7 +70,7 @@ Al buscar tareas mediante el filtro de texto de palabra clave, las tareas "Invit
 
 ## <a name="files"></a>Archivos
 
-Al navegar a la carpeta Archivo después de archivar archivos, los usuarios pueden experimentar carpetas de archivo duplicadas.  Navegar desde las carpetas de archivo a la vista principal de archivos resolverá el problema y los archivos archivados no se quitarán.
+Al navegar a la carpeta Archivo después de archivar archivos, los usuarios pueden experimentar carpetas de archivo duplicadas.  Navegar desde las carpetas de archivo a la vista principal de archivos resuelve el problema y los archivos archivados no se quitarán.
 
 ## <a name="controls"></a>Controles
 
@@ -78,21 +78,21 @@ Al navegar a la carpeta Archivo después de archivar archivos, los usuarios pued
 
 Si un control no puede guardar una tarea o reunión, la causa probable es un id. de grupo o un identificador de canal mal configurados.  
 
-Solución 1: confirme que los identificadores son correctos y que la configuración se ha aplicado según el ejercicio de configuración.  
+Solución 1: confirme que los identificadores son correctos y que la configuración se aplica según el ejercicio de configuración.  
 
-Solución 2: intente asegurarse de que el entorno de Power Apps y el entorno de Teams están en el mismo inquilino.  
+Solución 2: asegúrese de que el entorno de Power Apps y el entorno de Teams están en el mismo inquilino.  
 
 **Los controles no se cargan o muestran un error**
 
-Si los controles no se cargan o muestran un error, puede tratarse de un problema transitorio.
+Si los controles no se cargan o muestran un error, podría tratarse de un problema transitorio.
 
 Ejemplo:
 
-:::image type="content" source="../assets/images/collaboration-control/sync-fail.png" alt-text="error de sincronización de control":::
+:::image type="content" source="../assets/images/collaboration-control/sync-fail.png" alt-text="Captura de pantalla que muestra el error de sincronización de control.":::
 
 Esto se representaría en el registro de consola como:
 
-:::image type="content" source="../assets/images/collaboration-control/control-fail.png" alt-text="error de control" border="true":::
+:::image type="content" source="../assets/images/collaboration-control/control-fail.png" alt-text="La captura de pantalla es un ejemplo de error de control del registro de consol." border="true":::
 
 Solución: actualice el explorador o, si está en la aplicación Teams, vuelva a cargar la pestaña.
 
@@ -146,7 +146,7 @@ Con estos nuevos controles, como creador puede arrastrar y colocar controles que
 
 <summary><b>¿Cuál es la ventaja de los controles de colaboración (versión preliminar) para los usuarios?</b></summary>
 
-Los usuarios pueden experimentar mejoras de productividad y mantenerse en su flujo mediante la colaboración en aprobaciones, archivos, reuniones, notas y tareas sin salir del contexto de la aplicación.
+Los usuarios pueden experimentar aumentos de productividad y mantenerse en su flujo mediante la colaboración en aprobaciones, archivos, reuniones, notas y tareas sin salir del contexto de la aplicación.
 
 <br>
 

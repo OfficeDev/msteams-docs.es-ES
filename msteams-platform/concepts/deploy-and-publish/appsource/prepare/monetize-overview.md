@@ -5,17 +5,17 @@ author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 67dfa765d27327cee15977d17dfecf955cae8bca
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 144328aff254f94a3bcfc7e383e82dfa93d0d8fd
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100584"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243580"
 ---
 # <a name="monetize-your-app"></a>Rentabilizar la aplicación
 
 La Tienda de aplicaciones de Microsoft Teams proporciona características que le permiten monetizar sus aplicaciones y obtener clientes interactuando con sus usuarios. En los temas de esta sección se muestra cómo compilar estas características en la aplicación.
- 
+
 ## <a name="choose-a-pricing-model"></a>Elegir un modelo de precios
 
 :::row:::
@@ -70,6 +70,10 @@ Con una oferta de software como servicio (SaaS) comercializable, puede probar la
 
     :::column-end:::
 :::row-end:::
+
+**Administración de licencias para aplicaciones de terceros en Teams**
+
+Con la administración de licencias de Microsoft, los proveedores de software independientes (ISV) pueden administrar la licencia SaaS comprada en Teams para asignar, anular la asignación, usar y realizar un seguimiento de las licencias SaaS fácilmente. Para obtener más información, consulte [Administración de licencias para aplicaciones de terceros en Teams](include-saas-offer.md#manage-license-for-third-party-apps-in-teams).
 
 ## <a name="next-step"></a>Paso siguiente
 

@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: Obtenga más información para habilitar los comandos de acción de extensión de mensaje.
   ms.custom: mvc
   ms.localizationpriority: high
-  ms.openlocfilehash: e90cd42f04eb655b5e913813c1773b9b2487e470
-  ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
+  ms.openlocfilehash: 8b0b4ea1780d1157db9f496933619fccecd20552
+  ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 09/27/2022
-  ms.locfileid: "68027217"
+  ms.lasthandoff: 09/30/2022
+  ms.locfileid: "68243314"
 items:
 - durationInMinutes: 1
   content: "Las extensiones de mensaje permiten a los usuarios interactuar con servicios web en el cliente de Microsoft Teams. Ayudan a iniciar acciones en un sistema externo desde el área del mensaje de redacción, el cuadro de comandos o directamente desde un mensaje.\n\n**Características clave de la extensión de mensaje basada en acciones**\n\n* Presenta al usuario un elemento emergente modal para recopilar o mostrar información.\n* Desencadena los comandos de acción desde el área del mensaje de redacción, el cuadro de comandos o desde un mensaje. \n\nEsta guía paso a paso le ayuda a crear la extensión de mensajes basada en acciones de Teams para iniciar acciones desde el área de redacción de mensajes y mensajes. Verá la siguiente salida:\n   \n  ![Salida](~/assets/images/sbs-messagingextension-action/sharemessageoutput1.png)\n"

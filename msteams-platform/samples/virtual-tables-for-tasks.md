@@ -5,12 +5,12 @@ description: En este módulo, obtenga información sobre las tablas virtuales pa
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
-ms.openlocfilehash: 1913b379e9f24d36948a05190a4ae1804a8ec728
-ms.sourcegitcommit: 442d2c8e80a2605b6d0215c973557471f18f8121
+ms.openlocfilehash: 2571787d5fba47c4ada3765dd13dd36ef1f8f63a
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/11/2022
-ms.locfileid: "67314598"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243048"
 ---
 # <a name="virtual-tables-for-tasks-meetings-files"></a>Tablas virtuales para tareas, reuniones, archivos
 
@@ -45,18 +45,18 @@ Para seguir este artículo, necesitará:
 
 1. Entorno de Dataverse donde se han instalado los controles de colaboración.
 1. Una cuenta de usuario en el entorno de Dataverse, que tiene asignado el rol **Usuario de controles de colaboración** .
-1. Una herramienta de terceros, por ejemplo: Publicar el hombre o algún código de C# personalizado que le permita autenticarse en instancias de Microsoft Dataverse y redactar y enviar solicitudes de API web y ver respuestas.  
+1. Una herramienta de terceros, por ejemplo, Post man o algún código de C# personalizado que le permite autenticarse en instancias de Microsoft Dataverse y redactar y enviar solicitudes de API web y ver respuestas.  
 
 > [!TIP]
 > Microsoft proporciona información sobre cómo configurar un entorno de Postman que se conecta a la instancia de Dataverse y cómo usar Postman para realizar operaciones con la API web. Consulte [Uso de Postman con Microsoft Dataverse Web API](/power-apps/developer/data-platform/webapi/use-postman-web-api).
 
 ## <a name="virtual-tables-sample-scenario"></a>Escenario de ejemplo de tablas virtuales
 
-En el escenario descrito en esta guía se usan las tablas virtuales Plan de Planner y Tarea. El escenario descrito es el mismo que usa el control De colaboración de tareas. Desde la perspectiva del usuario, el escenario muestra cómo se crean un plan de Planner y varias tareas y se asocian a un registro empresarial específico. En el escenario se muestra cómo recuperar las tareas asociadas al registro empresarial y cómo leer, actualizar y eliminar una tarea de planner específica.
+En el escenario descrito en esta guía se usan las tablas virtuales Plan de Planner y Tarea. El escenario descrito es el mismo que usa el control De colaboración de tareas. Desde la perspectiva del usuario, el escenario muestra cómo se crean un plan de Planner y varias tareas y se asocian a un registro empresarial específico. En el escenario se muestra cómo recuperar las tareas asociadas al registro empresarial y cómo leer, actualizar y eliminar una tarea de Planner específica.
 
 En el diagrama de secuencia siguiente se explica la interacción entre el cliente, que podría ser el control de colaboración Tareas, la [API de colaboración](/rest/api/industry/collaboration-controls/) y las tablas virtuales Plan de Planner y Tarea.
 
-:::image type="content" source="~/assets/images/collaboration-control/vt-sequence.png" alt-text="Diagrama de secuencia para tablas virtuales":::
+:::image type="content" source="~/assets/images/collaboration-control/vt-sequence.png" alt-text="En la ilustración se muestra el diagrama de secuencia de las tablas virtuales.":::
 
 ## <a name="virtual-tables-basic-operations"></a>Operaciones básicas de tablas virtuales
 
@@ -73,7 +73,7 @@ Recupere el identificador de grupo usado en [la configuración de la colaboraci�
 
 Una sesión de colaboración es un registro de la tabla raíz de colaboración, que permite asociar varias colaboraciones, por ejemplo, tareas, eventos, citas con un registro empresarial.
 
-Una sesión de colaboración le permite realizar operaciones como una lista de los eventos de calendario asociados a un registro empresarial, por ejemplo, una aplicación de inspecciones.
+Una sesión de colaboración permite realizar operaciones como una lista de los eventos de calendario asociados a un registro empresarial, por ejemplo, una aplicación de inspecciones.
 
 # <a name="request"></a>[Solicitud](#tab/request)
 
@@ -108,7 +108,7 @@ Una sesión de colaboración le permite realizar operaciones como una lista de l
 
 ---
 
-Realice un seguimiento de `collaborationRootId` como será necesario en las solicitudes posteriores.
+Realice un seguimiento de `collaborationRootId` como se necesita en solicitudes posteriores.
 
 **Tarea 3: Crear un plan de Planner**
 
@@ -161,7 +161,7 @@ Cree un plan de Planner y asócielo a la sesión de colaboración creada anterio
 
 ---
 
-Realice un seguimiento de`m365_id` como será necesario en las solicitudes posteriores.
+Realice un seguimiento de`m365_id` como se necesita en solicitudes posteriores.
 
 **Tarea 4: Crear una tarea de Planner**
 
@@ -184,7 +184,7 @@ Cree una tarea de Planner con `PlanId` y `collaborationRootId`. puede crear vari
 
 ```
 
-* `collaborationRootId`: identifica la sesión de colaboración a la que queremos asociar este plan, el valor de la tarea 2.
+* `collaborationRootId`: identifica la sesión de colaboración con la que queremos asociar este plan y usa el valor de la tarea 2.
 * `planId`: identifica el plan al que se asignará esta tarea, use el valor del paso anterior.
 * `taskTitle`: título de la tarea
 
@@ -230,7 +230,7 @@ Cree una tarea de Planner con `PlanId` y `collaborationRootId`. puede crear vari
 
 ---
 
-Realice un seguimiento de `m365_graphplannertaskid` como será necesario en las solicitudes posteriores.
+Realice un seguimiento de `m365_graphplannertaskid` como se necesita en solicitudes posteriores.
 
 > [!NOTE]
 > `m365_graphplannertaskid` es la clave principal del registro en la tabla virtual de tareas de Planner. Todas las solicitudes posteriores a la tabla virtual para interactuar con este registro deben usar esta clave principal. Esto se denominará en los `plannerTaskId` pasos siguientes de este documento.

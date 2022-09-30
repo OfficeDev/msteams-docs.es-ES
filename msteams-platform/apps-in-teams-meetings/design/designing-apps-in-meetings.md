@@ -6,12 +6,12 @@ ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 04/07/2022
-ms.openlocfilehash: 9022f9cb7ad01808481a5ac9fb4a730459213300
-ms.sourcegitcommit: ffcfab268abbca398d1a75df158f73630490c330
+ms.openlocfilehash: 2c458752e081efd170a757a39789aca4f7360bc6
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2022
-ms.locfileid: "67636178"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243132"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Diseñar la extensión de reunión de Microsoft Teams
 
@@ -126,7 +126,7 @@ Recuerde lo siguiente si permite el desplazamiento:
 
 ### <a name="navigation"></a>Navegación
 
-En escenarios con capas de navegación o contenido pesado, se recomienda permitir a los usuarios navegar a una capa secundaria. Los usuarios deben poder volver a la capa anterior.
+En escenarios con capas de navegación o contenido pesado, se recomienda permitir a los usuarios ir a una capa secundaria. Los usuarios deben poder volver a la capa anterior.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav.png" alt-text="En el ejemplo se muestra la navegación en la reunión.":::
 
@@ -268,12 +268,12 @@ La fase de reunión compartida se basa en la colaboración y la participación. 
 
 Las aplicaciones compartidas en la fase de reunión varían en función del estado de la reunión y de cómo el usuario cambia el tamaño de la ventana. Mantenga el relleno y el diseño dinámico de la navegación y los controles tal y como lo haría en un explorador.
 
-* **Panel lateral**: un usuario puede hacer que el panel lateral esté abierto en cualquier momento durante una reunión para chatear, ver la lista o usar una aplicación (es decir, una pestaña en la reunión). La fase se reorganiza dinámicamente cuando el panel está abierto.
+* **Panel lateral**: un usuario puede tener el panel lateral abierto en cualquier momento durante una reunión para chatear, ver la lista o usar una aplicación (es decir, una pestaña en la reunión). La fase se reorganiza dinámicamente cuando el panel está abierto.
 * **Cuadrícula de vídeo y audio**: la cuadrícula de vídeo y audio siempre está visible para mostrar a los participantes de la reunión. Cuando un usuario pone en foco o ancla a alguien en la reunión, esto aumenta el alto o el ancho de la cuadrícula de participantes en función de la orientación.
 
 #### <a name="meeting-stage-without-side-panel"></a>Fase de reunión (sin panel lateral)
 
-Cuando el panel lateral no está abierto, la fase de reunión es de 994 x 678 píxeles de forma predeterminada y puede ser un mínimo de 792 x 382 píxeles.
+Cuando el panel lateral no está abierto, la fase de reunión es de 994 x 678 píxeles, de forma predeterminada y puede ser un mínimo de 792 x 382 píxeles.
 
 :::image type="content" source="~/assets/images/apps-in-meetings/meeting-stage-no-side-panel.png" alt-text="Imagen que muestra la capacidad de respuesta de la fase de reunión compartida con el panel lateral cerrado.":::
 
@@ -341,7 +341,7 @@ La aplicación solo debe pedir a los usuarios que se centren en una sola superfi
 
 #### <a name="do-use-a-one-column-dialog"></a>Hacer: Usar un cuadro de diálogo de una columna
 
-Dado que los diálogos están en el centro de la fase de reunión, la finalización de tareas debe ser rápida y sencilla para evitar la frustración del usuario.
+Dado que los diálogos están en el centro de la fase de reunión, la finalización de la tarea debe ser rápida y sencilla para evitar la frustración del usuario.
 
    :::column-end:::
    :::column span="":::

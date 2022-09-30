@@ -5,14 +5,14 @@ description: En este módulo, aprenderá a configurar tareas para clientes exter
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
-ms.openlocfilehash: bb98ab632b335717a61499600aef01e652fd0dee
-ms.sourcegitcommit: 0bb822b30739e4a532a36764dad2dbf35a81ba29
+ms.openlocfilehash: 7d458cc97429772695958606835edd4ef953b5db
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67179337"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243167"
 ---
-# <a name="configure-tasks-for-external-clients"></a>Configuración de tareas para clientes externos
+# <a name="configure-tasks-for-external-clients"></a>Configurar Tasks para clientes externos
 
 Tareas externas que se pueden asignar a usuarios que no forman parte de su organización o no tienen acceso a la aplicación, como asignar una tarea a un cliente.
 
@@ -21,7 +21,7 @@ Para habilitarlo, necesitará un paso adicional para pasar una cadena XML a cada
 > [!NOTE]
 > Actualmente, los controles de colaboración solo están disponibles en la [versión preliminar del desarrollador público](~/resources/dev-preview/developer-preview-intro.md).
 
-Estos son los pasos para crear tareas externas:
+Para crear tareas externas, siga estos pasos:
 
 1. Cree una nueva entidad personalizada como Customer o reutilice una entidad de cliente existente como Contactos.
 
@@ -30,7 +30,7 @@ Estos son los pasos para crear tareas externas:
     1. Correo electrónico
     1. Elemento primario (búsqueda en la tabla primaria, como inspecciones)
     > [!NOTE]
-    > La entidad de cliente creada anteriormente será , donde el control de tarea extrae la información del cliente al asignar una tarea externa. El campo Primario garantiza que la entidad de cliente esté vinculada a un registro de inspección.
+    > La entidad de cliente creada anteriormente es, donde el control de tareas extrae la información del cliente al asignar una tarea externa. El campo Primario garantiza que la entidad de cliente esté vinculada a un registro de inspección.
 
 1. Genere un archivo Fetch XML para permitir que el control PCF extraiga la información correcta del cliente.
 
@@ -39,8 +39,8 @@ Estos son los pasos para crear tareas externas:
     A continuación se muestra la definición de esquema para la configuración de tareas Fetch XML. Cualquier xml de captura debe diseñarse para cumplir los siguientes requisitos:
 
     * El resultado de la consulta devolverá las siguientes propiedades para cada objeto de usuario:
-      * ID
-      * displayname
+      * Id.
+      * Displayname
       * email, use alias si es necesario.
     * La consulta contendrá el parámetro **@top** para permitir que el autor de la llamada limite el número de resultados.
     * La consulta tendrá **@rootEntityId** parámetro para filtrar los resultados solo por registros relacionados, si es necesario.
@@ -81,19 +81,19 @@ Estos son los pasos para crear tareas externas:
 
 1. Desplácese por el diseñador de formularios clásico hasta que encuentre la pestaña **Tareas** . Haga doble clic en la subcuadrícula para abrir el cuadro de diálogo de propiedades.
 
-    :::image type="content" source="~/assets/images/collaboration-control/subgrid-property.png" alt-text="Cuadro de diálogo de la propiedad Tasks":::
+    :::image type="content" source="~/assets/images/collaboration-control/subgrid-property.png" alt-text="Captura de pantalla que muestra el cuadro de diálogo de la propiedad tasks.":::
 
 1. En el cuadro de diálogo de propiedades, establezca las propiedades como se muestra en la siguiente imagen:
 
-    :::image type="content" source="~/assets/images/collaboration-control/tasks-property.png" alt-text="Configuración de la propiedad Tasks":::
+    :::image type="content" source="~/assets/images/collaboration-control/tasks-property.png" alt-text="Sceenshot muestra para establecer las propiedades en la configuración de la propiedad Tasks.":::
 
-1. Vaya a la pestaña Controles y seleccione :::image type="icon" source="~/assets/images/collaboration-control/edit-icon.png" alt-text="Editar tareas"::: en la propiedad Tareas personalizadas para agregar el xml de captura generado anteriormente.
+1. Vaya a la pestaña Controles y seleccione :::image type="icon" source="~/assets/images/collaboration-control/edit-icon.png" alt-text="Captura de pantalla que muestra cómo editar las tareas."::: en la propiedad Tareas personalizadas para agregar el XML de captura generado anteriormente.
 
 1. Pegar el archivo XML de captura
 
-    :::image type="content" source="~/assets/images/collaboration-control/set-fetchproperties.png" alt-text="Capturar la configuración de la propiedad XML":::
+    :::image type="content" source="~/assets/images/collaboration-control/set-fetchproperties.png" alt-text="Captura de pantalla que muestra cómo pegar Fetch XML.":::
 
-    :::image type="content" source="~/assets/images/collaboration-control/custom-tasksproperty.png" alt-text="Captura de la configuración de propiedades personalizadas XML":::
+    :::image type="content" source="~/assets/images/collaboration-control/custom-tasksproperty.png" alt-text="Captura de pantalla que muestra cómo configurar las propiedades personalizadas.":::
 
 1. Seleccione **Aceptar** en Configurar propiedad "Tareas personalizadas" y Establecer ventanas propiedades.
 

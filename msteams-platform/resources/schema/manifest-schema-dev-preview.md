@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo habilitar la versión preliminar d
 ms.topic: reference
 ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: 5122ab4c0d2a3668c8ca7568a3ce65ee69b980a8
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: d3e7db2a3f50d989cd6d8596eea20ea491c56564
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100297"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243174"
 ---
 # <a name="public-developer-preview-manifest-schema-for-teams"></a>Versión preliminar pública de esquema de manifiesto para desarrolladores de Teams
 
@@ -535,7 +535,7 @@ Specifies the native features on a user's device that your app may request acces
 
 **Opcional**, excepto cuando se indique que es **necesario**.
 
-Lista de dominios válidos desde los que la aplicación espera cargar cualquier contenido. Las listas de dominios pueden incluir caracteres comodín, por ejemplo `*.example.com`. El dominio válido coincide exactamente con un segmento del dominio; si necesita que coincida con `a.b.example.com`, use `*.*.example.com`. Si la interfaz de usuario de contenido o configuración de pestaña necesita navegar a cualquier otro dominio además del que se usa para la configuración de pestañas, ese dominio debe especificarse aquí.
+Lista de dominios válidos desde los que la aplicación espera cargar cualquier contenido. Las listas de dominios pueden incluir caracteres comodín, por ejemplo `*.example.com`. Coincide exactamente con un segmento del dominio; si necesita coincidir con `a.b.example.com`, use `*.*.example.com`. Si la interfaz de usuario de contenido o configuración de pestaña necesita ir a cualquier otro dominio además del que se usa para la configuración de pestañas, ese dominio debe especificarse aquí.
 
 **No** es necesario que incluya los dominios de proveedores de identidades que desea admitir en la aplicación. Por ejemplo, para autenticarse con un identificador de Google, es necesario redirigir a accounts.google.com, pero no debe incluir accounts.google.com en `validDomains[]`.
 

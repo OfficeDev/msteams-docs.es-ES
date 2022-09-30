@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: Obtenga más información sobre los webhooks salientes.
   ms.custom: mvc
   ms.localizationpriority: High
-  ms.openlocfilehash: 1f99cc6f22e85f7ee32f29f6bfca245efc2e2117
-  ms.sourcegitcommit: 4eeede81a0ae8ec985c6a1ad4f608df58371402f
+  ms.openlocfilehash: d15f2d03d349ea5012bc3439d986a669036c0c65
+  ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 07/14/2022
-  ms.locfileid: "66792938"
+  ms.lasthandoff: 09/30/2022
+  ms.locfileid: "68243566"
 items:
 - durationInMinutes: 1
   content: "Los webhooks ayudan a Microsoft Teams a integrarse con aplicaciones externas. En Teams, los webhooks salientes actúan como bot y buscan mensajes en canales mediante **@mention**. Los webhooks salientes permiten a los usuarios enviar mensajes a servicios web sin realizar todo el proceso de creación de bots a través de Microsoft Bot Framework. Los webhooks salientes publican datos de Teams en cualquier servicio capaz de aceptar la carga json. \n\n**Características clave de los webhooks salientes**\n\n* Enviar notificaciones a cualquier servicio web externo.\n* Responda con mensajes de texto enriquecidos, incluidas tarjetas e imágenes. \n* Recibir mensajes en canales públicos y no dentro del ámbito personal o privado.\n* Enviar HTTP POST al servicio web y obtener respuesta. \n\n > [!NOTE]\n > Los webhooks salientes no pueden acceder a ninguna otra API, como recuperar la lista o la lista de canales de un equipo.\n\nEsta guía paso a paso le ayuda a crear webhooks salientes en Teams. Verá la siguiente salida:\n\n![Listo](~/assets/images/sbs-outgoing-webhooks/output-result1.png)\n"

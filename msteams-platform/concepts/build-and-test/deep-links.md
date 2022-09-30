@@ -3,12 +3,12 @@ title: Crear vínculos profundos
 description: En este artículo, aprenderá a crear vínculos profundos y a navegar por dichos vínculos en las aplicaciones de Microsoft Teams con pestañas.
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: b02a29b74204e9ef8f61633642bd42cd178c8350
-ms.sourcegitcommit: c74e1e12175969c75e112a580949f96d2610c24e
+ms.openlocfilehash: 7a9af415a6fdc4f2cb1f9fd04ba79e8b197a40fc
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2022
-ms.locfileid: "68160723"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243223"
 ---
 # <a name="create-deep-links"></a>Crear vínculos profundos
 
@@ -101,7 +101,7 @@ Aunque se recomienda usar `shareDeepLink()` para generar un vínculo profundo a 
 > [!NOTE]
 >
 > * Las pestañas personales tienen un ámbito `personal`, mientras que las pestañas de canal y grupo usan ámbitos `team` o `group`. Los dos tipos de pestaña tienen una sintaxis ligeramente diferente, ya que solo la pestaña configurable tiene una propiedad `channel` asociada a su objeto de contexto. Para obtener más información sobre los ámbitos de pestaña, vea la referencia del [manifiesto](~/resources/schema/manifest-schema.md).
-> * Los vínculos profundos solo funcionan correctamente si la pestaña se configuró mediante la biblioteca v0.4 o posterior y por ello tiene un identificador de entidad. Los vínculos profundos a pestañas sin identificadores de entidad siguen navegando a la pestaña, pero no pueden proporcionar el identificador de subentidad a la pestaña.
+> * Los vínculos profundos solo funcionan correctamente si la pestaña se configuró mediante la biblioteca v0.4 o posterior y por ello tiene un identificador de entidad. Los vínculos profundos a pestañas sin identificadores de entidad siguen a la pestaña, pero no pueden proporcionar el identificador de subentlación a la pestaña.
 
 Use el formato siguiente para un vínculo profundo que puede usar en un bot, conector o tarjeta de extensión de mensajería:
 
@@ -322,7 +322,7 @@ Para usar este vínculo profundo con el bot, puede especificarlo como destino de
 
 ### <a name="generate-deep-links-to-channel-conversation"></a>Generar vínculos profundos a la conversación del canal
 
-Use este formato de vínculo profundo para navegar a una conversación determinada dentro de la conversación del canal:
+Use este formato de vínculo profundo para ir a una conversación determinada dentro del subproceso del canal:
 
 `https://teams.microsoft.com/l/message/<channelId>/<parentMessageId>?tenantId=<tenantId>&groupId=<groupId>&parentMessageId=<parentMessageId>&teamName=<teamName>&channelName=<channelName>&createdTime=<createdTime>`
 

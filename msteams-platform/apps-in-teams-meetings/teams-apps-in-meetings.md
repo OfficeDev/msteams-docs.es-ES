@@ -6,12 +6,12 @@ ms.topic: overview
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.date: 04/07/2022
-ms.openlocfilehash: a462c3e4f5e6aef332fbb0b05cce8b1f2fa7d5a7
-ms.sourcegitcommit: b9ec2a17094cb8b24c3017815257431fb0a679d0
+ms.openlocfilehash: 10604f4101185b2c18a619308e6551182809c290
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2022
-ms.locfileid: "67990892"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243209"
 ---
 # <a name="apps-for-teams-meetings-and-calls"></a>Aplicaciones para reuniones y llamadas de Teams
 
@@ -46,6 +46,10 @@ En la siguiente ilustración se ofrece una idea de las características de exten
 ![Extensibilidad de la aplicación para reuniones](../assets/images/apps-in-meetings/meetingappextensibility.png)
 
 En este artículo se proporciona información general sobre la extensibilidad de aplicaciones de reunión, las referencias de API, la habilitación y configuración de aplicaciones para reuniones y las escenas personalizadas del Modo conferencia en Teams.
+
+> [!Note]
+>
+> Las aplicaciones de reunión (panel lateral, fase de reunión) se admiten en el cliente de escritorio de Teams. Cuando, como en el cliente web de Teams, solo se admite cuando la versión preliminar del desarrollador está habilitada.
 
 * **Ampliar la aplicación de reunión**: mejore la experiencia de reunión mediante la característica de extensibilidad de reuniones. Esta característica permite integrar las aplicaciones en reuniones. También incluye diferentes fases del ciclo de vida de una reunión donde poder integrar pestañas, bots y extensiones de mensajes. Puede identificar varios roles de participante y tipos de usuario, obtener eventos de reunión y generar diálogos en la reunión.
 * **Configurar aplicaciones para reuniones**: para personalizar Teams con aplicaciones para reuniones, habilite las aplicaciones para reuniones de Teams actualizando el manifiesto de la aplicación y configurando también las aplicaciones para escenarios de reunión.

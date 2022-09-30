@@ -3,12 +3,12 @@ title: Preparar el espacio empresarial de Microsoft 365
 description: En este módulo, aprenderá a empezar a trabajar con Teams en Microsoft 365 y a crear su entorno de desarrollo.
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.openlocfilehash: b52a74056dac01d6a946bd8f0166080b75a5fab5
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: c5ebc7d36f73978e1cd954c7be8d7ac3595ba68e
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66484890"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243587"
 ---
 # <a name="prepare-your-microsoft-365-tenant"></a>Preparar el espacio empresarial de Microsoft 365
 
@@ -46,7 +46,7 @@ Para activar la carga o instalación de prueba de aplicaciones personalizadas pa
     > [!Note]
     > La opciónTeams puede tardar **hasta 24 horas** en aparecer. Puede [cargar la aplicación personalizada en un entorno de Teams](/microsoftteams/upload-custom-apps#validate) para pruebas y validación en ese momento.
 
-3. Vaya a **aplicaciones de Teams** > **Directivas de configuración** > **Global**.
+3. Vaya a **Directivas** > **de instalación de** aplicaciones  >  de Teams **Global**.
 
    ![Activar la vista de transferencia local](~/assets/images/prepare-test-tenant/turn-on-sideload.png)
 

@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: high
-ms.openlocfilehash: 790c6324f012da8aabe7c4489a414d9887e03640
-ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
-ms.translationtype: HT
+ms.openlocfilehash: 2fc0a66683bb5454bfb8fbced64e97618522fce7
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "66919735"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243517"
 ---
 # <a name="extend-a-teams-message-extension-across-microsoft-365"></a>Ampliar una extensión de mensajería de Teams en Microsoft 365
 
@@ -90,7 +90,7 @@ Abra el manifiesto de la aplicación de Teams y actualice `$schema` y `manifestV
 
 ---
 
-Si usó el Kit de herramientas de Teams para crear la aplicación de la extensión de mensajería, puede usarlo para validar los cambios en el archivo de manifiesto e identificar los errores. Abra la paleta de comandos `Ctrl+Shift+P` y busque **Teams: Validar archivo del manifiesto**.
+If you used Teams Toolkit to create your message extension app, you can use it to validate the changes to your manifest file and identify any errors. Open the command palette `Ctrl+Shift+P` and find **Teams: Validate manifest file**.
 
 ## <a name="add-an-outlook-channel-for-your-bot"></a>Agregar un canal de Outlook para el bot
 
@@ -98,7 +98,7 @@ En Microsoft Teams, una extensión de mensajería consta de un servicio web que 
 
 Para que los usuarios interactúen con la extensión de mensajería desde Outlook, deberá agregar un canal de Outlook al bot:
 
-1. Desde [Microsoft Azure Portal](https://portal.azure.com) (o [Bot Framework portal](https://dev.botframework.com) si se registró anteriormente allí), vaya al recurso del bot.
+1. En [Microsoft Azure Portal](https://portal.azure.com) (o [en el portal de Bot Framework](https://dev.botframework.com) si se registró anteriormente allí), vaya al recurso del bot.
 
 1. En *Configuración*, seleccione **Canales**.
 
@@ -115,7 +115,7 @@ Para que los usuarios interactúen con la extensión de mensajería desde Outloo
 > [!NOTE]
 > Puede omitir el paso si usa la [aplicación de muestra](#quickstart) que se ofrece en este tutorial, ya que el escenario no implica la autenticación de inicio de sesión único de Azure Active Directory (AAD).
 
-El inicio de sesión único (SSO) de Azure Active Directory para extensiones de mensajería funciona de la misma manera tanto en Outlook [como en Teams](/microsoftteams/platform/bots/how-to/authentication/auth-aad-sso-bots), sin embargo, debe agregar varios identificadores de la aplicación cliente al registro de la aplicación de Azure AD del bot en el portal *Registros de aplicaciones* de la cuenta empresarial.
+Azure Active Directory (AD) Single-sign on (SSO) for message extensions works the same way in Outlook [as it does in Teams](/microsoftteams/platform/bots/how-to/authentication/auth-aad-sso-bots). However you need to add several client application identifiers to the Azure AD app registration of your bot in your tenant's *App registrations* portal.
 
 1. Inicie sesión en [Azure Portal](https://portal.azure.com) con su cuenta empresarial de espacio aislado.
 1. Abra **Registros de aplicaciones**.
@@ -167,7 +167,7 @@ Para obtener una vista previa de la aplicación que se ejecuta en Outlook en la 
 
     :::image type="content" source="images/outlook-web-compose-more-apps.png" alt-text="Haga clic en el menú &quot;Más aplicaciones&quot; en la parte inferior de la ventana de redacción de correo para usar la extensión de mensaje":::
 
-Se muestra la extensión de mensajería. Puede invocarla desde allí y usarla al igual que lo haría al redactar un mensaje en Teams.
+Your message extension is listed. You can invoke it from there and use it just as you would while composing a message in Teams.
 
 ### <a name="outlook"></a>Outlook
 

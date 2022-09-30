@@ -5,12 +5,12 @@ ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
 author: surbhigupta
-ms.openlocfilehash: 83a4b4d40ebca418b62dcac5f94f77ac30ee85d7
-ms.sourcegitcommit: 904cca011c3f27d1d90ddd80c3d0300a8918e412
+ms.openlocfilehash: c2276c720ca4d7014b3317365411a9c3d7fe6a73
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2022
-ms.locfileid: "66895506"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243181"
 ---
 # <a name="install-moodle-lms"></a>Instalar Moodle LMS
 
@@ -115,7 +115,7 @@ Use el archivo generado `AppID` y `Key` en la página de configuración de compl
     1. Haga clic con el botón derecho en **Windows PowerShell**.
     1. Seleccione **Ejecutar como administrador**.
 
-1. Vaya al directorio descomprimido; para ello, escriba `cd .../.../Moodle-AzureAD-Powershell` dónde `.../...` es la ruta de acceso al directorio.
+1. Vaya al directorio descomprimido escribiendo `cd .../.../Moodle-AzureAD-Powershell` dónde `.../...` es la ruta de acceso al directorio.
 
 1. Ejecute el script de PowerShell:
 

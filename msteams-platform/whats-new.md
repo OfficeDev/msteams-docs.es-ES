@@ -4,12 +4,12 @@ description: Obtenga información sobre las nuevas características para desarro
 ms.topic: reference
 ms.localizationpriority: high
 zone_pivot_groups: What-new-features
-ms.openlocfilehash: 5aad27389416a5e10920ebc00521274fc8f7d907
-ms.sourcegitcommit: c74e1e12175969c75e112a580949f96d2610c24e
+ms.openlocfilehash: 8c618862056d6cc8b7a76cfd504be32f341d11ca
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2022
-ms.locfileid: "68160730"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243426"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores en Microsoft Teams
 
@@ -22,7 +22,7 @@ Descubra las características de la plataforma de Microsoft Teams que están dis
 :::row:::
 :::column:::
 
-:::image type="icon" source="~/assets/images/general-availabe.png" alt-text="Novedades para las características disponibles con carácter general":::
+:::image type="icon" source="~/assets/images/general-availabe.png":::
 
 :::column-end:::
 :::column span="2":::
@@ -31,6 +31,7 @@ Características de la plataforma Microsoft Teams que están disponibles para to
 
 **Septiembre de 2022**
 
+* ***30 de septiembre de 2022***: Administración de [licencias SaaS para aplicaciones de terceros en Teams](concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md#manage-license-for-third-party-apps-in-teams)
 * ***29 de septiembre de 2022***: [la aplicación móvil de Teams ahora admite descargas de archivos en dispositivos locales.](concepts/device-capabilities/media-capabilities.md#file-download-on-teams-mobile)
 * ***29 de septiembre de 2022***: [genere un vínculo profundo para compartir contenido para realizar reuniones.](concepts/build-and-test/deep-links.md#generate-a-deep-link-to-share-content-to-stage-in-meetings)
 * ***16 de septiembre de 2022***: [las tarjetas adaptables en las extensiones de mensaje basadas en búsqueda ahora admiten Acciones universales.](messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md)
@@ -265,6 +266,7 @@ Explore las actualizaciones de las versiones anteriores de GA que se enumeran aq
 </details>
 </details>
 </details>
+
 ::: zone-end
 
 ::: zone pivot="dev-preview"
@@ -276,7 +278,7 @@ Descubra las características de la plataforma de Microsoft Teams que se encuent
 :::row:::
 :::column:::
 
-:::image type="icon" source="~/assets/images/developer-preview.png" alt-text="Novedades para las características disponibles en la versión preliminar para desarrolladores":::
+:::image type="icon" source="~/assets/images/developer-preview.png":::
 
 :::column-end:::
 :::column span="2":::
@@ -316,7 +318,7 @@ Descubra las características de la plataforma de Microsoft Teams que están en 
 :::row:::
 :::column:::
 
-:::image type="icon" source="~/assets/images/deprecated.png" alt-text="Características desusadas":::
+:::image type="icon" source="~/assets/images/deprecated.png":::
 
 :::column-end:::
 :::column span="2":::
