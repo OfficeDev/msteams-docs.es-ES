@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.date: 04/07/2022
-ms.openlocfilehash: d0e7cf82685588977beb426ec6cc2ed75b2249c6
-ms.sourcegitcommit: 600d3b13d47ca42ab5ba7abf18bccc7e912180e4
+ms.openlocfilehash: 631fa01f8e3909495281a95205a70f88a729648f
+ms.sourcegitcommit: 3aaccc48906fc6f6fbf79916af5664bf55537250
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2022
-ms.locfileid: "68158823"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68295980"
 ---
 # <a name="enable-and-configure-apps-for-meetings"></a>Habilitar y configurar las aplicaciones para reuniones
 
@@ -177,7 +177,7 @@ Además, puede agregar la imagen de visualización de Teams y la tarjeta de cont
 
 La fase de reunión compartida permite a los participantes de la reunión interactuar con el contenido de la aplicación y colaborar en él en tiempo real. Puede compartir sus aplicaciones en la fase de reunión colaborativa de las siguientes maneras:
 
-* [Comparta toda la aplicación para realizar la fase](#share-entire-app-to-stage) mediante el botón compartir para realizar la fase en el panel lateral de la reunión del cliente de Teams o a través de [vínculos profundos](~/concepts/build-and-test/deep-links.md#generate-a-deep-link-to-share-content-to-stage-in-meetings).
+* [Comparta toda la aplicación en fase](#share-entire-app-to-stage) mediante el botón compartir en fase en el cliente de Teams.
 * [Comparta partes específicas de la aplicación en fase](#share-specific-parts-of-the-app-to-stage) mediante API en el SDK de cliente de Teams.
 
 ##### <a name="share-entire-app-to-stage"></a>Compartir toda la aplicación en fase

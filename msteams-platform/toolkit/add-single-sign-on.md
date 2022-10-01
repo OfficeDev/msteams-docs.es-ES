@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/20/2022
-ms.openlocfilehash: b2016cefcdf476e32860f80a76606c04bf892f5d
-ms.sourcegitcommit: dccb48902e08484692ab927415bcd3d61dc50db2
+ms.openlocfilehash: 9c221b0903d4541c4b0601e14ea347680140dfb9
+ms.sourcegitcommit: 3aaccc48906fc6f6fbf79916af5664bf55537250
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2022
-ms.locfileid: "67806797"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68295966"
 ---
 # <a name="add-single-sign-on-to-teams-app"></a>Agregar inicio de sesión único a la aplicación de Teams
 
@@ -59,15 +59,15 @@ En la tabla siguiente se enumeran los cambios realizados por Teams Toolkit en el
    |--------|--------|-----------|
    |Crear|`aad.template.json` Bajo `template/appPackage`|El manifiesto de aplicación de Azure AD representa la aplicación de Azure AD. `template/appPackage` ayuda a registrar una aplicación de Azure AD durante la fase de depuración o aprovisionamiento local.|
    |Modify|`manifest.template.json` Bajo `template/appPackage`|Se agrega un `webApplicationInfo` objeto a la plantilla de manifiesto de aplicación de Teams. Teams requiere este campo para habilitar el inicio de sesión único. El cambio está en vigor cuando se desencadena la depuración o el aprovisionamiento locales.|
-   |Crear|`auth/tab`|El código de referencia, las páginas de redirección de autenticación y un `README.md` archivo se generan en esta ruta de acceso para un proyecto de pestaña.|
-   |Crear|`auth/bot`|El código de referencia, las páginas de redirección de autenticación y un `README.md` archivo se generan en esta ruta de acceso para un proyecto de bot.|
+   |Crear|`auth/tab`|El código de referencia, las páginas de redireccionamiento de autenticación y `README.md` los archivos se generan en esta ruta de acceso para un proyecto de pestaña.|
+   |Crear|`auth/bot`|El código de referencia, las páginas de redireccionamiento de autenticación y `README.md` los archivos se generan en esta ruta de acceso para un proyecto de bot.|
 
 > [!Note]
 > Al agregar el inicio de sesión único, Teams Toolkit no cambia nada en la nube hasta que se desencadena la depuración local. Actualice el código para asegurarse de que el inicio de sesión único funciona en el proyecto.
 
 ## <a name="update-your-application-to-use-sso"></a>Actualización de la aplicación para usar el inicio de sesión único
 
-Los pasos siguientes le ayudan a habilitar el inicio de sesión único en la aplicación.
+Los pasos siguientes le ayudan a habilitar el inicio de sesión único en la aplicación:
 
 > [!NOTE]
 > Estos cambios se basan en las plantillas que aplicamos al scaffolding.
@@ -95,221 +95,267 @@ Los pasos siguientes le ayudan a habilitar el inicio de sesión único en la apl
 
     ```
 
-5. Reemplace la línea siguiente: `<AddSSO />` por `<InitTeamsFx />` para reemplazar el `AddSso` componente por `InitTeamsFx` el componente.
+5. Reemplace la línea siguiente:
+
+   `<AddSSO />` con `<InitTeamsFx />` para reemplazar el `AddSso` componente por `InitTeamsFx` el componente.
 
 </details>
 <details>
 <summary><b>Proyecto de bot </b></summary>
 
-1. Copie `auth/bot/public` la carpeta en `bot/src`. Las dos carpetas contienen páginas HTML usadas para la redirección de autenticación; es necesario modificar `bot/src/index` el archivo para agregar enrutamiento a estas páginas.
+#### <a name="set-up-the-azure-ad-redirects"></a>Configuración de las redirecciones de Azure AD
 
-2. Copie `auth/bot/sso` la carpeta en `bot/src`. Las dos carpetas contienen tres archivos como referencia para la implementación de SSO:
+1. Mueva la `auth/bot/public` carpeta a `bot/src`. Esta carpeta contiene páginas HTML que hospeda la aplicación bot. Cuando se inicia el flujo de inicio de sesión único con Azure AD, redirige al usuario a las páginas HTML.
+1. Modifique para `bot/src/index` agregar las rutas adecuadas `restify` a las páginas HTML.
 
-    * `showUserInfo`: implementa una función para obtener información del usuario con el token de SSO. Puede seguir esto para crear su propio método que requiera el token de SSO.
+    ```ts
+    const path = require("path");
 
-    * `ssoDialog`: crea un [ComponentDialog](/javascript/api/botbuilder-dialogs/componentdialog?view=botbuilder-ts-latest&preserve-view=true) que se usa para el inicio de sesión único.
+    server.get(
+        "/auth-*.html",
+        restify.plugins.serveStatic({
+            directory: path.join(__dirname, "public"),
+        })
+    );
+    ```
 
-    * `teamsSsoBot`: crea un [TeamsActivityHandler](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest&preserve-view=true) con `ssoDialog` y agrega `showUserInfo` como un comando que se puede desencadenar.
+#### <a name="update-your-app"></a>Actualizar la aplicación
 
-3. Siga el ejemplo de código y registre su propio comando con `addCommand` en este archivo (opcional).
+El controlador de `ProfileSsoCommandHandler` comandos sso usa un token de Azure AD para llamar a Microsoft Graph. Este token se obtiene mediante el token de usuario de Teams que ha iniciado sesión. El flujo se reúne en un cuadro de diálogo que muestra un cuadro de diálogo de consentimiento si es necesario.
 
-4. Ejecute `npm install isomorphic-fetch` en `bot/`.
+1. Mueva el `profileSsoCommandHandler` archivo de la `auth/bot/sso` carpeta a `bot/src`. `ProfileSsoCommandHandler` class es un controlador de comandos sso para obtener información del usuario con el token de SSO, seguir este método y crear su propio controlador de comandos sso.
+1. Abra el `package.json` archivo y asegúrese de que la versión del SDK de teamsfx >= 1.2.0
+1. Ejecute el comando en `bot` la `npm install isomorphic-fetch --save` carpeta .
+1. Para el script ts, ejecute el comando en `bot` la `npm install copyfiles --save-dev` carpeta y reemplace las líneas siguientes en `package.json`:
 
-5. Ejecute `npm install copyfiles` en `bot/` y reemplace la siguiente línea en package.json:
-  
-   ```JSON
+    ```json
+    "build": "tsc --build && shx cp -r ./src/adaptiveCards ./lib/src",
+    ```
 
-   "build": "tsc --build",
+    Con
+
+    ```json
+    "build": "tsc --build && shx cp -r ./src/adaptiveCards ./lib/src && copyfiles src/public/*.html lib/",
+    ```
+
+    Esto copia las páginas HTML que se usan para la redirección de autenticación al compilar el proyecto de bot.
+
+1. Para que el flujo de consentimiento de SSO funcione, reemplace el código siguiente en el `bot/src/index` archivo:
+
+    ```ts
+    server.post("/api/messages", async (req, res) => {
+        await commandBot.requestHandler(req, res);
+    });
+    ```
+
+    Con
+
+    ```ts
+    server.post("/api/messages", async (req, res) => {
+        await commandBot.requestHandler(req, res).catch((err) => {
+            // Error message including "412" means it is waiting for user's consent, which is a normal process of SSO, sholdn't throw this error.
+            if (!err.message.includes("412")) {
+                throw err;
+            }
+        });
+    });
+    ```
+
+1. Reemplace las opciones de, por `ConversationBot` ejemplo, en `bot/src/internal/initialize` para agregar la configuración de SSO y el controlador de comandos sso:
+
+    ```ts
+    export const commandBot = new ConversationBot({
+        ...
+        command: {
+            enabled: true,
+            commands: [new HelloWorldCommandHandler()],
+        },
+    });
+    ```
+
+    Con
+
+    ```ts
+    import { ProfileSsoCommandHandler } from "../profileSsoCommandHandler";
+
+    export const commandBot = new ConversationBot({
+        ...
+        // To learn more about ssoConfig, please refer teamsfx sdk document: https://docs.microsoft.com/microsoftteams/platform/toolkit/teamsfx-sdk
+        ssoConfig: {
+            aad :{
+                scopes:["User.Read"],
+            },
+        },
+        command: {
+            enabled: true,
+            commands: [new HelloWorldCommandHandler() ],
+            ssoCommands: [new ProfileSsoCommandHandler()],
+        },
+    });
+    ```
+
+1. Registre el comando en el manifiesto de aplicación de Teams. Abra `templates/appPackage/manifest.template.json`y agregue las siguientes líneas en `commands` en `commandLists` del bot:
+
+    ```json
+    {
+        "title": "profile",
+        "description": "Show user profile using Single Sign On feature"
+    }
+    ```
+
+#### <a name="add-a-new-sso-command-to-the-bot-optional"></a>Adición de un nuevo comando sso al bot (opcional)
+
+Después de agregar correctamente el inicio de sesión único en el proyecto, puede agregar un nuevo comando sso.
+
+1. Cree un nuevo archivo como `photoSsoCommandHandler.ts` o `photoSsoCommandHandler.js` en `bot/src/` y agregue su propio controlador de comandos de SSO para llamar a Graph API:
+
+    ```TypeScript
+    // for TypeScript:
+    import { Activity, TurnContext, ActivityTypes } from "botbuilder";
+    import "isomorphic-fetch";
+    import {
+        CommandMessage,
+        TriggerPatterns,
+        TeamsFx,
+        createMicrosoftGraphClient,
+        TeamsFxBotSsoCommandHandler,
+        TeamsBotSsoPromptTokenResponse,
+    } from "@microsoft/teamsfx";
+
+    export class PhotoSsoCommandHandler implements TeamsFxBotSsoCommandHandler {
+        triggerPatterns: TriggerPatterns = "photo";
+
+        async handleCommandReceived(
+            context: TurnContext,
+            message: CommandMessage,
+            tokenResponse: TeamsBotSsoPromptTokenResponse,
+        ): Promise<string | Partial<Activity> | void> {
+            await context.sendActivity("Retrieving user information from Microsoft Graph ...");
+
+            const teamsfx = new TeamsFx().setSsoToken(tokenResponse.ssoToken);
+
+            const graphClient = createMicrosoftGraphClient(teamsfx, ["User.Read"]);
+
+            let photoUrl = "";
+            try {
+                const photo = await graphClient.api("/me/photo/$value").get();
+                const arrayBuffer = await photo.arrayBuffer();
+                const buffer=Buffer.from(arrayBuffer, 'binary');
+                photoUrl = "data:image/png;base64," + buffer.toString("base64");
+            } catch {
+                // Could not fetch photo from user's profile, return empty string as placeholder.
+            }
+            if (photoUrl) {
+                const photoMessage: Partial<Activity> = {
+                    type: ActivityTypes.Message, 
+                    text: 'This is your photo:', 
+                    attachments: [
+                        {
+                            name: 'photo.png',
+                            contentType: 'image/png',
+                            contentUrl: photoUrl
+                        }
+                    ]
+                };
+                return photoMessage;
+            } else {
+                return "Could not retrieve your photo from Microsoft Graph. Please make sure you have uploaded your photo.";
+            }
+        }
+    }
+    ```
+
+    ```javascript
+    // for JavaScript:
+    const { ActivityTypes } = require("botbuilder");
+    require("isomorphic-fetch");
+    const { createMicrosoftGraphClient, TeamsFx } = require("@microsoft/teamsfx");
+
+    class PhotoSsoCommandHandler {
+        triggerPatterns = "photo";
+
+        async handleCommandReceived(context, message, tokenResponse) {
+            await context.sendActivity("Retrieving user information from Microsoft Graph ...");
+
+            const teamsfx = new TeamsFx().setSsoToken(tokenResponse.ssoToken);
+
+            const graphClient = createMicrosoftGraphClient(teamsfx, ["User.Read"]);
+        
+            let photoUrl = "";
+            try {
+                const photo = await graphClient.api("/me/photo/$value").get();
+                const arrayBuffer = await photo.arrayBuffer();
+                const buffer=Buffer.from(arrayBuffer, 'binary');
+                photoUrl = "data:image/png;base64," + buffer.toString("base64");
+            } catch {
+            // Could not fetch photo from user's profile, return empty string as placeholder.
+            }
+            if (photoUrl) {
+                const photoMessage = {
+                    type: ActivityTypes.Message, 
+                    text: 'This is your photo:', 
+                    attachments: [
+                        {
+                            name: 'photo.png',
+                            contentType: 'image/png',
+                            contentUrl: photoUrl
+                        }
+                    ]
+                };
+                return photoMessage;
+            } else {
+                return "Could not retrieve your photo from Microsoft Graph. Please make sure you have uploaded your photo.";
+            }
+        }
+    }
+
+    module.exports = {
+        PhotoSsoCommandHandler,
+    };
 
     ```
 
-   Con
+1. Agregue `PhotoSsoCommandHandler` una instancia a la `ssoCommands` matriz en `bot/src/internal/initialize.ts`:
 
-   ```JSON
+    ```ts
+    // for TypeScript:
+    import { PhotoSsoCommandHandler } from "../photoSsoCommandHandler";
 
-   "build": "tsc --build && copyfiles public/*.html lib/",
+    export const commandBot = new ConversationBot({
+        ...
+        command: {
+            ...
+            ssoCommands: [new ProfileSsoCommandHandler(), new PhotoSsoCommandHandler()],
+        },
+    });
+    ```
 
-   ```
+    ```javascript
+    // for JavaScript:
+    ...
+    const { PhotoSsoCommandHandler } = require("../photoSsoCommandHandler");
 
-   Las páginas HTML usadas para la redirección de autenticación se copian al compilar este proyecto de bot.
+    const commandBot = new ConversationBot({
+        ...
+        command: {
+            ...
+            ssoCommands: [new ProfileSsoCommandHandler(), new PhotoSsoCommandHandler()]
+        },
+    });
+    ...
 
-6. Después de agregar los siguientes archivos, debe crear una nueva `teamsSsoBot` instancia en `bot/src/index` el archivo. Reemplace el código siguiente:
+    ```
 
-   ```Bash
-  
-   // Process Teams activity with Bot Framework.
-   server.post("/api/messages", async (req, res) => {
-   await commandBot.requestHandler(req, res);
-   });  
+1. Registre el comando en el manifiesto de aplicación de Teams. Abra `templates/appPackage/manifest.template.json`y agregue las siguientes líneas en `commands` en `commandLists` del bot:
 
-   ```
+    ```JSON
 
-   Con
+    {
+        "title": "photo",
+        "description": "Show user photo using Single Sign On feature"
+    }
 
-   ```Bash
-
-   const handler = new TeamsSsoBot();
-   // Process Teams activity with Bot Framework.
-   server.post("/api/messages", async (req, res) => {
-       await commandBot.requestHandler(req, res, async (context)=> {
-           await handler.run(context);
-       });
-   });
-
-   ```
-
-7. Agregue las rutas HTML en el `bot/src/index` archivo:
-
-   ```Bash
-
-   server.get(
-       "/auth-*.html",
-       restify.plugins.serveStatic({
-           directory: path.join(__dirname, "public"),
-       })
-   );
-
-   ```
-
-8. Agregue las líneas siguientes a `bot/src/index` para importar `teamsSsoBot` y `path`:
-
-   ```Bash
-
-   // For ts:
-   import { TeamsSsoBot } from "./sso/teamsSsoBot";
-   const path = require("path");
-
-   // For js:
-   const { TeamsSsoBot } = require("./sso/teamsSsoBot");
-   const path = require("path");
-
-   ```
-
-9. Registre el comando en el manifiesto de aplicación de Teams. Abra `templates/appPackage/manifest.template.json`y agregue las siguientes líneas en `command` en `commandLists` del bot:
-
-   ```JSON
-
-   {
-       "title": "show",
-       "description": "Show user profile using Single Sign On feature"
-   }
-
-   ```
-
-</details>
-<details>
-<summary><b>Adición de un nuevo comando al bot </b></summary>
-
-> [!NOTE]
-> Actualmente, estas instrucciones se aplican a `command bot`. Si comienza con , `bot`consulte [el ejemplo bot-sso](https://github.com/OfficeDev/TeamsFx-Samples/tree/v2/bot-sso).
-
-Los pasos siguientes le ayudarán a agregar un nuevo comando, después de agregar sso en el proyecto:
-
-1. Cree un nuevo archivo (`todo.ts` o `todo.js`) en `bot/src/` y agregue su propia lógica de negocios para llamar a Graph API:
-
-# <a name="typescript"></a>[TypeScript](#tab/typescript)
-
-   ```typescript
-   // for TypeScript:
-export async function showUserImage(
-    context: TurnContext,
-    ssoToken: string,
-    param: any[]
-): Promise<DialogTurnResult> {
-    await context.sendActivity("Retrieving user photo from Microsoft Graph ...");
-
-    // Init TeamsFx instance with SSO token
-    const teamsfx = new TeamsFx().setSsoToken(ssoToken);
-
-    // Update scope here. For example: Mail.Read, etc.
-    const graphClient = createMicrosoftGraphClient(teamsfx, param[0]);
-    
-    // You can add following code to get your photo:
-    // let photoUrl = "";
-    // try {
-    //   const photo = await graphClient.api("/me/photo/$value").get();
-    //   photoUrl = URL.createObjectURL(photo);
-    // } catch {
-    //   // Could not fetch photo from user's profile, return empty string as placeholder.
-    // }
-    // if (photoUrl) {
-    //   await context.sendActivity(
-    //     `You can find your photo here: ${photoUrl}`
-    //   );
-    // } else {
-    //   await context.sendActivity("Could not retrieve your photo from Microsoft Graph. Please make sure you have uploaded your photo.");
-    // }
-
-    return;
-}  
-   ```
-
-# <a name="javascript"></a>[JavaScript](#tab/javascript)
-
-   ```javaScript
-   // for JavaScript:
-export async function showUserImage(context, ssoToken, param) {
-    await context.sendActivity("Retrieving user photo from Microsoft Graph ...");
-
-    // Init TeamsFx instance with SSO token
-    const teamsfx = new TeamsFx().setSsoToken(ssoToken);
-
-    // Update scope here. For example: Mail.Read, etc.
-    const graphClient = createMicrosoftGraphClient(teamsfx, param[0]);
-    
-    // You can add following code to get your photo:
-    // let photoUrl = "";
-    // try {
-    //   const photo = await graphClient.api("/me/photo/$value").get();
-    //   photoUrl = URL.createObjectURL(photo);
-    // } catch {
-    //   // Could not fetch photo from user's profile, return empty string as placeholder.
-    // }
-    // if (photoUrl) {
-    //   await context.sendActivity(
-    //     `You can find your photo here: ${photoUrl}`
-    //   );
-    // } else {
-    //   await context.sendActivity("Could not retrieve your photo from Microsoft Graph. Please make sure you have uploaded your photo.");
-    // }
-
-    return;
-}
-   ```
-
----
-
-2. Registro de un nuevo comando
-
-   * Agregue la siguiente línea para el nuevo registro de comandos mediante `addCommand` en `teamsSsoBot`:
-
-     ```bash
-
-     this.dialog.addCommand("ShowUserProfile", "show", showUserInfo);
-
-     ```
-
-   * Agregue las líneas siguientes después de la línea anterior para registrar un nuevo comando `photo` y enlazar con el método `showUserImage` agregado anteriormente:
-
-     ```bash
-
-     // As shown here, you can add your own parameter into the `showUserImage` method
-     // You can also use regular expression for the command here
-     const scope = ["User.Read"];
-     this.dialog.addCommand("ShowUserPhoto", new RegExp("photo\s*.*"), showUserImage, scope);
-
-     ```
-
-3. Registre el comando en el manifiesto de aplicación de Teams. Abra `templates/appPackage/manifest.template.json`y agregue las siguientes líneas en `command` en `commandLists` del bot:
-
-   ```JSON
-
-   {
-       "title": "photo",
-       "description": "Show user photo using Single Sign On feature"
-   }
-
-   ```
+    ```
 
 </details>
 <br>
@@ -320,7 +366,7 @@ Presione F5 para depurar la aplicación. Teams Toolkit usa el archivo de manifie
 
 ## <a name="customize-azure-ad-application-registration"></a>Personalización del registro de aplicaciones de Azure AD
 
-El [manifiesto de aplicación de Azure AD](/azure/active-directory/develop/reference-app-manifest) permite personalizar varios aspectos del registro de aplicaciones. Puede actualizar el manifiesto según sea necesario. Si necesita incluir permisos de API adicionales para acceder a las API deseadas, consulte [Permisos de API para acceder a las API deseadas](https://github.com/OfficeDev/TeamsFx/wiki/#customize-aad-manifest-template).
+El [manifiesto de aplicación de Azure AD](/azure/active-directory/develop/reference-app-manifest) permite personalizar varios aspectos del registro de aplicaciones. Puede actualizar el manifiesto según sea necesario. Si necesita incluir más permisos de API para acceder a las API deseadas, consulte [Permisos de API para acceder a las API deseadas](https://github.com/OfficeDev/TeamsFx/wiki/#customize-aad-manifest-template).
 Para ver la aplicación de Azure AD en Azure Portal, consulte [Visualización de la aplicación de Azure AD en Azure Portal](https://github.com/OfficeDev/TeamsFx/wiki/Manage-AAD-application-in-Teams-Toolkit#How-to-view-the-AAD-app-on-the-Azure-portal).
 
 ## <a name="sso-authentication-concepts"></a>Conceptos de autenticación de SSO
