@@ -3,12 +3,12 @@ title: Registro de llamadas y bots de reuniones para Microsoft teams
 description: Obtenga información sobre cómo registrar un nuevo bot de llamadas de audio y vídeo para Microsoft Teams, crear un nuevo bot o agregar funcionalidad de llamadas, agregar permisos de grafos. Ejemplo para crear una llamada, unirse a una reunión y una llamada de transferencia.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 2563d94e944a7d4058d1417be2f3816e3f565bff
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 3fe8d0adde45242738b8023c5478c24769561d1c
+ms.sourcegitcommit: 53818e55dfe0dbdf874d578a40982f7db444f89b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100927"
+ms.lasthandoff: 10/01/2022
+ms.locfileid: "68319940"
 ---
 # <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>Registro de llamadas y bots de reuniones para Microsoft teams
 
@@ -93,9 +93,10 @@ You can rely on an administrator to grant the permissions your app needs at the 
 
 ## <a name="code-sample"></a>Ejemplo de código
 
-| **Ejemplo de nombre** | **Descripción** | **Graph** |
+| **Ejemplo de nombre** | **Descripción** | **C#** |
 |---------------|----------|--------|
 | Bots de llamadas y reuniones | La aplicación de ejemplo muestra cómo el bot puede crear una llamada, unirse a una reunión y transferirla. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-calling-meeting/csharp) |
+| Eventos de reunión en tiempo real |La aplicación de ejemplo muestra cómo bot puede recibir eventos de reunión en tiempo real.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp)|
 
 ## <a name="step-by-step-guide"></a>Guía paso a paso
 
@@ -111,3 +112,4 @@ Siga la guía [paso a paso](../../sbs-calling-and-meeting.yml) para configurar l
 * [Notificaciones de llamadas entrantes](~/bots/calls-and-meetings/call-notifications.md)
 * [Desarrollar bots de llamadas y reuniones en línea en su PC local](~/bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md)
 * [Ver permisos de aplicación y conceder consentimiento del administrador](/MicrosoftTeams/app-permissions-admin-center).
+* [Uso de la API de comunicaciones en Microsoft Graph](/graph/api/resources/communications-api-overview)
