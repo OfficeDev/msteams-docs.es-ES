@@ -6,12 +6,12 @@ ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 498a003e8fdc58d1eb0d9db4abb7b4b151143a19
-ms.sourcegitcommit: 275bb05daee25ae710238cbd49f588e6da1ffdf1
+ms.openlocfilehash: 25f4db19c2f89031d5bb4566793586d1c8988ceb
+ms.sourcegitcommit: e4ccbbdce620418c129689c0ba6ad246a81068c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2022
-ms.locfileid: "68158684"
+ms.lasthandoff: 10/03/2022
+ms.locfileid: "68329094"
 ---
 # <a name="create-a-personal-tab"></a>Crear una pestaña personal
 
@@ -251,7 +251,7 @@ gulp ngrok-serve
 ### <a name="upload-your-application-to-teams"></a>Cargar la aplicación en Teams
 
 1. Vaya a Teams y seleccione **Aplicaciones**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Tienda de Teams":::.
-1. A continuación, seleccione **Administrar aplicaciones** y **Cargar una aplicación personalizada**.
+1. Seleccione **Administrar las aplicaciones** > **Cargar una aplicación** > **Carga de una aplicación personalizada**.
 1. Vaya al directorio del proyecto, examine la carpeta **./package**, seleccione la carpeta zip y elija **Abrir**.
 
     :::image type="content" source="~/assets/images/tab-images/addingpersonaltab.png" alt-text="Agregar la pestaña personal":::
@@ -399,9 +399,9 @@ ngrok http 3978 --host-header=localhost
 
 1. En **Información del desarrollador**, agregue los detalles necesarios y en **Sitio web (debe ser una dirección URL HTTPS válida)**, proporcione la dirección URL HTTPS de ngrok.
 
-1. En **Direcciones URL de la aplicación**, actualice la Directiva de privacidad a `https://<yourngrokurl>/privacy` y los Términos de uso a `https://<yourngrokurl>/tou` y seleccione Guardar.
+1. En **Direcciones URL de la aplicación**, actualice la directiva de privacidad a `https://<yourngrokurl>/privacy` y los Términos de uso para `https://<yourngrokurl>/tou` y seleccione **Guardar**.
 
-1. En **Características de la aplicación**, seleccione **Aplicación personal** > **Crear la primera pestaña de la aplicación personal**, escriba el Nombre y actualice la **Dirección URL del contenido** con `https://<yourngrokurl>/personalTab`. Deje en blanco el campo dirección URL del sitio web, seleccione **Contexto** como personalTab de la lista desplegable y luego **Agregar**.
+1. En **Características de la aplicación**, seleccione **Aplicación personal** > **Crear la primera pestaña de la aplicación personal**, escriba el Nombre y actualice la **Dirección URL del contenido** con `https://<yourngrokurl>/personalTab`. Deje el campo Url del sitio web en blanco, seleccione **Contexto** como personalTab en la lista desplegable y seleccione **Confirmar**.
 
 1. Seleccione **Guardar**.
 
@@ -566,11 +566,11 @@ ngrok http 3978 --host-header=localhost
 
 1. Agregue una Descripción corta y una Descripción larga para la aplicación en **Descripciones**.
 
-1. En **Información del desarrollador**, agregue los detalles necesarios y en **Sitio web (debe ser una dirección URL HTTPS válida)**, proporcione la dirección URL HTTPS de ngrok.
+1. En **Información del desarrollador**, agregue los detalles necesarios y, en **Sitio web (debe ser una dirección URL HTTPS válida),** proporcione la dirección URL HTTPS de ngrok.
 
-1. En **Direcciones URL de la aplicación**, actualice la Directiva de privacidad a `https://<yourngrokurl>/privacy` y los Términos de uso a `https://<yourngrokurl>/tou` y seleccione Guardar.
+1. En **Direcciones URL de la aplicación**, actualice la directiva de privacidad a `https://<yourngrokurl>/privacy` y los Términos de uso para `https://<yourngrokurl>/tou` y seleccione **Guardar**.
 
-1. En **Características de la aplicación**, seleccione **Aplicación personal** > **Crear la primera pestaña de la aplicación personal**, escriba el Nombre y actualice la **Dirección URL del contenido** con `https://<yourngrokurl>/personalTab`. Deje en blanco el campo dirección URL del sitio web, seleccione **Contexto** como personalTab de la lista desplegable y luego **Agregar**.
+1. En **Características de la aplicación**, seleccione **Aplicación personal** > **Crear la primera pestaña de la aplicación personal**, escriba el Nombre y actualice la **Dirección URL del contenido** con `https://<yourngrokurl>/personalTab`. Deje el campo Url del sitio web en blanco, seleccione **Contexto** como personalTab en la lista desplegable y seleccione **Confirmar**.
 
 1. Seleccione **Guardar**.
 

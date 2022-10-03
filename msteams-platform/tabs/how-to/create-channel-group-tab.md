@@ -6,12 +6,12 @@ ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: c4e1b595a226095485e88448c8bd25006c0c58ca
-ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
+ms.openlocfilehash: 0febbd535f5375f03599009d32d9b613cf5af6d6
+ms.sourcegitcommit: e4ccbbdce620418c129689c0ba6ad246a81068c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2022
-ms.locfileid: "68027336"
+ms.lasthandoff: 10/03/2022
+ms.locfileid: "68329087"
 ---
 # <a name="create-a-channel-tab"></a>Crear una pestaña de canal
 
@@ -197,7 +197,7 @@ gulp ngrok-serve
 ### <a name="upload-your-application-to-teams"></a>Cargar la aplicación en Teams
 
 1. Vaya a Teams y seleccione **Aplicaciones**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Tienda de Teams":::.
-1. A continuación, seleccione **Administrar aplicaciones** y **Cargar una aplicación personalizada**.
+1. Seleccione **Administrar las aplicaciones** > **Cargar una aplicación** > **Carga de una aplicación personalizada**.
 1. Vaya al directorio del proyecto, desplácese hasta la carpeta **./package**, seleccione la carpeta ZIP del paquete de la aplicación y elija **Abrir**.
 
     :::image type="content" source="~/assets/images/tab-images/channeltabadded.png" alt-text="Pestaña del canal cargada":::
@@ -426,9 +426,9 @@ Asegúrese de mantener el símbolo del sistema con ngrok en ejecución y tome no
 
 1. En **Información del desarrollador**, agregue los detalles necesarios y, en **Sitio web (debe ser una dirección URL HTTPS válida)** proporcione la dirección URL HTTPS de ngrok.
 
-1. En **Direcciones URL de la aplicación**, actualice la directiva de privacidad a `https://<yourngrokurl>/privacy` y los Términos de uso en `https://<yourngrokurl>/tou` y guarde.
+1. En **Direcciones URL de la aplicación**, actualice la Directiva de privacidad a `https://<yourngrokurl>/privacy` y los Términos de uso a `https://<yourngrokurl>/tou` y seleccione Guardar.
 
-1. En **Características de la aplicación**, seleccione Grupo y aplicación de canal. Actualice la **Dirección URL de configuración** con `https://<yourngrokurl>/tab` y seleccione la pestaña **Ámbito**.
+1. En **Características de la aplicación**, seleccione **Grupo y aplicación de canal**. Actualice la **Dirección URL de configuración** con `https://<yourngrokurl>/tab` y seleccione la pestaña **Ámbito**.
 
 1. Seleccione **Guardar**.
 
@@ -647,9 +647,9 @@ Asegúrese de mantener el símbolo del sistema con ngrok en ejecución y tome no
 
 1. En **Información del desarrollador**, agregue los detalles necesarios y en **Sitio web (debe ser una dirección URL HTTPS válida)**, proporcione la dirección URL HTTPS de ngrok.
 
-1. En **Direcciones URL de la aplicación**, actualice la directiva de privacidad a `https://<yourngrokurl>/privacy` y los Términos de uso en `https://<yourngrokurl>/tou` y guarde.
+1. En **Direcciones URL de la aplicación**, actualice la Directiva de privacidad a `https://<yourngrokurl>/privacy` y los Términos de uso a `https://<yourngrokurl>/tou` y seleccione Guardar.
 
-1. En **Características de la aplicación**, seleccione Grupo y aplicación de canal. Actualice la **Dirección URL de configuración** con `https://<yourngrokurl>/tab` y seleccione la pestaña **Ámbito**.
+1. En **Características de la aplicación**, seleccione **Grupo y aplicación de canal**. Actualice la **Dirección URL de configuración** con `https://<yourngrokurl>/tab` y seleccione la pestaña **Ámbito**.
 
 1. Seleccione **Guardar**.
 
