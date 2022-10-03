@@ -7,12 +7,12 @@ ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: 175854db36b85a1fc68cc299bd733b7abd539ac9
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: a0174d113d441e2318f4f9f4165211f46df1876e
+ms.sourcegitcommit: ea7b7b8ebb4b2acdd0b9a3411c59a9a91a06f409
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67780989"
+ms.lasthandoff: 10/03/2022
+ms.locfileid: "68350464"
 ---
 # <a name="provision-cloud-resources"></a>Aprovisionar recursos en la nube
 
@@ -189,7 +189,7 @@ Para asegurarse de que la herramienta TeamsFx funciona correctamente, asegúrese
 
 Puede personalizar los siguientes escenarios:
 
-#### <a name="use-an-existing-azure-ad-app-for-your-bot"></a>Uso de una aplicación de Azure AD existente para el bot
+#### <a name="use-an-existing-azure-ad-app-for-your-teams-app"></a>Uso de una aplicación de Azure AD existente para su aplicación de Teams
 
 Puede añadir el siguiente fragmento de código de configuración al archivo `.fx/configs/config.{env}.json` para usar una aplicación de Azure AD creada por usted mismo para la aplicación de Teams. Para crear una aplicación de Azure AD, consulte <https://aka.ms/teamsfx-existing-aad-doc>.
 
@@ -207,7 +207,7 @@ Después de añadir el fragmento de código, añada el secreto a la variable de 
 > [!NOTE]
 > Asegúrese de no compartir la misma aplicación Azure AD en varios entornos. Si no tiene permiso para actualizar la aplicación de Azure AD, puede obtener una advertencia con instrucciones sobre cómo actualizar manualmente la aplicación de Azure AD. Siga las instrucciones para actualizar la aplicación de Azure AD después del aprovisionamiento.
 
-#### <a name="use-an-existing-azure-ad-app-for-your-teams-app"></a>Uso de una aplicación de Azure AD existente para su aplicación de Teams
+#### <a name="use-an-existing-azure-ad-app-for-your-bot"></a>Uso de una aplicación de Azure AD existente para el bot
 
 Puede añadir el siguiente fragmento de código de configuración al archivo `.fx/configs/config.{env}.json` para usar una aplicación de Azure AD creada por usted mismo para el bot:
 
@@ -308,7 +308,7 @@ Los pasos siguientes le ayudan a aprovisionar recursos en la nube mediante Visua
 
 1. Seleccione **Iniciar sesión** para iniciar sesión en su cuenta de Azure.
 
-   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-prepare1.png" alt-text="Iniciar sesión en Microsoft 365":::
+   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-prepare1.png" alt-text="Inicio de sesión en Microsoft 365":::
 
     > [!NOTE]
     > Si ya ha iniciado sesión, se muestra el nombre de usuario o puede seleccionar el mismo para cambiar su cuenta.
@@ -543,7 +543,7 @@ Para asegurarse de que la herramienta TeamsFx funciona correctamente, personalic
 
 Puede personalizar el bot o la aplicación de Teams agregando fragmentos de código de configuración para usar una aplicación de Azure AD creada por usted. Puede realizar de las siguientes maneras:
 
-#### <a name="use-an-existing-azure-ad-app-for-your-bot"></a>Uso de una aplicación de Azure AD existente para el bot
+#### <a name="use-an-existing-azure-ad-app-for-your-teams-app"></a>Uso de una aplicación de Azure AD existente para su aplicación de Teams
 
 Puede agregar el siguiente fragmento de código de `.fx/configs/config.{env}.json` configuración para usar una aplicación de Azure AD creada por usted para la aplicación de Teams. Para crear una aplicación de Azure AD, siga el vínculo <https://aka.ms/teamsfx-existing-aad-doc>.
 
@@ -561,7 +561,7 @@ Después de agregar el fragmento de código, agregue el secreto de cliente a la 
 > [!NOTE]
 > Asegúrese de no compartir la misma aplicación Azure AD en varios entornos. Si no tiene permiso para actualizar la aplicación de Azure AD, recibirá una advertencia con instrucciones para actualizar manualmente la aplicación de Azure AD. Siga estas instrucciones para actualizar la aplicación de Azure AD después del aprovisionamiento.
 
-#### <a name="use-an-existing-azure-ad-app-for-your-teams-app"></a>Uso de una aplicación de Azure AD existente para su aplicación de Teams
+#### <a name="use-an-existing-azure-ad-app-for-your-bot"></a>Uso de una aplicación de Azure AD existente para el bot
 
 Puede agregar el siguiente fragmento de código de configuración para `.fx/configs/config.{env}.json` usar la aplicación de Azure AD creada para el bot:
 
