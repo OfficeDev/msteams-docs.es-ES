@@ -5,12 +5,12 @@ description: En este módulo, aprenderá a crear una aplicación basada en model
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
-ms.openlocfilehash: 119e02f6cc31d8642447e4e7406d461faff3a731
-ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
+ms.openlocfilehash: f75f7ea3b014a9373ba1d643cede7055aa333ef5
+ms.sourcegitcommit: f2ac771cbd608e872604e9ac8ffec2d08f55ee1a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "68243062"
+ms.lasthandoff: 10/04/2022
+ms.locfileid: "68373048"
 ---
 # <a name="create-a-new-model-driven-app-with-collaboration-controls-for-teams"></a>Creación de una nueva aplicación controlada por modelos con controles de colaboración para Teams
 
@@ -27,11 +27,11 @@ Los controles de colaboración están diseñados para [aplicaciones basadas en m
 
 1. Seleccione **Nueva solución** para que pueda proporcionar un hogar para todas las personalizaciones futuras.
 
-   :::image type="content" source="../assets/images/collaboration-control/new-solution.png" alt-text="La captura de pantalla es un ejemplo que muestra la nueva solución.":::
+   :::image type="content" source="../assets/images/collaboration-control/new-solution.png" alt-text="Captura de pantalla de un ejemplo que muestra la nueva solución, que proporciona un hogar para toda la personalización futura.":::
 
 1. Proporcione el nombre y el publicador de la nueva solución; esta solución va a contener el Collaboration Manager personalizado.
 
-   :::image type="content" source="../assets/images/collaboration-control/collaboration-manager.png" alt-text="La captura de pantalla es un ejemplo que muestra el administrador de colaboración.":::
+   :::image type="content" source="../assets/images/collaboration-control/collaboration-manager.png" alt-text="Captura de pantalla de un ejemplo que proporciona detalles del publicador de la nueva solución.":::
 
 1. Seleccione **Crear**
 
@@ -39,41 +39,41 @@ Los controles de colaboración están diseñados para [aplicaciones basadas en m
 
 1. Antes de crear la aplicación, cree una casa para los datos. seleccione **Nueva** > **tabla** para empezar.
 
-     :::image type="content" source="../assets/images/collaboration-control/create-table.png" alt-text="En la captura de pantalla se describe cómo crear una nueva tabla.":::
+     :::image type="content" source="../assets/images/collaboration-control/create-table.png" alt-text="Captura de pantalla que describe cómo crear una nueva tabla.":::
 
 1. Asigne un nombre a la tabla. En **Opciones avanzadas**, seleccione **Crear una nueva actividad**.
 
-   :::image type="content" source="../assets/images/collaboration-control/new-activity.png" alt-text="En la captura de pantalla se describe cómo crear una nueva actividad.":::
+   :::image type="content" source="../assets/images/collaboration-control/new-activity.png" alt-text="Captura de pantalla que describe cómo crear una nueva actividad.":::
 
 1. Seleccione **Guardar**.
 
-1. Una vez que haya terminado de crear la tabla, puede personalizarla agregando columnas adicionales, relaciones y mucho más (opcional).
+1. Después de crear la tabla, puede personalizarla agregando columnas adicionales, relaciones y mucho más (opcional).
 
 1. Ahora puede crear una nueva aplicación controlada por modelos seleccionando **Nueva** > **aplicación** > **controlada por modelos de aplicación.**
 
-   :::image type="content" source="../assets/images/collaboration-control/model-driven-app.png" alt-text="La captura de pantalla es un ejemplo que muestra la nueva aplicación controlada por modelos.":::
+   :::image type="content" source="../assets/images/collaboration-control/model-driven-app.png" alt-text="Captura de pantalla de un ejemplo que muestra cómo crear una nueva aplicación controlada por modelos.":::
 
-1. Elija nuevo **diseñador de aplicaciones modernas (versión preliminar)** para abrir la nueva aplicación.
+1. Seleccione **nuevo diseñador de aplicaciones modernas (versión preliminar)** para abrir la nueva aplicación.
 
-   :::image type="content" source="../assets/images/collaboration-control/model-driven-app-blank.png" alt-text="La captura de pantalla es un ejemplo que muestra la nueva aplicación controlada por modelos en blanco.":::
+   :::image type="content" source="../assets/images/collaboration-control/model-driven-app-blank.png" alt-text="Captura de pantalla de un ejemplo que muestra la nueva aplicación controlada por modelos en blanco y puede seleccionar una experiencia de creación.":::
 
 1. Seleccione **Crear.**
 
 1. Asigne un nombre a la aplicación y seleccione **Crear.**
 
-   :::image type="content" source="../assets/images/collaboration-control/collaboration-manager-for-inspection.png" alt-text="La captura de pantalla es un ejemplo que muestra el administrador de colaboración para la inspección.":::
+   :::image type="content" source="../assets/images/collaboration-control/collaboration-manager-for-inspection.png" alt-text="Captura de pantalla de un ejemplo que muestra cómo agregar el administrador de colaboración para la inspección y crear una nueva aplicación controlada por modelos.":::
 
 1. Seleccione **Agregar página.**
 
 1. Seleccione **Vista basada en tabla y formulario.**
 
-   :::image type="content" source="../assets/images/collaboration-control/table-based.png" alt-text="La captura de pantalla es un ejemplo que muestra la vista basada en tabla y el formulario.":::
+   :::image type="content" source="../assets/images/collaboration-control/table-based.png" alt-text="Captura de pantalla de un ejemplo que muestra la vista y el formulario basados en tabla y puede seleccionar un tipo de página.":::
 
 1. Seleccione **Siguiente.**
 
 1. Busque y seleccione la tabla que ha creado anteriormente.
 
-   :::image type="content" source="../assets/images/collaboration-control/table-view-form-pages.png" alt-text="La captura de pantalla es un ejemplo que muestra las páginas del formulario de vista de tabla.":::
+   :::image type="content" source="../assets/images/collaboration-control/table-view-form-pages.png" alt-text="Captura de pantalla de un ejemplo que muestra las páginas del formulario de vista de tabla y puede seleccionar la tabla que ha creado.":::
 
 1. Seleccione **Agregar.**
 
@@ -93,54 +93,54 @@ Estos son los pasos para agregar funcionalidades de control de colaboración com
 
 1. Vaya a la pestaña Formularios de la tabla.
 
-     :::image type="content" source="../assets/images/collaboration-control/forms-tab.png" alt-text="La captura de pantalla es un ejemplo que muestra la pestaña formularios de la tabla.":::
+     :::image type="content" source="../assets/images/collaboration-control/forms-tab.png" alt-text="Captura de pantalla de un ejemplo que muestra la pestaña formularios de la tabla.":::
 
 1. Seleccione el formulario Información del tipo de formulario **Principal** para abrirlo en el diseñador de formularios.
 
 1. Una vez que esté en el diseñador de formularios, presione y arrastre una **pestaña de 1 columna** desde la sección **Componentes** .
 
-     :::image type="content" source="../assets/images/collaboration-control/components.png" alt-text="La captura de pantalla es un ejemplo que muestra los componentes de power apps.":::
+     :::image type="content" source="../assets/images/collaboration-control/components.png" alt-text="Captura de pantalla de un ejemplo que muestra los componentes de power apps.":::
 
 1. Después de seleccionar la pestaña, cambie el nombre de la pestaña a "Tareas" en el panel de propiedades.
 
 1. Seleccione el nombre de la pestaña para seleccionar la sección completa y seleccione **Expandir primer componente a pestaña completa** en el panel Propiedades. Esto es necesario, ya que los controles de colaboración se ven mejor en vistas de pestaña completas.
 
-    :::image type="content" source="../assets/images/collaboration-control/tasks-pane.png" alt-text=" En la captura de pantalla se describe cómo seleccionar el primer componente en la pestaña completa.":::
+    :::image type="content" source="../assets/images/collaboration-control/tasks-pane.png" alt-text=" Captura de pantalla que describe cómo seleccionar el primer componente en la pestaña completa.":::
 
-     :::image type="content" source="../assets/images/collaboration-control/expand-first-component.png" alt-text=" En la captura de pantalla se describe cómo expandir el primer componente a la pestaña completa.":::
+     :::image type="content" source="../assets/images/collaboration-control/expand-first-component.png" alt-text=" Captura de pantalla que describe cómo expandir el primer componente a la pestaña completa.":::
 
 1. Expanda la categoría Colaboración (versión preliminar) en el cajón de controles y arrastre el control Tareas (versión preliminar) a la sección del formulario Tareas.
 
-     :::image type="content" source="../assets/images/collaboration-control/collab-preview.png" alt-text="Vista previa del control en la sección en el formulario de tareas":::
+     :::image type="content" source="../assets/images/collaboration-control/collab-preview.png" alt-text="Captura de pantalla que describe cómo obtener una vista previa del control en la sección en el formulario de tareas.":::
 
 3. Establezca la tabla en Actividades & seleccione Listo.
 
-     :::image type="content" source="../assets/images/collaboration-control/select-table-activities.png" alt-text="Selección de la tabla a las actividades":::
+     :::image type="content" source="../assets/images/collaboration-control/select-table-activities.png" alt-text="Captura de pantalla que muestra cómo seleccionar la tabla para las actividades.":::
 
 5. Seleccione "Ocultar etiqueta" en propiedades.
 
-     :::image type="content" source="../assets/images/collaboration-control/hide-label-properties.png" alt-text="Seleccionar ocultar etiqueta":::
+     :::image type="content" source="../assets/images/collaboration-control/hide-label-properties.png" alt-text="Captura de pantalla que muestra cómo seleccionar ocultar etiqueta.":::
 
-1. Ahora se mostrará el control Tareas.
+1. Ahora aparece el control Tareas.
 
-     :::image type="content" source="../assets/images/collaboration-control/new-collab-control.png" alt-text="Visualización del control de tareas":::
+     :::image type="content" source="../assets/images/collaboration-control/new-collab-control.png" alt-text="Captura de pantalla que muestra un ejemplo de visualización del control de tareas.":::
 
 1. Repita los pasos de Tareas para agregar controles Aprobaciones, Archivos, Reuniones y Notas a la aplicación.
-1. Una vez agregados todos los controles, verá los controles representados a continuación en el Diseñador de formularios. Si un control no se representa en el Diseñador de formularios, por ejemplo muestra un formulario en blanco, ejecute la aplicación en Power Apps y la presencia de una página "configurar" o un "estado vacío" significa que el control se agregó correctamente.
+1. Después de agregar todos los controles, verá los controles representados a continuación en el Diseñador de formularios. Si un control no se representa en el Diseñador de formularios, por ejemplo muestra un formulario en blanco, ejecute la aplicación en Power Apps y la presencia de una página "configurar" o un "estado vacío" significa que el control se agregó correctamente.
 
-     :::image type="content" source="../assets/images/collaboration-control/new-collab-approval.png" alt-text="Diseñador de formularios de controles":::
+     :::image type="content" source="../assets/images/collaboration-control/new-collab-approval.png" alt-text="Captura de pantalla que muestra que el diseñador de formularios de controles se ha agregado correctamente.":::
 
 1. Ahora puede ejecutar la aplicación de energía en Power Apps seleccionándola.
 
-     :::image type="content" source="../assets/images/collaboration-control/collaboration-manager-for-inspections-power-apps.png" alt-text="Administrador de colaboración para inspecciones":::
+     :::image type="content" source="../assets/images/collaboration-control/collaboration-manager-for-inspections-power-apps.png" alt-text="Captura de pantalla que muestra cómo ejecutar la aplicación de energía seleccionando Administrador de colaboración para las inspecciones.":::
 
 1. Cree un nuevo registro seleccionando **+ Nuevo** y, a continuación, abra el registro.
 
-     :::image type="content" source="../assets/images/collaboration-control/power-apps-open-the-record.png" alt-text="La captura de pantalla es un ejemplo que muestra las aplicaciones de energía que abren el registro.":::
+     :::image type="content" source="../assets/images/collaboration-control/power-apps-open-the-record.png" alt-text="Captura de pantalla que muestra cómo crear un nuevo registro.":::
 
 1. Ahora puede ver las vistas de cada pestaña que aparecen de forma similar a la siguiente imagen:
 
-     :::image type="content" source="../assets/images/collaboration-control/tabs.png" alt-text="La captura de pantalla es un ejemplo que muestra las tareas.":::
+     :::image type="content" source="../assets/images/collaboration-control/tabs.png" alt-text="Captura de pantalla de un ejemplo que muestra la vista de cada pestaña.":::
 
      > [!TIP]
      > Los controles solo están visibles después de guardar un registro en la aplicación. Si las pestañas de control no aparecen en el registro, intente actualizar el explorador o volver a publicar la aplicación desde Power Apps.
@@ -161,7 +161,7 @@ La configuración que puede aplicar es la siguiente:
 |Id. de unidad|Archivos de SharePoint|
 
 > [!NOTE]
-> La configuración es crtical para iniciar la aplicación, por lo que asegúrese de seguir los pasos sugeridos. Si tiene problemas para iniciar y guardar los controles, vuelva a comprobar los valores.
+> La configuración es fundamental para iniciar la aplicación, por lo que asegúrese de seguir los pasos sugeridos. Si tiene problemas para iniciar y guardar los controles, vuelva a comprobar los valores.
 
 Para obtener el identificador de grupo, cree un nuevo equipo o use un equipo existente en Microsoft Teams para hospedar la aplicación y crear variables de configuración.
 
@@ -173,7 +173,7 @@ Use las instrucciones siguientes para recuperar el identificador de grupo del eq
 
 1. Seleccione la elipse **...** y seleccione **Obtener vínculo al equipo**.
 
-     :::image type="content" source="../assets/images/collaboration-control/get-link.png" alt-text="En la captura de pantalla se describe cómo obtener el vínculo al equipo.":::
+     :::image type="content" source="../assets/images/collaboration-control/get-link.png" alt-text="Captura de pantalla que describe cómo obtener el vínculo al equipo.":::
 
 1. Copie el vínculo y registre el valor de desde `groupId` la dirección URL. Usará este valor en una fase posterior al definir la configuración de la solución.
 
@@ -187,14 +187,14 @@ Use las instrucciones siguientes para recuperar el identificador de sitio de Sha
 
      1. **Id. de sitio**: con [el Explorador de Graph](https://developer.microsoft.com/graph/graph-explorer), inicie sesión y conceda permisos a Directory.ReadWrite.All y User.ReadWrite.All.
 
-         :::image type="content" source="../assets/images/collaboration-control/graph-permissions.png" alt-text="La captura de pantalla es un ejemplo que muestra el Explorador de Graph.":::
+         :::image type="content" source="../assets/images/collaboration-control/graph-permissions.png" alt-text="Captura de pantalla de un ejemplo que muestra el Explorador de Graph.":::
 
      1. Asegúrese de reemplazar el nombre de host por el nombre de host y la ruta de acceso relativa a la ruta de acceso del sitio y realice una llamada de grafo a `https://graph.microsoft.com/v1.0/sites/{hostname}:/{relative-path-to-site}`. A continuación se muestra un ejemplo:
          1. Si la dirección URL del sitio = `https://myhostname.sharepoint.com/sites/MySiteName`
          1. Nombre de host = `myhostname.sharepoint.com`
          1. Ruta de acceso relativa al sitio = `sites/MySiteName`
 
-              :::image type="content" source="../assets/images/collaboration-control/graph-call.png" alt-text="La captura de pantalla es un ejemplo que muestra la llamada a Graph.":::
+              :::image type="content" source="../assets/images/collaboration-control/graph-call.png" alt-text="Captura de pantalla de un ejemplo que muestra la llamada a Graph.":::
 
             La llamada de grafo sería , `https://graph.microsoft.com/v1.0/sites/myhostname.sharepoint.com:/sites/MySiteName`.
 
@@ -225,15 +225,15 @@ Tendría que agregar los identificadores de configuración que guardó anteriorm
 
 1. Inicie un control y puede ver una ventana como sigue:
 
-     :::image type="content" source="../assets/images/collaboration-control/launch-window.png" alt-text="La captura de pantalla es un ejemplo que muestra la ventana de control.":::
+     :::image type="content" source="../assets/images/collaboration-control/launch-window.png" alt-text="Captura de pantalla de un ejemplo que muestra la ventana de control.":::
 
 1. Seleccione **Configurar** y vaya a la pestaña General para agregar el identificador de grupo.
 
-     :::image type="content" source="../assets/images/collaboration-control/groupid-general.png" alt-text="En la captura de pantalla se describe cómo agregar el identificador de grupo en la pestaña General.":::
+     :::image type="content" source="../assets/images/collaboration-control/groupid-general.png" alt-text="Captura de pantalla que describe cómo agregar el identificador de grupo en la pestaña General.":::
 
 1. Abra la pestaña Archivos para agregar el identificador de sitio y el identificador de unidad.
 
-     :::image type="content" source="../assets/images/collaboration-control/files-tab.png" alt-text="En la captura de pantalla se describe cómo agregar el identificador de sitio y el identificador de unidad en la pestaña de archivos.":::
+     :::image type="content" source="../assets/images/collaboration-control/files-tab.png" alt-text="Captura de pantalla que describe cómo agregar el identificador de sitio y el identificador de unidad en la pestaña de archivos.":::
 
 El control Notes no requiere un valor de configuración. Ahora puede crear entidades como Tareas y reuniones en la aplicación. Si tiene problemas al iniciar y guardar los controles, vuelva a comprobar los valores de configuración.
 
@@ -247,7 +247,7 @@ Explore la colaboración en la pestaña Tareas; para ello, seleccione la pestañ
 
 1. Para crear una nueva tarea para el equipo, seleccione **Agregar una tarea**. Se abre un cuadro de diálogo en el que puede proporcionar detalles sobre la tarea y asignarla a las personas pertinentes del equipo y seleccionar Guardar.
 
-     :::image type="content" source="../assets/images/collaboration-control/add-task.png" alt-text="En la captura de pantalla se describe cómo agregar una tarea.":::
+     :::image type="content" source="../assets/images/collaboration-control/add-task.png" alt-text="Captura de pantalla que describe cómo agregar una tarea.":::
 
 1. La tarea guardada aparecerá en la lista de tareas.
 
@@ -268,7 +268,7 @@ Seleccione **la pestaña Reuniones** en un registro para programar reuniones int
 
 Para programar una reunión interna, seleccione la lista desplegable situada junto al botón **Nueva reunión** y, a continuación, seleccione **Reunión interna**.
 
-:::image type="content" source="../assets/images/collaboration-control/new-meeting-tab.png" alt-text="En la captura de pantalla se describe cómo programar reuniones internas.":::
+:::image type="content" source="../assets/images/collaboration-control/new-meeting-tab.png" alt-text="Captura de pantalla que describe cómo programar reuniones internas.":::
 
 > [!NOTE]
 >
@@ -276,11 +276,11 @@ Para programar una reunión interna, seleccione la lista desplegable situada jun
 
 En el cuadro de diálogo **Nueva reunión** , los usuarios pueden proporcionar información relevante sobre la reunión y seleccionar **Guardar**. La reunión aparece en la lista de reuniones.
 
-:::image type="content" source="../assets/images/collaboration-control/new-meeting.png" alt-text="En la captura de pantalla se describe cómo programar una nueva reunión.":::
+:::image type="content" source="../assets/images/collaboration-control/new-meeting.png" alt-text="Captura de pantalla que describe cómo programar una nueva reunión.":::
 
 Para programar una reunión externa con el cliente, seleccione la lista desplegable situada junto al botón **Nueva reunión** y seleccione **Reserva de clientes**. Si la opción **Reserva de clientes** no está disponible en la lista desplegable **Nueva reunión**, confirme si la aplicación está configurada para Microsoft Bookings en configuración y el usuario tiene el rol Administrador de Bookings. Para obtener más información, consulte [Agregar personal a Bookings](/microsoft-365/bookings/add-staff?view=o365-worldwide&preserve-view=true). Puede agregar tipos de reserva adicionales agregando servicios adicionales dentro de su empresa de Bookings.
 
-:::image type="content" source="../assets/images/collaboration-control/customer-booking.png" alt-text="En la captura de pantalla se describe cómo programar reservas de clientes.":::
+:::image type="content" source="../assets/images/collaboration-control/customer-booking.png" alt-text="Captura de pantalla que describe cómo programar reservas de clientes.":::
 
 Los usuarios pueden ver tanto las reuniones internas como las reservas de clientes en su lista de reuniones. Una vez iniciada la reunión, los usuarios pueden unirse seleccionando el botón **Unirse** , que abre la reunión directamente en Microsoft Teams.
 
@@ -294,13 +294,13 @@ A continuación se indican los pasos para agregar un calendario compartido a Out
 
 En el panel izquierdo, en Calendarios compartidos ahora debería ver un calendario adicional con el nombre de la persona.
 
-:::image type="content" source="../assets/images/collaboration-control/customer-booking.png" alt-text="En la captura de pantalla se describe cómo programar reservas de clientes.":::
+:::image type="content" source="../assets/images/collaboration-control/customer-booking.png" alt-text="Captura de pantalla que describe cómo programar reservas de clientes.":::
 
 ### <a name="add-files"></a>Agregar archivos
 
 Abra la pestaña **Archivos** de la aplicación y seleccione **Cargar** para cargar archivos desde OneDrive para la Empresa o desde el equipo. Cuando un archivo se carga correctamente, la vista de lista principal se actualiza automáticamente para mostrar los archivos de la lista.
 
-:::image type="content" source="../assets/images/collaboration-control/meeting-calendar.png" alt-text="En la captura de pantalla se describe cómo abrir el calendario compartido.":::
+:::image type="content" source="../assets/images/collaboration-control/meeting-calendar.png" alt-text="Captura de pantalla que describe cómo abrir el calendario compartido.":::
 
 ### <a name="approvals"></a>Aprobaciones
 
@@ -310,15 +310,15 @@ Las aprobaciones permiten a los usuarios solicitar el cierre de sesión de otros
 
 1. Cuando no hay solicitudes de aprobación, los usuarios ven la siguiente pantalla.
 
-      :::image type="content" source="../assets/images/collaboration-control/no-approvals.png" alt-text="La captura de pantalla es un ejemplo que no muestra ninguna solicitud de aprobación.":::
+      :::image type="content" source="../assets/images/collaboration-control/no-approvals.png" alt-text="Captura de pantalla de un ejemplo que no muestra solicitudes de aprobación.":::
 
 1. Seleccione la **nueva solicitud de aprobación** para abrir el formulario de solicitud de aprobación.
 
-      :::image type="content" source="../assets/images/collaboration-control/approval-request-form.png" alt-text="La captura de pantalla es un ejemplo que muestra el nuevo formulario de solicitud de aprobación.":::
+      :::image type="content" source="../assets/images/collaboration-control/approval-request-form.png" alt-text="Captura de pantalla de un ejemplo que muestra el nuevo formulario de solicitud de aprobación.":::
 
 1. En el formulario Solicitud de aprobación, rellene los campos necesarios y seleccione **Enviar**, que crea una solicitud y se agrega a la lista.
 
-      :::image type="content" source="../assets/images/collaboration-control/approvals-list.png" alt-text="La captura de pantalla es un ejemplo que muestra la lista de aprobaciones.":::
+      :::image type="content" source="../assets/images/collaboration-control/approvals-list.png" alt-text="Captura de pantalla de un ejemplo que muestra la lista de aprobaciones.":::
 
 1. Seleccione la aprobación para ver los detalles.
 
