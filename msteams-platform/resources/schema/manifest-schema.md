@@ -3,12 +3,12 @@ title: Referencia del esquema de manifiesto
 description: En este artículo, tendrá la versión más reciente del esquema de manifiesto público para la referencia, el esquema y el manifiesto completo de ejemplo de Microsoft Teams.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 23bdb87bd1f5f3ea1fadb2527f64b5bebec0b157
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: f797c44b49c29227ec973c0066bf98ee25590d35
+ms.sourcegitcommit: 176bbca74ba46b7ac298899d19a2d75087fb37c1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100171"
+ms.lasthandoff: 10/04/2022
+ms.locfileid: "68376574"
 ---
 # <a name="app-manifest-schema-for-teams"></a>Esquema del manifiesto de la aplicación de Teams
 
@@ -29,7 +29,6 @@ En el ejemplo de esquema siguiente se muestran todas las opciones de extensibili
     "manifestVersion": "1.14",
     "version": "1.0.0",
     "id": "%MICROSOFT-APP-ID%",
-    "packageName": "com.example.myapp",
     "localizationInfo": {
         "defaultLanguageTag": "en-us",
         "additionalLanguages": [
@@ -404,12 +403,6 @@ Asegúrese de que la descripción describe su experiencia y ayuda a los clientes
 |---|---|---|---|
 |`short`|80 caracteres|✔️|Una breve descripción de la experiencia de la aplicación, que se usa cuando el espacio es limitado.|
 |`full`|4000 caracteres|✔️|La descripción completa de la aplicación.|
-
-## <a name="packagename"></a>packageName
-
-Cadena **opcional**
-
-A unique identifier for the app in reverse domain notation; for example, com.example.myapp. Maximum length: 64 characters.
 
 ## <a name="localizationinfo"></a>localizationInfo
 
@@ -910,7 +903,7 @@ Para crear un archivo de manifiesto de aplicación de Teams:
 <br>
 
 > [!NOTE]
-> El contenido de ejemplo del manifiesto que se muestra aquí es solo para una aplicación de pestañas. Usa valores de ejemplo para el URI de subdominio y el nombre del paquete. Para obtener más información, consulte [esquema de manifiesto de ejemplo](#sample-full-manifest).
+> El contenido de ejemplo del manifiesto que se muestra aquí es solo para una aplicación de pestañas. Usa valores de ejemplo para el URI de subdominio. Para obtener más información, consulte [esquema de manifiesto de ejemplo](#sample-full-manifest).
 
   ```json
 { 
@@ -918,7 +911,6 @@ Para crear un archivo de manifiesto de aplicación de Teams:
  "manifestVersion": "1.12", 
  "version": "1.0.0", 
  "id": "{new GUID for this Teams app - not the Azure AD App ID}", 
- "packageName": "com.contoso.teamsauthsso", 
  "developer": { 
  "name": "Microsoft", 
  "websiteUrl": "https://www.microsoft.com", 

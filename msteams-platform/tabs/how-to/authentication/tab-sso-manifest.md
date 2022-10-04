@@ -4,12 +4,12 @@ description: Actualice el manifiesto de Teams para habilitar el inicio de sesió
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: pestañas de autenticación de teams del Graph API de Microsoft Azure Active Directory (Azure AD)
-ms.openlocfilehash: 1af4120914343b7fb2b37e6c2458ac43fcaa9d47
-ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
+ms.openlocfilehash: bd5b7257a131a11e861b94221c533d8364b6bb54
+ms.sourcegitcommit: 176bbca74ba46b7ac298899d19a2d75087fb37c1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2022
-ms.locfileid: "67587004"
+ms.lasthandoff: 10/04/2022
+ms.locfileid: "68376588"
 ---
 # <a name="update-manifest-for-sso-and-preview-app"></a>Actualizar el manifiesto para el SSO y versión preliminar de la aplicación
 
@@ -81,7 +81,6 @@ Para obtener más información, consulte [webApplicationInfo](../../../resources
   "manifestVersion": "1.11",
   "version": "1.0.0",
   "id": "bccfbe67-e08b-4ec1-a7fd-e0aaf41a097c",
-  "packageName": "com.contoso.teamsauthsso",
   "developer": {
     "name": "Microsoft",
     "websiteUrl": "https://www.microsoft.com",

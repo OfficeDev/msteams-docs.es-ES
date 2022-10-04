@@ -5,12 +5,12 @@ description: En este artículo, obtenga información sobre Acciones universales 
 ms.topic: conceptual
 ms.author: v-ypalikila
 ms.localizationpriority: medium
-ms.openlocfilehash: b8515ca2a84d3c29ddfb384fde5038a68d953c33
-ms.sourcegitcommit: 19f3e4e9088d0a07c9b567e76640d498b9d1981f
+ms.openlocfilehash: 78b8c525b51603245fc379a826fa0cc11cbc5fd8
+ms.sourcegitcommit: 176bbca74ba46b7ac298899d19a2d75087fb37c1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67787206"
+ms.lasthandoff: 10/04/2022
+ms.locfileid: "68376595"
 ---
 # <a name="universal-actions-for-search-based-message-extensions"></a>Acciones universales para extensiones de mensajes basadas en búsqueda
 
@@ -28,7 +28,6 @@ Ejemplo de un esquema JSON con `team` valores y `groupchat` :
     "manifestVersion": "1.11",
     "version": "1.0.0",
     "id": "%MICROSOFT-APP-ID%",
-    "packageName": "com.example.myapp",
     "bots": [
         {
             "botId": "%MICROSOFT-APP-ID-REGISTERED-WITH-BOT-FRAMEWORK%",

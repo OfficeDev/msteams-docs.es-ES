@@ -3,12 +3,12 @@ title: Iniciar acciones con extensiones de mensajería
 description: En este módulo, aprenderá a crear extensiones de mensajes basadas en acciones para permitir que los usuarios desencadenen servicios externos.
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: e72d4c5d7ca7ecaa0ced14f28cc321d0a93a19c3
-ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
+ms.openlocfilehash: c087e8d3866215a1ed55c0bc503b34f920a4e436
+ms.sourcegitcommit: 176bbca74ba46b7ac298899d19a2d75087fb37c1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "68243573"
+ms.lasthandoff: 10/04/2022
+ms.locfileid: "68376616"
 ---
 # <a name="initiate-actions-with-message-extensions"></a>Iniciar acciones con extensiones de mensajería
 
@@ -18,13 +18,11 @@ Las extensiones de mensajes basadas en acciones permiten a los usuarios desencad
 
 ![Ejemplo de tarjeta de extensión de mensaje](~/assets/images/compose-extensions/ceexample.png)
 
-En las secciones siguientes se describe cómo hacerlo:
-
 [!include[Common content for creating extensions](~/includes/messaging-extensions/messaging-extensions-common.md)]
 
 ## <a name="action-type-message-extensions"></a>Extensiones de mensaje de tipo de acción
 
-Para iniciar acciones desde una extensión de mensaje, establezca el `type` parámetro en `action`. A continuación se muestra un ejemplo de un manifiesto con una búsqueda y un comando create. Una sola extensión de mensaje puede tener hasta 10 comandos diferentes. Esto puede incluir varios comandos de búsqueda y varios basados en acciones.
+Para iniciar acciones desde una extensión de mensaje, establezca el `type` parámetro en `action`. A continuación se muestra un ejemplo de un manifiesto con una búsqueda y un comando create. Una sola extensión de mensaje puede tener hasta 10 comandos diferentes e incluir varios comandos basados en acciones y búsqueda.
 
  > [!NOTE]
  >`justInTimeInstall` funciona cuando se carga una aplicación en el catálogo de aplicaciones, pero se produce un error al transferir localmente una aplicación.
@@ -37,7 +35,6 @@ Para iniciar acciones desde una extensión de mensaje, establezca el `type` par�
   "manifestVersion": "1.5",
   "version": "1.0",
   "id": "57a3c29f-1fc5-4d97-a142-35bb662b7b23",
-  "packageName": "com.microsoft.teams.samples.Todo",
   "developer": {
     "name": "John Developer",
     "websiteUrl": "http://todobotservice.azurewebsites.net/",
@@ -133,7 +130,7 @@ Para iniciar acciones desde una extensión de mensaje, establezca el `type` par�
 
 ### <a name="initiate-actions-from-messages"></a>Iniciar acciones a partir de mensajes
 
-Además de iniciar acciones desde el área de redacción del mensaje, también puede usar la extensión de mensaje para iniciar una acción desde un mensaje. Esto le permitirá enviar el contenido del mensaje al bot para su procesamiento y, opcionalmente, responder a ese mensaje con una respuesta mediante el método , que se describe en [Responder al envío](#responding-to-submit). La respuesta se insertará como respuesta al mensaje que los usuarios pueden editar antes de enviarlo. Los usuarios pueden acceder a la extensión de mensaje desde el menú de desbordamiento `...` y, a continuación, seleccionar `Take action` como en la siguiente imagen:
+Puede iniciar acciones desde el área de redacción del mensaje y también usar la extensión de mensaje para iniciar una acción desde un mensaje, lo que le permite enviar el contenido del mensaje al bot para su procesamiento. Opcionalmente, puede responder a ese mensaje con una respuesta mediante el método descrito en [Responder al envío](#responding-to-submit). La respuesta se insertará como respuesta al mensaje que los usuarios pueden editar antes de enviarlo. Los usuarios pueden acceder a la extensión de mensaje desde el menú de desbordamiento `...` y, a continuación, seleccionar `Take action` como en la siguiente imagen:
 
 ![Ejemplo de inicio de una acción desde un mensaje](~/assets/images/compose-extensions/messageextensions_messageaction.png)
 
@@ -313,7 +310,7 @@ Al igual que en el flujo de tarjeta adaptable, el servicio envía un `fetchTask`
 
 ### <a name="request-to-install-your-conversational-bot"></a>Solicitud para instalar el bot conversacional
 
-Si la aplicación contiene un bot de conversación, asegúrese de que está instalado en la conversación antes de cargar el módulo de tareas. Esto puede ser útil en situaciones en las que necesita obtener contexto adicional para el módulo de tareas. Por ejemplo, es posible que tenga que capturar la lista para rellenar un control de selector de personas o la lista de canales de un equipo.
+Si la aplicación contiene un bot de conversación, asegúrese de que está instalado en la conversación antes de cargar el módulo de tareas para obtener más contexto para el módulo de tareas. Por ejemplo, es posible que tenga que capturar la lista para rellenar un control de selector de personas o la lista de canales de un equipo.
 
 Para facilitar este flujo, cuando la extensión de mensaje recibe por primera vez la `composeExtension/fetchTask` comprobación de invocación para ver si el bot está instalado en el contexto actual. Para obtener esto, intente obtener la llamada a la lista. Por ejemplo, si el bot no está instalado, devuelve una tarjeta adaptable con una acción que solicita al usuario que instale el bot. El usuario debe tener permiso para instalar aplicaciones en esa ubicación. Si no se pueden instalar, el mensaje le pide que se ponga en contacto con el administrador.
 
@@ -379,15 +376,15 @@ Estas son las distintas respuestas esperadas a .`submitAction`
 
 ### <a name="task-module-response"></a>Respuesta del módulo de tareas
 
-Esto se usa cuando la extensión necesita encadenar cuadros de diálogo para obtener más información. La respuesta es exactamente la misma que `fetchTask` se mencionó anteriormente.
+La respuesta del módulo de tareas se usa cuando la extensión necesita encadenar cuadros de diálogo para obtener más información. La respuesta es exactamente la misma que `fetchTask` se mencionó anteriormente.
 
 ### <a name="compose-extension-authconfig-response"></a>Redacción de la respuesta de autenticación o configuración de la extensión
 
-Esto se usa cuando la extensión necesita autenticarse o configurarse para continuar. Para obtener más información, consulte [la sección autenticación](~/resources/messaging-extension-v3/search-extensions.md#authentication) en la sección de búsqueda.
+La respuesta auth/config de la extensión compose se usa cuando la extensión necesita autenticarse o configurarse para continuar. Para obtener más información, consulte [la sección autenticación](~/resources/messaging-extension-v3/search-extensions.md#authentication) en la sección de búsqueda.
 
 ### <a name="compose-extension-result-response"></a>Respuesta del resultado de la extensión compose
 
-Esto se usa para insertar una tarjeta en el cuadro de redacción como resultado del comando . Es la misma respuesta que se usa en el comando de búsqueda, pero se limita a una tarjeta o a un resultado en la matriz.
+La respuesta del resultado de la extensión Compose se usa para insertar una tarjeta en el cuadro de redacción como resultado del comando . Es la misma respuesta que se usa en el comando de búsqueda, pero se limita a una tarjeta o a un resultado en la matriz.
 
 ```json
 {
@@ -450,7 +447,6 @@ Para habilitar este flujo, el módulo de tareas debe responder como en el ejempl
 
 > [!NOTE]
 > `activityPreview` debe contener una `message` actividad con exactamente 1 archivo adjunto de tarjeta adaptable.
-
 
 ```json
 {
