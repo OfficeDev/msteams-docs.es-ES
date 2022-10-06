@@ -5,12 +5,12 @@ description: Obtenga información sobre la vista de fase, un componente de inter
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: c11e65958e14db8f29206ff3585680818c18c5af
-ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
+ms.openlocfilehash: 41fce323ff65dd264e8dca71120ea126ddfcf16f
+ms.sourcegitcommit: 93c2fcd78a2fbb4550d180d295d98d1b3944ca67
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2022
-ms.locfileid: "68027294"
+ms.lasthandoff: 10/06/2022
+ms.locfileid: "68484923"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>Expansión del vínculo de la pestaña y vista de fases
 
@@ -90,7 +90,7 @@ A continuación se muestra el proceso para invocar la vista extendida:
 
 > [!NOTE]
 >
-> On Teams mobile clients, invoking Stage View for apps distributed through the [Teams store](~/concepts/deploy-and-publish/apps-publish-overview.md) and not having a moblie-optimized experience opens the default web browser of the device. The browser opens the URL specified in the `websiteUrl` parameter of the `TabInfo` object.
+> En los clientes móviles de Teams, al invocar la vista de fase para las aplicaciones distribuidas a través de la [tienda de Teams](~/concepts/deploy-and-publish/apps-publish-overview.md) y no tener una experiencia optimizada para dispositivos móviles, se abre el explorador web predeterminado del dispositivo. `websiteUrl` El explorador abre la dirección URL especificada en el parámetro del objeto`TabInfo`.
 
 ## <a name="invoke-stage-view-through-deep-link"></a>Invocación de la Vista extendida a través de un vínculo profundo
 
