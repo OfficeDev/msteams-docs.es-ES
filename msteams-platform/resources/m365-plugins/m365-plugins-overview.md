@@ -4,12 +4,12 @@ description: En este artículo, tendrá complementos de Microsoft 365, listas de
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: Surbhigupta
-ms.openlocfilehash: 438093c5ffe9990c5aa7c8175131c654019c3120
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
-ms.translationtype: HT
+ms.openlocfilehash: 56ba41598fb7d9e75aff92f240f7a3132988c1ec
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841753"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499310"
 ---
 # <a name="microsoft-365-plugins"></a>Complementos de Microsoft 365
 
@@ -36,7 +36,7 @@ La siguiente tabla enumera los complementos y las etiquetas de GitHub que deben 
 |[**Integración con Microsoft 365**](#microsoft-365-integration)|Cree instancias de Teams para cada curso en Moodle, y sincronice a los profesores como propietarios, y a los estudiantes como miembros del equipo.|local_o365|
 |[**Repositorio de Microsoft 365**](#microsoft-365-repository) |Admite el contenido de Microsoft 365 OneDrive para los repositorios de archivos para reducir las necesidades de almacenamiento en Moodle.| repository_office 365|
 |[**Reunión de Teams**](#teams-meetings) |Habilita el editor Atto en Moodle para crear vínculos de reuniones de Teams.|atto_teamsmeeting |
-|[**Tema de Teams**](#microsoft-365-teams-theme)| Eliminar los bloques de Moodle y el cromo extra dentro de los iframes de Moodle para Teams, que se aplica mientras se mapean los cursos a las instancias de Teams.| themeboost_o365teams |
+|[**Tema de Teams**](#microsoft-365-teams-theme)| Quite los bloques de Moodle y el cromo adicional dentro de los iFrames de Moodle para Teams, que se aplica al asignar cursos a instancias de Teams.| themeboost_o365teams |
 |[**OneNote**](#onenote-integration)| Habilitar el uso de OneNote para la asignación, el envío y los informes|local_onenote, assignsubmission_onenote, y assignfeedback_onenote </br>|  
 |[**Bloque de Microsoft**](#microsoft-block) | Habilita bloques de acceso rápido a Microsoft 365 dentro de Moodle con vínculos a los servicios de colaboración de Microsoft 365 y vínculos de instalación para Microsoft Office.|block_microsoft |
 |[**Filtro de oEmbed**](#oembed-filter) | Habilitar los vínculos de vídeo en Moodle.|Filter_oembed|

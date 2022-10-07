@@ -6,12 +6,12 @@ ms.author: v-amprasad
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 11/29/2021
-ms.openlocfilehash: 964e7d8ad6e643d26178e04fb9ce706bb177f1d1
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: 20bdb351eeff9a11d9460cf8206cfdc7dcbea0ff
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67780999"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499303"
 ---
 # <a name="manage-multiple-environments"></a>Administrar varios entornos
 
@@ -156,7 +156,7 @@ Pasos para la personalización:
 4. Abra el archivo `.fx/configs/config.staging.json`de configuración .
 5. Agregue la misma propiedad a `my app description for staging`.
 6. Abra la plantilla `templates/appPackage/manifest.template.json`de manifiesto de aplicación de Teams .
-7. Actualice la propiedad **`description`** > **`short`** para usar la **variable** definida en configurar archivos con sintaxis **`{{config.manifest.description.short}}`** de mustache .
+7. Actualice la propiedad **`description`** > **`short`** para usar la **variable** definida en configurar archivos con la sintaxis **`{{config.manifest.description.short}}`** de llaves .
   
   Las actualizaciones de `manifest.template.json` son:
 

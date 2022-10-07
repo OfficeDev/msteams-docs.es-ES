@@ -3,12 +3,12 @@ title: Referencia del esquema de manifiesto
 description: En este artículo, tendrá la versión más reciente del esquema de manifiesto público para la referencia, el esquema y el manifiesto completo de ejemplo de Microsoft Teams.
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: f797c44b49c29227ec973c0066bf98ee25590d35
-ms.sourcegitcommit: 176bbca74ba46b7ac298899d19a2d75087fb37c1
+ms.openlocfilehash: 2638c668bf1363a0f997786bcb958689626c70c6
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2022
-ms.locfileid: "68376574"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499177"
 ---
 # <a name="app-manifest-schema-for-teams"></a>Esquema del manifiesto de la aplicación de Teams
 
@@ -643,9 +643,9 @@ Especifique la configuración del conector de Graph de la aplicación. Si está 
 
 Booleano **opcional**
 
-Indicates if or not to show the loading indicator when an app or tab is loading. Default is **false**.
+Indica si se va a mostrar o no el indicador de carga cuando se carga una aplicación o pestaña. El valor predeterminado es **false**.
 >[!NOTE]
->Si selecciona `showLoadingIndicator` como true en el manifiesto de la aplicación, para cargar la página correctamente, modifique las páginas de contenido de las pestañas y los módulos de tareas tal como se describe en el documento [Mostrar un indicador de carga nativo](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator).
+>Si selecciona `showLoadingIndicator` como true en el manifiesto de la aplicación, para cargar la página correctamente, modifique las páginas de contenido de las pestañas y módulos de tareas como se describe en [Mostrar un documento de indicador de carga nativo](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator) .
 
 ## <a name="isfullscreen"></a>IsFullScreen
 

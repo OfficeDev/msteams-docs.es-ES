@@ -6,12 +6,12 @@ ms.author: v-amprasad
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 5f0aa26276c2db7651fac473049cac0aa75f14dd
-ms.sourcegitcommit: dccb48902e08484692ab927415bcd3d61dc50db2
+ms.openlocfilehash: 29ba0fff62678a18222f0229701546515b7d4c38
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2022
-ms.locfileid: "67806860"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499191"
 ---
 # <a name="add-capabilities-to-teams-apps"></a>Adición de funcionalidades a aplicaciones de Teams
 
@@ -71,11 +71,11 @@ Puede agregar funcionalidades mediante los métodos siguientes:
 * Cambie el directorio de trabajo al **directorio del proyecto**.
 * En la tabla siguiente se enumeran las funcionalidades y los comandos necesarios:
 
-  |Funcionalidad y escenario| Comando|
+  |Funcionalidad y escenario| Get-Help|
   |-----------------------|----------|
   |Para agregar un bot de notificación |`teamsfx add notification`|
   |Para agregar un bot de comandos |`teamsfx add command-and-response`|
-  |Para agregar la pestaña habilitada para sso |`teamsfx add sso-tab`|
+  |Para agregar la pestaña habilitada para SSO |`teamsfx add sso-tab`|
   |Para agregar pestaña |`teamsfx add tab`|
   |Para agregar bot |`teamsfx add bot`|
   |Para agregar la extensión de mensaje |`teamsfx add message extension`|
@@ -89,7 +89,7 @@ En la tabla siguiente se muestran los cambios que se pueden ver en los archivos 
 |Bot, extensión de mensaje y pestaña|Incluye un bot **hello world**&nbsp;o una plantilla de aplicación de pestaña en el proyecto.|Se agrega un código de plantilla de pestaña o bot de front-end a una subcarpeta con ruta de acceso `yourProjectFolder/bot` o `yourProjectFolder/tab` respectivamente.|
 | Bot, extensión de mensaje y pestaña |Incluye los scripts necesarios para Visual Studio Code y se ejecuta cuando desea depurar la aplicación localmente. |Los archivos `launch.json` y `task.json` en `.vscode` la carpeta se actualizan.|
 | Bot y extensión de mensaje|Incluye información relacionada con bots o pestañas en el archivo de manifiesto que representa la aplicación en la plataforma teams.|Se actualiza el archivo`manifest.template.json` en `templates/appPackage` la carpeta , que incluye información relacionada con pestañas en el archivo de manifiesto que representa la aplicación en la Plataforma de Teams. Los cambios son visibles en el identificador del bot, los ámbitos del bot y los comandos a los que hello world bot o la aplicación de pestaña pueden responder.|
-|Tab|Incluye información relacionada con bots o pestañas en el archivo de manifiesto que representa la aplicación en la plataforma teams.|Se actualiza el archivo`manifest.template.json` en `templates/appPackage` la carpeta , que incluye información relacionada con pestañas en el archivo de manifiesto que representa la aplicación en la Plataforma de Teams. Los cambios son visibles en pestañas configurables y estáticas, y ámbitos de las pestañas.|
+|Tab|Incluye información relacionada con bots o pestañas en el archivo de manifiesto que representa la aplicación en la plataforma teams.|Se actualiza el archivo `manifest.template.json` en `templates/appPackage` la carpeta , que incluye información relacionada con pestañas en el archivo de manifiesto que representa la aplicación en la Plataforma de Teams. Los cambios son visibles en pestañas configurables y estáticas, y ámbitos de las pestañas.|
 |Bot, extensión de mensaje y pestaña|Incluye información relacionada con&nbsp;bots o pestañas en teamsfx y archivos de aprovisionamiento que son para integrar funciones de Azure.|Los archivos de `templates/azure/teamsfx` se actualizan y `templates/azure/provision/xxx`los archivos .bicep se vuelven a generar.|
 |Bot, extensión de mensaje y pestaña|Garantiza que el proyecto está configurado con las configuraciones adecuadas para la funcionalidad recién agregada.|Los archivos de `.fx/config` se vuelven a generar|
 

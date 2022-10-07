@@ -5,12 +5,12 @@ description: Obtenga información sobre cómo implementar la pestaña de Teams e
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 1da3d1359da2878586dafef16dac9a868d074ff1
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 076cf027e2696848319fc0beb7ae69c3633b8dc4
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189475"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499198"
 ---
 # <a name="add-teams-tab-to-sharepoint"></a>Añadir una pestaña de Teams a SharePoint
 

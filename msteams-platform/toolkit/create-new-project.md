@@ -7,12 +7,12 @@ ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: e9f1d0cbfcc1de9ced3cd0bac6f26f9218aecd40
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: 8ed7d882ba7d58862539e77bfc8b6ea5277a3729
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67781166"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499247"
 ---
 # <a name="create-a-new-teams-project"></a>Creación de un nuevo proyecto de Teams
 
@@ -137,7 +137,7 @@ La implementación de notificación principal en la carpeta **bot** y contiene:
 | --- | --- |
 | `src/adaptiveCards/` | Plantillas para tarjeta adaptable  |
 | `src/internal/` | Código de inicialización generado para la funcionalidad de notificación |
-| `src/index.*s` | El punto de entrada para controlar los mensajes del bot y enviar notificaciones |
+| `src/index.*s` | Punto de entrada para controlar los mensajes del bot y enviar notificaciones |
 | `.gitignore` | Archivo para excluir archivos locales del proyecto de bot |
 | `package.json` | El archivo de paquete npm para el proyecto de bot |
 
@@ -260,7 +260,7 @@ Puede ver las plantillas de aplicación de Teams ya rellenadas en Teams Toolkit 
 |Bot de notificación     |La aplicación Bot de notificación puede enviar una notificación al cliente de Teams; hay varias maneras de desencadenar la notificación. Por ejemplo, desencadene la notificación por solicitud HTTP o por tiempo. También puede seleccionar la notificación desencadenada en función del escenario empresarial.         |
 |Bot de comandos     |Los usuarios pueden escribir un comando para interactuar con el bot mediante la aplicación Bot de comandos.         |
 |Tab     |La aplicación Tab muestra una página web dentro de Teams y habilita el inicio de sesión único con la cuenta de Teams.         |
-|Extensión de mensaje     |La aplicación extensión de mensaje implementa características sencillas, como crear tarjeta adaptable, buscar paquetes Nugget, desenlazar vínculos para el dominio "dev.botframework.com".         |
+|Extensión de mensaje     |La aplicación extensión de mensaje implementa características sencillas como crear tarjeta adaptable, buscar paquetes Nugget, desenvolver vínculos para el dominio "dev.botframework.com".         |
 
 > [!NOTE]
 > Una vez creado el proyecto, El kit de herramientas de Teams abre automáticamente la ventana **Introducción** . Ahora puede ver las instrucciones en la ventana **Introducción** y consultar las distintas características del kit de herramientas de Teams.

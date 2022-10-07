@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/20/2022
-ms.openlocfilehash: 2091649581686b376d2486a874118d36fd6a984b
-ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
+ms.openlocfilehash: 0df9cc75b6a9775f9369b6a3bf8b95c35941207b
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67616656"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499324"
 ---
 # <a name="edit-azure-ad-manifest"></a>Edición del manifiesto de Azure AD
 

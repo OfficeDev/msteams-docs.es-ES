@@ -5,12 +5,12 @@ description: Aprenda a crear pestañas con tarjetas adaptables donde el front-en
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 33c9d42ff2d2d5d13676261c7197e287fcacff59
-ms.sourcegitcommit: 176bbca74ba46b7ac298899d19a2d75087fb37c1
+ms.openlocfilehash: c69ca5f366e973fcd17e04ef490514526bef0f96
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2022
-ms.locfileid: "68376630"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499289"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>Compilar pestañas con tarjetas adaptables
 
@@ -25,7 +25,7 @@ Al desarrollar una pestaña con el método tradicional, podría encontrarse con 
 * Restricciones de iFrame
 * Mantenimiento y costes del servidor
 
-Las pestañas de tarjeta adaptable son una nueva forma de crear pestañas en Teams. En lugar de incrustar contenido web en un IFrame, puede representar Tarjetas adaptables en una pestaña. Aunque el front-end se representa con Tarjetas adaptables, el back-end se basa en un bot. El bot es responsable de aceptar las solicitudes y responder adecuadamente con la tarjeta adaptable que se representa.
+Las pestañas de tarjeta adaptable son una nueva forma de crear pestañas en Teams. En lugar de insertar contenido web en un iFrame, puede representar tarjetas adaptables en una pestaña. Mientras el front-end se representa con tarjetas adaptables, el back-end funciona con un bot. El bot es responsable de aceptar las solicitudes y responder adecuadamente con la tarjeta adaptable que se representa.
 
 Puede crear sus pestañas con bloques de creación de interfaz de usuario (UI) listos para usar nativos en equipos de escritorio, web y móviles. Este artículo le ayuda a comprender los cambios necesarios para realizar en el manifiesto de la aplicación. El artículo también identifica cómo la actividad de invocación solicita y envía información en la pestaña con Tarjetas adaptables y su efecto en el flujo de trabajo del módulo de tareas.
 

@@ -6,12 +6,12 @@ ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 25f4db19c2f89031d5bb4566793586d1c8988ceb
-ms.sourcegitcommit: e4ccbbdce620418c129689c0ba6ad246a81068c0
+ms.openlocfilehash: 40fecae63c563ae110dedf9e1430f5207574f969
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2022
-ms.locfileid: "68329094"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499213"
 ---
 # <a name="create-a-personal-tab"></a>Crear una pestaña personal
 
@@ -193,13 +193,13 @@ Cree una página de contenido y actualice los archivos existentes de la aplicaci
 
 1. Guarde el archivo `manifest.json` actualizado.
 
-1. Abra **Tab.ts** en Visual Studio Code desde la siguiente ruta de acceso para proporcionar la página de contenido en un IFrame:
+1. Abra **Tab.ts en el** Visual Studio Code desde la siguiente ruta de acceso para proporcionar la página de contenido en un iFrame:
 
     ```bash
     ./src/server/<yourDefaultTabNameTab>/<yourDefaultTabNameTab>.ts
     ```
 
-1. Agregue lo siguiente a la lista de decoradores de IFrame:
+1. Agregue lo siguiente a la lista de decoradores de iFrame:
 
     ```typescript
      @PreventIframe("/<yourDefaultTabName Tab>/personal.html")
@@ -485,7 +485,7 @@ Esta carpeta contiene los siguientes archivos de paquete de aplicación necesari
 * Un **icono de contorno transparente** de 32 x 32 píxeles.
 * Un archivo `manifest.json` que especifica los atributos de la aplicación.
 
-Estos archivos deben comprimirse en un paquete de aplicación para usarlos en la carga de la pestaña en Teams. Teams carga el `contentUrl` especificado en el manifiesto, lo inserta en un lFrame y lo representa en la pestaña.
+Estos archivos deben comprimirse en un paquete de aplicación para usarlos en la carga de la pestaña en Teams. Teams carga el especificado en el `contentUrl` manifiesto, lo inserta en un iFrame y lo representa en la pestaña.
 
 #### <a name="csproj"></a>.csproj
 

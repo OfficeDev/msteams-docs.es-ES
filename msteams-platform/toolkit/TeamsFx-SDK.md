@@ -6,12 +6,12 @@ ms.author: v-amprasad
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 9d870680e146564bb23db0193d2e2b116a249009
-ms.sourcegitcommit: 16898eebeddc1bc1ac0d9862b4627c3bb501c109
+ms.openlocfilehash: e28e726a1915cdbc8fddf501b0352d160673516c
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2022
-ms.locfileid: "68327590"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499170"
 ---
 # <a name="teamsfx-sdk"></a>TeamsFx SDK
 
@@ -179,6 +179,7 @@ Si ha creado una función de Azure o un proyecto de bot con Visual Studio Code T
 * clientSecret (M365_CLIENT_SECRET)
 * applicationIdUri (M365_APPLICATION_ID_URI)
 * apiEndpoint (API_ENDPOINT)
+
 * sqlServerEndpoint (SQL_ENDPOINT) // solo se usa cuando hay una instancia de sql
 * sqlUsername (SQL_USER_NAME) // solo se usa cuando hay una instancia de sql
 * sqlPassword (SQL_PASSWORD) // solo se usa cuando hay una instancia de sql
@@ -254,9 +255,9 @@ En esta sección se proporcionan varios fragmentos de código para escenarios co
     <details>
     <summary><b>Integración con Microsoft Graph Toolkit</b></summary>
 
-    La biblioteca [de Microsoft Graph Toolkit (mgt)](https://aka.ms/mgt) es una colección de diversos proveedores de autenticación y componentes de interfaz de usuario con tecnología de Microsoft Graph.
+    La biblioteca [del kit de herramientas de Microsoft Graph](https://aka.ms/mgt) es una colección de diversos proveedores de autenticación y componentes de interfaz de usuario con tecnología de Microsoft Graph.
 
-    El `@microsoft/mgt-teamsfx-provider` paquete expone la clase que usa `TeamsFx` la `TeamsFxProvider` clase para iniciar sesión de usuarios y adquirir tokens para usarlos con Graph.
+    El `@microsoft/mgt-teamsfx-provider` paquete expone la clase que usa `TeamsFx` la `TeamsFxProvider` clase para iniciar sesión a los usuarios y adquirir tokens para usarlos con Microsoft Graph.
 
     1. Puede instalar los siguientes paquetes necesarios:
 

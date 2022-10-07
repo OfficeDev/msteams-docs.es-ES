@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.date: 04/07/2022
-ms.openlocfilehash: 631fa01f8e3909495281a95205a70f88a729648f
-ms.sourcegitcommit: 3aaccc48906fc6f6fbf79916af5664bf55537250
+ms.openlocfilehash: 4284babe1015a041bf36e24c74d9a33225bf5e8a
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "68295980"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499205"
 ---
 # <a name="enable-and-configure-apps-for-meetings"></a>Habilitar y configurar las aplicaciones para reuniones
 
@@ -42,6 +42,7 @@ Las funcionalidades de la aplicación de reuniones se declaran en el manifiesto 
 > * Las aplicaciones en reuniones requieren `groupchat` o `team` ámbito. El `team` ámbito funciona para pestañas en canales o reuniones de canales.
 > * Para admitir la adición de pestañas en reuniones de canal programadas, especifique el ámbito del **equipo** en **la sección ámbitos** del manifiesto de la aplicación. Sin el ámbito del **equipo** , la aplicación no aparecería en el control flotante para las reuniones de canal.
 > * Las aplicaciones de las reuniones pueden usar los siguientes contextos: `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel` y `meetingStage`.
+> * Los permisos `MeetingStage.Write.Chat` de RSC delegados y `ChannelMeetingStage.Write.Group` son necesarios en el manifiesto para habilitar el uso compartido de la fase de reunión.
 
 El siguiente fragmento de código es un ejemplo de una pestaña configurable que se usa en una aplicación para reuniones de Teams:
 

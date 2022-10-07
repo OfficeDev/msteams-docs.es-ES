@@ -3,12 +3,12 @@ title: Crear un asistente virtual
 description: Obtenga información sobre cómo crear un bot de Virtual Assistant para Teams mediante ejemplos de código y fragmentos de código con características como tarjetas adaptables, control de interrupciones y mucho más.
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: 12339ed10f1c6a6e30ebb74320fbf69018a6d3f9
-ms.sourcegitcommit: 0bb822b30739e4a532a36764dad2dbf35a81ba29
+ms.openlocfilehash: 4f35edee79dba5b6a8faa9720906915bec27d6d5
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67178607"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499282"
 ---
 # <a name="create-virtual-assistant"></a>Crear un asistente virtual
 
@@ -564,7 +564,7 @@ Para obtener más información, consulte [esta](/microsoftteams/platform/samples
     }
 ```
 
-También puede aprovechar las aptitudes existentes del repositorio de [repositorio de Bot Framework Solutions](https://github.com/microsoft/botframework-components/tree/main/skills/csharp) o crear una nueva aptitud completamente desde cero. Para crear una nueva aptitud, consulte [tutoriales para crear una nueva aptitud](https://microsoft.github.io/botframework-solutions/overview/skills/). Para obtener el asistente virtual y la documentación sobre la arquitectura de aptitudes, consulte[el asistente virtual y la arquitectura de aptitudes](/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0&preserve-view=true).  
+También puede aprovechar las aptitudes existentes del repositorio de [repositorio de Bot Framework Solutions](https://github.com/microsoft/botframework-components/tree/main/skills/csharp) o crear una nueva aptitud completamente desde cero. Para crear una nueva aptitud, consulte [tutoriales para crear una nueva aptitud](https://microsoft.github.io/botframework-solutions/overview/skills/). Para obtener documentación sobre virtual assistant y arquitectura de aptitudes, consulte [Virtual Assistant and skills architecture(Asistente virtual y arquitectura de aptitudes](/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0&preserve-view=true)).  
 
 ## <a name="limitations-of-virtual-assistant"></a>Limitaciones del asistente virtual
 

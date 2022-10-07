@@ -5,12 +5,12 @@ description: En este módulo, aprenderá a crear una aplicación basada en model
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
-ms.openlocfilehash: f75f7ea3b014a9373ba1d643cede7055aa333ef5
-ms.sourcegitcommit: f2ac771cbd608e872604e9ac8ffec2d08f55ee1a
+ms.openlocfilehash: aace2b68bc67aaee54d8c9015c2e649c7c3b8887
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2022
-ms.locfileid: "68373048"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499331"
 ---
 # <a name="create-a-new-model-driven-app-with-collaboration-controls-for-teams"></a>Creación de una nueva aplicación controlada por modelos con controles de colaboración para Teams
 

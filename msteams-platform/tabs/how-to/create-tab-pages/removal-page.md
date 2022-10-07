@@ -5,12 +5,12 @@ description: Aprenda a habilitar la pestaña para volver a configurarla después
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 6aa06cae222ad89b89b2eddc0ba224db0ff4225f
-ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
+ms.openlocfilehash: 964872d0de88d7462bec68d84f7b1e1ecf3681ec
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2022
-ms.locfileid: "67450411"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499297"
 ---
 # <a name="create-a-removal-page"></a>Crear una página de eliminación
 
@@ -24,15 +24,15 @@ El `manifest.json` define las características y funcionalidades de la pestaña.
 
 |Nombre| Tipo| Tamaño máximo | Necesario | Descripción|
 |---|---|---|---|---|
-|`canUpdateConfiguration`|Booleano|||El valor que indica si el usuario puede actualizar una instancia de la configuración de la pestaña después de la creación. El valor predeterminado es `true`. |
+|`canUpdateConfiguration`|Booleano|||Valor que indica si el usuario puede actualizar una instancia de la configuración de la pestaña tras su creación. El valor predeterminado es `true`. |
 
 Cuando la pestaña se carga en un canal o chat de grupo, Teams agrega un menú desplegable con el botón derecho para la pestaña. Las opciones disponibles vienen determinadas por la configuración `canUpdateConfiguration`. En la tabla siguiente se proporcionan los detalles de configuración:
 
 | `canUpdateConfiguration`| true   | false | description |
 | ----------------------- | :----: | ----- | ----------- |
-|     Configuración            |   √    |       |La página `configurationUrl` se vuelve a cargar en un IFrame, lo que permite al usuario volver a configurar la pestaña. |
+|     Configuración            |   √    |       |La `configurationUrl` página se vuelve a cargar en un iFrame, lo que permite al usuario volver a configurar la pestaña. |
 |     Cambiar nombre              |   √    |   √   | El usuario puede cambiar el nombre de la pestaña tal como aparece en la barra de pestañas.          |
-|     Eliminar               |   √    |   √   |  Si la propiedad `removeURL` se incluyen en la **página de configuración**, la página **removal** se carga en un IFrame y se presenta al usuario. Si no se incluye una página de eliminación, se muestra al usuario un cuadro de diálogo de confirmación.          |
+|     Eliminar               |   √    |   √   |  Si la propiedad y el  `removeURL` valor se incluyen en la **página de configuración**, la **página de eliminación** se carga en un iFrame y se presenta al usuario. Si no se incluye una página de eliminación, se muestra al usuario un cuadro de diálogo de confirmación.          |
 
 ## <a name="create-a-tab-removal-page-for-your-application"></a>Crear una página de eliminación de pestañas para la aplicación
 
@@ -111,7 +111,7 @@ A continuación se muestra un bloque de código de eliminación de pestañas de 
 
 ***
 
-Cuando un usuario selecciona **Quitar** en el menú desplegable de la pestaña, Teams carga la página opcional `removeUrl` asignada en la **configuración**, en un IFrame. Se muestra al usuario un botón cargado con la función `onClick()` que llama a `pages.config.setValidityState(true)` y habilita el botón **Quitar** que se muestra en la parte inferior del IFrame de la página de eliminación.
+Cuando un usuario selecciona **Quitar** en el menú desplegable de la pestaña, Teams carga la página opcional `removeUrl` asignada en la **página de configuración** en un iFrame. Al usuario se le muestra un botón cargado con la `onClick()` función que llama `pages.config.setValidityState(true)` a y habilita el botón **Quitar** que se muestra en la parte inferior de la página de eliminación iFrame.
 
 Después de ejecutar el controlador de eliminación, `removeEvent.notifySuccess()` o `removeEvent.notifyFailure()` notifica a Teams el resultado de la eliminación de contenido.
 
