@@ -4,12 +4,12 @@ description: Obtenga información sobre las nuevas características para desarro
 ms.topic: reference
 ms.localizationpriority: high
 zone_pivot_groups: What-new-features
-ms.openlocfilehash: 674da73dfbbb5417ef498315da0b3219466a4935
-ms.sourcegitcommit: 3aaccc48906fc6f6fbf79916af5664bf55537250
+ms.openlocfilehash: 07a4edf8751707a9ae0268b05b0314c85f471209
+ms.sourcegitcommit: 20070f1708422d800d7b1d84b85cbce264616ead
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "68295973"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "68537580"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores en Microsoft Teams
 
@@ -284,15 +284,16 @@ Descubra las características de la plataforma de Microsoft Teams que se encuent
 
 La versión preliminar para desarrolladores es un programa público que proporciona acceso anticipado a las características de la plataforma de Teams que aún no se han lanzado.
 
-**Septiembre de 2022**
+**Octubre de 2022**
 
-***23 de septiembre de 2022***: [se introdujo compatibilidad con aplicaciones de reunión para reuniones de canal programadas.](apps-in-teams-meetings/meeting-app-extensibility.md)
+***11 de octubre de 2022***: [generar un vínculo profundo para compartir contenido para realizar reuniones.](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#generate-a-deep-link-to-share-content-to-stage-in-meetings)
 
 :::column-end:::
 :::row-end:::
 
 | **Date** | **Actualizar** | **Buscar aquí** |
 | -------- | --------- | ------------------ |
+| 09/23/2022 | Se introdujo compatibilidad con aplicaciones de reunión para reuniones de canal programadas. | Compilación de aplicaciones para reuniones y llamadas de Teams > [aplicaciones de reuniones unificadas](apps-in-teams-meetings/meeting-app-extensibility.md) |
 | 08/23/2022 | Uso compartido de aplicaciones en la fase de reunión de Teams en dispositivos móviles | Creación de aplicaciones para reuniones y llamadas de Teams > [Habilitar y configurar aplicaciones para reuniones](/microsoftteams/platform/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings) |
 | 08/10/2022 | Aplicaciones para reuniones programadas de canales públicos | Crear aplicaciones para reuniones y llamadas de Teams > [Información general](apps-in-teams-meetings/teams-apps-in-meetings.md) |
 | 03/08/2022 | Silenciar y reactivar el audio de las API para aplicaciones en la fase de reunión de Teams | Crear aplicaciones para reuniones y llamadas de Teams > [Referencias de API de aplicaciones de reuniones](/microsoftteams/platform/apps-in-teams-meetings/api-references?tabs=dotnet) |
