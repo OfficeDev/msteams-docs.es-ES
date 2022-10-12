@@ -6,18 +6,18 @@ ms.topic: overview
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.date: 04/07/2022
-ms.openlocfilehash: 10604f4101185b2c18a619308e6551182809c290
-ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
+ms.openlocfilehash: 86cccc05a2c22cd337ae696d232c09c52728523c
+ms.sourcegitcommit: 20070f1708422d800d7b1d84b85cbce264616ead
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "68243209"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "68537531"
 ---
 # <a name="apps-for-teams-meetings-and-calls"></a>Aplicaciones para reuniones y llamadas de Teams
 
 Las reuniones permiten la colaboración, la asociación, la comunicación informada y los comentarios compartidos. La aplicación de reunión puede ofrecer una experiencia de usuario para cada fase del ciclo de vida de la reunión. El ciclo de vida de la reunión incluye experiencias de la aplicación previas a la reunión, en la reunión y posteriores a la reunión, según el estado del asistente.
 
-> [!Note]
+> [!NOTE]
 >
 > Las aplicaciones para reuniones instantáneas, reuniones programadas de canales públicos, llamadas uno a uno y llamadas grupales solo están disponibles actualmente en [versión preliminar para desarrolladores públicos](../resources/dev-preview/developer-preview-intro.md).
 
@@ -35,7 +35,7 @@ Los usuarios pueden agregar aplicaciones a la reunión mediante la opción de su
 
 Visite la [tienda teams](https://go.microsoft.com/fwlink/p/?LinkID=2183121) y explore las aplicaciones diseñadas específicamente para reuniones.
 
-> [!Note]
+> [!NOTE]
 >
 > * Actualmente, cuando se agrega una tercera persona a una llamada uno a uno, la llamada se eleva a una llamada de grupo que significa que se inicia una nueva sesión. Las aplicaciones agregadas a la llamada uno a uno no están disponibles en la llamada de grupo. Sin embargo, se pueden agregar de nuevo.
 >
@@ -47,7 +47,7 @@ En la siguiente ilustración se ofrece una idea de las características de exten
 
 En este artículo se proporciona información general sobre la extensibilidad de aplicaciones de reunión, las referencias de API, la habilitación y configuración de aplicaciones para reuniones y las escenas personalizadas del Modo conferencia en Teams.
 
-> [!Note]
+> [!NOTE]
 >
 > Las aplicaciones de reunión (panel lateral, fase de reunión) se admiten en el cliente de escritorio de Teams. Cuando, como en el cliente web de Teams, solo se admite cuando la versión preliminar del desarrollador está habilitada.
 
@@ -56,6 +56,7 @@ En este artículo se proporciona información general sobre la extensibilidad de
 * **Personalizar con escenas del modo junto**: la nueva característica de escenas de modo juntos personalizada permite a los usuarios colaborar en una reunión con su equipo en un solo lugar.
 * **Personalizar el permiso de aplicación en el canal compartido**: si la aplicación comparte información importante en el canal compartido, puede personalizar el permiso de aplicación para miembros externos. Los permisos de aplicación en [canales compartidos](../concepts/build-and-test/Shared-channels.md) siguen la lista de aplicaciones del equipo host y la directiva de aplicación del inquilino del host.
 * **Recuperar transcripciones de reuniones**: puede acceder a las transcripciones de reuniones y recuperarla en un escenario posterior a la reunión. Configure la aplicación para obtener transcripciones automáticamente para una reunión programada y úselas para obtener conclusiones, análisis inteligentes y mucho más.
+* **Generar un vínculo profundo para compartir contenido para realizar una fase en las reuniones**: puede generar un vínculo profundo para compartir la aplicación para realizar la fase e iniciar o unirse a una reunión.
 
 ## <a name="next-step"></a>Paso siguiente
 
