@@ -409,10 +409,13 @@
               href: apps-in-teams-meetings/teams-live-share-tutorial.md
         - name: Funcionalidades principales
           href: apps-in-teams-meetings/teams-live-share-capabilities.md
-          displayName: Ephemeral data structures
+          displayName: Live Share data structures
         - name: Sincronización de medios
           href: apps-in-teams-meetings/teams-live-share-media-capabilities.md
-          displayName: Audio ducking
+          displayName: 'Media synchronization, audio ducking'
+        - name: Entrada manuscrita & cursores
+          href: apps-in-teams-meetings/teams-live-share-canvas.md
+          displayName: 'Inking, cursors, live canvas'
         - name: Guías de procedimientos
           items:
             - name: Tutorial de Agile Poker

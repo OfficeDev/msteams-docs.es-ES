@@ -6,12 +6,12 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: v-ypalikila
 ms.date: 04/07/2022
-ms.openlocfilehash: b53d7c01722faa51824e0df17586bc8a385438b0
-ms.sourcegitcommit: 134ce9381891e51e6327f1f611fdfd60c90cca18
+ms.openlocfilehash: 7cea66e58461814e3b2cd3be85e979b7a5b75c4b
+ms.sourcegitcommit: 0fa0bc081da05b2a241fd8054488d9fd0104e17b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2022
-ms.locfileid: "67425613"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "68552514"
 ---
 ---
 
@@ -25,7 +25,7 @@ Obtenga respuestas a preguntas comunes al usar Live Share.<br>
 
 <summary><b>¿Puedo usar mi propio servicio de Azure Fluid Relay?</b></summary>
 
-Sí. Al construir la clase `TeamsFluidClient`, puede definir su propio `AzureConnectionConfig`. Live Share asocia los contenedores que crea con reuniones, pero deberá implementar la `ITokenProvider` interfaz para firmar tokens para los contenedores. Por ejemplo, puede usar un elemento proporcionado `AzureFunctionTokenProvider`, que usa una función en la nube de Azure para solicitar un token de acceso desde un servidor.
+Sí. Al inicializar Live Share, puede definir su propio `AzureConnectionConfig`. Live Share asocia los contenedores que crea con reuniones, pero deberá implementar la `ITokenProvider` interfaz para firmar tokens para los contenedores. Por ejemplo, puede usar un elemento proporcionado `AzureFunctionTokenProvider`, que usa una función en la nube de Azure para solicitar un token de acceso desde un servidor.
 
 Aunque a la mayoría le parece beneficioso usar nuestro servicio hospedado gratuito, es posible que todavía haya ocasiones en las que sea beneficioso usar su propio servicio De Azure Fluid Relay para la aplicación Live Share. Considere la posibilidad de usar una conexión de servicio AFR personalizada si:
 
@@ -53,7 +53,7 @@ Los datos enviados o almacenados a través de contenedores de Fluid creados por 
 
 <summary><b>¿Qué tipos de reuniones admite Live Share?</b></summary>
 
-Durante la versión preliminar, solo se admiten las reuniones programadas y todos los participantes deben estar en el calendario de reuniones. No se admiten los tipos de reunión, como llamadas uno a uno, llamadas grupales y reuniones.
+Se admiten reuniones programadas, llamadas uno a uno, llamadas grupales y reuniones ahora. Las reuniones de canal aún no se admiten.
 
 <br>
 
@@ -79,7 +79,7 @@ Actualmente, Live Share admite un máximo de 100 asistentes por sesión. Si esto
 </details>
 
 <details>
-<summary><b>¿Puedo usar las estructuras de datos efímeras de Live Share fuera de Teams?</b></summary>
+<summary><b>¿Puedo usar las estructuras de datos de Live Share fuera de Teams?</b></summary>
 
 Actualmente, los paquetes de Live Share requieren que el SDK de cliente de Teams funcione correctamente. Las características de `@microsoft/live-share` o `@microsoft/live-share-media` no funcionarán fuera de Microsoft Teams. Si esto es algo que le interesa, puede [iniciar una discusión aquí](https://github.com/microsoft/live-share-sdk/discussions).
 
@@ -106,7 +106,7 @@ Actualmente, Live Share no admite la adición de nuevos `initialObjects` element
 
 Para corregir los errores resultantes de los cambios en al realizar pruebas localmente en el explorador, quite el identificador de contenedor con hash de la dirección URL y vuelva a `initialObjects` cargar la página. Si va a realizar pruebas en una reunión de Teams, inicie una nueva reunión e inténtelo de nuevo.
 
-Si planea actualizar la aplicación con frecuencia con instancias nuevas o `EphemeralObject` nuevas`SharedObject`, debe tener en cuenta cómo implementar nuevos cambios de esquema en producción. Aunque el riesgo real es relativamente bajo y de corta duración, puede haber sesiones activas en el momento de implementar el cambio. Los usuarios existentes en la sesión no deben verse afectados, pero los usuarios que se unan a esa sesión después de implementar un cambio importante pueden tener problemas para conectarse a la sesión. Para mitigar esto, puede considerar algunas de las siguientes soluciones:
+Si planea actualizar la aplicación con frecuencia con instancias nuevas o `LiveObject` nuevas`SharedObject`, debe tener en cuenta cómo implementar nuevos cambios de esquema en producción. Aunque el riesgo real es relativamente bajo y de corta duración, puede haber sesiones activas en el momento de implementar el cambio. Los usuarios existentes en la sesión no deben verse afectados, pero los usuarios que se unan a esa sesión después de implementar un cambio importante pueden tener problemas para conectarse a la sesión. Para mitigar esto, puede considerar algunas de las siguientes soluciones:
 
 * Implemente los cambios de esquema para la aplicación web fuera del horario comercial normal.
 * Use `dynamicObjectTypes` para los cambios realizados en el esquema, en lugar de cambiar `initialObjects`.
@@ -121,7 +121,7 @@ Si planea actualizar la aplicación con frecuencia con instancias nuevas o `Ephe
 <details>
 <summary><b>¿Hay límites para cuántos eventos de cambio puedo emitir a través de Live Share?</b></summary>
 
-Mientras Live Share está en versión preliminar, no se aplica ningún límite a los eventos emitidos a través de Live Share. Para obtener un rendimiento óptimo, debe eliminar los cambios emitidos a través `SharedObject` de instancias o `EphemeralObject` a un mensaje cada 50 milisegundos o más. Esto es especialmente importante al enviar cambios basados en coordenadas táctiles o de mouse, como al sincronizar posiciones de cursor, entrada manuscrita y arrastrar objetos alrededor de una página.
+Mientras Live Share está en versión preliminar, no se aplica ningún límite a los eventos emitidos a través de Live Share. Para obtener un rendimiento óptimo, debe eliminar los cambios emitidos a través `SharedObject` de instancias o `LiveObject` a un mensaje cada 50 milisegundos o más. Esto es especialmente importante al enviar cambios basados en coordenadas táctiles o de mouse, como al sincronizar posiciones de cursor, entrada manuscrita y arrastrar objetos alrededor de una página.
 
 <br>
 
