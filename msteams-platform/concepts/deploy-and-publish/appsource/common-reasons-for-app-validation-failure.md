@@ -1,16 +1,16 @@
 ---
 title: Razones comunes del error de validación de la aplicación
-description: Obtenga información sobre las razones más comunes para que la aplicación no realice la validación de la aplicación. Vínculos rotos, errores en la descripción, vínculos de directiva no válidos, infracción de directrices de dominio válidas, vínculos de soporte técnico no válidos, etc.
+description: Obtenga información sobre las razones más comunes para el error de validación de aplicaciones, como vínculos rotos, errores inesperados, bloqueos, infracción de directrices de dominio válidas, errores funcionales.
 ms.topic: overview
 author: v-ypalikila
 ms.author: v-ypalikila
 ms.localizationpriority: high
-ms.openlocfilehash: 1743bfc861afbbad851d2bfa6ff4236dca680ecf
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 65144510fcb6a63c1c5cfaed4c344185917dee9a
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100913"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560655"
 ---
 # <a name="common-reasons-for-app-validation-failure"></a>Razones comunes del error de validación de la aplicación
 

@@ -6,16 +6,16 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: stevenic
 ms.date: 04/07/2022
-ms.openlocfilehash: ee88797d007e736eb7958e462d8697f379c99413
-ms.sourcegitcommit: 0fa0bc081da05b2a241fd8054488d9fd0104e17b
+ms.openlocfilehash: 66ff0cfed7fcd34d741a35ff4aa30e507adf8717
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2022
-ms.locfileid: "68552577"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560543"
 ---
 # <a name="dice-roller-code-tutorial"></a>Tutorial de código de Dice Roller
 
-En la aplicación de ejemplo de Dice Roller, se muestra a los usuarios un dado con un botón para lanzarlo. Cuando se lanza el dado, el SDK de Live Share usa el marco de Fluid para sincronizar los datos entre los clientes, de modo que todos vean el mismo resultado. Para sincronizar datos, realice los pasos siguientes en el archivo [app.js](https://github.com/microsoft/live-share-sdk/blob/main/samples/01.dice-roller/src/app.js):
+En la aplicación de ejemplo Dados Roller, a los usuarios se les muestra un dado con un botón para lanzarlo. Cuando se revierten los dados, el SDK de Live Share usa Fluid Framework para sincronizar los datos entre clientes, de modo que todos ven el mismo resultado. Para sincronizar datos, realice los pasos siguientes en el archivo [app.js](https://github.com/microsoft/live-share-sdk/blob/main/samples/01.dice-roller/src/app.js):
 
 1. [Configurar la aplicación](#set-up-the-application)
 2. [Unir un contenedor de Fluid](#join-a-fluid-container)
@@ -28,13 +28,16 @@ En la aplicación de ejemplo de Dice Roller, se muestra a los usuarios un dado c
 
 ## <a name="set-up-the-application"></a>Configurar la aplicación
 
-Para empezar, importe los módulos necesarios. En el ejemplo se usa el [DDS SharedMap](https://fluidframework.com/docs/data-structures/map/) de Fluid Framework y la clase [LiveShareClient](/javascript/api/@microsoft/live-share/liveshareclient) . El ejemplo admite la extensibilidad de las reuniones de Teams, por lo que tendremos que incluir el [SDK del cliente de Teams](https://github.com/OfficeDev/microsoft-teams-library-js). Por último, el ejemplo está diseñado para ejecutarse localmente, en una reunión de Teams, por lo que tendremos que incluir algunas piezas adicionales del marco de Fluid necesarias para [probar el ejemplo localmente](https://fluidframework.com/docs/testing/testing/#azure-fluid-relay-as-an-abstraction-for-tinylicious).
+Puede empezar importando los módulos necesarios. En el ejemplo se usa [SharedMap DDS](https://fluidframework.com/docs/data-structures/map/) de Fluid Framework y [TeamsFluidClient](/javascript/api/@microsoft/live-share/teamsfluidclient) del SDK de Live Share. El ejemplo admite la extensibilidad de reuniones de Teams, por lo que debe incluir el [SDK de cliente de Teams](https://github.com/OfficeDev/microsoft-teams-library-js). Por último, el ejemplo está diseñado para ejecutarse localmente y en una reunión de Teams, por lo que debe incluir más piezas de Fluid Framework para [probar el ejemplo localmente](https://fluidframework.com/docs/testing/testing/#azure-fluid-relay-as-an-abstraction-for-tinylicious).
 
-Las aplicaciones crean contenedores de Fluid mediante un esquema que define un conjunto de _objetos iniciales_ que estarán disponibles para el contenedor. En el ejemplo, se usa un SharedMap para almacenar el valor del dado más reciente que se obtuvo. Para obtener más información, consulte [Modelado de datos](https://fluidframework.com/docs/build/data-modeling/).
+Las aplicaciones crean contenedores fluid mediante un esquema que define un conjunto de _objetos iniciales_ que están disponibles para el contenedor. En el ejemplo se usa SharedMap para almacenar el valor de dados actual que se ha laminado. Para obtener más información, consulte [Modelado de datos](https://fluidframework.com/docs/build/data-modeling/).
 
-Las aplicaciones de reuniones de Teams requieren varias vistas (contenido, configuración y escena). Crearemos una función `start()` para ayudar a identificar la vista que se va a representar y a realizar cualquier inicialización necesaria. Queremos que nuestra aplicación admita la ejecución local en un explorador web y desde una reunión de Teams a fin de que la función `start()` busque un parámetro de consulta `inTeams=true` para determinar si se ejecuta en Teams. Al ejecutarse en Teams, la aplicación debe llamar a `app.initialize()` antes de llamar a cualquier otro método de teams-js.
+Las aplicaciones de reuniones de Teams requieren varias vistas, como contenido, configuración y fase. Puede crear una `start()` función para ayudar a identificar la vista. Esto ayuda a representar y realizar cualquier inicialización necesaria. La aplicación admite la ejecución local en un explorador web y desde una reunión de Teams. La `start()` función busca un `inTeams=true` parámetro de consulta para determinar si se ejecuta en Teams.
 
-Además del parámetro de consulta `inTeams=true`, podemos usar un parámetro de consulta `view=content|config|stage` para determinar la vista que debe representarse.
+> [!NOTE]
+> Cuando se ejecuta en Teams, la aplicación debe llamar `app.initialize()` a antes de llamar a cualquier otro método de teams-js.
+
+Además del parámetro de `inTeams=true` consulta, puede usar un `view=content|config|stage` parámetro de consulta para determinar la vista que debe representarse.
 
 ```js
 import { SharedMap } from "fluid-framework";
@@ -97,7 +100,7 @@ start().catch((error) => console.error(error));
 
 ## <a name="join-a-fluid-container"></a>Unir un contenedor de Fluid
 
-No todas las vistas de aplicación tendrán que ser colaborativas. La vista `stage` _siempre_ necesita características de colaboración, la vista `content` _puede_ necesitar características de colaboración y la vista `config`_nunca_ necesita características de colaboración. Para las vistas que necesitan características de colaboración, deberá unir un contenedor Fluid asociado a la reunión actual.
+No todas las vistas de la aplicación deben ser colaborativas. La vista `stage` _siempre_ necesita características de colaboración, la vista `content` _puede_ necesitar características de colaboración y la vista `config`_nunca_ necesita características de colaboración. Para las vistas que necesitan características de colaboración, deberá unir un contenedor Fluid asociado a la reunión actual.
 
 Unirse al contenedor para la reunión es tan sencillo como inicializar [LiveShareClient](/javascript/api/@microsoft/live-share/liveshareclient) y llamar a su método [joinContainer().](/javascript/api/@microsoft/live-share/liveshareclient#@microsoft-live-share-liveshareclient-joincontainer)
 
@@ -128,7 +131,7 @@ Muchas aplicaciones de extensibilidad de reuniones de Teams están diseñadas pa
 
 Es fácil crear la vista con datos locales sin ninguna funcionalidad de Fluid y, a continuación, agregar Fluid cambiando algunas partes clave de la aplicación.
 
-La función `renderStage` anexa `stageTemplate` al elemento HTML que se pasó y crea un lanzador de dados que funciona con un valor de dados aleatorio cada vez que se selecciona el botón **Roll**. `diceMap` se usa en los pasos siguientes.
+La `renderStage` función anexa al `stageTemplate` elemento HTML pasado y crea un rodillo de dados de trabajo con un valor de dados aleatorio cada vez que se selecciona el botón **Roll** . `diceMap` se usa en los pasos siguientes.
 
 ```js
 const stageTemplate = document.createElement("template");
@@ -158,7 +161,7 @@ function renderStage(diceMap, elem) {
 
 ### <a name="modify-fluid-data"></a>Modificar los datos de Fluid
 
-Para empezar a usar Fluid en la aplicación, lo primero que hay que cambiar es lo que sucede cuando el usuario selecciona `rollButton`. En lugar de actualizar el estado local directamente, el botón actualiza el número almacenado en la clave `value` del objeto pasado en `diceMap`. Dado que `diceMap` es un `SharedMap` de Fluid, los cambios se distribuyen a todos los clientes. Cualquier cambio en `diceMap` hará que se emita un evento `valueChanged` y un controlador de eventos puede desencadenar una actualización de la vista.
+Para empezar a usar Fluid en la aplicación, lo primero que hay que cambiar es lo que sucede cuando el usuario selecciona `rollButton`. En lugar de actualizar el estado local directamente, el botón actualiza el número almacenado en la clave `value` del objeto pasado en `diceMap`. Dado que `diceMap` es un `SharedMap` de Fluid, los cambios se distribuyen a todos los clientes. Cualquier cambio en `diceMap` puede hacer que se emita un `valueChanged` evento y un controlador de eventos puede desencadenar una actualización de la vista.
 
 Este patrón es común en Fluid porque permite que la vista se comporte de la misma manera para los cambios locales y remotos.
 
@@ -169,7 +172,7 @@ rollButton.onclick = () =>
 
 ### <a name="rely-on-fluid-data"></a>Confiar en los datos de Fluid
 
-El siguiente cambio que debe realizarse es cambiar la función `updateDice` para que ya no acepte un valor arbitrario. Esto significa que la aplicación ya no puede modificar directamente el valor local del dado. En su lugar, el valor se recupera del `SharedMap` cada vez que se llama a `updateDice`.
+El siguiente cambio que debe realizarse es cambiar la `updateDice` función, ya que ya no acepta un valor arbitrario. Esto significa que la aplicación ya no puede modificar directamente el valor local del dado. En su lugar, el valor se recupera del `SharedMap` cada vez que se llama a `updateDice`.
 
 ```js
 const updateDice = () => {
@@ -189,7 +192,7 @@ diceMap.on("valueChanged", updateDice);
 
 ## <a name="write-the-side-panel-view"></a>Escribir la vista del panel lateral
 
-La vista del panel lateral, cargada a través de la pestaña `contentUrl` con el contexto del marco `sidePanel`, se muestra al usuario en un panel lateral cuando abre la aplicación dentro de una reunión. El objetivo de esta vista es permitir que un usuario seleccione contenido para la aplicación antes de compartir la aplicación en la escena de reunión. Para las aplicaciones del SDK de Live Share, la vista del panel lateral también se puede usar como experiencia complementaria para la aplicación. Llamar a [joinContainer()](/javascript/api/@microsoft/live-share/liveshareclient#@microsoft-live-share-liveshareclient-joincontainer) desde la vista del panel lateral conecta al mismo contenedor de Fluid al que está conectada la vista extendida. A continuación, este contenedor se puede usar para comunicarse con la vista extendida. Asegúrese de que se está comunicando con la vista extendida _y_ la vista del panel lateral de todos los usuarios.
+La vista del panel lateral, cargada a través de la pestaña `contentUrl` con el contexto del marco `sidePanel`, se muestra al usuario en un panel lateral cuando abre la aplicación dentro de una reunión. El objetivo de la vista del panel lateral es permitir que un usuario seleccione contenido para la aplicación antes de compartir la aplicación en la fase de reunión. Para las aplicaciones del SDK de Live Share, la vista del panel lateral también se puede usar como experiencia complementaria para la aplicación. Llamar a [joinContainer()](/javascript/api/@microsoft/live-share/liveshareclient#@microsoft-live-share-liveshareclient-joincontainer) desde la vista del panel lateral conecta al mismo contenedor de Fluid al que está conectada la vista extendida. A continuación, este contenedor se puede usar para comunicarse con la vista extendida. Asegúrese de que se está comunicando con la vista extendida _y_ la vista del panel lateral de todos los usuarios.
 
 La vista del panel lateral del ejemplo solicita al usuario que seleccione el botón Compartir en escena
 
@@ -215,7 +218,7 @@ function renderSidePanel(elem) {
 
 ## <a name="write-the-settings-view"></a>Escribir la vista de configuración
 
-La vista de configuración, cargada mediante `configurationUrl` en el manifiesto de la aplicación, se muestra a un usuario cuando agrega la aplicación por primera vez a una reunión de Teams. Esta vista permite al desarrollador configurar `contentUrl` para la pestaña que está anclada a la reunión en función de la entrada del usuario. Esta página es necesaria actualmente incluso si no se requiere ninguna entrada del usuario para establecer `contentUrl`.
+La vista de configuración, cargada `configurationUrl` en el manifiesto de la aplicación, se muestra a un usuario cuando agrega la aplicación por primera vez a una reunión de Teams. Esta vista permite al desarrollador configurar `contentUrl` para la pestaña que está anclada a la reunión en función de la entrada del usuario. Esta página es necesaria actualmente incluso si no se requiere ninguna entrada del usuario para establecer `contentUrl`.
 
 > [!NOTE]
 > El [elemento joinContainer()](/javascript/api/@microsoft/live-share/liveshareclient#@microsoft-live-share-liveshareclient-joincontainer) de Live Share no se admite en el contexto de tabulación `settings` .

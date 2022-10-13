@@ -5,12 +5,12 @@ description: Obtenga información sobre la página web dentro del cliente de Tea
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 34e106bfa0fdfa6b881d1a2fcd5685c022ac5d87
-ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
+ms.openlocfilehash: 362b63f44abf1afdf1572d967eb703f0836d4a45
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2022
-ms.locfileid: "67450376"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560466"
 ---
 # <a name="create-a-content-page"></a>Creación de una página de contenido
 
@@ -46,13 +46,16 @@ El código siguiente proporciona un ejemplo de cómo se comunican la página y e
 <html>
 <head>
 ...
-    <script src= 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js'></script>
+    <script src="https://res.cdn.office.net/teams-js/2.2.0/js/MicrosoftTeams.min.js" 
+      integrity="sha384yBjE++eHeBPzIg+IKl9OHFqMbSdrzY2S/LW3qeitc5vqXewEYRWegByWzBN/chRh" 
+      crossorigin="anonymous" >
+    </script>
 ...
+</head>
 <body>
 ...
-    <script type="module">
-        import {app} from 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js';
-        await app.initialize();
+    <script>
+    microsoftTeams.app.initialize();
     </script>
 ...
 </body>
@@ -68,7 +71,6 @@ El código siguiente proporciona un ejemplo de cómo se comunican la página y e
     <script src= 'https://statics.teams.cdn.office.net/sdk/v1.10.0/js/MicrosoftTeams.min.js'></script>
 ...
 </head>
-
 <body>
 ...
     <script>
@@ -86,7 +88,7 @@ Puede acceder a contenido adicional mediante el SDK para interactuar con Teams, 
 
 ### <a name="use-the-sdk-to-interact-with-teams"></a>Usar el SDK para interactuar con Teams
 
-El [SDK de JavaScript del cliente de Teams](~/tabs/how-to/using-teams-client-sdk.md) proporciona varias funciones adicionales que pueden ser de utilidad al desarrollar la página de contenido.
+El [SDK de JavaScript del cliente de Teams](~/tabs/how-to/using-teams-client-sdk.md) proporciona muchas más funciones que puede encontrar útiles al desarrollar la página de contenido.
 
 ### <a name="deep-links"></a>Vínculos profundos
 
@@ -94,7 +96,7 @@ Puede crear vínculos profundos a entidades en Teams. Se usan para crear víncul
 
 ### <a name="task-modules"></a>Módulos de tareas
 
-Un módulo de tareas es una experiencia emergente modal que puede desencadenar desde la pestaña. En una página de contenido, use módulos de tareas para presentar formularios para recopilar información adicional, mostrar los detalles de un elemento de una lista o presentar al usuario información adicional. Los propios módulos de tareas pueden ser páginas de contenido adicionales o pueden crearse por completo mediante Tarjetas adaptables. Para obtener más información, consulte [Usar módulos de tareas en pestañas](~/task-modules-and-cards/task-modules/task-modules-tabs.md).
+Un módulo de tareas es una experiencia emergente modal que puede desencadenar desde la pestaña. En una página de contenido, use módulos de tareas para presentar formularios para recopilar información adicional, mostrar los detalles de un elemento de una lista o presentar al usuario información adicional. Los propios módulos de tareas pueden ser páginas de contenido adicionales o crearse completamente mediante tarjetas adaptables. Para obtener más información, consulte [Usar módulos de tareas en pestañas](~/task-modules-and-cards/task-modules/task-modules-tabs.md).
 
 ### <a name="valid-domains"></a>Dominios válidos
 
@@ -117,7 +119,7 @@ Para mostrar el indicador de carga:
 
 1. Agregar `"showLoadingIndicator": true` al manifiesto.
 1. Llamar a `app.initialize();`.
-1. Como paso **obligatorio**, llame a `app.notifySuccess()` para notificarle a Teams que la aplicación se ha cargado correctamente. A continuación, Teams oculta el indicador de carga, si procede. Si `notifySuccess`  no se llama a en un plazo de 30 segundos, Teams supone que la aplicación agotó el tiempo de espera y muestra una pantalla de error con una opción de reintento.
+1. Como paso **obligatorio**, llame a `app.notifySuccess()` para notificarle a Teams que la aplicación se ha cargado correctamente. A continuación, Teams oculta el indicador de carga, si procede. Si `notifySuccess`  no se llama en un plazo de 30 segundos, Teams supone que la aplicación agotó el tiempo de espera y muestra una pantalla de error con una opción de reintento.
 1. **Opcionalmente**, si está listo para imprimir en la pantalla y desea cargar de forma diferida el resto del contenido de la aplicación, puede ocultar manualmente el indicador de carga llamando a `app.notifyAppLoaded();`.
 1. Si la aplicación no se carga, puede llamar `app.notifyFailure({reason: app.FailedReason.Timeout, message: "failure message"});` a para informar a Teams sobre el error y, opcionalmente, proporcionar un mensaje de error. Se muestra al usuario una pantalla de error. En el código siguiente se muestra la enumeración que define las posibles razones que puede indicar para que la aplicación no se cargue:
 

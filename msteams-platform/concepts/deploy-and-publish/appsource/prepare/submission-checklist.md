@@ -1,16 +1,16 @@
 ---
 title: Preparar el envío de la tienda
-description: Aprender los pasos finales antes de enviar la aplicación de Microsoft Teams para que aparezca en la tienda. Aprenda a validar el paquete de la aplicación. Sepa cómo actualizar el id. de equipo de Apple App Store Connect en el Centro de partners.
+description: Pasos finales antes de enviar la aplicación de Microsoft Teams para que aparezca en la tienda. Valide el paquete de la aplicación y complete la comprobación y la atestación del publicador.
 ms.topic: how-to
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: c78cfb103b9e6bd57218b6ca31edeae54c4ecca1
-ms.sourcegitcommit: 176bbca74ba46b7ac298899d19a2d75087fb37c1
+ms.openlocfilehash: bec6c900a0f478b2243685215f094b9a051c44f1
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2022
-ms.locfileid: "68376609"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560683"
 ---
 # <a name="prepare-your-teams-store-submission"></a>Preparar el envío de la tienda de Microsoft Teams
 

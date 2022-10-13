@@ -6,12 +6,12 @@ ms.topic: overview
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.date: 04/07/2022
-ms.openlocfilehash: 86cccc05a2c22cd337ae696d232c09c52728523c
-ms.sourcegitcommit: 20070f1708422d800d7b1d84b85cbce264616ead
+ms.openlocfilehash: 2e022ab2a39d399395a1aaf43ca6b282d24b81b7
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2022
-ms.locfileid: "68537531"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560536"
 ---
 # <a name="apps-for-teams-meetings-and-calls"></a>Aplicaciones para reuniones y llamadas de Teams
 
@@ -19,7 +19,9 @@ Las reuniones permiten la colaboración, la asociación, la comunicación inform
 
 > [!NOTE]
 >
-> Las aplicaciones para reuniones instantáneas, reuniones programadas de canales públicos, llamadas uno a uno y llamadas grupales solo están disponibles actualmente en [versión preliminar para desarrolladores públicos](../resources/dev-preview/developer-preview-intro.md).
+> * Las aplicaciones para reuniones programadas de canales públicos solo están disponibles actualmente en versión [preliminar para desarrolladores públicos](../resources/dev-preview/developer-preview-intro.md).
+>
+> * Las aplicaciones no se admiten en [las llamadas de Teams cifradas de un extremo a otro](https://support.microsoft.com/office/use-end-to-end-encryption-for-teams-calls-1274b4d2-b5c5-4b24-a376-606fa6728a90) en [la red telefónica conmutada pública (RTC).](/microsoftteams/cloud-voice-landing-page#public-switched-telephone-network-connectivity-options)
 
 Teams admite el acceso a las aplicaciones durante la reunión para los siguientes tipos de reunión:
 

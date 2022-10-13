@@ -6,12 +6,12 @@ ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 40fecae63c563ae110dedf9e1430f5207574f969
-ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
+ms.openlocfilehash: 187f1b40c60d8f7d88b75e6f666239ab70717cf6
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2022
-ms.locfileid: "68499213"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560739"
 ---
 # <a name="create-a-personal-tab"></a>Crear una pestaña personal
 
@@ -31,7 +31,7 @@ Asegúrese de cumplir con todos los [requisitos previos](~/tabs/how-to/tab-requi
     npm install yo gulp-cli --global
     ```
 
-1. En el símbolo del sistema, instale el generador de aplicaciones de Microsoft Teams escribiendo el siguiente comando:
+1. En el símbolo del sistema, instale el generador de aplicaciones de Microsoft Teams; para ello, escriba el siguiente comando:
 
     ```cmd
     npm install generator-teams --global
@@ -56,7 +56,7 @@ Estos son los pasos para crear una pestaña personal:
     yo teams
     ```
 
-1. Proporcione sus valores a una serie de preguntas del generador de aplicaciones de Microsoft Teams para actualizar el archivo `manifest.json`.
+1. Proporcione los valores a una serie de preguntas que le pide el generador de aplicaciones de Microsoft Teams para actualizar el `manifest.json` archivo.
 
     :::image type="content" source="~/assets/images/tab-images/teamsTabScreenshot.PNG" alt-text="Generador de Teams":::
 
@@ -97,7 +97,7 @@ Estos son los pasos para crear una pestaña personal:
 
     * **¿Cuál es la dirección URL en donde hospedará esta solución?**
 
-      De forma predeterminada, el generador sugiere una dirección URL de sitios web de Azure. Solo está probando la aplicación localmente, por lo que no es necesaria ninguna dirección URL válida.
+      De forma predeterminada, el generador sugiere una dirección URL del sitio web de Azure. Solo está probando la aplicación localmente, por lo que no es necesaria ninguna dirección URL válida.
 
     * **¿Quiere mostrar un indicador de carga cuando se cargue la aplicación o la pestaña?**
 
@@ -262,7 +262,7 @@ gulp ngrok-serve
 
 1. En el panel izquierdo de Teams, seleccione los puntos suspensivos &#x25CF;&#x25CF;&#x25CF; y, a continuación, elija la aplicación cargada para ver su pestaña personal.
 
-   Ha creado y agregado correctamente su pestaña personal en Teams.
+   Ahora ha creado y agregado correctamente su pestaña personal en Teams.
   
    Ahora que tiene su pestaña personal en Teams, también puede [reordenar](#reorder-static-personal-tabs) dicha pestaña.
 
@@ -371,13 +371,15 @@ En el Explorador de soluciones de Visual Studio, haga clic con el botón derecho
     <script src="https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js" integrity="sha384-QtTBFeFlfRDZBfwHJHYQp7MdLJ2C3sfAEB1Qpy+YblvjavBye+q87TELpTnvlXw4" crossorigin="anonymous"></script>
     ```
 
-1. En el Explorador de soluciones de Visual Studio abra **PersonalTab.cshtml** desde la carpeta **Páginas**, agregue `app.initialize()` en las etiquetas `<script>` y guárdelas.
+1. En Visual Studio Explorador de soluciones, abra **personalTab.cshtml desde la** carpeta **Pages** y agregue `microsoftTeams.app.initialize()` las `<script>` etiquetas.
+
+1. Seleccione **Guardar**.
 
 1. En Visual Studio, seleccione **F5** o elija **Iniciar depuración** en el menú **Depurar** de la aplicación.
 
 ### <a name="establish-a-secure-tunnel-to-your-tab"></a>Establecer un túnel seguro a la pestaña
 
-En el símbolo del sistema en la raíz del directorio del proyecto, ejecute el siguiente comando para establecer un túnel seguro a la pestaña:
+En el símbolo del sistema de la raíz del directorio del proyecto, ejecute el siguiente comando para establecer un túnel seguro en la pestaña:
 
 ```cmd
 ngrok http 3978 --host-header=localhost
@@ -389,7 +391,7 @@ ngrok http 3978 --host-header=localhost
 
 1. Abra **Aplicaciones** y seleccione **Importar aplicación**.
 
-1. El nombre de archivo del paquete de la aplicación es `tab.zip` y está disponible en la ruta de acceso `/bin/Debug/netcoreapp3.1/tab.zip`.
+1. El nombre del archivo del paquete de la aplicación es `tab.zip` y está disponible en la `/bin/Debug/netcoreapp3.1/tab.zip` ruta de acceso.
 
 1. Seleccione `tab.zip` y ábralo en el Portal para desarrolladores.
 
@@ -401,7 +403,7 @@ ngrok http 3978 --host-header=localhost
 
 1. En **Direcciones URL de la aplicación**, actualice la directiva de privacidad a `https://<yourngrokurl>/privacy` y los Términos de uso para `https://<yourngrokurl>/tou` y seleccione **Guardar**.
 
-1. En **Características de la aplicación**, seleccione **Aplicación personal** > **Crear la primera pestaña de la aplicación personal**, escriba el Nombre y actualice la **Dirección URL del contenido** con `https://<yourngrokurl>/personalTab`. Deje el campo Url del sitio web en blanco, seleccione **Contexto** como personalTab en la lista desplegable y seleccione **Confirmar**.
+1. En **Características de la aplicación**, seleccione **Personal app** > **Create your first personal app tab (Creación de la primera pestaña de aplicación personal** ), escriba el nombre y actualice la **dirección URL de contenido** con `https://<yourngrokurl>/personalTab`. Deje el campo Url del sitio web en blanco, seleccione **Contexto** como personalTab en la lista desplegable y seleccione **Confirmar**.
 
 1. Seleccione **Guardar**.
 
@@ -415,7 +417,7 @@ ngrok http 3978 --host-header=localhost
 
     :::image type="content" source="~/assets/images/tab-images/personaltabaspnetuploaded.png" alt-text="Pestaña predeterminada":::
 
-   Ha creado y agregado correctamente su pestaña personal en Teams.
+   Ahora ha creado y agregado correctamente su pestaña personal en Teams.
   
    Ahora que tiene su pestaña personal en Teams, también puede [reordenar](#reorder-static-personal-tabs) dicha pestaña.
 
@@ -536,13 +538,15 @@ Los controladores usan la propiedad `ViewBag` para transferir valores dinámicam
     <script src="https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js" integrity="sha384-QtTBFeFlfRDZBfwHJHYQp7MdLJ2C3sfAEB1Qpy+YblvjavBye+q87TELpTnvlXw4" crossorigin="anonymous"></script>
     ```
 
-1. En el Explorador de soluciones de Visual Studio abra **PersonalTab.cshtml** desde la carpeta **Vistas** > **PersonalTab** y agregue `app.initialize()` dentro de las etiquetas `<script>` y guárdelas.
+1. En Visual Studio Explorador de soluciones, abra **PersonalTab.cshtml** desde la carpeta **Views** > **PersonalTab** y agregue `microsoftTeams.app.initialize()` dentro de las `<script>` etiquetas.
+
+1. Seleccione **Guardar**.
 
 1. En Visual Studio, seleccione **F5** o elija **Iniciar depuración** en el menú **Depurar** de la aplicación.
 
 ### <a name="establish-a-secure-tunnel-to-your-tab"></a>Establecer un túnel seguro a la pestaña
 
-En el símbolo del sistema en la raíz del directorio del proyecto, ejecute el siguiente comando para establecer un túnel seguro a la pestaña:
+En el símbolo del sistema de la raíz del directorio del proyecto, ejecute el siguiente comando para establecer un túnel seguro en la pestaña:
 
 ```cmd
 ngrok http 3978 --host-header=localhost
@@ -570,7 +574,7 @@ ngrok http 3978 --host-header=localhost
 
 1. En **Direcciones URL de la aplicación**, actualice la directiva de privacidad a `https://<yourngrokurl>/privacy` y los Términos de uso para `https://<yourngrokurl>/tou` y seleccione **Guardar**.
 
-1. En **Características de la aplicación**, seleccione **Aplicación personal** > **Crear la primera pestaña de la aplicación personal**, escriba el Nombre y actualice la **Dirección URL del contenido** con `https://<yourngrokurl>/personalTab`. Deje el campo Url del sitio web en blanco, seleccione **Contexto** como personalTab en la lista desplegable y seleccione **Confirmar**.
+1. En **Características de la aplicación**, seleccione **Personal app** > **Create your first personal app tab (Creación de la primera pestaña de aplicación personal** ), escriba el nombre y actualice la **dirección URL de contenido** con `https://<yourngrokurl>/personalTab`. Deje el campo Url del sitio web en blanco, seleccione **Contexto** como personalTab en la lista desplegable y seleccione **Confirmar**.
 
 1. Seleccione **Guardar**.
 
@@ -584,7 +588,7 @@ ngrok http 3978 --host-header=localhost
 
     :::image type="content" source="~/assets/images/tab-images/personaltabaspnetmvccoreuploaded.png" alt-text="Pestaña personal":::
   
-   Ha creado y agregado correctamente su pestaña personal en Teams.
+   Ahora ha creado y agregado correctamente su pestaña personal en Teams.
 
    Ahora que tiene su pestaña personal en Teams, también puede [reordenar](#reorder-static-personal-tabs) dicha pestaña.
 
@@ -592,7 +596,7 @@ ngrok http 3978 --host-header=localhost
 
 ## <a name="reorder-static-personal-tabs"></a>Reordenar las pestañas personales estáticas
 
-A partir de la versión 1.7 del manifiesto, los desarrolladores podrán reorganizar todas las pestañas de su aplicación personal. En concreto, un desarrollador puede mover la pestaña **chat de bot**, que siempre tiene como valor predeterminado la primera posición, a cualquier lugar del encabezado de la pestaña personal de la aplicación. Se declaran dos palabras clave `entityId` reservadas para la pestaña, **conversaciones** y **Acerca de**.
+A partir de la versión 1.7 del manifiesto, los desarrolladores podrán reorganizar todas las pestañas de su aplicación personal. Puede mover la pestaña **de chat del bot** , que siempre se establece de forma predeterminada en la primera posición, en cualquier lugar del encabezado de la pestaña de la aplicación personal. Se declaran dos palabras clave `entityId` reservadas para la pestaña, **conversaciones** y **Acerca de**.
 
 Si crea un bot con un ámbito **personal**, aparecerá en la primera posición de pestaña de la aplicación personal de forma predeterminada. Si desea moverlo a otra posición, debe agregar un objeto de pestaña estática al manifiesto con la palabra clave reservada, **conversaciones**. La pestaña **conversación** aparecerá en la web o en el escritorio en función de dónde agregue la pestaña de **conversación** en la matriz `staticTabs`.
 

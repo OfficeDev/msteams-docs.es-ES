@@ -6,16 +6,16 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: v-ypalikila
 ms.date: 10/04/2022
-ms.openlocfilehash: 3845d890de365eca8029a3f28d770586a6929743
-ms.sourcegitcommit: 0fa0bc081da05b2a241fd8054488d9fd0104e17b
+ms.openlocfilehash: 9d1a776432f728c1e56caa357089be6e47c17e4c
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2022
-ms.locfileid: "68552659"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560613"
 ---
 # <a name="live-share-canvas-overview"></a>Introducción al lienzo de Live Share
 
-:::image type="content" source="../assets/images/teams-live-share/live-share-canvas-docs-feature-1.png" alt-text="Sincronización de medios de Teams Live Share":::
+:::image type="content" source="../assets/images/teams-live-share/live-share-canvas-docs-feature-1.png" alt-text="Captura de pantalla que muestra un ejemplo de un lienzo sincronizado con otros participantes de una reunión de Teams.":::
 
 En salas de conferencias y aulas de todo el mundo, las pizarras son una parte fundamental de la colaboración. Sin embargo, en los tiempos modernos, la pizarra ya no es suficiente. Con numerosas herramientas digitales como PowerPoint como punto focal de colaboración en la era moderna, es esencial habilitar el mismo potencial creativo.
 
@@ -103,7 +103,7 @@ await liveCanvas.initialize(inkingManager);
 
 ---
 
-## <a name="canvas-tools--cursors"></a>Herramientas de lienzo & cursores
+## <a name="canvas-tools-and-cursors"></a>Herramientas y cursores de lienzo
 
 Ahora que el lienzo de Live Share está configurado y sincronizado, puede configurar el lienzo para la interacción del usuario, como botones para seleccionar una herramienta de lápiz. En esta sección, analizaremos qué herramientas están disponibles y cómo usarlas.
 
@@ -113,7 +113,7 @@ Cada herramienta de entrada manuscrita en el lienzo de Live Share representa tra
 
 #### <a name="pen-tool"></a>Herramienta Lápiz
 
-:::image type="content" source="../assets/images/teams-live-share/canvas-pen-tool.gif" alt-text="Herramienta de lápiz de lienzo de Teams Live Share":::
+:::image type="content" source="../assets/images/teams-live-share/canvas-pen-tool.gif" alt-text="GIF muestra un ejemplo de trazos de dibujo en el lienzo mediante la herramienta de lápiz.":::
 
 La herramienta pluma dibuja trazos sólidos que se almacenan en el lienzo. La forma de sugerencia predeterminada es un círculo.
 
@@ -151,7 +151,7 @@ document.getElementById("pen-tip-size").onclick = () => {
 
 #### <a name="highlighter-tool"></a>Herramienta Resaltador
 
-:::image type="content" source="../assets/images/teams-live-share/canvas-highlighter-tool.gif" alt-text="Herramienta de resaltador de lienzo de Teams Live Share":::
+:::image type="content" source="../assets/images/teams-live-share/canvas-highlighter-tool.gif" alt-text="GIF muestra un ejemplo de dibujo de trazos translúcidos en el lienzo mediante la herramienta de resaltado.":::
 
 La herramienta de resaltado dibuja trazos translúcidos que se almacenan en el lienzo. La forma predeterminada de la punta es un cuadrado.
 
@@ -189,7 +189,7 @@ document.getElementById("highlighter-tip-size").onclick = () => {
 
 #### <a name="eraser-tool"></a>Herramienta borrador
 
-:::image type="content" source="../assets/images/teams-live-share/canvas-eraser-tool.gif" alt-text="Herramienta de borrador de lienzo de Teams Live Share":::
+:::image type="content" source="../assets/images/teams-live-share/canvas-eraser-tool.gif" alt-text="GIF muestra un ejemplo de borrado de trazos en el lienzo mediante la herramienta de borrador.":::
 
 La herramienta borrador borra trazos completos que cruzan su camino.
 
@@ -219,7 +219,7 @@ document.getElementById("eraser-size").onclick = () => {
 
 #### <a name="point-eraser-tool"></a>Herramienta de borrador de punto
 
-:::image type="content" source="../assets/images/teams-live-share/canvas-point-eraser-tool.gif" alt-text="Herramienta de borrador de punto de lienzo de Teams Live Share":::
+:::image type="content" source="../assets/images/teams-live-share/canvas-point-eraser-tool.gif" alt-text="GIF muestra un ejemplo de eliminación de puntos individuales dentro de trazos en el lienzo mediante la herramienta de borrador de puntos.":::
 
 La herramienta borrador de puntos borra puntos individuales dentro de trazos que cruzan su ruta dividiendo los trazos existentes por la mitad. Esta herramienta es costosa computacionalmente y puede dar lugar a velocidades de fotogramas más lentas para los usuarios.
 
@@ -247,7 +247,7 @@ document.getElementById("point-eraser").onclick = () => {
 
 #### <a name="laser-pointer"></a>Puntero láser
 
-:::image type="content" source="../assets/images/teams-live-share/canvas-laser-tool.gif" alt-text="Herramienta de puntero láser del lienzo de Teams Live Share":::
+:::image type="content" source="../assets/images/teams-live-share/canvas-laser-tool.gif" alt-text="GIF muestra un ejemplo de trazos de dibujo en el lienzo mediante la herramienta de puntero láser.":::
 
 El puntero láser es único, ya que la punta del láser tiene un efecto final a medida que mueve el mouse. Al dibujar trazos, el efecto final se representa durante un breve período antes de que se desvanezca por completo. Esta herramienta es perfecta para señalar información en la pantalla durante una reunión, ya que el moderador no tiene que cambiar entre herramientas para borrar trazos.
 
@@ -285,7 +285,7 @@ document.getElementById("laser-tip-size").onclick = () => {
 
 #### <a name="line-and-arrow-tools"></a>Herramientas de línea y flecha
 
-:::image type="content" source="../assets/images/teams-live-share/canvas-line-tool.gif" alt-text="Herramienta de línea de lienzo de Teams Live Share":::
+:::image type="content" source="../assets/images/teams-live-share/canvas-line-tool.gif" alt-text="GIF muestra un ejemplo de dibujo de líneas rectas en un lienzo mediante la herramienta de línea y flecha .":::
 
 La herramienta de línea permite a los usuarios dibujar líneas rectas de un punto a otro, con una flecha opcional que se puede aplicar al final.
 
@@ -333,7 +333,7 @@ Puede borrar todos los trazos del lienzo llamando a `inkingManager.clear()`. Est
 
 ### <a name="cursors"></a>Cursores
 
-:::image type="content" source="../assets/images/teams-live-share/canvas-cursors.gif" alt-text="Uso compartido de cursores en vivo de Teams":::
+:::image type="content" source="../assets/images/teams-live-share/canvas-cursors.gif" alt-text="GIF muestra un ejemplo de usuarios que comparten un cursor en un lienzo.":::
 
 Puede habilitar cursores en directo en la aplicación para que los usuarios realicen un seguimiento de las posiciones de los cursores entre sí en el lienzo. A diferencia de las herramientas de entrada manuscrita, los cursores funcionan completamente a través de la `LiveCanvas` clase . Opcionalmente, puede proporcionar un nombre y una imagen para identificar a cada usuario. Puede habilitar cursores por separado o con las herramientas de entrada manuscrita.
 
@@ -357,7 +357,7 @@ De forma predeterminada, el lienzo de Live Share funciona mucho como una aplicac
 
 Este es un diagrama sencillo para ayudar a visualizar este concepto:
 
-:::image type="content" source="../assets/images/teams-live-share/live-share-canvas-capabilities-docs-diagram-1.png" alt-text="Visualización de la ventanilla del lienzo de Live Share":::
+:::image type="content" source="../assets/images/teams-live-share/live-share-canvas-capabilities-docs-diagram-1.png" alt-text="Captura de pantalla que muestra el diseño del lienzo de pantalla completa para los usuarios de escritorio y móviles juntos.":::
 
 Puede personalizar este comportamiento de las siguientes maneras:
 
@@ -435,7 +435,7 @@ document.getElementById("change-reference").onclick = () => {
 
 ## <a name="ideal-scenarios"></a>Escenarios ideales
 
-Con las páginas web que vienen en todas las formas y tamaños, no es posible crear un lienzo de Live Share para admitir todos los escenarios. El paquete es ideal para escenarios en los que todos los usuarios miran al mismo tiempo el mismo contenido. Aunque no todo el contenido debe estar visible en la pantalla, debe ser contenido que se escale linealmente entre dispositivos.
+Con las páginas web que vienen en todas las formas y tamaños, no es posible crear un lienzo de Live Share para admitir todos los escenarios. El paquete es ideal para escenarios en los que todos los usuarios miran al mismo tiempo el mismo contenido. Aunque no todo el contenido debe estar visible en la pantalla, debe ser el contenido que se escala entre dispositivos linealmente.
 
 Estos son un par de ejemplos de escenarios en los que el lienzo de Live Share es una excelente opción para la aplicación:
 

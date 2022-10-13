@@ -6,16 +6,16 @@ ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 0febbd535f5375f03599009d32d9b613cf5af6d6
-ms.sourcegitcommit: e4ccbbdce620418c129689c0ba6ad246a81068c0
+ms.openlocfilehash: 6431a80f7340ad641f92ca5b7c8c55f83cf5c9fd
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2022
-ms.locfileid: "68329087"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560494"
 ---
 # <a name="create-a-channel-tab"></a>Crear una pestaña de canal
 
-Pestañas de canal o grupo entregar contenido a canales y chats grupales, y son una excelente manera de crear espacios de colaboración en torno a contenido dedicado basado en web.
+Las pestañas de canal o grupo entregan contenido a canales y chats de grupo, lo que ayuda a crear espacios de colaboración en torno al contenido web dedicado.
 
 Asegúrese de que tiene todos los [requisitos previos](~/tabs/how-to/tab-requirements.md) para compilar el canal o la pestaña de grupo.
 
@@ -31,7 +31,7 @@ Asegúrese de que tiene todos los [requisitos previos](~/tabs/how-to/tab-require
     npm install yo gulp-cli --global
     ```
 
-2. En el símbolo del sistema, instale el generador de aplicaciones de Microsoft Teams escribiendo el siguiente comando:
+2. En el símbolo del sistema, instale el generador de aplicaciones de Microsoft Teams; para ello, escriba el siguiente comando:
 
     ```cmd
     npm install generator-teams --global
@@ -55,7 +55,7 @@ Estos son los pasos para crear una pestaña de canal o grupo:
     yo teams
     ```
 
-1. Proporcione sus valores a una serie de preguntas solicitadas por el generador de aplicaciones de Microsoft Teams para actualizar el archivo `manifest.json`:
+1. Proporcione los valores a una serie de preguntas que le pide el generador de aplicaciones de Microsoft Teams para actualizar el `manifest.json` archivo:
 
     ![captura de pantalla de apertura del generador](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
 
@@ -76,7 +76,7 @@ Estos son los pasos para crear una pestaña de canal o grupo:
 
     * **¿Nombre (de su empresa)? (Máximo 32 caracteres)**
 
-        El nombre de la empresa se usará en el manifiesto de la aplicación. Escriba un nombre de empresa o seleccione **Introducir** para aceptar el nombre predeterminado.
+        El nombre de la empresa se puede usar en el manifiesto de la aplicación. Escriba un nombre de empresa o seleccione **Introducir** para aceptar el nombre predeterminado.
 
     * **¿Qué versión del manifiesto desea usar?**
 
@@ -94,9 +94,9 @@ Estos son los pasos para crear una pestaña de canal o grupo:
 
         Seleccione **( &ast; ) Una pestaña**.
 
-    * **¿Cuál es la dirección URL en donde hospedará esta solución?**
+    * **¿La dirección URL para hospedar esta solución?**
 
-        De forma predeterminada, el generador sugiere una dirección URL de sitios web de Azure. Solo está probando la aplicación localmente, por lo que no es necesaria ninguna dirección URL válida.
+        De forma predeterminada, el generador sugiere una dirección URL del sitio web de Azure. Solo está probando la aplicación localmente, por lo que no es necesaria ninguna dirección URL válida.
 
     * **¿Quiere mostrar un indicador de carga cuando se cargue la aplicación o la pestaña?**
 
@@ -179,7 +179,7 @@ gulp build
 
     :::image type="content" source="~/assets/images/tab-images/homePage.png" alt-text="Pestaña predeterminada":::
 
-1. Para ver la página de configuración de la pestaña, vaya a `http://localhost:3007/<yourDefaultAppNameTab>/config.html`. Se muestra lo siguiente:
+1. Para ver la página de configuración de la pestaña, vaya a `http://localhost:3007/<yourDefaultAppNameTab>/config.html`.
 
     :::image type="content" source="~/assets/images/tab-images/configurationPage.png" alt-text="Página de configuración de la pestaña":::
 
@@ -338,7 +338,10 @@ Asegúrese de mantener el símbolo del sistema con ngrok en ejecución y tome no
 
     ```html
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-    <script src="https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js"></script>
+    <script src="https://res.cdn.office.net/teams-js/2.2.0/js/MicrosoftTeams.min.js" 
+      integrity="sha384yBjE++eHeBPzIg+IKl9OHFqMbSdrzY2S/LW3qeitc5vqXewEYRWegByWzBN/chRh" 
+      crossorigin="anonymous" >
+    </script>
     ```
 
     > [!IMPORTANT]
@@ -346,9 +349,9 @@ Asegúrese de mantener el símbolo del sistema con ngrok en ejecución y tome no
 
 1. Inserte una llamada a `microsoftTeams.app.initialize();` en la etiqueta `script`.
 
-1. En el Explorador de soluciones de Visual Studio vaya a la carpeta **Pages** y abra **Tab.cshtml**.
+1. En Visual Studio Explorador de soluciones, vaya a la carpeta **Pages** y abra **Tab.cshtml**.
 
-    En **Tab.cshtml** , la aplicación presenta al usuario dos opciones para mostrar la pestaña con un icono rojo o gris. El botón **Seleccionar gris** o **Seleccionar rojo** desencadena `saveGray()` o `saveRed()` , respectivamente, establece `pages.config.setValidityState(true)`y habilita **Guardar** en la página de configuración. Este código permite a Teams saber que ha completado la configuración de requisitos y puede continuar con la instalación. Se establecen los parámetros de `pages.config.setConfig`. Por último, se llama a `saveEvent.notifySuccess()` para indicar que la dirección URL de contenido se ha resuelto correctamente.
+    En **Tab.cshtml**, la aplicación presenta al usuario dos opciones para mostrar la pestaña con un icono rojo o gris. El botón **Seleccionar gris** o **Seleccionar rojo** desencadena `saveGray()` o `saveRed()` , respectivamente, establece `pages.config.setValidityState(true)`y habilita **Guardar** en la página de configuración. Este código permite a Teams saber que ha completado la configuración de requisitos y puede continuar con la instalación. Se establecen los parámetros de `pages.config.setConfig`. Por último, se llama a `saveEvent.notifySuccess()` para indicar que la dirección URL de contenido se ha resuelto correctamente.
 
 1. Actualice los valores `websiteUrl` y `contentUrl` en cada función con la dirección URL de ngrok HTTPS en la pestaña.
 
@@ -515,7 +518,7 @@ Estos archivos deben comprimirse en un paquete de aplicación para usarlos al ca
 
 #### <a name="csproj"></a>.csproj
 
-En la ventana Explorador de soluciones de Visual Studio, haga clic con el botón derecho en el proyecto y seleccione **Editar archivo de proyecto**. Al final del archivo, verá el código siguiente que crea y actualiza la carpeta ZIP cuando se compila la aplicación:
+En la ventana Explorador de soluciones de Visual Studio, haga clic con el botón derecho en el proyecto y seleccione **Editar archivo de proyecto**. Al final del archivo, vea el código siguiente que crea y actualiza la carpeta zip cuando se compila la aplicación:
 
 ```xml
 <PropertyGroup>
@@ -537,15 +540,15 @@ En la ventana Explorador de soluciones de Visual Studio, haga clic con el botón
 
 #### <a name="models"></a>Modelos
 
-**ChannelGroup.cs** presenta un objeto Message y métodos a los que se llamará desde los controladores durante la configuración.
+**ChannelGroup.cs** presenta un objeto de mensaje y métodos a los que se puede llamar desde los controladores durante la configuración.
 
 #### <a name="views"></a>Vistas
 
 Estas son las distintas vistas de ASP.NET Core MVC:
 
-* Inicio: ASP.NET Core trata los archivos denominados **Index** como la página principal o predeterminada del sitio. Cuando la dirección URL del explorador apunta a la raíz del sitio, **Index.cshtml** se mostrará como la página principal de la aplicación.
+* Inicio: ASP.NET Core trata los archivos denominados **Index** como la página principal o predeterminada del sitio. Cuando la dirección URL del explorador apunta a la raíz del sitio, **Index.cshtml** se puede mostrar como la página principal de la aplicación.
 
-* Compartido: el marcado de vista parcial **_Layout.cshtml** contiene la estructura general de la página de la aplicación y los elementos visuales compartidos. También hará referencia a la biblioteca de Teams.
+* Compartido: el marcado de vista parcial **_Layout.cshtml** contiene la estructura general de la página de la aplicación y los elementos visuales compartidos que también hacen referencia a la biblioteca de Teams.
 
 #### <a name="controllers"></a>Controladores
 
@@ -569,7 +572,10 @@ Asegúrese de mantener el símbolo del sistema con ngrok en ejecución y tome no
 
     ```html
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-    <script src="https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js"></script>
+    <script src="https://res.cdn.office.net/teams-js/2.2.0/js/MicrosoftTeams.min.js" 
+      integrity="sha384yBjE++eHeBPzIg+IKl9OHFqMbSdrzY2S/LW3qeitc5vqXewEYRWegByWzBN/chRh" 
+      crossorigin="anonymous" >
+    </script>
     ```
 
     > [!IMPORTANT]
@@ -577,9 +583,9 @@ Asegúrese de mantener el símbolo del sistema con ngrok en ejecución y tome no
 
 1. Inserte una llamada a `microsoftTeams.app.initialize();` en la etiqueta `script`.
 
-1. En el Explorador de soluciones de Visual Studio vaya a la carpeta **Tab** y abra **Tab.cshtml**.
+1. En Visual Studio Explorador de soluciones, vaya a la carpeta **Tab** y abra **Tab.cshtml**.
 
-    En **Tab.cshtml** , la aplicación presenta al usuario dos opciones para mostrar la pestaña con un icono rojo o gris. El botón **Seleccionar gris** o **Seleccionar rojo** desencadena `saveGray()` o `saveRed()` , respectivamente, establece `pages.config.setValidityState(true)`y habilita **Guardar** en la página de configuración. Este código permite a Teams saber que ha completado la configuración de requisitos y puede continuar con la instalación. Se establecen los parámetros de `pages.config.setConfig`. Por último, se llama a `saveEvent.notifySuccess()` para indicar que la dirección URL de contenido se ha resuelto correctamente.
+    En **Tab.cshtml**, la aplicación presenta al usuario dos opciones para mostrar la pestaña con un icono rojo o gris. El botón **Seleccionar gris** o **Seleccionar rojo** desencadena `saveGray()` o `saveRed()` , respectivamente, establece `pages.config.setValidityState(true)`y habilita **Guardar** en la página de configuración. Este código permite a Teams saber que ha completado la configuración de requisitos y puede continuar con la instalación. Se establecen los parámetros de `pages.config.setConfig`. Por último, se llama a `saveEvent.notifySuccess()` para indicar que la dirección URL de contenido se ha resuelto correctamente.
 
 1. Actualice los valores `websiteUrl` y `contentUrl` en cada función con la dirección URL de ngrok HTTPS en la pestaña.
 

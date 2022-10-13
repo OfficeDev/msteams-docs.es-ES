@@ -1,16 +1,16 @@
 ---
 title: Ofrecer mantenimiento y soporte técnico de su aplicación publicada
-description: Aprenda a mantener la aplicación de Microsoft Teams publicada y qué hacer después de que la tienda aparezca en la tienda de Teams y AppSource. Analice el uso de la aplicación, publique actualizaciones, promueva la aplicación y complete la certificación de Microsoft 365.
+description: Mantenga la aplicación de Microsoft Teams publicada. Analice el uso de la aplicación, publique actualizaciones, promueva la aplicación y complete la certificación de Microsoft 365.
 ms.topic: conceptual
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: f05613a54ea87660611bb4a4d66d2f88f9ee3b46
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 77b17cb837312bca5b253fbd99fba2d0503f1744
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100332"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560473"
 ---
 # <a name="maintain-your-published-microsoft-teams-app"></a>Mantener la aplicación publicada de Microsoft Teams
 

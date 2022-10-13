@@ -5,12 +5,12 @@ description: Aprenda a habilitar la pestaña para volver a configurarla después
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 964872d0de88d7462bec68d84f7b1e1ecf3681ec
-ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
+ms.openlocfilehash: 40d6024d01b608c99347e9df65883906d7cb276d
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2022
-ms.locfileid: "68499297"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560452"
 ---
 # <a name="create-a-removal-page"></a>Crear una página de eliminación
 
@@ -40,7 +40,7 @@ La página de eliminación opcional es una página HTML que hospeda y se muestra
 
 ### <a name="register-a-remove-handler"></a>Registrar un controlador de eliminación
 
-Opcionalmente, dentro de la lógica de la página de eliminación, puede invocar el `registerOnRemoveHandler((RemoveEvent) => {}` controlador de eventos cuando el usuario quita una configuración de pestaña existente. El método toma la interfaz [`RemoveEvent`](/javascript/api/@microsoft/teams-js/pages.config.removeevent?view=msteams-client-js-latest&preserve-view=true) y ejecuta el código en el controlador cuando un usuario intenta quitar contenido. El método se usa para realizar operaciones de limpieza, como quitar el recurso subyacente que alimenta el contenido de la pestaña. A la vez, solo se puede registrar un controlador de eliminación.
+Opcionalmente, dentro de la lógica de la página de eliminación, puede invocar el `registerOnRemoveHandler((RemoveEvent) => {}` controlador de eventos cuando el usuario quita una configuración de pestaña existente. El método toma la interfaz [`RemoveEvent`](/javascript/api/@microsoft/teams-js/pages.config.removeevent?view=msteams-client-js-latest&preserve-view=true) y ejecuta el código en el controlador cuando un usuario intenta quitar contenido. El método se usa para realizar operaciones de limpieza, como quitar el recurso subyacente que alimenta el contenido de la pestaña. A la vez solo se puede registrar un controlador de eliminación.
 
 La interfaz `RemoveEvent` describe un objeto con dos métodos:
 
@@ -67,9 +67,8 @@ A continuación se muestra un bloque de código de eliminación de pestañas de 
 ```html
 <body>
   <button onclick="onClick()">Delete this tab and all underlying data?</button>
-  <script type="module">
-        import {app, pages} from 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js';
-    await app.initialize();
+  <script>
+    await microsoftTeams.app.initialize();
     pages.config.registerOnRemoveHandler((removeEvent) => {
       // Here you can designate the tab content to be removed and/or archived.
         const configPromise = pages.getConfig();

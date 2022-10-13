@@ -6,12 +6,12 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: v-ypalikila
 ms.date: 04/07/2022
-ms.openlocfilehash: 38157dea1c2d24b82cf1f48829639fd1d92392c1
-ms.sourcegitcommit: 0fa0bc081da05b2a241fd8054488d9fd0104e17b
+ms.openlocfilehash: c242faa57809bb967a29b7ab224e6cc0e859247b
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2022
-ms.locfileid: "68552534"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560557"
 ---
 ---
 
@@ -49,9 +49,9 @@ Puede encontrar más información sobre este paquete en la [página de funcional
 
 ### <a name="live-share-media"></a>Contenido multimedia de Live Share
 
-:::image type="content" source="../assets/images/teams-live-share/teams-live-share-contoso-video.gif" alt-text="Experiencia de uso compartido de vídeo con Live Share":::
+:::image type="content" source="../assets/images/teams-live-share/teams-live-share-contoso-video.gif" alt-text="Captura de pantalla que muestra un ejemplo de experiencia de uso compartido de vídeo de Live Share.":::
 
-El vídeo y el audio forman parte fundamental del mundo moderno y de los lugares de trabajo. Live Share Media permite la **sincronización de medios** para cualquier reproductor multimedia con solo unas pocas líneas de código. Al sincronizar los medios en la capa de controles de transporte y estado del reproductor, puede atribuir vistas individualmente, a la vez que proporciona la máxima calidad posible disponible a través de la aplicación. Dado que Microsoft no está retransmitiendo de nuevo el contenido multimedia, los requisitos de licencia y acceso se mantienen intactos.
+El vídeo y el audio forman parte fundamental del mundo moderno y de los lugares de trabajo. Live Share Media permite la **sincronización de medios** para cualquier reproductor multimedia con solo unas pocas líneas de código. Al sincronizar los medios en la capa de controles de transporte y estado del reproductor, puede atribuir vistas individualmente, a la vez que proporciona la máxima calidad posible disponible a través de la aplicación. Dado que Microsoft no retransmite de nuevo el contenido multimedia, los requisitos de licencia y acceso se mantienen intactos.
 
 Entre las características admitidas por los medios de Live Share se incluyen:
 
@@ -67,7 +67,7 @@ Puede encontrar más información sobre este paquete en la [página multimedia d
 
 ### <a name="live-share-canvas"></a>Lienzo de Live Share
 
-:::image type="content" source="../assets/images/teams-live-share/Teams-live-share-schematics.png" alt-text="Live Share de Teams":::
+:::image type="content" source="../assets/images/teams-live-share/Teams-live-share-schematics.png" alt-text="Capturas de pantalla que muestran un ejemplo de varios usuarios dibujando en un lienzo durante una reunión.":::
 
 Al colaborar en reuniones, es esencial que los usuarios puedan señalar y enfatizar el contenido en la pantalla. Live Share Canvas facilita la incorporación de entrada manuscrita, punteros láser y cursores a la aplicación para una colaboración perfecta.
 
@@ -173,7 +173,7 @@ Para obtener más información, consulte la [guía de procedimientos del](./team
 | :-------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Durante una revisión de marketing, un usuario quiere recopilar comentarios sobre su última edición de vídeo. | El usuario comparte el vídeo en la fase de reunión e inicia el vídeo. Según sea necesario, el usuario pausa el vídeo para analizar la escena y los participantes dibujan partes de la pantalla para enfatizar los puntos clave. |
 | Un jefe de proyecto juega Agile Poker con su equipo durante la planificación.                    | El administrador comparte una aplicación agile poker en la fase de reunión que permite jugar al juego de planificación hasta que el equipo tenga consenso.                                                                        |
-| Un asesor financiero revisa documentos PDF con los clientes antes de firmar.                  | El asesor financiero comparte el contrato PDF en la fase de reunión. Todos los asistentes pueden ver cursores y texto resaltado en el PDF, después de lo cual ambas partes firman el acuerdo.        |
+| Un asesor financiero revisa documentos PDF con los clientes antes de firmar.                  | El asesor financiero comparte el contrato PDF en la fase de reunión. Todos los asistentes pueden ver los cursores del otro y el texto resaltado en el PDF, después de lo cual ambas partes firman el acuerdo.        |
 
 > [!IMPORTANT]
 > Live Share tiene licencia bajo la [licencia del SDK de Microsoft Live Share](https://github.com/microsoft/live-share-sdk/blob/main/LICENSE). Para usar estas funcionalidades en la aplicación, primero debe leer y aceptar estos términos.
