@@ -3,12 +3,12 @@ title: Pestañas en dispositivos móviles
 description: Obtenga información sobre cómo funcionan las pestañas en los clientes de Microsoft Teams (móvil) de Android e iOS, su autenticación, su conexión de ancho de banda bajo, las pruebas o la distribución.
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: 604d1ed8cabd745359e4714bc1b5fe82e67c7662
-ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
+ms.openlocfilehash: 0dbb74d5c2854897f82708aa83a0c49df4f28890
+ms.sourcegitcommit: bd96080c78f25eb0a67ce176df5e255be348f7b1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2022
-ms.locfileid: "67450481"
+ms.lasthandoff: 10/14/2022
+ms.locfileid: "68575771"
 ---
 # <a name="tabs-on-mobile"></a>Pestañas en dispositivos móviles
 
@@ -53,7 +53,7 @@ En la tabla siguiente se describe la disponibilidad y el comportamiento de las p
 |Funcionalidad   |¿Disponibilidad móvil?   |Comportamiento móvil|
 |----------|-----------|------------|
 |Canal <br /> y pestaña de grupo|Yes|La pestaña se abre en el cliente móvil de Teams mediante la configuración de la `contentUrl` aplicación.|
-|Aplicación personal|Yes|Cada pestaña de la pestaña aplicación personal se abre en el cliente móvil de Teams con su configuración respectiva `contentUrl` .|
+|Aplicación personal|Sí|Cada pestaña de la pestaña aplicación personal se abre en el cliente móvil de Teams con su configuración respectiva `contentUrl` .|
 
 ### <a name="apps-on-teams-store-not-approved-for-mobile"></a>Aplicaciones en la tienda teams no aprobadas para dispositivos móviles
 
@@ -63,6 +63,11 @@ En la tabla siguiente se describe la disponibilidad y el comportamiento de las p
 |----------|-----------|------------|
 |Pestaña Canal y grupo|Yes|La pestaña se abre en el explorador predeterminado del dispositivo en lugar del cliente móvil de Teams mediante la configuración de la `websiteUrl` aplicación, que también debe incluirse en la [función](/microsoftteams/platform/tabs/how-to/using-teams-client-sdk#settings-namespace) del `setSettings()` código fuente. Sin embargo, los usuarios pueden ver la pestaña en el cliente móvil de Teams seleccionando **Más** junto a la aplicación y eligiendo **Abrir**, lo que desencadena la configuración de la `contentUrl` aplicación.|
 |Aplicación personal|No|No aplicable|
+
+> [!NOTE]
+> Los mensajes del bot se muestran en la sección de chat si una aplicación móvil tiene las funcionalidades bot y tab.
+>
+> Al seleccionar **Chat** de la aplicación de bot y seleccionar **Más (...)**, no puede ver la funcionalidad de tabulación de esa aplicación en la lista. Sin embargo, si selecciona **Más (...)** en la parte inferior derecha de la sección **Chat** , puede ver la aplicación de pestaña con un vínculo a la funcionalidad de la aplicación de bot de esa aplicación.
 
 ### <a name="apps-not-on-teams-store"></a>Aplicaciones que no están en el almacén de Teams
 
