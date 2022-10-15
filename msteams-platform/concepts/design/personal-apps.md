@@ -5,16 +5,16 @@ author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: ad6a69f05225c6821ec1d8ee8ba1f569044247ff
-ms.sourcegitcommit: 2d2a08f671c3d19381403ba1af5dff1f06bb4dd6
+ms.openlocfilehash: 4646d47c5aa325291f060ea192dcc1705b414ac7
+ms.sourcegitcommit: bd96080c78f25eb0a67ce176df5e255be348f7b1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2022
-ms.locfileid: "67338826"
+ms.lasthandoff: 10/14/2022
+ms.locfileid: "68575799"
 ---
 # <a name="designing-your-personal-app-for-microsoft-teams"></a>Diseñe la aplicación personal para Microsoft Teams
 
-Una aplicación personal puede ser un bot, un área de trabajo privada o ambas. A veces funciona como un sitio para crear o ver contenido, otras veces ofrece al usuario una vista general de todo lo que tienen si la aplicación se ha configurado como una pestaña en varios canales.
+Una aplicación personal puede ser un bot, un área de trabajo privada o ambas. A veces funciona como un lugar para crear o ver contenido. Otras veces, ofrece al usuario una vista general de todo lo que es suyo cuando la aplicación se ha configurado como una pestaña en varios canales.
 
 A modo de guía en el diseño de su aplicación, a continuación se describe e ilustra cómo pueden los usuarios agregar, usar y administrar bots en Teams.
 
@@ -47,8 +47,39 @@ Con un área de trabajo privada, los usuarios pueden ver el contenido de la apli
 |----------|-----------|
 |A|**Atribución de la aplicación**: nombre de la aplicación.|
 |N|**Pestañas**: navegación en la aplicación personal.|
-|C|**Menú Más**: incluye información y opciones adicionales de la aplicación.|
+|C|**Más menú**: incluye otras opciones e información de la aplicación.|
 |D|**Navegación principal**: proporciona navegación a otras características principales de la aplicación de Teams.|
+
+#### <a name="configure-and-add-multiple-actions-in-navbar"></a>**Configuración y adición de varias acciones en NavBar**
+
+Puede agregar varias acciones a la barra de navegación superior derecha y crear un menú de desbordamiento para acciones adicionales en una aplicación.
+
+>[!NOTE]
+> Se pueden agregar un máximo de cinco acciones en la barra de navegación, incluido el menú de desbordamiento.
+
+:::image type="content" source="../../assets/images/overflow-menu-and-multiple-actionsoptions.png" alt-text="La captura de pantalla es un ejemplo que describe el menú NavBar y Overflow.":::
+
+Para **configurar y agregar varias acciones en NavBar**, llame a [setNavBarMenu](/javascript/api/@microsoft/teams-js/microsoftteams.menus?view=msteams-client-js-1.12.1&preserve-view=true) API. y agregue la `displayMode enum` propiedad a `MenuItem`. `displayMode enum` define cómo aparece un menú en la barra de navegación. El valor predeterminado de `displayMode enum` se establece en `ifRoom`.
+
+En función de los requisitos y el espacio disponible en la barra de navegación, establezca `displayMode enum` teniendo en cuenta uno de los siguientes.
+
+* Si hay espacio, establezca `ifRoom = 0` para colocar un elemento en la barra de navegación.
+* Si no hay espacio, establezca `overflowOnly = 1`, para que ese elemento siempre se coloque en el menú de desbordamiento de la barra de navegación, pero no en la barra de navegación.
+
+A continuación se muestra un ejemplo de configuración de la barra de navegación con un menú de desbordamiento para varias acciones:
+
+```typescript
+const menuItems = [item1, item2, item3, item4, item5]
+microsoftTeams.menus.setNavBarMenu(menuItems, (id: string) => {
+  output(`Clicked ${id}`)
+  return true;
+})
+```
+
+> [!NOTE]
+> La `setNavBarMenu` API no controla el botón **Actualizar** . Aparece de forma predeterminada.
+
+:::image type="content" source="../../assets/images/overflow-menu-and-multple-actions.png" alt-text="La captura de pantalla es un ejemplo que muestra la barra de navegación y varias acciones en un menú de desbordamiento.":::
 
 :::image type="content" source="../../assets/images/personal-apps/mobile-personal-tab-structural-anatomy.png" alt-text="En el ejemplo se muestra la anatomía estructural de la pestaña personal.":::
 
@@ -66,7 +97,7 @@ Con un área de trabajo privada, los usuarios pueden ver el contenido de la apli
 |A|**Atribución de aplicaciones**: el logotipo y el nombre de la aplicación.|
 |N|**Pestañas**: navegación en la aplicación personal.|
 |C|**Vista emergente**: inserta el contenido de la aplicación desde una ventana primaria en una ventana secundaria independiente.|
-|D|**Menú Más**: incluye información y opciones adicionales de la aplicación. (También puede convertir **Configuración** en una pestaña).|
+|D|**Más menú**: incluye otras opciones e información de la aplicación. (También puede convertir **Configuración** en una pestaña).|
 
 :::image type="content" source="../../assets/images/personal-apps/personal-tab-structural-anatomy.png" alt-text="En este ejemplo se muestra la anatomía estructural de la pestaña personal.":::
 
@@ -88,7 +119,7 @@ Use una de las siguientes plantillas y componentes de Teams para ayudar a diseñ
 
 ## <a name="use-a-personal-app-bot"></a>Uso de una aplicación personal (bot)
 
-Las aplicaciones personales pueden incluir un bot para conversaciones individuales y notificaciones privadas (por ejemplo, cuando un compañero publica un comentario en la mesa de trabajo). Los usuarios interactúan con el bot en la pestaña que se especifique.
+Personal apps can include a bot for one-on-one conversations and private notifications (for instance, when a colleague posts a comment on artboard). Users interact with the bot in a tab you specify.
 
 ### <a name="anatomy-personal-app-bot"></a>Anatomía: Aplicación personal (bot)
 
@@ -102,6 +133,30 @@ Las aplicaciones personales pueden incluir un bot para conversaciones individual
 |N|**Botón Atrás**: devuelve a los usuarios al área de trabajo privada.|
 |C|**Mensaje del bot**: los bots suelen enviar mensajes y notificaciones en forma de tarjeta (por ejemplo, una tarjeta adaptable).|
 |D|**Cuadro Redactar**: campo de entrada para enviar mensajes al bot.|
+
+#### <a name="configure-back-button"></a>Botón Configurar atrás
+
+Al seleccionar el botón Atrás en una aplicación de Teams, volverá a la plataforma teams sin navegar dentro de la aplicación.
+
+Para navegar dentro de la aplicación, configure el botón Atrás para que, al seleccionar el botón Atrás, pueda volver a los pasos anteriores y navegar dentro de la aplicación.
+
+Para **configurar el botón Atrás**, llame a [registerBackButtonHandler](/javascript/api/@microsoft/teams-js/pages.backstack?view=msteams-client-js-latest&preserve-view=true&branch=pr-en-us-6801&preserve-view=true) API, que controla la funcionalidad del botón Atrás en función de una de las condiciones siguientes:
+
+* Cuando `registerBackButtonHandler` se establece en `false`, el SDK de JavaScript llama a la `navigateBack` API y la plataforma teams controla el botón Atrás.
+* Cuando `registerBackButtonHandler` se establece en `true`, la aplicación controla la funcionalidad del botón Atrás (puede volver a los pasos anteriores y navegar dentro de la aplicación) y la plataforma Teams no realiza ninguna acción adicional.
+
+A continuación se muestra un ejemplo de configuración del botón Atrás:
+
+```typescript
+microsoftTeams.registerBackButtonHandler(() => {
+  const selectOption = registerBackReturn.options[registerBackReturn.selectedIndex].value
+  var isHandled = false
+  if (selectOption == 'true') 
+    isHandled = true;
+  output(`onBack isHandled ${isHandled}`)
+  return isHandled;
+})
+```
 
 #### <a name="desktop"></a>Escritorio
 
@@ -204,4 +259,6 @@ A menos que haya creado la aplicación específicamente para Teams, probablement
 Estas otras directrices de diseño pueden ayudar en función del ámbito de la aplicación personal:
 
 * [Diseño de la pestaña](../../tabs/design/tabs.md)
-* [Diseño del bot](../../bots/design/bots.md)
+* [Cómo diseñar su bot](../../bots/design/bots.md)
+* [registerBackButtonHandler](/javascript/api/@microsoft/teams-js/pages.backstack?view=msteams-client-js-latest&preserve-view=true&branch=pr-en-us-6801&preserve-view=true)
+* [Enumeración DisplayMode](/javascript/api/@microsoft/teams-js/menus.displaymode?view=msteams-client-js-latest&preserve-view=true)
