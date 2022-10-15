@@ -4,12 +4,12 @@ description: Obtenga información sobre las nuevas características para desarro
 ms.topic: reference
 ms.localizationpriority: high
 zone_pivot_groups: What-new-features
-ms.openlocfilehash: b1c06e5ea6e46adf5a40d29015bf79a30d653107
-ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
+ms.openlocfilehash: 069c908c18377b440d21e44c0a95594d2904722b
+ms.sourcegitcommit: bd96080c78f25eb0a67ce176df5e255be348f7b1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2022
-ms.locfileid: "68560753"
+ms.lasthandoff: 10/14/2022
+ms.locfileid: "68575778"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores en Microsoft Teams
 
@@ -31,6 +31,8 @@ Características de la plataforma Microsoft Teams que están disponibles para to
 
 **Octubre de 2022**
 
+* ***13 de octubre de 2022***: [Configure NavBar y cree un menú de desbordamiento para varias acciones](concepts/design/personal-apps.md#configure-and-add-multiple-actions-in-navbar).
+* ***13 de octubre de 2022***: [botón Configurar atrás de una aplicación](concepts/design/personal-apps.md#configure-back-button).
 * ***12 de octubre de 2022***: [las aplicaciones se admiten en reuniones instantáneas, llamadas uno a uno y llamadas grupales.](apps-in-teams-meetings/teams-apps-in-meetings.md)
 * ***12 de octubre de 2022***: [Lienzo de Live Share](apps-in-teams-meetings/teams-live-share-canvas.md)
 
