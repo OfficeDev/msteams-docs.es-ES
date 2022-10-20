@@ -4,12 +4,12 @@ description: En este artículo, aprenderá a configurar, distribuir y administra
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 02b9272c2c0d325501c28d150ac728230ac65255
-ms.sourcegitcommit: 9ebb516ac448627e1deb42e18703791fc2ad583d
+ms.openlocfilehash: e66ee0a46417fe18c6729cb11bb2851795cda4c4
+ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68098921"
+ms.lasthandoff: 10/20/2022
+ms.locfileid: "68615320"
 ---
 # <a name="manage-your-apps-in-developer-portal"></a>Administre sus aplicaciones en el Portal para desarrolladores
 
@@ -55,6 +55,8 @@ En la sección **Configurar** , puede ver los siguientes componentes para admini
   * Extensión de mensajería
   * Extensión de reunión
   * Notificación de fuente de actividad
+  > [!NOTE]
+  > Actualmente, El conector no está disponible para los inquilinos de Government Community Cloud (GCC).
 * **Permisos**: esta sección le permite conceder permisos de dispositivo, permisos de equipo, permisos de chat o reunión y permisos de usuario para la aplicación.
 * **Inicio de sesión único**: bot registrado en Azure AD admite Sign-On único (SSO). Si un bot está registrado en Bot Framework Portal (o en el Portal para desarrolladores en Bot Management), esos bots no admiten el inicio de sesión único y debe registrar el bot en Azure AD para admitir el inicio de sesión único. Para un bot registrado en Azure AD, agregue el **URI del identificador de aplicación**. Para obtener el URI del identificador de aplicación de Azure AD, consulte Uso de la [autenticación de SSO para bots](../../bots/how-to/authentication/auth-aad-sso-bots.md).
 * **Idiomas**: puede configurar o cambiar el idioma de la aplicación.

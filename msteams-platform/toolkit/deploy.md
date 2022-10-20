@@ -7,16 +7,16 @@ ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: 179a3002533e296e03dc0bb367b43880e95c3a1f
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: 4f5afe23e9d8deefdf2b1b182fa51cfe034e5c4d
+ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67781119"
+ms.lasthandoff: 10/20/2022
+ms.locfileid: "68615145"
 ---
 # <a name="deploy-teams-app-to-the-cloud"></a>Implementar la aplicación de Teams en la nube
 
-El kit de herramientas de Teams le ayuda a implementar o cargar el código frontend y backend de su aplicación en sus recursos de nube aprovisionados en Azure.
+Teams Toolkit le ayuda a implementar o cargar el código front-end y back-end de la aplicación en los recursos de nube aprovisionados en Azure.
 
 ::: zone pivot="visual-studio-code"
 
@@ -24,9 +24,9 @@ El kit de herramientas de Teams le ayuda a implementar o cargar el código front
 
 Puede implementar lo siguiente en la nube:
 
-* La pestaña, como las aplicaciones de frontend se implementan en el almacenamiento de Azure y se configuran para el alojamiento web estático o un sitio de sharepoint.
-* Las API de backend se implementan en Azure Functions.
-* El bot o la extensión de mensajes se implementa en el servicio de aplicaciones de Azure.
+* La pestaña, como las aplicaciones front-end, se implementa en Azure Storage y se configura para el hospedaje web estático o un sitio de SharePoint.
+* Las API de back-end se implementan en Azure Functions.
+* La extensión de bot o mensaje se implementa en Azure App Service.
 
   > [!NOTE]
   > Antes de implementar el código de la aplicación en la nube de Azure, debe completar correctamente el [aprovisionamiento de recursos en la nube](provision.md).
@@ -42,10 +42,10 @@ Las guías de introducción le ayudan a implementar mediante el kit de herramien
 
 | Carga de trabajo de la aplicación de Teams | Código fuente | Artefacto de compilación| Recurso de destino |
 |-------------|----------|---------------|---------------|
-|Pestañas con React </br> Carga de trabajo de front-end| `yourProjectFolder/tabs`| `tabs/build` |Almacenamiento de Azure |
+|Pestañas con React </br> Carga de trabajo de front-end| `yourProjectFolder/tabs`| `tabs/build` |Azure Storage |
 |Pestañas con SharePoint </br> Carga de trabajo de front-end | `yourProjectFolder/SPFx`| `SPFx/sharepoint/solution` |Catálogo de aplicaciones de SharePoint |
 |API en Azure Functions </br> Carga de trabajo de back-end | `yourProjectFolder/api`| No aplicable |Azure Functions |
-|Bots y extensiones de mensaje </br> Carga de trabajo de back-end | `yourProjectFolder/bot` | No aplicable | Servicio de aplicaciones de Azure |
+|Bots y extensiones de mensaje </br> Carga de trabajo de back-end | `yourProjectFolder/bot` | No aplicable | Azure App Service |
 
 > [!NOTE]
 > Al incluir el recurso de Azure API Management en el proyecto y desencadenar la implementación, puede publicar las API en Azure Functions en el servicio Azure API Management.
@@ -59,7 +59,7 @@ Las guías de introducción le ayudan a implementar mediante el kit de herramien
 Las siguientes aplicaciones se pueden implementar en Visual Studio:
 
 * La aplicación de pestaña, como las aplicaciones de front-end, se implementa en Azure Storage, configurada para el hospedaje web estático.
-* La aplicación de bot de notificación con desencadenadores de función de Azure se puede implementar en Azure Functions.
+* La aplicación del bot de notificación con desencadenadores de Azure Functions se puede implementar en Azure Functions.
 * La aplicación de bot o la extensión de mensaje se pueden implementar en Azure App Services.
 
 Después de la implementación, puede obtener una vista previa de la aplicación en el cliente de Teams o en el explorador web antes de empezar a usar.
@@ -104,7 +104,7 @@ Para obtener una vista previa de la aplicación, primero debe crear un paquete d
 
 La otra manera de obtener una vista previa de la aplicación:
 
-1. Haga clic con el botón derecho en el proyecto **MyTeamsApp1** en **Explorador de soluciones**.
+1. Haga clic con el botón derecho en el proyecto **MyTeamsApp1** en **समाधान अन्वेषक**.
 1. Seleccione **Versión preliminar del kit de herramientas de** >  Teams **en Teams** para iniciar la aplicación teams en el explorador web.
 
    :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/vs-deploy-preview-teams.png" alt-text="Vista previa de la aplicación teams en el explorador web":::

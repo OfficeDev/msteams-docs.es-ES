@@ -5,12 +5,12 @@ description: Cree webhook entrante en la aplicación Teams y publique solicitude
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: c439a7147ea4fe76e2cd1778396b4936a6313a23
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 5f6aef184805aa4ef7a68eac827b08fa8d4c12f1
+ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100479"
+ms.lasthandoff: 10/20/2022
+ms.locfileid: "68615334"
 ---
 # <a name="create-incoming-webhooks"></a>Crear webhooks entrantes
 
@@ -25,7 +25,7 @@ Un Webhook entrante permite a las aplicaciones externas compartir contenido en l
 
 Vea el siguiente vídeo para obtener información sobre cómo crear un webhook entrante:
 <br>
-> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4ODcY>]
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4ODcY]
 
 ## <a name="key-features-of-an-incoming-webhook"></a>Características principales de un Webhook entrante
 

@@ -4,12 +4,12 @@ description: En este artículo, obtenga más información sobre el Portal para d
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 0e099700d6129dc2db7b12e0a699fc903c9d32c8
-ms.sourcegitcommit: b060a3901a3ba770ea6fca96d0ab477c252af1a2
+ms.openlocfilehash: b0619fc328e6bc30decfe5868692281037489654
+ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/23/2022
-ms.locfileid: "67417503"
+ms.lasthandoff: 10/20/2022
+ms.locfileid: "68615138"
 ---
 # <a name="developer-portal-for-teams"></a>Portal para desarrolladores de Teams
 
@@ -19,9 +19,8 @@ El <a href="https://dev.teams.microsoft.com" target="_blank">portal para desarro
 
 > [!NOTE]
 >
-> * Actualmente, el portal para desarrolladores no está disponible para inquilinos de Government Community Cloud (GCC), GCC-High o el Departamento de Defensa (DOD).
+> * Actualmente, el Portal para desarrolladores no está disponible para inquilinos de Government Community Cloud (GCC)-High o del Departamento de Defensa (DOD).
 > * Sin embargo, puede usar un inquilino normal para compilar una aplicación en el portal para desarrolladores, descargar la aplicación y cargar la aplicación mediante [Microsoft Graph](/graph/api/teamsapp-publish?view=graph-rest-1.0&tabs=http&preserve-view=true) en una nube nacional. Para obtener más información, consulte [Implementaciones nacionales de nube](/graph/deployments).
-> * Actualmente, en algunos escenarios, el Portal para desarrolladores no se cargará en el explorador cuando AdBlocker esté habilitado. Para continuar con el Portal para desarrolladores en el explorador, deshabilite AdBlocker.
 
 ## <a name="register-an-app"></a>Registrar una aplicación
 

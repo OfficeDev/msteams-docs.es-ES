@@ -7,16 +7,14 @@ ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/24/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: 84a18c736c59c992bb4e3e51962ed631483f7f2b
-ms.sourcegitcommit: 3aaccc48906fc6f6fbf79916af5664bf55537250
+ms.openlocfilehash: 786bfd318f1cefa4329e54b5a19cba89a823bb5b
+ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "68296028"
+ms.lasthandoff: 10/20/2022
+ms.locfileid: "68615341"
 ---
 # <a name="teams-toolkit-overview"></a>Información general del kit de herramientas de Teams
-
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey2.png" alt-text="Recorrido del usuario del kit de herramientas de Teams" lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey2.png":::
 
 Teams Toolkit facilita la introducción al desarrollo de aplicaciones para Microsoft Teams mediante Visual Studio y Visual Studio Code.
 
@@ -25,7 +23,9 @@ Teams Toolkit facilita la introducción al desarrollo de aplicaciones para Micro
 * Ejecución y depuración en Teams directamente desde herramientas conocidas
 * Valores predeterminados inteligentes para hospedar en Azure mediante la infraestructura como código y Bicep
 * Creación de configuraciones únicas como desarrollo, pruebas y producción mediante la característica Entornos
-* Traiga la aplicación a su organización o a la App Store de Teams mediante herramientas de publicación integradas
+* Traiga la aplicación a su organización o a la Tienda de aplicaciones de Teams mediante herramientas de publicación integradas
+
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey2.png" alt-text="Recorrido del usuario del kit de herramientas de Teams" lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey2.png":::
 
 ## <a name="available-for-visual-studio-and-visual-studio-code"></a>Disponible para Visual Studio y Visual Studio Code
 
