@@ -7,12 +7,12 @@ ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: 624cad282e181ed56cbc3041f725b046ca061c72
-ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
+ms.openlocfilehash: 5f0e909c9b6fbccc1f1a9a886858177f4673f85f
+ms.sourcegitcommit: 707dad21dc3cf79ac831afe05096c0341bcf2fee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2022
-ms.locfileid: "68499163"
+ms.lasthandoff: 10/20/2022
+ms.locfileid: "68653696"
 ---
 # <a name="debug-your-teams-app"></a>Depurar la aplicación de Teams
 
@@ -34,7 +34,7 @@ Durante el proceso de depuración:
 * Teams Toolkit comprueba los requisitos previos durante el proceso en segundo plano de depuración.
 * La aplicación de Teams está disponible para la versión preliminar en el cliente web de Teams localmente después de la depuración.
 * También puede personalizar la configuración de depuración para usar los puntos de conexión del bot, el certificado de desarrollo o el componente parcial de depuración para cargar la aplicación configurada.
-* Microsoft Visual Studio Code permite depurar pestañas, bots, extensiones de mensajes y Azure Functions.
+* Microsoft Visual Studio Code permite depurar pestañas, bots, extensiones de mensaje y Azure Functions.
 
 ## <a name="key-debug-features-of-teams-toolkit"></a>Características clave de depuración del kit de herramientas de Teams
 
@@ -64,7 +64,7 @@ Los puntos de interrupción en los códigos fuente de pestañas, bots, extension
 
 ### <a name="hot-reload"></a>Recarga activa
 
-Puede actualizar y guardar los códigos de origen de tabulación, bot, extensión de mensaje y Azure Functions al mismo tiempo que depura la aplicación teams. La aplicación se vuelve a cargar y el depurador vuelve a asociarse a los lenguajes de programación.
+Puede actualizar y guardar los códigos de origen de tab, bot, extensión de mensaje y Azure Functions al mismo tiempo que depura la aplicación de Teams. La aplicación se vuelve a cargar y el depurador vuelve a asociarse a los lenguajes de programación.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hot-reload.png" alt-text="recarga activa para códigos fuente" lightbox="../assets/images/teams-toolkit-v2/debug/hot-reload.png":::
 
@@ -84,69 +84,80 @@ Si ya se ha registrado en Microsoft 365, inicie sesión en Microsoft 365. Para o
 
 ### <a name="toggle-breakpoints"></a>Alternar puntos de interrupción
 
-Asegúrese de que puede alternar los puntos de interrupción en los códigos de origen de pestañas, bots, extensiones de mensaje y Azure Functions para obtener más información, consulte [Alternar puntos de interrupción](#toggle-breakpoints).
+Asegúrese de que puede alternar puntos de interrupción en los códigos de origen de pestañas, bots, extensiones de mensaje y Azure Functions para obtener más información, consulte [Alternancia de puntos de interrupción](#toggle-breakpoints).
 
 ## <a name="customize-debug-settings"></a>Personalizar la configuración de depuración
 
-El kit de herramientas de Teams desactiva algunos requisitos previos y le permite personalizar la configuración de depuración para crear su pestaña o bot:
+Teams Toolkit le permite personalizar la configuración de depuración para crear la pestaña o el bot. Para obtener más información sobre la lista completa de opciones personalizables, consulte [el documento de configuración de depuración](https://aka.ms/teamsfx-debug-tasks).
+
+### <a name="customize-scenarios"></a>Personalizar escenarios
 
 <br>
 
 <details>
-<summary><b>Use el punto de conexión del bot</b></summary>
 
-1. En Visual Studio Code configuración, debe desactivar **Asegurarse de que Ngrok está instalado e iniciado (ngrok)**.
+<summary><b>Omitir comprobaciones de requisitos previos</b></summary>
 
-1. Puede establecer la `siteEndpoint` configuración en en el `.fx/configs/config.local.json` punto de conexión.
+ > `"prerequisites"``"Validate & install prerequisites"``"args"` > En `.fx/configs/tasks.json` , actualice las comprobaciones de requisitos previos que desea omitir.
 
-```json
-{
-    "bot": {
-        "siteEndpoint": "https://your-bot-tunneling-url"
-    }
-}
-
-```
-
-:::image type="content" source="../assets/images/teams-toolkit-v2/debug/bot-endpoint.png" alt-text="Personalice el punto de conexión del bot":::
+  :::image type="content" source="../assets/images/teams-toolkit-v2/debug/skip-prerequisite-checks.png" alt-text="omitir las comprobaciones de requisitos previos":::
 
 </details>
 
 <details>
 <summary><b>Use el certificado de desarrollo</b></summary>
 
-1. En Visual Studio Code configuración, debe desactivar **Asegurarse de que el certificado de desarrollo es de confianza (devCert).**
-
-1. Puede establecer `sslCertFile` y `sslKeyFile` configurar en la ruta de acceso del archivo de certificado y la `.fx/configs/config.local.json` ruta de acceso del archivo de clave.
-
-```json
-{
-    "frontend": {
-        "sslCertFile": "",
-        "sslKeyFile": ""
-    }
-}
-```
-
-:::image type="content" source="../assets/images/teams-toolkit-v2/debug/development-certificate-customize.png" alt-text="Personalizar el certificado":::
+1. En `.fx/configs/tasks.json`, desactive `"devCert"` en `"Validate & install prerequisites"` > `"args"` > `"prerequisites"`.
+1. Establezca "SSL_CRT_FILE" y "SSL_KEY_FILE" en en la ruta de acceso del archivo de certificado y la `.env.teamsfx.local` ruta de acceso del archivo de clave.
 
 </details>
 
 <details>
-<summary><b>Use los scripts de inicio para iniciar los servicios de aplicaciones</b></summary>
+<summary><b>Personalización de los argumentos de instalación de npm</b></summary>
 
-1. Para la pestaña , debe actualizar `dev:teamsfx` el script en `tabs/package.json`.
-
-1. Para la extensión de bot o mensaje, debe actualizar `dev:teamsfx` el script en `bot/package.json`.
-
-1. Para Azure Functions, debe actualizar `dev:teamsfx` el script en `api/package.json` y para el script de actualización `watch:teamsfx` de TypeScript.
-
-   > [!NOTE]
-   > Actualmente, la pestaña, el bot, las aplicaciones de extensión de mensajes y los puertos de Azure Functions no admiten la personalización.
+En `.fx/configs/tasks.json`, establezca npmInstallArgs en `"Install npm packages"`.
+  
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/customize-npm-install.png" alt-text="Instalación del paquete npm":::
 
 </details>
 
 <details>
+<summary><b>Modificar puertos</b></summary>
+
+* Bot
+  1. Busque `"3978"` en todo el proyecto y busque apariencias en `tasks.json`y `ngrok.yml` `index.js`.
+  1. Reemplácela por el puerto.
+     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/modify-ports-bot.png" alt-text="Reemplazar el puerto del bot":::
+* Tab
+  1. En `.fx/configs/tasks.json`, busque `"53000"`.
+  1. Reemplácela por el puerto.
+     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/modify-ports-tab.png" alt-text="Reemplazar el puerto para la pestaña":::
+
+</details>
+
+<details>
+<summary><b>Uso de su propio paquete de aplicación</b></summary>
+
+En `.fx/configs/tasks.json`, establezca `"appPackagePath"` en la `"Build & upload Teams manifest"` ruta de acceso del paquete de la aplicación.
+
+  :::image type="content" source="../assets/images/teams-toolkit-v2/debug/app-package-path.png" alt-text="usar su propia ruta de acceso del paquete de aplicación":::
+
+</details>
+
+<details>
+<summary><b>Uso de su propio túnel</b></summary>
+
+1. En `.fx/configs/tasks.json` , `"Start Teams App Locally"`puede actualizar `"Start Local tunnel"`.
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/start-local-tunnel.png" alt-text="Uso de su propio túnel":::
+1. Inicie su propio servicio de túnel y actualice `"botMessagingEndpoint"` a su propio punto de conexión de mensaje en en `.fx/configs/tasks.json` `"Set up bot"`.
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/set-up-bot.png" alt-text="actualizar punto de conexión de mensajería":::
+
+</details>
+
+<details>
+
 <summary><b>Agregar variables de entorno</b></summary>
 
 Puede agregar variables de entorno al archivo `.env.teamsfx.local` para pestañas, bots, extensión de mensajes y Azure Functions. Teams Toolkit carga las variables de entorno que agregó para iniciar los servicios durante la depuración local.
@@ -161,7 +172,7 @@ Puede agregar variables de entorno al archivo `.env.teamsfx.local` para pestaña
 
 El kit de herramientas de Teams usa la depuración de varios destinos de Visual Studio Code para depurar la pestaña, el bot, la extensión de mensajes y Azure Functions al mismo tiempo. Puede actualizar `.vscode/launch.json` y `.vscode/tasks.json` para depurar componentes parciales. Si desea depurar la pestaña solo en una pestaña más un bot con un proyecto de Azure Functions, siga estos pasos:
 
-1. Comentario **`Attach to Bot`** y **`Attach to Backend`** del compuesto de depuración en `.vscode/launch.json`.
+1. Actualice `"Attach to Bot"` y `"Attach to Backend"` a partir del compuesto de depuración en `.vscode/launch.json`.
 
    ```json
    {
@@ -181,7 +192,7 @@ El kit de herramientas de Teams usa la depuración de varios destinos de Visual 
    }
    ```
 
-2. Comentario **`Start Backend`** e inicio del bot desde la tarea Iniciar todo en .vscode/tasks.json.
+2. Actualice `"Start Backend"` y `"Start Bot"` desde la tarea Iniciar todo en .vscode/tasks.json.
 
    ```json
    {
@@ -253,16 +264,16 @@ En la imagen siguiente se muestran la alternancia de puntos de interrupción:
 
 ### <a name="hot-reload"></a>Recarga activa
 
-Seleccione **Recarga activa** para aplicar los cambios en la aplicación de Teams cuando quiera actualizar y guardar los códigos de origen simultáneamente durante la depuración.
+Seleccione **Recarga** activa para aplicar los cambios en la aplicación de Teams cuando quiera actualizar y guardar los códigos de origen simultáneamente durante la depuración.
 
 :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-hot-reload.png" alt-text="Seleccionar icono de recarga activa":::
 
-Seleccione la opción **Recarga activa en Guardar** archivo en la lista desplegable para habilitar la recarga activa automática.
+Seleccione la opción **Recarga activa en Guardar archivo** en la lista desplegable para habilitar la recarga activa automática.
 
 :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-hot-reload-filesave.png" alt-text="Seleccionar recarga activa al guardar archivos":::
   
    > [!Tip]
-   > Para obtener más información sobre Recarga activa función de Visual Studio durante la depuración, puede visitar <https://aka.ms/teamsfx-vs-hotreload>.
+   > Para obtener más información sobre la función recarga activa de Visual Studio durante la depuración, puede visitar <https://aka.ms/teamsfx-vs-hotreload>.
 
 ### <a name="stop-debugging"></a>Detener depuración
 
@@ -294,7 +305,7 @@ Puede agregar **environmentVariables** al archivo **launchSettings.json** .
 
 Puede iniciar la aplicación de Teams como una aplicación web en lugar de ejecutarse en el cliente de Teams.
 
-1. Seleccione **Propiedades** > **launchSettings.json** en Explorador de soluciones panel del proyecto.
+1. Seleccione **Propiedades** > **launchSettings.json** en समाधान अन्वेषक panel del proyecto.
 1. Quite " **launchUrl"** del archivo.
 
    :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-launch-teamsapp-webapp.png" alt-text="Iniciar equipos como una aplicación web mediante la eliminación de launchurl" lightbox="../assets/images/debug-teams-app/vs-localdebug-launch-teamsapp-webapp.png":::

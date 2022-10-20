@@ -7,12 +7,12 @@ ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: 24d231ef7a76ede1d45176d5869caa9a76a791be
-ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
+ms.openlocfilehash: 730317fd6480b583d7b293a4e032589d01c99db0
+ms.sourcegitcommit: 707dad21dc3cf79ac831afe05096c0341bcf2fee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2022
-ms.locfileid: "68026965"
+ms.lasthandoff: 10/20/2022
+ms.locfileid: "68653667"
 ---
 # <a name="debug-your-teams-app-locally"></a>Depurar la aplicación de Teams localmente
 
@@ -23,6 +23,10 @@ Teams Toolkit le ayuda a depurar y obtener una vista previa de la aplicación de
 ## <a name="debug-your-microsoft-teams-app-locally-for-visual-studio-code"></a>Depuración local de la aplicación de Microsoft Teams para Visual Studio Code
 
 El kit de herramientas de Teams en Visual Studio Code proporciona las características para automatizar la depuración de la aplicación de Teams localmente. Visual Studio permite depurar la pestaña, el bot y la extensión de mensaje. Debe configurar Teams Toolkit antes de depurar la aplicación.
+
+> [!NOTE]
+>
+> Puede actualizar el proyecto del kit de herramientas de Teams antiguo para usar nuevas tareas. Para obtener más información, consulte [el documento de configuración de depuración](https://aka.ms/teamsfx-debug-upgrade-new-tasks).
 
 ## <a name="set-up-your-teams-toolkit-for-debugging"></a>Configuración del kit de herramientas de Teams para la depuración
 
@@ -110,7 +114,7 @@ Ejecuta tareas como se define en `.vscode/tasks.json`.
 
 En la imagen siguiente se muestran los nombres de las tareas en las pestañas **OUTPUT** y **TERMINAL** de la Visual Studio Code mientras se ejecuta la pestaña, el bot o la extensión de mensaje y Azure Functions.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/debug/Terminal.png" alt-text="Inicia los servicios de las aplicaciones":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/debug/Terminal1.png" alt-text="Inicia los servicios de las aplicaciones" lightbox="../assets/images/teams-toolkit-v2/debug/Terminal1.png":::
 
 ### <a name="launches-debug-configurations"></a>Inicia las configuraciones de depuración
 
@@ -118,7 +122,7 @@ Inicia las configuraciones de depuración tal como se define en `.vscode/launch.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/debug/launch-debuggers.png" alt-text="Inicia el depurador":::
 
-En la tabla siguiente se enumeran los nombres y tipos de configuración de depuración para el proyecto con la pestaña, bot o aplicación de extensión de mensaje y Azure Functions:
+En la tabla siguiente se enumeran los nombres y tipos de configuración de depuración para el proyecto con la aplicación de extensión de pestaña, bot o mensaje y Azure Functions:
 
 |  Componente |  Nombre de la configuración de depuración  | Tipo de configuración de depuración |
 | --- | --- | --- |

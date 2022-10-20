@@ -6,12 +6,12 @@ ms.author: v-amprasad
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/03/2022
-ms.openlocfilehash: b8f85f092f9a99e9931a5ff0ea5e763c0b4fb0fe
-ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
+ms.openlocfilehash: 4d654d5da598b9bf2b9bacfc189c97df08f9a359
+ms.sourcegitcommit: 707dad21dc3cf79ac831afe05096c0341bcf2fee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67616791"
+ms.lasthandoff: 10/20/2022
+ms.locfileid: "68653653"
 ---
 # <a name="debug-background-process"></a>Depurar procesos en segundo plano
 
@@ -21,13 +21,13 @@ El flujo de trabajo del proceso de depuración es el siguiente:
 
 1. `launch.json`file configura el depurador en Visual Studio Code.
 
-2. Visual Studio Code ejecuta el **preLaunchTask** compuesto, **comprobación previa a la depuración & Iniciar todo** en `.vscode/tasks.json` el archivo.
+2. Visual Studio Code ejecuta el **elemento compuesto preLaunchTask**, **Iniciar la aplicación teams localmente** en el `.vscode/tasks.json` archivo.
 
 3. Visual Studio Code inicia los depuradores especificados en las configuraciones compuestas, como **Attach to Bot**, **Attach to Backend**, **Attach to Frontend** y **Launch Bot**.
 
 4. Microsoft Edge o Google Chrome inicia una nueva instancia del explorador y abre una página web para cargar el cliente de Teams.
 
-## <a name="teams-toolkit-verification-of-prerequisites"></a>Comprobación del kit de herramientas de Teams de los requisitos previos
+## <a name="verification-of-prerequisites"></a>Comprobación de los requisitos previos
 
 Kit de herramientas de Teams comprueba los siguientes requisitos previos durante el proceso de depuración:
 
@@ -42,11 +42,8 @@ Kit de herramientas de Teams comprueba los siguientes requisitos previos durante
 
 * Teams Toolkit le pide que inicie sesión en la cuenta de Microsoft 365 si no ha iniciado sesión con sus credenciales válidas.
 * La carga de aplicaciones personalizadas o la instalación local para el inquilino del desarrollador está activada, para evitar la terminación de depuración local.
-* Teams Toolkit instala el paquete `ngrok@4.2.2` NPM de Ngrok en `~/.fx/bin/ngrok`, si Ngrok no está instalado o la versión no coincide con el requisito. El paquete NPM de Ngrok en `/.fx/bin/ngrok/node modules/ngrok/bin` administra la versión binaria 2.3 de Ngrok que es aplicable para la extensión de bot y mensaje.
-* Teams Toolkit instala Azure Functions paquete NPM de Core Tools, azure-functions-core-tools@3 para **Windows** y **macOs** en `~/.fx/bin/func`, si Azure Functions Core Tools versión 3 no está instalada o la versión no coincide con el requisito. El Azure Functions Core Tools paquete NPM en `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` administra Azure Functions Core Tools binario. Para Linux, finaliza la depuración local.
-* Teams Toolkit instala el SDK de .NET Core para **Windows** y **MacOS** en `~/.fx/bin/dotnet`, si la versión del SDK de .NET Core aplicable a Azure Functions no está instalada o la versión no coincide con el requisito. Para Linux, finaliza la depuración local.
 * Teams Toolkit instala el paquete `ngrok@4.2.2` NPM de Ngrok en `~/.fx/bin/ngrok`, si Ngrok no está instalado o la versión no coincide con el requisito. La versión binaria 2.3 de Ngrok es aplicable para la extensión de bot y mensaje. El paquete Ngrok NPM administra el binario Ngrok en `/.fx/bin/ngrok/node modules/ngrok/bin`.
-* Teams Toolkit instala Azure Functions paquete NPM de Core Tools, azure-functions-core-tools@3 para **Windows** y **MacOs** en `~/.fx/bin/func`, si Azure Functions Core Tools versión 4 no está instalada o la versión no coincide con el requisito. El Azure Functions Core Tools paquete NPM en `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` administra Azure Functions Core Tools binario. Para Linux, finaliza la depuración local.
+* Teams Toolkit instala el paquete NPM de Azure Functions Core Tools, azure-functions-core-tools@3 para **Windows** y **MacOs** en  `~/.fx/bin/func`, si azure Functions Core Tools versión 4 no está instalada o la versión no coincide con el requisito. El Azure Functions Core Tools paquete NPM en `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` administra Azure Functions Core Tools binario. Para Linux, finaliza la depuración local.
 * Teams Toolkit instala el SDK de .NET Core para **Windows** y **MacOS** en `~/.fx/bin/dotnet`la versión del SDK de .NET Core aplicable a Azure Functions, si el SDK de .NET Core no está instalado o la versión no coincide con el requisito. Para Linux, finaliza la depuración local.
 
   En la tabla siguiente se enumeran las versiones de .NET Core:
@@ -57,7 +54,7 @@ Kit de herramientas de Teams comprueba los siguientes requisitos previos durante
   |macOS (arm64) |6.0 |
 
 * Certificado de desarrollo, si el certificado de desarrollo para localhost no está instalado para la pestaña en **Windows** o **MacOS**, teams Toolkit le pide que lo instale.
-* Azure Functions extensiones de enlace definidas en `api/extensions.csproj`, si Azure Functions extensiones de enlace no están instaladas, teams Toolkit instala Azure Functions extensiones de enlace.
+* Las extensiones de enlace de Azure Functions definidas en `api/extensions.csproj`, si las extensiones de enlace de Azure Functions no están instaladas, teams Toolkit instala las extensiones de enlace de Azure Functions.
 * Paquetes NPM, que se aplican a aplicaciones de pestañas, aplicaciones de bot, aplicaciones de extensión de mensaje y Azure Functions. Si los paquetes NPM no están instalados, Teams Toolkit instala todos los paquetes NPM.
 * Bot y extensión de mensaje, Teams Toolkit inicia Ngrok para crear un túnel HTTP para bot y extensión de mensaje.
 * Puertos disponibles. Si los puertos de pestaña, bot, extensión de mensaje y Azure Functions no están disponibles, la depuración local finaliza
@@ -103,7 +100,7 @@ Use the following .NET Core versions:
 
 Al seleccionar **Start Debugging (F5)**, el canal de salida del kit de herramientas de Teams muestra el progreso y el resultado después de comprobar los requisitos previos.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/prerequisites-debugcheck.png" alt-text="Resumen de comprobación de requisitos previos" lightbox="../assets/images/teams-toolkit-v2/debug/prerequisites-debugcheck.png":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/prerequisites-debugcheck1.png" alt-text="Resumen de comprobación de requisitos previos" lightbox="../assets/images/teams-toolkit-v2/debug/prerequisites-debugcheck1.png":::
 
 ## <a name="register-and-configure-teams-app"></a>Registrar y configurar la aplicación de Teams
 
