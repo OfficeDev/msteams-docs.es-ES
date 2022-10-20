@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 77b17cb837312bca5b253fbd99fba2d0503f1744
-ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
+ms.openlocfilehash: cbb97bd1fcd3422af968e7928436f4da1ae4038d
+ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2022
-ms.locfileid: "68560473"
+ms.lasthandoff: 10/20/2022
+ms.locfileid: "68615292"
 ---
 # <a name="maintain-your-published-microsoft-teams-app"></a>Mantener la aplicación publicada de Microsoft Teams
 
@@ -23,11 +23,6 @@ Puede realizar un seguimiento del uso de la aplicación en el [ Informe de uso d
 Los datos de las aplicaciones recién publicadas tardan alrededor de una semana en aparecer en el informe.
 
 ## <a name="publish-updates-to-your-app"></a>Publicar actualizaciones en la aplicación
-
-> [!NOTE]
-> La tienda de Teams ha evolucionado:
->
-> Anteriormente, los vínculos se copiaban seleccionando puntos suspensivos en el icono de la aplicación. Con la experiencia actualizada de la tienda de Teams, tendrá acceso a la misma desde la pestaña de detalles de las aplicaciones. Esta actualización estará disponible con carácter general (GA) antes del 1 de marzo de 2022.
 
 Puede enviar cambios a la aplicación (como nuevas características o incluso metadatos) en Centro de partners. Estos cambios requieren un nuevo proceso de revisión.
 
