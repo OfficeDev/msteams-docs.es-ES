@@ -5,12 +5,12 @@ description: Descripción de las características de uso y aplicaciones de Micro
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: eb72d4296ee6b91bae1775ad79eef06139abb59e
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: fcc360410d4af501d4097c6269b3e1157a6e742b
+ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100423"
+ms.lasthandoff: 10/20/2022
+ms.locfileid: "68615180"
 ---
 # <a name="plan-your-app-with-teams-features"></a>Planear la aplicación con las características de Teams
 
@@ -88,7 +88,7 @@ En la tabla siguiente se incluyen las características y la disponibilidad de Te
 
 La lista siguiente ayuda a identificar la disponibilidad de GCC, GCC-High y DOD para las características:
 
-* Para aplicaciones de terceros, consulte [aplicaciones web](../samples/integrating-web-apps.md) y [extensibilidad de aplicaciones de reuniones](../apps-in-teams-meetings/meeting-app-extensibility.md).
+* Para aplicaciones de terceros, consulte [aplicaciones web](../samples/integrating-web-apps.md) y [extensibilidad de aplicaciones de reuniones](../apps-in-teams-meetings/teams-apps-in-meetings.md).
 * Para bots, consulte [crear su primer bot de conversación para Teams](../get-started/first-app-bot.md), [diseñar el bot de Teams](../bots/design/bots.md), [agregar bots a aplicaciones de Microsoft Teams](../resources/bot-v3/bots-overview.md)y [bots en Teams](../bots/what-are-bots.md).
 * Para las aplicaciones de instalación de prueba, vea [habilitar la personalización de la aplicación de Teams para](../concepts/design/enable-app-customization.md), [distribuir la aplicación de Microsoft Teams](../concepts/deploy-and-publish/apps-publish-overview.md)y [Cargar la aplicación en Teams](../concepts/deploy-and-publish/apps-upload.md).
 * Para los conectores personalizados, consulte [crear conectores de Office 365 para Teams](../webhooks-and-connectors/how-to/connectors-creating.md).
