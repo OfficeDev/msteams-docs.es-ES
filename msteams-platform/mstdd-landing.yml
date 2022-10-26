@@ -12,12 +12,12 @@ metadata:
   ms.author: msauthor
   ms.date: 11/10/2021
   ms.localizationpriority: high
-  ms.openlocfilehash: ea9e2643aa280749887a323fb442db3c37f6e552
-  ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
+  ms.openlocfilehash: c70a978c8d369d8caf486c35c39c9aed48b94fcb
+  ms.sourcegitcommit: 372aade09e62ac7e5936215173a6632fbb042c9d
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 10/20/2022
-  ms.locfileid: "68615305"
+  ms.lasthandoff: 10/26/2022
+  ms.locfileid: "68699167"
 landingContent:
 - title: Explore lo más reciente
   linkLists:
@@ -153,6 +153,8 @@ landingContent:
     links:
     - text: Enviar notificación de fuente de actividad
       url: ~/sbs-graphactivity-feedbroadcast.yml
+    - text: Creación de una aplicación de firma de documentos en la reunión
+      url: ~/sbs-inmeeting-document-signing.yml
   - linkListType: tutorial
     links:
     - text: Crear un bot de comandos con JavaScript

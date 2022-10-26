@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: v-sdhakshina
 ms.localizationpriority: medium
 ms.date: 04/07/2022
-ms.openlocfilehash: 440e48d370d18564f5bba869d95c63bc25b11e4e
-ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
+ms.openlocfilehash: 48834addceb0e7a6e4522c096cf40b117312647c
+ms.sourcegitcommit: 372aade09e62ac7e5936215173a6632fbb042c9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/20/2022
-ms.locfileid: "68615492"
+ms.lasthandoff: 10/26/2022
+ms.locfileid: "68699145"
 ---
 # <a name="build-apps-for-teams-meeting-stage"></a>Compilación de aplicaciones para la fase de reunión de Teams
 
@@ -265,6 +265,26 @@ Para compartir toda la aplicación para la fase, en el manifiesto de la aplicaci
 > [!NOTE]
 > Para que la aplicación pase la validación, cuando cree un vínculo profundo desde el sitio web, la aplicación web o la tarjeta adaptable, use **Compartir en la reunión** como cadena o copia.
 
+## <a name="build-an-in-meeting-document-signing-app"></a>Creación de una aplicación de firma de documentos en la reunión
+
+Puede crear una aplicación en la reunión para permitir que los participantes de la reunión firmen documentos en tiempo real. Facilita la revisión y firma de documentos en una sola sesión. Los participantes pueden firmar los documentos con su identidad de inquilino actual.
+
+Puede usar una aplicación de firma en reunión para:
+
+- Adición de documentos que se revisarán durante una reunión
+- Uso compartido de documentos que se van a revisar en la fase principal
+- Firmar documentos con la identidad del firmante
+
+Los participantes pueden revisar y firmar documentos, como contratos de compra y pedidos de compra.
+
+![Aplicación de firma de documentos en la reunión](~/assets//images/sbs-inmeeting-doc-signing/signing-clip.gif)
+
+Los siguientes roles de participante pueden estar implicados durante la reunión:
+
+- **Creador de** documentos: este rol puede agregar sus propios documentos para revisarlos y firmarlos.
+- **Firmante**: este rol puede firmar documentos revisados.
+- **Lector**: este rol puede ver los documentos agregados a la reunión.
+
 ## <a name="code-sample"></a>Ejemplo de código
 
 |Ejemplo de nombre | Descripción | C# | Node.js |
@@ -272,6 +292,10 @@ Para compartir toda la aplicación para la fase, en el manifiesto de la aplicaci
 |Ejemplo de fase de reunión | Aplicación de ejemplo para mostrar una pestaña en la fase de reunión para la colaboración | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) |
 | Notificación en la reunión | Muestra cómo implementar la notificación en la reunión mediante el bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) | [Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs) |
 | Firma de documentos en la reunión | Muestra cómo implementar una aplicación de Teams de firma de documentos. Incluye el uso compartido de contenido específico de la aplicación para la fase, el inicio de sesión único de Teams y la vista de fase específica del usuario. | [View](https://github.com/officedev/microsoft-teams-samples/tree/main/samples/meetings-share-to-stage-signing/csharp) | ND |
+
+## <a name="step-by-step-guide"></a>Guía paso a paso
+
+Siga la [guía paso a paso](../sbs-inmeeting-document-signing.yml) para crear una aplicación de firma de documentos en la reunión.
 
 ## <a name="see-also"></a>Consulte también
 
@@ -283,3 +307,4 @@ Para compartir toda la aplicación para la fase, en el manifiesto de la aplicaci
 * [API avanzadas de reunión](meeting-apps-apis.md)
 * [Escenas personalizadas del Modo conferencia](~/apps-in-teams-meetings/teams-together-mode.md)
 * [SDK de Live Share](teams-live-share-overview.md)
+* [Guía paso a paso para crear una aplicación de firma de documentos en la reunión](../sbs-inmeeting-document-signing.yml)

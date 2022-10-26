@@ -5,12 +5,12 @@ description: En este artículo, aprenderá a crear una notificación en la reuni
 ms.topic: conceptual
 ms.author: v-sdhakshina
 ms.localizationpriority: medium
-ms.openlocfilehash: 2bdf63ab597c00627c14b909d51efa753e0cd1b0
-ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
+ms.openlocfilehash: e62958535fa1bcbcdeb104b5fd5fdd2882250aa3
+ms.sourcegitcommit: 372aade09e62ac7e5936215173a6632fbb042c9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/20/2022
-ms.locfileid: "68615498"
+ms.lasthandoff: 10/26/2022
+ms.locfileid: "68699132"
 ---
 # <a name="build-in-meeting-notification-for-teams-meeting"></a>Creación de una notificación en la reunión para la reunión de Teams
 
@@ -53,7 +53,7 @@ Ejemplo de nombre | Descripción | C# | Node.js |
 |----------------|-----------------|--------------|----------------|
 | Notificación en la reunión | Muestra cómo implementar la notificación en la reunión mediante el bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs) |
 
-## <a name="step-by-step-guides"></a>Guías paso a paso
+## <a name="step-by-step-guide"></a>Guía paso a paso
 
 Siga la [guía paso a paso](../sbs-meeting-content-bubble.yml) para generar una notificación en la reunión de Teams.
 

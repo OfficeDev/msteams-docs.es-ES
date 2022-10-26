@@ -2,13 +2,13 @@
 title: Obtener el id. de reunión y el identificador del organizador para capturar las transcripciones de la reunión
 description: Describe el proceso de obtención del id. de reunión y el identificador del organizador para capturar transcripciones de reuniones.
 ms.localizationpriority: high
-ms.topic: concept
-ms.openlocfilehash: 8be611f72a1ddac84bbe596a1bfc00621cb7c038
-ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
+ms.topic: conceptual
+ms.openlocfilehash: 0f9502b9e4f399725b115ece7c6ab5b705a1bf3f
+ms.sourcegitcommit: 372aade09e62ac7e5936215173a6632fbb042c9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2022
-ms.locfileid: "68027315"
+ms.lasthandoff: 10/26/2022
+ms.locfileid: "68699174"
 ---
 # <a name="obtain-meeting-id-and-organizer-id"></a>Obtener id. de reunión e id. de organizador
 

@@ -4,12 +4,12 @@ description: Obtenga información sobre las nuevas características para desarro
 ms.topic: reference
 ms.localizationpriority: high
 zone_pivot_groups: What-new-features
-ms.openlocfilehash: d1ad99b5fff30f5329525fc536e62f5690c0e9a9
-ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
+ms.openlocfilehash: 99da7ecfc60d681246b0e5c7ea9448235fc37bf3
+ms.sourcegitcommit: 372aade09e62ac7e5936215173a6632fbb042c9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/20/2022
-ms.locfileid: "68615327"
+ms.lasthandoff: 10/26/2022
+ms.locfileid: "68699188"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores en Microsoft Teams
 
@@ -18,7 +18,7 @@ ms.locfileid: "68615327"
 Descubra las características de la plataforma de Microsoft Teams que están disponibles con carácter general (GA). Ahora puede obtener las últimas actualizaciones de la plataforma Teams si se suscribe a la fuente RSS [![descargar fuente](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates). Para obtener más información, consulte [configurar la fuente RSS](#get-latest-updates).
 
 ## <a name="generally-available"></a>Disponible con carácter general
-
+ 
 :::row:::
 :::column:::
 
@@ -46,7 +46,8 @@ Características de la plataforma Microsoft Teams que están disponibles para to
 
 | **Date** | **Actualizar** | **Buscar aquí** |
 | -------- | --------- | ----------------|
-| 09/30/2022|Administración de licencias SaaS para aplicaciones de terceros en Teams|Monetizar la aplicación > Incluir una oferta de SaaS con la aplicación de Teams > [Administrar licencia para aplicaciones de terceros en Teams](concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md#manage-license-for-third-party-apps-in-teams)|
+| 10/26/2022 | Cree una aplicación en la reunión para permitir que los participantes de la reunión firmen documentos en tiempo real. | Compilación de aplicaciones para reuniones y llamadas de Teams > Habilitar y configurar aplicaciones para reuniones de Teams > Compilación de aplicaciones para la fase de reunión de Teams > [Creación de una aplicación de firma de documentos en la reunión](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#build-an-in-meeting-document-signing-app) |
+| 09/30/2022|Administrar licencias de SaaS para aplicaciones de terceros en Teams.|Monetizar la aplicación > Incluir una oferta de SaaS con la aplicación de Teams > [Administrar licencia para aplicaciones de terceros en Teams](concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md#manage-license-for-third-party-apps-in-teams)|
 | 09/29/2022|La aplicación móvil de Teams ahora admite descargas de archivos en dispositivos locales.|Integración de funcionalidades de dispositivo > Integración de funcionalidades multimedia > [descarga de archivos en dispositivos móviles de Teams](concepts/device-capabilities/media-capabilities.md#file-download-on-teams-mobile)|
 | 09/16/2022|Las tarjetas adaptables de las extensiones de mensaje basadas en búsqueda ahora admiten Acciones universales.|Compilación de extensiones de mensaje > comandos de búsqueda > [Acciones universales para extensiones de mensaje basadas en búsqueda](messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md)|
 | 09/06/2022|Se han introducido fragmentos de código para capturar vídeos mediante la cámara a través de `selectMedia` la API.| Integración de funcionalidades de dispositivo > Integración de funcionalidades multimedia > [fragmentos de código](concepts/device-capabilities/media-capabilities.md#code-snippets)|
