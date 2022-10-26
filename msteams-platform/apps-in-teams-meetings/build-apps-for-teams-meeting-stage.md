@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: v-sdhakshina
 ms.localizationpriority: medium
 ms.date: 04/07/2022
-ms.openlocfilehash: 48834addceb0e7a6e4522c096cf40b117312647c
-ms.sourcegitcommit: 372aade09e62ac7e5936215173a6632fbb042c9d
+ms.openlocfilehash: ea5d7b57b9ee6344d34fcc6ed560936ac6109304
+ms.sourcegitcommit: 4e355e22ddcd10ba9a8f37965c4f5c8fa04f5776
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/26/2022
-ms.locfileid: "68699145"
+ms.locfileid: "68701037"
 ---
 # <a name="build-apps-for-teams-meeting-stage"></a>Compilación de aplicaciones para la fase de reunión de Teams
 
@@ -277,7 +277,7 @@ Puede usar una aplicación de firma en reunión para:
 
 Los participantes pueden revisar y firmar documentos, como contratos de compra y pedidos de compra.
 
-![Aplicación de firma de documentos en la reunión](~/assets//images/sbs-inmeeting-doc-signing/signing-clip.gif)
+:::image type="content" source="../assets/images/sbs-inmeeting-doc-signing/final-output.png" alt-text="Aplicación de firma de documentos en la reunión":::
 
 Los siguientes roles de participante pueden estar implicados durante la reunión:
 
@@ -289,9 +289,9 @@ Los siguientes roles de participante pueden estar implicados durante la reunión
 
 |Ejemplo de nombre | Descripción | C# | Node.js |
 |----------------|-----------------|--------------|----------------|
-|Ejemplo de fase de reunión | Aplicación de ejemplo para mostrar una pestaña en la fase de reunión para la colaboración | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) |
-| Notificación en la reunión | Muestra cómo implementar la notificación en la reunión mediante el bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) | [Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs) |
-| Firma de documentos en la reunión | Muestra cómo implementar una aplicación de Teams de firma de documentos. Incluye el uso compartido de contenido específico de la aplicación para la fase, el inicio de sesión único de Teams y la vista de fase específica del usuario. | [View](https://github.com/officedev/microsoft-teams-samples/tree/main/samples/meetings-share-to-stage-signing/csharp) | ND |
+|Ejemplo de fase de reunión | Aplicación de ejemplo para mostrar una pestaña en la fase de reunión para la colaboración | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) |
+| Notificación en la reunión | Muestra cómo implementar la notificación en la reunión mediante el bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs) |
+| Firma de documentos en la reunión | Muestra cómo implementar una aplicación de Teams de firma de documentos. Incluye el uso compartido de contenido específico de la aplicación para la fase, el inicio de sesión único de Teams y la vista de fase específica del usuario. | [Ver](https://github.com/officedev/microsoft-teams-samples/tree/main/samples/meetings-share-to-stage-signing/csharp) | ND |
 
 ## <a name="step-by-step-guide"></a>Guía paso a paso
 
@@ -307,4 +307,3 @@ Siga la [guía paso a paso](../sbs-inmeeting-document-signing.yml) para crear un
 * [API avanzadas de reunión](meeting-apps-apis.md)
 * [Escenas personalizadas del Modo conferencia](~/apps-in-teams-meetings/teams-together-mode.md)
 * [SDK de Live Share](teams-live-share-overview.md)
-* [Guía paso a paso para crear una aplicación de firma de documentos en la reunión](../sbs-inmeeting-document-signing.yml)
