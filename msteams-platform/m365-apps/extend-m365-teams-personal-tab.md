@@ -5,12 +5,12 @@ ms.date: 10/10/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 99b95d72e75bf43381ea441cf2e94f9cf63edc7e
-ms.sourcegitcommit: 20070f1708422d800d7b1d84b85cbce264616ead
+ms.openlocfilehash: 2e16b27b0854e9dc4f92e1c7ce4dc35c2af1f5c4
+ms.sourcegitcommit: 6926cf5eee55d5047c11ca13afc7f6f23e270396
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2022
-ms.locfileid: "68537594"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "68739928"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>Ampliar una pestaña personal de Teams en Microsoft 365
 
@@ -120,8 +120,8 @@ Si la aplicación usa encabezados de [directiva de seguridad de contenido](https
 |host de Microsoft 365| permiso de antecesor de marco|
 |--|--|
 | Teams | `teams.microsoft.com` |
-| Office | `*.office.com` |
-| Outlook | `outlook.office.com`, `outlook.office365.com`, `outlook-sdf.office.com`, `outlook-sdf.office365.com` |
+| Office | `*.microsoft365.com`, `*.office.com` |
+| Outlook | `outlook.live.com`, `outlook.office.com`, `outlook.office365.com`, `outlook-sdf.office.com`, `outlook-sdf.office365.com` |
 
 ## <a name="update-azure-ad-app-registration-for-sso"></a>Actualización del registro de aplicaciones de Azure AD para SSO
 
@@ -283,8 +283,8 @@ La depuración del kit de herramientas de Teams (`F5`) todavía no se admite con
 |---------------|--------------|--------|
 | Lista de tareas pendientes | Lista de tareas pendientes editable con sso creado con React y Azure Functions. Solo funciona en Teams (use esta aplicación de ejemplo para probar el proceso de actualización descrito en este tutorial). | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend)  |
 | Lista de tareas pendientes (Microsoft 365) | Lista de tareas pendientes editable con sso creado con React y Azure Functions. Funciona en Teams, Outlook, Office. | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend-M365)|
-| Editor de imágenes (Microsoft 365) | Cree, edite, abra y guarde imágenes mediante Microsoft Graph API. Funciona en Teams, Outlook, Office. | [Ver](https://github.com/OfficeDev/m365-extensibility-image-editor) |
-| Página de inicio de ejemplo (Microsoft 365) | Muestra la autenticación sso y las funcionalidades del SDK de TeamsJS como disponibles en distintos hosts. Funciona en Teams, Outlook, Office. | [Ver](https://github.com/OfficeDev/microsoft-teams-library-js/tree/main/apps/sample-app) |
+| Editor de imágenes (Microsoft 365) | Cree, edite, abra y guarde imágenes mediante Microsoft Graph API. Funciona en Teams, Outlook, Office. | [View](https://github.com/OfficeDev/m365-extensibility-image-editor) |
+| Página de inicio de ejemplo (Microsoft 365) | Muestra la autenticación sso y las funcionalidades del SDK de TeamsJS como disponibles en distintos hosts. Funciona en Teams, Outlook, Office. | [View](https://github.com/OfficeDev/microsoft-teams-library-js/tree/main/apps/sample-app) |
 | Aplicación Northwind Orders | Muestra cómo usar el SDK de Microsoft TeamsJS V2 para ampliar la aplicación de Teams a otras aplicaciones host de M365. Funciona en Teams, Outlook, Office. Optimizado para dispositivos móviles.| [View](https://github.com/microsoft/app-camp/tree/main/experimental/ExtendTeamsforM365) |
 
 ## <a name="next-step"></a>Paso siguiente

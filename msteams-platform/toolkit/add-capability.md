@@ -6,12 +6,12 @@ ms.author: v-amprasad
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 29ba0fff62678a18222f0229701546515b7d4c38
-ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
+ms.openlocfilehash: abcda0dd19388d1cdce2f2b440ecbae833b5f9c3
+ms.sourcegitcommit: 6926cf5eee55d5047c11ca13afc7f6f23e270396
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2022
-ms.locfileid: "68499191"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "68740607"
 ---
 # <a name="add-capabilities-to-teams-apps"></a>Adición de funcionalidades a aplicaciones de Teams
 
@@ -28,6 +28,7 @@ Agregar funcionalidades con Teams Toolkit le ayuda a incluir características ad
 |**Aplicación de Teams basada en escenarios**|             |
 | Bot de notificación | El bot de notificación envía de forma proactiva mensajes en el canal de Teams, el chat grupal o el chat personal. Puede desencadenar el bot de notificación con una solicitud HTTP, como tarjetas o textos. |Pestaña habilitada para SSO, pestaña|
 | Bot de comandos | El bot de comandos le permite automatizar tareas repetitivas mediante un bot de comandos. Responde a comandos simples enviados en chats con tarjetas adaptables. |Pestaña habilitada para SSO, pestaña|
+| Bot de flujo de trabajo| El bot de flujo de trabajo permite a los usuarios interactuar con una tarjeta adaptable habilitada por la característica de controlador de acciones tarjeta adaptable en la aplicación de bot de flujo de trabajo.|Pestaña habilitada para SSO, pestaña|
 
 > [!NOTE]
 > Puede agregar pestañas de hasta 16 instancias. En cuanto al bot y la extensión de mensaje, puede agregar uno para cada instancia a la vez.
@@ -95,9 +96,11 @@ En la tabla siguiente se muestran los cambios que se pueden ver en los archivos 
 
 ## <a name="step-by-step-guide"></a>Guía paso a paso
 
-* Siga la guía [paso a paso](../sbs-gs-commandbot.yml) para compilar un bot de comandos en Microsoft Teams
+* Siga la guía [paso a paso](../sbs-gs-commandbot.yml) para compilar un bot de comandos en Microsoft Teams.
 
 * Siga la guía [paso a paso](../sbs-gs-notificationbot.yml) para compilar el bot de notificación en Microsoft Teams.
+
+* Siga la guía [paso a paso](../sbs-gs-workflow-bot.yml) para crear un bot de flujo de trabajo en Microsoft Teams.
 
 ## <a name="see-also"></a>Vea también
 

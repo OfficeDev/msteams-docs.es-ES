@@ -43,6 +43,8 @@
       href: sbs-gs-notificationbot.yml
     - name: Crear un bot de comandos con JavaScript
       href: sbs-gs-commandbot.yml
+    - name: Compilación de un bot de flujo de trabajo
+      href: sbs-gs-workflow-bot.yml
     - name: Ejemplos de código
       href: 'https://github.com/OfficeDev/Microsoft-Teams-Samples'
 - name: Planear la aplicación
@@ -141,8 +143,6 @@
                   href: toolkit/TeamsFx-preview-and-customize-app-manifest.md
                 - name: Edición del manifiesto de Azure AD
                   href: toolkit/AAD-manifest-customization.md
-            - name: TeamsFx SDK
-              href: toolkit/TeamsFx-SDK.md
             - name: Depurar la aplicación de Teams
               items:
                 - name: Información general
@@ -175,6 +175,8 @@
               href: toolkit/Integrate-with-developer-portal.md
         - name: Preguntas más frecuentes
           href: toolkit/faq.md
+    - name: TeamsFx SDK
+      href: toolkit/TeamsFx-SDK.md
     - name: CLI del kit de herramientas de Teams
       href: toolkit/TeamsFx-CLI.md
     - name: Portal para desarrolladores de Teams
