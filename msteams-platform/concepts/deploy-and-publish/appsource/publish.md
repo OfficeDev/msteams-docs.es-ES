@@ -5,12 +5,12 @@ ms.topic: overview
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 95d310467ae5fad80d07a61d6b790dcd086feb35
-ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
+ms.openlocfilehash: f3981ccc9437c28b288a86912dd2b878e729c101
+ms.sourcegitcommit: 0e4fcbc5efff4bfa1dbfba1e5467bbfaa6638705
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2022
-ms.locfileid: "68560732"
+ms.lasthandoff: 10/28/2022
+ms.locfileid: "68773509"
 ---
 # <a name="publish-your-app-to-the-microsoft-teams-store"></a>Publique su aplicación en la tienda de Microsoft Teams
 
@@ -172,6 +172,7 @@ Si su aplicación está lista para producción, podrá comenzar el proceso para 
 
 ## <a name="see-also"></a>Vea también
 
+* [Publicación de aplicaciones de Teams en la tienda de Microsoft Teams](/training/modules/microsoft-teams-publish-app-to-store/)
 * [Publicar en la Tienda de aplicaciones de Microsoft 365](/office/dev/store/)
 * [Cargar la aplicación de Teams](~/concepts/deploy-and-publish/apps-upload.md)
 * [Publicar la aplicación de Teams en su organización](/MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/MicrosoftTeams/breadcrumb/toc.json)

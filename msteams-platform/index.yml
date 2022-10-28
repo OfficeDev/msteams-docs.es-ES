@@ -11,12 +11,12 @@ metadata:
   author: akjo
   ms.author: lajanuar
   ms.date: 05/29/2020
-  ms.openlocfilehash: 71a0f5ad43599fa6d9e96974d10863624cabc993
-  ms.sourcegitcommit: 31032e3dee47232c3f8fc9ed1f2168cc0cbcfb7e
+  ms.openlocfilehash: 6c4e6560c9ca2e3f1645389b1e3ece231591cab1
+  ms.sourcegitcommit: 0e4fcbc5efff4bfa1dbfba1e5467bbfaa6638705
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 09/21/2022
-  ms.locfileid: "67858919"
+  ms.lasthandoff: 10/28/2022
+  ms.locfileid: "68773495"
 highlightedContent:
   items:
   - title: Novedades
@@ -48,6 +48,9 @@ conceptualContent:
   items:
   - title: Aprender
     links:
+    - url: /training/modules/microsoft-teams-publish-app-to-store
+      itemType: learn
+      text: Publicación de aplicaciones de Teams en la tienda de Microsoft Teams
     - url: /training/modules/intro-microsoft-teams-apps
       itemType: learn
       text: Desarrollar aplicaciones para Microsoft Teams
@@ -109,7 +112,7 @@ conceptualContent:
     - url: /microsoftteams/platform/resources/schema/manifest-schema
       itemType: reference
       text: Esquema de manifiesto para aplicaciones de Teams
-    - url: https://adoption.microsoft.com/extensibility-look-book/scenarios/
+    - url: https://developer.microsoft.com/microsoft-teams/app-development-resources/?filter=commonscenarios
       itemType: reference
       text: Escenarios de compilación para aplicaciones de Teams
     - url: https://developer.microsoft.com/microsoft-teams/app-development-resources
@@ -135,7 +138,7 @@ conceptualContent:
     - url: /microsoftteams/platform/samples/shifts-wfm-connectors
       itemType: reference
       text: Integración de conectores Shifts listos para producción
-  - title: Comunidad
+  - title: Community
     links:
     - url: https://developer.microsoft.com/microsoft-teams/blogs/
       itemType: overview

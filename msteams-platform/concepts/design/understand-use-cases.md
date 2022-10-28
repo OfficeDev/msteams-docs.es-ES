@@ -1,16 +1,16 @@
 ---
 title: Descripción de los casos de uso y las características de Teams de la aplicación
 author: heath-hamilton
-description: 'Obtenga información sobre las capacidades de aplicaciones de Microsoft Teaams: pestañas, bots, extensiones de reunión, extensiones de mensajes, conectores de webhook, experiencia de aplicación personal, experiencia de aplicación compartida.'
+description: Obtenga información sobre las funcionalidades de aplicaciones de Microsoft Teams, como pestañas, bots, extensiones de reunión, extensiones de mensajes, conectores de webhook, experiencia de aplicación personal y experiencia de aplicación compartida.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 8a78fe23f244fc37d7bbeda5f854b3cbeb800303
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 296f6d2e8fe5088c480490cc0dbcc035f9f659ec
+ms.sourcegitcommit: 0e4fcbc5efff4bfa1dbfba1e5467bbfaa6638705
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100458"
+ms.lasthandoff: 10/28/2022
+ms.locfileid: "68773516"
 ---
 # <a name="understand-your-use-cases"></a>Entender los casos de uso
 
@@ -20,21 +20,22 @@ El usuario de la aplicación y los requisitos de la aplicación son las directri
 
 Si va a cumplir los requisitos de usuario con la aplicación, primero debe comprenderlos.
 
-- **Comprender al usuario**:
-  - Reconozca problemas de usuario e identifique las soluciones a algunos problemas comunes a los que se enfrentan los usuarios.
-  - Cree su aplicación de Teams buscando la combinación adecuada de características de Teams para satisfacer las necesidades de su usuario.
-  - Comprenda los casos de uso para saber cómo interactúa un usuario final con la aplicación.
+* **Comprender al usuario**:
+  * Reconozca problemas de usuario e identifique las soluciones a algunos problemas comunes a los que se enfrentan los usuarios.
+  * Cree su aplicación de Teams buscando la combinación adecuada de características de Teams para satisfacer las necesidades de su usuario.
+  * Comprenda los casos de uso para saber cómo interactúa un usuario final con la aplicación.
+  * Se recomienda pasar por el módulo lean [cómo publicar la aplicación en la tienda](/training/modules/microsoft-teams-publish-app-to-store/) de aplicaciones de Teams para ayudar con la aplicación a pasar el proceso de envío de la tienda de Microsoft Teams.
 
-- **Comprenda el problema**: vea el problema principal que debe resolver la aplicación.
+* **Comprenda el problema**: vea el problema principal que debe resolver la aplicación.
 
-- **Considere la posibilidad de integrar**: identifique las aplicaciones y los servicios que requiere la aplicación, como la autenticación, Microsoft Graph o las aplicaciones web.
+* **Considere la posibilidad de integrar**: identifique las aplicaciones y los servicios que requiere la aplicación, como la autenticación, Microsoft Graph o las aplicaciones web.
 
 ## <a name="microsoft-teams-app-features"></a>Características de aplicaciones de Microsoft Teams
 
 There are multiple ways to extend Teams so every app is unique. Teams app features offer:
 
-- [Capacidades de la aplicación](#app-capabilities)
-- [Ámbito de la aplicación](#app-scope)
+* [Capacidades de la aplicación](#app-capabilities)
+* [Ámbito de la aplicación](#app-scope)
 
 ### <a name="app-capabilities"></a>Capacidades de la aplicación
 
@@ -150,7 +151,7 @@ Hay algunas opciones para [incorporar la aplicación a la experiencia de llamada
 
 #### <a name="microsoft-graph-for-teams"></a>Microsoft Graph para Teams
 
-La [API de Microsoft Graph para Teams](/graph/teams-concept-overview) proporciona acceso a información sobre equipos, canales, usuarios y mensajes que le ayudan a crear o mejorar características para su aplicación.
+[Microsoft Graph API para Teams](/graph/teams-concept-overview) proporciona acceso a información sobre equipos, canales, usuarios y mensajes que le ayudan a crear o mejorar características para la aplicación.
 
    :::column-end:::
 
@@ -170,13 +171,13 @@ La [API de Microsoft Graph para Teams](/graph/teams-concept-overview) proporcion
 
 La aplicación puede tener uno de los siguientes ámbitos:
 
-- **Experiencia de aplicación personal**: una aplicación personal es un bot o un espacio dedicado para ayudar a los usuarios a centrarse en sus propias tareas o ver actividades importantes para ellos.
-- **Experiencia de aplicación compartida**: el equipo, el canal y el chat son espacios de colaboración. Las aplicaciones en estos contextos están disponibles para todos los usuarios de ese espacio. Normalmente, los espacios de colaboración se centran en los flujos de trabajo para las interacciones de la aplicación o para desbloquear nuevas interacciones sociales.
+* **Experiencia de aplicación personal**: una aplicación personal es un bot o un espacio dedicado para ayudar a los usuarios a centrarse en sus propias tareas o ver actividades importantes para ellos.
+* **Experiencia de aplicación compartida**: el equipo, el canal y el chat son espacios de colaboración. Las aplicaciones en estos contextos están disponibles para todos los usuarios de ese espacio. Normalmente, los espacios de colaboración se centran en los flujos de trabajo para las interacciones de la aplicación o para desbloquear nuevas interacciones sociales.
 
 Una aplicación puede existir en distintos ámbitos. Por ejemplo:
 
-- La aplicación puede mostrar datos en una ubicación compartida central, es decir, una pestaña.
-- También puede presentar esa misma información a través de una interfaz conversacional personal, es decir, un bot.
+* La aplicación puede mostrar datos en una ubicación compartida central, es decir, una pestaña.
+* También puede presentar esa misma información a través de una interfaz conversacional personal, es decir, un bot.
 
 Un usuario puede interactuar con una aplicación en una pestaña de lienzo para realizar una actividad o puede optar por hacer lo mismo con un bot de conversación.
 

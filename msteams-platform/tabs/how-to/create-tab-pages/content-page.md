@@ -5,12 +5,12 @@ description: Obtenga información sobre la página web dentro del cliente de Tea
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 362b63f44abf1afdf1572d967eb703f0836d4a45
-ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
+ms.openlocfilehash: dad5451c4255ad97cb14a13983f1701a52f39bb9
+ms.sourcegitcommit: 0e4fcbc5efff4bfa1dbfba1e5467bbfaa6638705
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2022
-ms.locfileid: "68560466"
+ms.lasthandoff: 10/28/2022
+ms.locfileid: "68773446"
 ---
 # <a name="create-a-content-page"></a>Creación de una página de contenido
 
@@ -121,7 +121,7 @@ Para mostrar el indicador de carga:
 1. Llamar a `app.initialize();`.
 1. Como paso **obligatorio**, llame a `app.notifySuccess()` para notificarle a Teams que la aplicación se ha cargado correctamente. A continuación, Teams oculta el indicador de carga, si procede. Si `notifySuccess`  no se llama en un plazo de 30 segundos, Teams supone que la aplicación agotó el tiempo de espera y muestra una pantalla de error con una opción de reintento.
 1. **Opcionalmente**, si está listo para imprimir en la pantalla y desea cargar de forma diferida el resto del contenido de la aplicación, puede ocultar manualmente el indicador de carga llamando a `app.notifyAppLoaded();`.
-1. Si la aplicación no se carga, puede llamar `app.notifyFailure({reason: app.FailedReason.Timeout, message: "failure message"});` a para informar a Teams sobre el error y, opcionalmente, proporcionar un mensaje de error. Se muestra al usuario una pantalla de error. En el código siguiente se muestra la enumeración que define las posibles razones que puede indicar para que la aplicación no se cargue:
+1. Si la aplicación no se carga, puede llamar `app.notifyFailure({reason: app.FailedReason.Timeout, message: "failure message"});` a para informar a Teams sobre el error y, opcionalmente, proporcionar un mensaje de error. `notifyFailure` no muestra un mensaje personalizado. Se muestra al usuario una pantalla de error. En el código siguiente se muestra la enumeración que define las posibles razones que puede indicar para que la aplicación no se cargue:
 
     ```typescript
     /* List of failure reasons */
