@@ -5,16 +5,16 @@ description: Obtenga información sobre cómo dar formato y aplicar estilo a los
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 4e3b777ba5e94c8bac541d0178122f16f218eba0
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: b0db9f9d9e55dc3f11474dac4b8c6563caf5fd1b
+ms.sourcegitcommit: bb15ce26cd65bec90991b703069424ab4b4e1a61
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100185"
+ms.lasthandoff: 10/28/2022
+ms.locfileid: "68772303"
 ---
 # <a name="format-your-bot-messages"></a>Formatear los mensajes del bot
 
-El formato de mensajes le permite sacar lo mejor de los mensajes del bot. Puede dar formato a los mensajes del bot para incluir tarjetas enriquecidas como datos adjuntos que contienen elementos interactivos, como botones, texto, imágenes, audio, vídeo, etc.
+El formato de mensajes le permite sacar lo mejor de los mensajes del bot. Puede dar formato a los mensajes del bot para incluir tarjetas enriquecidas como datos adjuntos que contienen elementos interactivos, como botones, texto, imágenes, etc.
 
 > [!NOTE]
 > El límite de tamaño del mensaje del bot es de 40 KB. Si el límite de tamaño del mensaje de bot supera los 40 KB, el bot recibe un `413` código de estado (`RequestEntityTooLarge`), que contiene el código `MessageSizeTooBig`de error . El límite de tamaño del mensaje del bot incluye toda la carga del mensaje codificada como UTF-16 y no incluye imágenes codificadas en Base64.

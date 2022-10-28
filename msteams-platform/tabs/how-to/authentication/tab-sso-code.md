@@ -4,12 +4,12 @@ description: Actualice el código de la aplicación de pestaña para solicitar y
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: pestañas de autenticación de teams Microsoft Azure Active Directory (Azure AD) Graph API
-ms.openlocfilehash: 71c532b62b53ea0efb11da72c30d7e9d32804897
-ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
+ms.openlocfilehash: 20b11032227a08d057a6cdae8e46154004bfdb02
+ms.sourcegitcommit: bb15ce26cd65bec90991b703069424ab4b4e1a61
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2022
-ms.locfileid: "67586787"
+ms.lasthandoff: 10/28/2022
+ms.locfileid: "68772268"
 ---
 # <a name="add-code-to-enable-sso"></a>Agregar código para habilitar el inicio de sesión único
 
@@ -36,7 +36,7 @@ Para obtener acceso a la aplicación para el usuario de la aplicación actual, e
 <details>
 <summary>Obtenga más información sobre getAuthToken()</summary>
 <br>
-`getAuthToken()` es un método del SDK de JavaScript de Microsoft Teams. Solicita que se emita un token de acceso de Azure AD en nombre de la aplicación. El token se puede adquirir de la memoria caché, si no ha expirado. De lo contrario, se envía una solicitud a Azure AD para obtener un nuevo token.
+`getAuthToken()` es un método del SDK de JavaScript de Microsoft Teams. Solicita que se emita un token de acceso de Azure AD en nombre de la aplicación. El token se adquiere de la memoria caché, si no ha expirado. De lo contrario, se envía una solicitud a Azure AD para obtener un nuevo token.
 
  Para más información, vea [getAuthToken](/javascript/api/@microsoft/teams-js/microsoftteams.authentication?view=msteams-client-js-latest#@microsoft-teams-js-microsoftteams-authentication-getauthtoken&preserve-view=true).
 </details>
@@ -47,7 +47,7 @@ Use `getAuthToken()` en el momento en que necesite un token de acceso para el us
 
 | Si se necesita un token de acceso... | Llame a getAuthToken()... |
 | --- | --- |
-| Cuando el usuario de la aplicación accede a la aplicación | Desde dentro de `microsoftTeams.initialize()`. |
+| Cuando el usuario de la aplicación accede a la aplicación | Después de `microsoftTeams.initialize()`. |
 | Para usar una funcionalidad determinada de la aplicación | Cuando el usuario de la aplicación realiza una acción que requiere el inicio de sesión. |
 
 ### <a name="add-code-for-getauthtoken"></a>Agregar código para getAuthToken

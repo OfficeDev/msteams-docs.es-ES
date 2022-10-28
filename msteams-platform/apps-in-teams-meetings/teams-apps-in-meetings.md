@@ -6,12 +6,12 @@ ms.topic: overview
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.date: 04/07/2022
-ms.openlocfilehash: b98204e1aec3224cad5955a1682d3d5338c47084
-ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
+ms.openlocfilehash: f253a4ca3d09e48f99df36fdcb77bdd740fab5ff
+ms.sourcegitcommit: bb15ce26cd65bec90991b703069424ab4b4e1a61
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/20/2022
-ms.locfileid: "68615173"
+ms.lasthandoff: 10/28/2022
+ms.locfileid: "68772275"
 ---
 # <a name="apps-for-teams-meetings-and-calls"></a>Aplicaciones para reuniones y llamadas de Teams
 
@@ -63,7 +63,7 @@ En la lista siguiente se detallan los distintos tipos de usuario junto con su ac
     > [!NOTE]
     > Los usuarios de Teams pueden agregar aplicaciones cuando hospedan reuniones o chats con otras organizaciones. Cuando un usuario externo comparte aplicaciones con la reunión, todo el usuario puede acceder a la aplicación. Las directivas de datos y las prácticas de uso compartido de datos de la organización host de las aplicaciones de terceros compartidas por la organización de ese usuario estarán en vigor.
 
-* **Anónimo**: los usuarios anónimos no tienen una identidad de Azure AD y no están federados con un inquilino. Los participantes anónimos son como usuarios externos, pero su identidad no se muestra en la reunión. Los usuarios anónimos no pueden acceder a las aplicaciones de una ventana de reunión. Un usuario anónimo puede ser moderador o asistente, pero no puede ser organizador.
+* **Anónimo**: los usuarios anónimos no tienen una identidad de Azure AD y no están federados con un inquilino. Los participantes anónimos son como usuarios externos, pero su identidad no se muestra en la reunión. Los usuarios anónimos no pueden acceder a las aplicaciones de una ventana de reunión. Un usuario anónimo no puede ver el logotipo del bot en el chat de reunión. Un usuario anónimo puede ser moderador o asistente, pero no puede ser organizador.
 
     > [!NOTE]
     > Los usuarios anónimos heredan la directiva de permisos de aplicación de nivel de usuario predeterminada global. Para obtener más información, vea [Administrar aplicaciones](/microsoftteams/non-standard-users#anonymous-user-in-meetings-access).

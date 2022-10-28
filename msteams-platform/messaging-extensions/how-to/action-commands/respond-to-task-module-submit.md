@@ -5,19 +5,19 @@ description: Obtenga información sobre cómo responder a la acción de envío d
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 827c939080aa2eff182115966351356b0d71e3a9
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 472bde652e60a8029bd54c7a1360412ab9710ada
+ms.sourcegitcommit: bb15ce26cd65bec90991b703069424ab4b4e1a61
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100486"
+ms.lasthandoff: 10/28/2022
+ms.locfileid: "68772310"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>Responder a la acción de envío del módulo de tareas
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
 Este documento le guía sobre cómo responde la aplicación a los comandos de acción, como la acción de envío del módulo de tareas del usuario.
-Una vez que un usuario envía el módulo de tareas, el servicio web recibe un mensaje de invocación `composeExtension/submitAction` con el identificador de comando y los valores de parámetro. La aplicación tiene cinco segundos para responder a la invocación; de lo contrario, el usuario recibe un mensaje de error **No se puede acceder a la aplicación** y el cliente Teams omite cualquier respuesta que se va a invocar.
+Una vez que un usuario envía el módulo de tareas, el servicio web recibe un mensaje de invocación `composeExtension/submitAction` con el identificador de comando y los valores de parámetro. La aplicación tiene cinco segundos para responder a la invocación.  
 
 Tiene las siguientes opciones:
 
@@ -27,6 +27,11 @@ Tiene las siguientes opciones:
 * [Tarjeta adaptable del bot](#bot-response-with-adaptive-card): inserte una tarjeta adaptable directamente en la conversación.
 * [Solicite al usuario que se autentique](~/messaging-extensions/how-to/add-authentication.md).
 * [Solicite al usuario que proporcione una configuración adicional](~/get-started/first-message-extension.md).
+
+Si la aplicación no responde en cinco segundos, el cliente de Teams volverá a intentar la solicitud dos veces antes de enviar un mensaje de error **No se puede llegar a la aplicación**. Si el bot responde después del tiempo de espera, se omite la respuesta.
+
+> [!NOTE]
+> La aplicación debe aplazar las acciones de ejecución prolongada después de que el bot responda a la solicitud de invocación. Los resultados de la acción de ejecución prolongada se pueden entregar como un mensaje.
 
 Para la autenticación o configuración, una vez que el usuario completa el proceso, la invocación original se resiente para el servicio web. En la tabla siguiente se muestra qué tipos de respuestas están disponibles, en función de la ubicación `commandContext` de invocación de la extensión de mensaje:
 

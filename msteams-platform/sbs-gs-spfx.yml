@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: Introducción a la introducción a la introducción
   ms.custom: mvc
   ms.localizationpriority: high
-  ms.openlocfilehash: e7ed30f07283f0c63b3e2fefa423af3b7c0bdcb1
-  ms.sourcegitcommit: 2d2a08f671c3d19381403ba1af5dff1f06bb4dd6
+  ms.openlocfilehash: 8f942af2c34711806ced9d2c39e42bc276ffceb8
+  ms.sourcegitcommit: bb15ce26cd65bec90991b703069424ab4b4e1a61
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 08/15/2022
-  ms.locfileid: "67338844"
+  ms.lasthandoff: 10/28/2022
+  ms.locfileid: "68772317"
 items:
 - durationInMinutes: 1
   content: "SharePoint Framework (SPFx) es un modelo de desarrollo para crear soluciones del lado cliente para Microsoft Teams y SharePoint. La aplicación de SPFx Teams se hospeda en Microsoft 365. Proporciona compatibilidad completa para desarrollar y hospedar la solución SPFx del lado cliente. Puede integrar la solución de SharePoint Framework con:\n\n- Datos de SharePoint y extensión de Microsoft Teams. \n- Las API empresariales protegidas con Azure Active Directory.\n\nPara este tutorial, inicie el desarrollo de aplicaciones de Microsoft Teams con SPFx mediante la creación de la primera aplicación con una funcionalidad de pestaña.\n\n:::image type=\"content\" source=\"~/assets/images/teams-toolkit-v2/first-tab/your-helloworld-app-tab1.png\" alt-text=\"Diagrama que muestra que esta aplicación tiene tres características. La pestaña está resaltada.\":::\n\n> [!NOTE]\n> Actualmente, Teams Toolkit solo ofrece la funcionalidad Tab en una aplicación de Teams con Visual Studio Code y SharePoint Framework. Las funcionalidades Bot y Message Extension no están disponibles.\n"
