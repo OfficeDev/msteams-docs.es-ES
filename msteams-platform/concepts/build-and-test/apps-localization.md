@@ -1,15 +1,15 @@
 ---
 title: Localizar la aplicación
-description: Obtenga información sobre las consideraciones para localizar la aplicación Microsoft Teams y localizar cadenas en el manifiesto de la aplicación.
+description: Obtenga información sobre las consideraciones para localizar la aplicación de Microsoft Teams y localizar cadenas en el manifiesto de la aplicación.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 05/15/2018
-ms.openlocfilehash: cfb425bef1b09540c1049a3769c87d8def272314
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: bd8b579178598b1d485e908f80e9590b27652101
+ms.sourcegitcommit: 10debe0f01574a21aab54bfac692a4c8373263a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189595"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68789873"
 ---
 # <a name="localize-your-app"></a>Localizar la aplicación
 
@@ -99,7 +99,7 @@ Si el idioma del usuario está establecido en "en-ca", se producen los siguiente
 1. El cliente de Teams toma las cadenas "fr" y las sobrescribe con las cadenas "en".
 1. Puesto que no se proporciona ninguna localización "en-ca", se usan las localizaciones "en".
 
-Si el idioma del usuario se establece en "es-es", el cliente de Teams toma las cadenas "fr". El cliente Teams no invalida las cadenas con ninguno de los archivos de idioma, ya que no se proporciona ninguna traducción "es" o "es-es".
+Si el idioma del usuario se establece en "es-es", el cliente de Teams toma las cadenas "fr". El cliente de Teams no invalida las cadenas con ninguno de los archivos de idioma, ya que no se proporciona ninguna traducción "es" o "es-es".
 
 Por lo tanto, debe proporcionar traducciones de nivel superior solo de idioma en el manifiesto. Por ejemplo, `en` en lugar de `en-us`. Debe proporcionar invalidaciones de nivel de región solo para las pocas cadenas que las necesiten.
 
@@ -158,8 +158,8 @@ Si proporciona versiones localizadas de la aplicación, los usuarios responderá
 
 | Ejemplo de nombre | Descripción | .NET | Node.js |
 |-------------|-------------|------|------|
-| Localización de aplicaciones | Teams localización de aplicaciones mediante bot y pestaña. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |[Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/nodejs) |
+| Localización de aplicaciones | Localización de aplicaciones de Teams mediante bot y pestaña. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |[Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/nodejs) |
 
 ## <a name="see-also"></a>Consulte también
 
-[Localizar la referencia de esquema JSON](~/resources/schema/localization-schema.md)
+* [Localizar la referencia de esquema JSON](~/resources/schema/localization-schema.md)

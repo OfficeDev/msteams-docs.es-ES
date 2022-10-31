@@ -5,16 +5,16 @@ ms.date: 10/10/2022
 ms.topic: conceptual
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: b225624970a380679b2b1a508bf3b4d2882de72e
-ms.sourcegitcommit: 20070f1708422d800d7b1d84b85cbce264616ead
+ms.openlocfilehash: cfe650e676252a16c1665f078938adbff0d4c7d7
+ms.sourcegitcommit: 10debe0f01574a21aab54bfac692a4c8373263a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2022
-ms.locfileid: "68537524"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68789887"
 ---
 # <a name="publish-teams-apps-for-microsoft-365"></a>Publicar aplicaciones de Teams para Microsoft 365
 
-Microsoft Teams admite aplicaciones de Teams habilitadas para Microsoft 365 para producción. Puede distribuir estas aplicaciones a la audiencia que use las versiones de versión de *destino*  (versión preliminar de desarrollo) de Outlook.com y Office.com, la compilación del *canal* beta de Outlook para el escritorio de Windows y la compilación del Canal actual de Office (versión preliminar de desarrollo) de la aplicación de Office para Android. Las opciones de distribución y los procesos de las aplicaciones de Teams habilitadas para Microsoft 365 son las mismas que para las aplicaciones tradicionales de Teams.
+Microsoft Teams admite aplicaciones de Teams habilitadas para Microsoft 365 para producción. Puede distribuir estas aplicaciones a los usuarios que usan las versiones de versión de *destino*  (versión preliminar de desarrollo) de Outlook.com y Office.com, la compilación del *canal* beta de Outlook para el escritorio de Windows y la compilación del Canal actual de Office (versión preliminar de desarrollo) de la aplicación de Office para Android. Las opciones de distribución y los procesos de las aplicaciones de Teams habilitadas para Microsoft 365 son las mismas que para las aplicaciones tradicionales de Teams.
 
 Una vez publicada, la aplicación se podrá detectar como una aplicación instalable desde las tiendas de aplicaciones de Outlook y Office, además de la tienda de Teams. La aplicación usa los permisos definidos en Teams en Outlook y Office. Los administradores de Teams pueden [administrar el acceso a las aplicaciones de Teams en Microsoft 365](/MicrosoftTeams/manage-third-party-teams-apps) para los usuarios de su organización.
 
@@ -26,11 +26,11 @@ Las extensiones de mensajes habilitadas para Outlook se pueden distribuir para l
 
 ### <a name="teams-client"></a>Cliente de Teams
 
-En el menú **Aplicaciones** , seleccione **Administrar las aplicaciones** > **Publicar una aplicación** > **Enviar una aplicación a su organización**. Esto requiere la aprobación del administrador de TI.
+En el menú **Aplicaciones** , seleccione **Administrar las aplicaciones** > **Publicar una aplicación** > **Enviar una aplicación a su organización**. Para enviar una aplicación se requiere la aprobación del administrador de TI.
 
 ### <a name="teams-developer-portal"></a>Portal para desarrolladores de Teams
 
-Use el [Portal para desarrolladores de Teams](https://dev.teams.microsoft.com/) para cargar y publicar una aplicación en su organización. Esto requiere la aprobación del administrador de TI. Para obtener más información, consulte [Administración de aplicaciones con el Portal para desarrolladores para Microsoft Teams](../concepts/build-and-test/teams-developer-portal.md).
+Use el [Portal para desarrolladores de Teams](https://dev.teams.microsoft.com/) para cargar y publicar una aplicación para su organización. La carga y publicación de una aplicación requiere la aprobación del administrador de TI. Para obtener más información, consulte [Administración de aplicaciones con el Portal para desarrolladores para Microsoft Teams](../concepts/build-and-test/teams-developer-portal.md).
 
 ### <a name="microsoft-teams-admin-center"></a>Centro de administración de Microsoft Teams
 
@@ -42,7 +42,7 @@ Como administrador global, puede cargar y preinstalar el paquete de la aplicaci�
 
 ## <a name="multitenant-distribution"></a>Distribución de varias cuentas empresariales
 
-El proceso de envío de [Microsoft Commercial Marketplace](https://appsource.microsoft.com/) (Microsoft AppSource) para aplicaciones de Teams habilitadas para Outlook y Office es el mismo que las aplicaciones tradicionales de Teams. La única diferencia es que tendrá que usar la [versión 1.13](../tabs/how-to/using-teams-client-sdk.md) del manifiesto de aplicación de Teams en el paquete de la aplicación, lo que introduce compatibilidad con las aplicaciones de Teams que se ejecutan en Microsoft 365.
+El proceso de envío [de Microsoft AppSource](https://appsource.microsoft.com/) (Marketplace comercial de Microsoft) para las aplicaciones de Teams habilitadas para Outlook y Office es el mismo que para las aplicaciones tradicionales de Teams. La única diferencia es que debe usar la [versión 1.13](../tabs/how-to/using-teams-client-sdk.md) del manifiesto de aplicación de Teams en el paquete de la aplicación, lo que introduce compatibilidad con las aplicaciones de Teams que se ejecutan en Microsoft 365.
 
 > [!TIP]
 > Use el Portal para desarrolladores de Teams para [validar el paquete de la aplicación](https://dev.teams.microsoft.com/validation) para resolver los errores o advertencias antes de enviarlo al almacén de Teams (a través de [Microsoft Partner Network](https://partner.microsoft.com/)).

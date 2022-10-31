@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.date: 04/07/2022
-ms.openlocfilehash: 79b5f58f5089ac40a12f608616dc52b90ed6ef08
-ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
+ms.openlocfilehash: f3d44317dbc8ea317e8fe3c5bdeb19404df75265
+ms.sourcegitcommit: 10debe0f01574a21aab54bfac692a4c8373263a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/20/2022
-ms.locfileid: "68615505"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68789866"
 ---
 # <a name="meeting-apps-apis"></a>API de aplicaciones de reunión
 
@@ -523,7 +523,7 @@ El cuerpo de la respuesta JSON para la API de Detalles de la Reunión es el sigu
 | Nombre de propiedad | Descripción |
 |---|---|
 | **details.id** | Identificador de la reunión, codificado como una cadena BASE64. |
-| **details.msGraphResourceId** | MsGraphResourceId, que se usa específicamente para llamadas a Graph API de MS. |
+| **details.msGraphResourceId** | MsGraphResourceId, que se usa específicamente para llamadas de Graph API de MS. |
 | **details.scheduledStartTime** | Hora de inicio programada de la reunión, en UTC. |
 | **details.scheduledEndTime** | Hora de finalización programada de la reunión, en UTC. |
 | **details.joinUrl** | Dirección URL usada para unirse a la reunión. |
@@ -952,6 +952,7 @@ En la tabla siguiente se proporcionan los códigos de respuesta:
 * [Flujo de autenticación de Teams para pestañas](../tabs/how-to/authentication/auth-flow-tab.md)
 * [Aplicaciones para reuniones de Teams](teams-apps-in-meetings.md)
 * [SDK de Live Share](teams-live-share-overview.md)
+* [Grabación de reuniones en la nube de Teams](/microsoftteams/cloud-recording)
 
 ## <a name="next-steps"></a>Pasos siguientes
 

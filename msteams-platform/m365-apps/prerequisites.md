@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.custom: m365apps
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: 1c808e2ecb15b87781daaf5879e72d415bc1b441
-ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
+ms.openlocfilehash: 99050d8b8db4fac38e9d36c42a6c3efe7f1bf28d
+ms.sourcegitcommit: 10debe0f01574a21aab54bfac692a4c8373263a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "68243328"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68789915"
 ---
 # <a name="set-up-your-dev-environment-for-extending-teams-apps-across-microsoft-365"></a>Configure el entorno de desarrollo para ampliar las aplicaciones de Teams en Microsoft 365
 
@@ -30,7 +30,7 @@ Para configurar el entorno de desarrollo:
 
 Necesita un inquilino de espacio aislado de suscripción de desarrollador de Microsoft 365 para configurar el entorno de desarrollo. Si aún no tiene uno, cree un [inquilino de espacio aislado](/office/developer-program/microsoft-365-developer-program-get-started) u obtenga un inquilino de prueba a través de su organización.
 
-También deberá habilitar la instalación de prueba para el inquilino:
+También debe habilitar la instalación local para el inquilino:
 
  1. Inicie sesión en el [Centro de administración de Teams](https://admin.teams.microsoft.com/dashboard) con las credenciales del inquilino de prueba.
 
@@ -38,7 +38,7 @@ También deberá habilitar la instalación de prueba para el inquilino:
 
  1. En la parte superior derecha, seleccione **Configuración de la aplicación para toda la organización**.
 
- 1. En Aplicaciones personalizadas, active la opción **Interacción con la aplicación personalizada** y guárdela.
+ 1. En Aplicaciones personalizadas, active la alternancia **Interacción con la aplicación personalizada** y **Guardar**.
 
     :::image type="content" source="images/teams-admin-enable-sideloading.png" alt-text="La captura de pantalla es un ejemplo que permite la transferencia local para aplicaciones personalizadas desde el Centro de Administración de Teams":::
 
@@ -62,17 +62,17 @@ Para inscribir el inquilino de prueba para las versiones dirigidas de Office 365
     1. **Versión dirigida para todos los usuarios**
     1. **Versión dirigida para los usuarios seleccionados**
 
-    :::image type="content" source="images/m365-admin-center-targeted-releases.png" alt-text="Menú &quot;Preferencias de versión&quot; del Centro de administración de Microsoft 365 con la opción de versión dirigida seleccionada":::
+    :::image type="content" source="images/m365-admin-center-targeted-releases.png" alt-text="La captura de pantalla es un ejemplo que muestra el menú &quot;Preferencias de versión&quot; de Centro de administración de Microsoft 365 con la opción Versión dirigida seleccionada.":::
 
 1. Seleccione **Guardar**.
 
-Para obtener más información sobre las opciones de versión de Office 365, consulte [Configurar las opciones de versión estándar o dirigida](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide&preserve-view=true#targeted-release) en la *ayuda del Centro de administración de Microsoft 365*.
+Para obtener más información sobre Office 365 opciones de versión, consulte [Configuración de las opciones de versión estándar o de destino](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide&preserve-view=true#targeted-release) en *Centro de administración de Microsoft 365 ayuda*.
 
 ## <a name="install-office-apps-in-your-test-environment"></a>Instalar aplicaciones de Office en el entorno de prueba
 
 ### <a name="desktop"></a>Escritorio
 
-Puede obtener una vista previa de las aplicaciones de Teams que se ejecutan en Outlook en el escritorio de Windows mediante una *Compilación de Canal beta* reciente. Compruebe si tiene que [Cambiar el canal de actualización de aplicaciones de Microsoft 365](/deployoffice/change-update-channels?WT.mc_id=M365-MVP-5002016) para que el inquilino de prueba instale una compilación de Office 365 Canal beta.
+Puede obtener una vista previa de las aplicaciones de Teams que se ejecutan en Outlook en el escritorio de Windows mediante una *Compilación de Canal beta* reciente. Compruebe si tiene que [cambiar el canal de actualización de Aplicaciones Microsoft 365](/deployoffice/change-update-channels?WT.mc_id=M365-MVP-5002016) para que el inquilino de prueba instale una compilación de Office 365 canal beta.
 
 Para instalar aplicaciones de Office 365 Canal beta en el entorno de prueba:
 
@@ -84,11 +84,11 @@ Para instalar aplicaciones de Office 365 Canal beta en el entorno de prueba:
 1. Abra Outlook (cliente de escritorio) y configure la cuenta de correo con sus credenciales de inquilino de prueba.
 1. Abrir **Archivo** > **Cuenta de Office** > **Acerca de Outlook** para confirmar que está ejecutando una compilación de Outlook del *Canal beta* de Microsoft 365.
 
-    :::image type="content" source="images/outlook-about-beta-channel.png" alt-text="Vaya a &quot;Acerca de Outlook&quot; desde su cuenta de Office para comprobar que está ejecutando una compilación de canal beta.":::
+    :::image type="content" source="images/outlook-about-beta-channel.png" alt-text="La captura de pantalla es un ejemplo que muestra acerca de Outlook para comprobar que está ejecutando una compilación de canal beta.":::
 
 1. Compruebe que *Microsoft Edge WebView2 Runtime* esté instalado. En Windows, vaya a **Inicio** > **Aplicaciones y características** y busque **webview**:
 
-    :::image type="content" source="images/windows-addremove-webview2.png" alt-text="Buscar &quot;vista web&quot; en &quot;Aplicaciones y características&quot; en la configuración de Windows":::
+    :::image type="content" source="images/windows-addremove-webview2.png" alt-text="La captura de pantalla es un ejemplo que muestra el campo de búsqueda en la configuración de Windows.":::
 
     Si no aparece, instale [Microsoft Edge WebView2](https://developer.microsoft.com/microsoft-edge/webview2/) en el entorno de prueba.
 
@@ -96,18 +96,18 @@ Para instalar aplicaciones de Office 365 Canal beta en el entorno de prueba:
 
 Puede obtener una vista previa de las pestañas personales de Teams que se ejecutan en la aplicación de Office para Android uniéndose al programa beta.
 
-Para instalar la versión beta de la aplicación de Office más reciente, compile en el dispositivo Android físico o en el emulador de Android:
+Para instalar la versión beta de la aplicación de Office más reciente, compile en su dispositivo Android físico o emulador de Android:
 
 1. Asegúrese de usar un [dispositivo Android compatible con](https://support.google.com/googleplay/answer/1727131) Google Play.
 1. Inicia **Play Store** en tu dispositivo Android.
 1. Busque office y seleccione **Microsoft Office: Editar & Share**.
 1. Seleccione el botón **Instalar** .
 
-    :::image type="content" source="images/office-android-install.png" alt-text="captura de pantalla de Microsoft Office: Editar & aplicación Share en Google Play Store":::
+    :::image type="content" source="images/office-android-install.png" alt-text="La captura de pantalla es un ejemplo que muestra el botón de instalación de la aplicación Microsoft Office: Editar & Share en Google Play Store.":::
 
 1. Seleccione **Join (Unirse****) en la sección Join the beta (Unir a la versión beta**) una vez completada la instalación.
 
-    :::image type="content" source="images/office-android-join-beta.png" alt-text="captura de pantalla de Unión a la pantalla beta":::
+    :::image type="content" source="images/office-android-join-beta.png" alt-text="La captura de pantalla es un ejemplo que muestra la pantalla Unirse a la versión beta.":::
 
 1. Inicie la aplicación de Office e inicie sesión con sus credenciales de inquilino de prueba.
 1. Abra su perfil **(Me) > Configuración** y desplácese hasta la parte inferior del menú.
@@ -121,7 +121,7 @@ Asegúrese de cambiar a la [Versión preliminar pública para desarrolladores](.
 1. En el menú de puntos suspensivos (**...**) situado junto a su perfil de usuario, seleccione **Acerca de** > **Versión preliminar del desarrollador**. Aparecerá un cuadro de diálogo, seleccione **Cambiar a la versión preliminar del desarrollador**.
 1. Una vez reiniciada la aplicación de Teams, vaya al menú de puntos suspensivos (**...**) junto a su perfil de usuario y compruebe si la opción **Versión preliminar del desarrollador** está seleccionada.
 
-    :::image type="content" source="images/teams-dev-preview.png" alt-text="Opción Versión preliminar pública para desarrolladores en Teams":::
+    :::image type="content" source="images/teams-dev-preview.png" alt-text="La captura de pantalla es un ejemplo que muestra la opción de versión preliminar para desarrolladores públicos en Teams.":::
 
 ## <a name="install-visual-studio-code-and-teams-toolkit-extension"></a>Instalar Visual Studio Code y la extensión kit de herramientas de Teams
 

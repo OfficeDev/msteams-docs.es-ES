@@ -5,12 +5,12 @@ description: En este artículo, obtenga información sobre las herramientas y lo
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: b8d9f81216ea82aff3a5be9ec96c4f1dd79e9603
-ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
+ms.openlocfilehash: e1be981a381846ab17220254336571ea40bf2752
+ms.sourcegitcommit: 10debe0f01574a21aab54bfac692a4c8373263a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2022
-ms.locfileid: "67605022"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68789901"
 ---
 # <a name="bots-and-sdks"></a>Bots y SDK
 
@@ -209,6 +209,7 @@ this.onMessage(async (context, next) => {
 * [Bots de llamadas y reuniones](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)
 * [Conversaciones de bot](~/bots/how-to/conversations/conversation-basics.md)
 * [Menús de comandos del bot](~/bots/how-to/create-a-bot-commands-menu.md)
+* [Creación de desencadenadores personalizados en Bot Framework Composer](/composer/how-to-create-custom-triggers)
 * [Flujo de autenticación para bots en Microsoft Teams](~/bots/how-to/authentication/auth-flow-bot.md)
 * [Uso de módulos de tareas desde los bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)
 * [Publicación del bot en Azure](/azure/bot-service/bot-builder-deploy-az-cli)

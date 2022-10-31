@@ -5,12 +5,12 @@ description: Obtenga información sobre Teams Connect canales compartidos para c
 ms.author: surbhigupta
 localization_priority: Normal
 ms.topic: conceptual
-ms.openlocfilehash: f063be5bce83484a259e67e94f4caa73ef8afa76
-ms.sourcegitcommit: bd30d33af59dd870a309ae72b4c4496c9c1f920d
+ms.openlocfilehash: d1f2d212c33f80ce6a5d27e93bda0551d26542dd
+ms.sourcegitcommit: 10debe0f01574a21aab54bfac692a4c8373263a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2022
-ms.locfileid: "67635318"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68789929"
 ---
 # <a name="microsoft-teams-connect-shared-channels"></a>Microsoft Teams Connect canales compartidos
 
@@ -111,4 +111,5 @@ Las aplicaciones deben funcionar entre inquilinos en la instalación y el uso. E
 * [Pestañas de compilación para Teams](../../tabs/what-are-tabs.md)
 * [Esquema del manifiesto de la aplicación de Teams](../../resources/schema/manifest-schema.md)
 * [Canales compartidos en Microsoft Teams](/MicrosoftTeams/shared-channels)
+* [Tipo de recurso de canal](/graph/api/resources/channel)
 * [Directiva de retención para ubicaciones de Teams](/microsoft-365/compliance/create-retention-policies)
