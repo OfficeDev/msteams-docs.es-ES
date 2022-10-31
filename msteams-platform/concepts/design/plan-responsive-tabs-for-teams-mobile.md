@@ -5,12 +5,12 @@ description: Con este módulo de aprendizaje, aprenderá a planear la creación 
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: v-abirade
-ms.openlocfilehash: 23f42e07f8c7b44cbcda35b5ed5f8fe17a320271
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: e7cf4508f723efa1b2a0445d304e080677b257ff
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66484023"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791562"
 ---
 # <a name="plan-responsive-tabs-for-teams-mobile"></a>Planear pestañas con capacidad de respuesta para dispositivo móvil de Teams
 
@@ -40,8 +40,8 @@ Después de identificar el ámbito de la aplicación, es el momento de comprende
 
    Proporcionar experiencias de aplicación completas para interactuar en dispositivos móviles. A medida que los usuarios interactúan con la aplicación, proporcione una experiencia inmersiva completa en dispositivos móviles, ya sea a la par o mejor aún que la experiencia de escritorio. Para proporcionar una buena experiencia a los usuarios, haga que todos los casos de uso respondan en dispositivos móviles.
 
-> [!TIP]
-> Para obtener información sobre las directrices de diseño, vea [proceso de diseño para las aplicaciones de Teams](design-teams-app-process.md).
+    > [!TIP]
+    > Para obtener información sobre las directrices de diseño, vea [proceso de diseño para las aplicaciones de Teams](design-teams-app-process.md).
 
 ## <a name="use-cases"></a>Casos de uso
 

@@ -5,12 +5,12 @@ description: Crear página de configuración para recopilar información del usu
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 5db345ce0653407b750afa96e6f82fff949f98f6
-ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
+ms.openlocfilehash: 51e5ef0a6752ab70ede4d2da699f78910c08f6c9
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2022
-ms.locfileid: "68560662"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791708"
 ---
 # <a name="create-a-configuration-page"></a>Creación de una página de configuración
 
@@ -30,7 +30,7 @@ La aplicación debe hacer referencia al [SDK de cliente de JavaScript Microsoft 
 
 En la imagen siguiente se muestra un ejemplo de una página de configuración:
 
-<img src="~/assets/images/tab-images/configuration-page.png" alt="Configuration page" width="400"/>
+:::image type="content" source="../../../assets/images/tab-images/configuration-page.png" alt-text="Captura de pantalla que muestra la página de configuración.":::
 
 El código siguiente es un ejemplo de código correspondiente para la página de configuración:
 
@@ -160,11 +160,11 @@ Elija los botones **Seleccionar gris** o **Seleccionar rojo** en la página de c
 
 En la imagen siguiente se muestra el contenido de la pestaña con el icono **Gris** seleccionado:
 
-<img src="~/assets/images/tab-images/configure-tab-with-gray.png" alt="Configure tab with select gray" width="400"/>
+:::image type="content" source="../../../assets/images/tab-images/configure-tab-with-gray.png" alt-text="Captura de pantalla que muestra la pestaña configurar con el color gris seleccionado.":::
 
 En la imagen siguiente se muestra el contenido de la pestaña con el icono **Rojo** seleccionado:
 
-<img src="~/assets/images/tab-images/configure-tab-with-red.png" alt="Configure tab with select red" width="400"/>
+:::image type="content" source="../../../assets/images/tab-images/configure-tab-with-red.png" alt-text="Captura de pantalla que muestra la pestaña configurar con el color rojo seleccionado.":::
 
 Al elegir los desencadenadores `saveGray()` de botón adecuados o `saveRed()`, se invoca lo siguiente:
 

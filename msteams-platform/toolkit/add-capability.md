@@ -6,12 +6,12 @@ ms.author: v-amprasad
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: abcda0dd19388d1cdce2f2b440ecbae833b5f9c3
-ms.sourcegitcommit: 6926cf5eee55d5047c11ca13afc7f6f23e270396
+ms.openlocfilehash: a0bec3166228b53dd4a6da336b42632ba2475582
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2022
-ms.locfileid: "68740607"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791758"
 ---
 # <a name="add-capabilities-to-teams-apps"></a>Adición de funcionalidades a aplicaciones de Teams
 
@@ -94,7 +94,7 @@ En la tabla siguiente se muestran los cambios que se pueden ver en los archivos 
 |Bot, extensión de mensaje y pestaña|Incluye información relacionada con&nbsp;bots o pestañas en teamsfx y archivos de aprovisionamiento que son para integrar funciones de Azure.|Los archivos de `templates/azure/teamsfx` se actualizan y `templates/azure/provision/xxx`los archivos .bicep se vuelven a generar.|
 |Bot, extensión de mensaje y pestaña|Garantiza que el proyecto está configurado con las configuraciones adecuadas para la funcionalidad recién agregada.|Los archivos de `.fx/config` se vuelven a generar|
 
-## <a name="step-by-step-guide"></a>Guía paso a paso
+## <a name="step-by-step-guides"></a>Guías paso a paso
 
 * Siga la guía [paso a paso](../sbs-gs-commandbot.yml) para compilar un bot de comandos en Microsoft Teams.
 

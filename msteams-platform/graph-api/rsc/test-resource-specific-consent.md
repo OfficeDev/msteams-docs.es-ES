@@ -6,12 +6,12 @@ author: akjo
 ms.author: lajanuar
 ms.topic: tutorial
 keywords: teams autorización del inicio de sesión único de OAuth Microsoft Azure Active Directory (Azure AD) rsc Postman Graph
-ms.openlocfilehash: d0eba34c8477c00e400e89adee7b9f09604918b7
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: ade66f40662140b86fcc9ae2e185fc10ea09d2f2
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189876"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791716"
 ---
 # <a name="test-resource-specific-consent-permissions-in-teams"></a>Probar permisos de consentimiento específicos del recurso en Teams
 
@@ -273,7 +273,7 @@ Para comprobar si los permisos RSC son respetados por la carga útil de la solic
 
 * `azureADAppId`: id. de aplicación Azure AD de la aplicación.
 * `azureADAppSecret`: Contraseña de la aplicación de Azure AD.
-* `token_scope`: El ámbito es necesario para obtener un token. Establecer el valor en https://graph.microsoft.com/.default.
+* `token_scope`: El ámbito es necesario para obtener un token. Establezca el valor en `https://graph.microsoft.com/.default`.
 * `teamGroupId`: puede obtener el identificador del grupo de equipo del cliente de Teams de la siguiente manera:
 
     1. En el cliente de Teams, seleccione **Teams** en la barra de navegación izquierda.
@@ -288,7 +288,7 @@ Para comprobar si la carga de solicitud de API respeta los permisos de RSC, debe
 
 * `azureADAppId`: id. de aplicación Azure AD de la aplicación.
 * `azureADAppSecret`: Contraseña de la aplicación de Azure AD.
-* `token_scope`: El ámbito es necesario para obtener un token. Establecer el valor en https://graph.microsoft.com/.default.
+* `token_scope`: El ámbito es necesario para obtener un token. Establezca el valor en `https://graph.microsoft.com/.default`.
 * `tenantId`: el nombre o el identificador de objeto Azure AD del inquilino.
 * `chatId`: puede obtener el identificador de subproceso de chat del cliente de Teams *web* de la siguiente manera:
 

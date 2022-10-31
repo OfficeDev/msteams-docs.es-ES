@@ -5,12 +5,12 @@ ms.topic: overview
 author: v-ypalikila
 ms.author: v-ypalikila
 ms.localizationpriority: high
-ms.openlocfilehash: 65144510fcb6a63c1c5cfaed4c344185917dee9a
-ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
+ms.openlocfilehash: 006fe6d9e939d9578fa84c61daaa4c404a10d5f6
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2022
-ms.locfileid: "68560655"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791730"
 ---
 # <a name="common-reasons-for-app-validation-failure"></a>Razones comunes del error de validación de la aplicación
 

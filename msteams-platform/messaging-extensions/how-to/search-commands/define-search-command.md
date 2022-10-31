@@ -5,12 +5,12 @@ description: Obtenga información sobre los comandos de búsqueda de extensión 
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: f774ae4ce0e4198a8e676080b87c33c8ecec3f3f
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: c126d6436c5fb091804c92caeb2876c09392bd9b
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100899"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791835"
 ---
 # <a name="define-message-extension-search-commands"></a>Definición de comandos de búsqueda de extensión de mensaje
 
@@ -34,7 +34,7 @@ El comando de búsqueda se invoca desde cualquiera de las siguientes ubicaciones
 * Área redactar mensaje: los botones de la parte inferior del área de redacción del mensaje.
 * Cuadro de comandos: por @mentioning en el cuadro de comandos.
 
-  Cuando se invoca un comando de búsqueda desde el área del mensaje de redacción, el usuario envía los resultados a la conversación. Cuando se invoca desde el cuadro de comandos, el usuario interactúa con la tarjeta resultante o la copia para usarla en otro lugar.
+Cuando se invoca un comando de búsqueda desde el área del mensaje de redacción, el usuario envía los resultados a la conversación. Cuando se invoca desde el cuadro de comandos, el usuario interactúa con la tarjeta resultante o la copia para usarla en otro lugar.
 
 En la imagen siguiente se muestran las ubicaciones de invocación del comando de búsqueda:
 

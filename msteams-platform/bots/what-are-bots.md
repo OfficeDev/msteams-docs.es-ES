@@ -5,12 +5,12 @@ description: En este artículo, use bots conversacionales en Microsoft Teams par
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: b9d0bda0d733a3b4a3204449ca9fd2ed6746ac98
-ms.sourcegitcommit: b9ec2a17094cb8b24c3017815257431fb0a679d0
+ms.openlocfilehash: 4f421c5bcc8251976a54bf5f94b7dafbcc50c64c
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2022
-ms.locfileid: "67990913"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791583"
 ---
 # <a name="build-bots-for-teams"></a>Crear bots para Teams
 
@@ -58,19 +58,19 @@ Puede usar las API de bot de Teams para obtener información de miembros de un c
 <!--- TBD: For quick scanning, see if the above information can be itemized as a list.
 --->
 
-## <a name="next-step"></a>Paso siguiente
-
-> [!div class="nextstepaction"]
-> [Bots y SDK](~/bots/bot-features.md)
-
 ## <a name="code-samples"></a>Ejemplos de código
 
 |Ejemplo de nombre | Descripción | C# | Node.js |
 |----------------|-----------------|--------------|--------------|
 | Recordatorio diario de tareas del bot| Demostrar cómo programar una tarea periódica y recibir un recordatorio a una hora programada. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-daily-task-reminder/csharp) | [Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-daily-task-reminder/nodejs) |
-| bot de Hola mundo | Se trata de una sencilla aplicación hello world con funcionalidades de extensión Bot y Message. |  | [Ver](https://github.com/OfficeDev/TeamsFx-Samples/tree/v1.0.0/hello-world-bot) |
-| Notificación de tarjeta adaptable | Este es un ejemplo que muestra cómo enviar notificaciones con diferentes tarjetas adaptables mediante bots. |  | [Ver](https://github.com/OfficeDev/TeamsFx-Samples/tree/v1.0.0/adaptive-card-notification) |
-| Notificación de webhook entrante | Este es un ejemplo que muestra cómo enviar notificaciones a través de Webhook entrante en canales de Microsoft Teams. |  | [Ver](https://github.com/OfficeDev/TeamsFx-Samples/tree/v1.0.0/incoming-webhook-notification) |
+| bot de Hola mundo | Se trata de una sencilla aplicación hello world con funcionalidades de extensión Bot y Message. | ND | [Ver](https://github.com/OfficeDev/TeamsFx-Samples/tree/v1.0.0/hello-world-bot) |
+| Notificación de tarjeta adaptable | Este es un ejemplo, que muestra cómo enviar notificaciones con diferentes tarjetas adaptables mediante bots. | ND | [Ver](https://github.com/OfficeDev/TeamsFx-Samples/tree/v1.0.0/adaptive-card-notification) |
+| Notificación de webhook entrante | Este es un ejemplo, que muestra cómo enviar notificaciones a través de Webhook entrante en canales de Microsoft Teams. | ND | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/v1.0.0/incoming-webhook-notification) |
+
+## <a name="next-step"></a>Paso siguiente
+
+> [!div class="nextstepaction"]
+> [Bots y SDK](~/bots/bot-features.md)
 
 ## <a name="see-also"></a>Consulte también
 

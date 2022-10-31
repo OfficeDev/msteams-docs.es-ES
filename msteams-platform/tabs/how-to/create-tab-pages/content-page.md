@@ -5,12 +5,12 @@ description: Obtenga información sobre la página web dentro del cliente de Tea
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: dad5451c4255ad97cb14a13983f1701a52f39bb9
-ms.sourcegitcommit: 0e4fcbc5efff4bfa1dbfba1e5467bbfaa6638705
+ms.openlocfilehash: 5dcc46567e14d183437982c7ffde26528c836810
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2022
-ms.locfileid: "68773446"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791541"
 ---
 # <a name="create-a-content-page"></a>Creación de una página de contenido
 
@@ -111,7 +111,7 @@ A partir del [esquema de manifiesto v1.7](../../../resources/schema/manifest-sch
 
 > [!NOTE]
 >
-> * El comportamiento en los clientes móviles no se puede configurar a través de la propiedad de indicador de carga nativa. Los clientes móviles muestran este indicador de forma predeterminada en las páginas de contenido y en los módulos de tareas basados en iframe. Este indicador en dispositivos móviles aparece cuando se realiza una solicitud para capturar contenido y se descarta en cuanto se completa la solicitud.
+> El comportamiento en los clientes móviles no se puede configurar a través de la propiedad de indicador de carga nativa. Los clientes móviles muestran este indicador de forma predeterminada en las páginas de contenido y en los módulos de tareas basados en iframe. Este indicador en dispositivos móviles aparece cuando se realiza una solicitud para capturar contenido y se descarta en cuanto se completa la solicitud.
 
 Si indica `showLoadingIndicator : true`  en el manifiesto de la aplicación, toda la configuración de pestañas, el contenido, las páginas de eliminación y los módulos de tareas basados en iframe deben seguir los siguientes pasos:
 

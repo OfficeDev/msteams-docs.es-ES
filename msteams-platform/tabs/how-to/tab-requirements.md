@@ -5,12 +5,12 @@ description: En este artículo, aprenderá los requisitos previos para crear la 
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: e1160566f73a63a7de87653900cdc64ba7cb0e52
-ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
+ms.openlocfilehash: 77714171491896f5d61088a20ab7c324227606c1
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2022
-ms.locfileid: "67450418"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791815"
 ---
 # <a name="prerequisites"></a>Requisitos previos
 
@@ -48,7 +48,7 @@ Asegúrese de cumplir los siguientes requisitos previos al crear la pestaña per
 | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Entorno de tiempo de ejecución de JavaScript de back-end. Use la versión v16 LTS más reciente.|
 | &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recomendado) o [Google Chrome](https://www.google.com/chrome/) | Un explorador con herramientas de desarrollo. |
 | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | Entornos de compilación de JavaScript, TypeScript o SharePoint Framework (SPFx). |
-| &nbsp; | Carga de trabajo de [Visual Studio 2019](https://visualstudio.com/download), **ASP.NET y desarrollo web** o **Desarrollo multiplataforma de .NET Core** | .NET. Puede instalar la edición de la comunidad gratuita de Visual Studio 2019. |
+| &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com), **ASP.NET y desarrollo web** o carga **de trabajo de desarrollo multiplataforma de .NET Core** | .NET. Puede instalar la edición de comunidad gratuita de Visual Studio 2022. |
 | &nbsp; | [Git](https://git-scm.com/downloads) | Git para usar el repositorio de aplicaciones de ejemplo de GitHub. |
 | &nbsp; | [Microsoft Teams](https://www.microsoft.com/en-us/microsoft-teams/download-app) | Microsoft Teams para colaborar con todos los usuarios con los que trabaja a través de aplicaciones de chat, reuniones, llamadas, todo en un solo lugar. |
 | &nbsp; | [ngrok](https://ngrok.com/download) | Ngrok es una herramienta de software de proxy inverso. Ngrok crea un túnel a los puntos de conexión HTTPS disponibles públicamente del servidor web en ejecución local. Los puntos de conexión web del servidor están disponibles durante la sesión actual en el equipo. Cuando el equipo se apaga o entra en suspensión, el servicio ya no está disponible. |

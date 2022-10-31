@@ -1,16 +1,16 @@
 ---
 title: Bots y SDK
 author: surbhigupta
-description: En este artículo, obtenga información sobre las herramientas y los SDK de Bot Framework (C#, Python, Java,JavaScript) para bots de Microsoft Teams y sus ventajas y desventajas.
+description: En este artículo, obtenga información sobre las herramientas y los SDK de Bot Framework (C#, Python, Java, JavaScript) para los bots de Microsoft Teams y sus ventajas y desventajas.
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: e1be981a381846ab17220254336571ea40bf2752
-ms.sourcegitcommit: 10debe0f01574a21aab54bfac692a4c8373263a8
+ms.openlocfilehash: 2a6e4201603bd30262cfcd275e8f995dcc730e9a
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/31/2022
-ms.locfileid: "68789901"
+ms.locfileid: "68791674"
 ---
 # <a name="bots-and-sdks"></a>Bots y SDK
 

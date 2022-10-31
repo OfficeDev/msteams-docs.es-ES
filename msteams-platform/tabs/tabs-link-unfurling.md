@@ -5,12 +5,12 @@ description: Obtenga información sobre la vista de fase, un componente de inter
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 41fce323ff65dd264e8dca71120ea126ddfcf16f
-ms.sourcegitcommit: 93c2fcd78a2fbb4550d180d295d98d1b3944ca67
+ms.openlocfilehash: 57ff75ac5861f6f348f676c85cc8ac702ece9842
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2022
-ms.locfileid: "68484923"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791569"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>Expansión del vínculo de la pestaña y vista de fases
 
@@ -45,9 +45,9 @@ Cuando el usuario escribe una dirección URL en el cliente de escritorio de Team
 
 Las siguientes imágenes muestran una fase abierta desde una tarjeta adaptable:
 
-[![abrir una fase desde tarjeta adaptable](~/assets/images/tab-images/open-stage-from-adaptive-card1.png)](~/assets/images/tab-images/open-stage-from-adaptive-card1.png#lightbox)
+:::image type="content" source="../assets/images/tab-images/open-stage-from-adaptive-card1.png" alt-text="Captura de pantalla que muestra la fase abierta de la tarjeta adaptable."lightbox="~/assets/images/tab-images/open-stage-from-adaptive-card1.png":::
 
-[![abrir una fase](~/assets/images/tab-images/open-stage-from-adaptive-card2.png)](~/assets/images/tab-images/open-stage-from-adaptive-card2.png#lightbox)
+:::image type="content" source="../assets/images/tab-images/open-stage-from-adaptive-card2.png" alt-text="Captura de pantalla que muestra la fase abierta de la tarjeta."lightbox="~/assets/images/tab-images/open-stage-from-adaptive-card2.png":::
 
 ### <a name="example"></a>Ejemplo
 

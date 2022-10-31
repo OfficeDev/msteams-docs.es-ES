@@ -6,12 +6,12 @@ ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: c21be77b03bf99224467213a4c257635388c57eb
-ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
+ms.openlocfilehash: 2ad44d0c43df7193106474fc3b6534d9ddde5bfc
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/20/2022
-ms.locfileid: "68615243"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791667"
 ---
 # <a name="create-a-channel-tab-or-group-tab"></a>Crear una pestaña de canal o una pestaña de grupo
 
@@ -349,7 +349,7 @@ Asegúrese de mantener el símbolo del sistema con ngrok en ejecución y tome no
 
 1. Inserte una llamada a `microsoftTeams.app.initialize();` en la etiqueta `script`.
 
-1. En Visual Studio समाधान अन्वेषक, vaya a la carpeta **Pages** y abra **Tab.cshtml**.
+1. En Visual Studio Explorador de soluciones, vaya a la carpeta **Pages** y abra **Tab.cshtml**.
 
     En **Tab.cshtml**, la aplicación presenta al usuario dos opciones para mostrar la pestaña con un icono rojo o gris. El botón **Seleccionar gris** o **Seleccionar rojo** desencadena `saveGray()` o `saveRed()` , respectivamente, establece `pages.config.setValidityState(true)`y habilita **Guardar** en la página de configuración. Este código permite a Teams saber que ha completado la configuración de requisitos y puede continuar con la instalación. Se establecen los parámetros de `pages.config.setConfig`. Por último, se llama a `saveEvent.notifySuccess()` para indicar que la dirección URL de contenido se ha resuelto correctamente.
 
@@ -410,10 +410,10 @@ Asegúrese de mantener el símbolo del sistema con ngrok en ejecución y tome no
 
 1. Abra **Aplicaciones** y seleccione **Importar aplicación**.
 
-<!--- TBD: This steps seems to be removed from main now so commenting it for now.
+   <!--- TBD: This steps seems to be removed from main now so commenting it for now.
 
-1. Select **Import an existing app** in the **Manifest editor** to begin updating the app package for your tab. The source code comes with its own partially complete manifest. The name of your app package is `tab.zip`. It is available from the following path:
---->
+   Select **Import an existing app** in the **Manifest editor** to begin updating the app package for your tab. The source code comes with its own partially complete manifest. The name of your app package is `tab.zip`. It is available from the following path:
+   --->
 
 1. El nombre del paquete de la aplicación es `tab.zip`. Está disponible en la siguiente ruta:
 
@@ -583,7 +583,7 @@ Asegúrese de mantener el símbolo del sistema con ngrok en ejecución y tome no
 
 1. Inserte una llamada a `microsoftTeams.app.initialize();` en la etiqueta `script`.
 
-1. En Visual Studio समाधान अन्वेषक, vaya a la carpeta **Tab** y abra **Tab.cshtml**.
+1. En Visual Studio Explorador de soluciones, vaya a la carpeta **Tab** y abra **Tab.cshtml**.
 
     En **Tab.cshtml**, la aplicación presenta al usuario dos opciones para mostrar la pestaña con un icono rojo o gris. El botón **Seleccionar gris** o **Seleccionar rojo** desencadena `saveGray()` o `saveRed()` , respectivamente, establece `pages.config.setValidityState(true)`y habilita **Guardar** en la página de configuración. Este código permite a Teams saber que ha completado la configuración de requisitos y puede continuar con la instalación. Se establecen los parámetros de `pages.config.setConfig`. Por último, se llama a `saveEvent.notifySuccess()` para indicar que la dirección URL de contenido se ha resuelto correctamente.
 

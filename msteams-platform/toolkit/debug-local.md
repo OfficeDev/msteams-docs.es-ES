@@ -7,12 +7,12 @@ ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: 730317fd6480b583d7b293a4e032589d01c99db0
-ms.sourcegitcommit: 707dad21dc3cf79ac831afe05096c0341bcf2fee
+ms.openlocfilehash: 65eb9599bb60b35448aaf1b6239fc155b7d397d5
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/20/2022
-ms.locfileid: "68653667"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791576"
 ---
 # <a name="debug-your-teams-app-locally"></a>Depurar la aplicación de Teams localmente
 
@@ -122,7 +122,7 @@ Inicia las configuraciones de depuración tal como se define en `.vscode/launch.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/debug/launch-debuggers.png" alt-text="Inicia el depurador":::
 
-En la tabla siguiente se enumeran los nombres y tipos de configuración de depuración para el proyecto con la aplicación de extensión de pestaña, bot o mensaje y Azure Functions:
+En la tabla siguiente se enumeran los nombres y tipos de configuración de depuración para el proyecto con la pestaña, bot o aplicación de extensión de mensaje y Azure Functions:
 
 |  Componente |  Nombre de la configuración de depuración  | Tipo de configuración de depuración |
 | --- | --- | --- |
@@ -205,7 +205,7 @@ Realice los pasos siguientes mediante el kit de herramientas de Teams para depur
    > También puede usar la función de recarga activa de Visual Studio durante la depuración. Para más información, visite <https://aka.ms/teamsfx-vs-hotreload>.
 
    > [!NOTE]
-   > Asegúrese de publicar la solicitud HTTP en "<http://localhost:5130/api/notification>" para desencadenar la notificación cuando esté depurando la aplicación del bot de notificación. Si ha seleccionado el desencadenador HTTP al crear el proyecto, puede usar cualquier herramienta de API, como curl (símbolo del sistema de Windows), Postman, etc.
+   > Asegúrese de publicar la solicitud HTTP en `http://localhost:5130/api/notification` para desencadenar la notificación cuando esté depurando la aplicación Notification Bot. Si ha seleccionado el desencadenador HTTP al crear el proyecto, puede usar cualquier herramienta de API, como curl (símbolo del sistema de Windows), Postman, etc.
 
    > [!TIP]
    > Si realiza algún cambio en el archivo de manifiesto de aplicación de Teams (/templates/appPackage/manifest.template.json), asegúrese de realizar el comando Preparar dependencias de aplicaciones de Teams. Antes de intentar ejecutar la aplicación de Teams de nuevo localmente.

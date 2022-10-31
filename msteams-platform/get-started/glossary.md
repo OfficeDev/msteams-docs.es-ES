@@ -3,16 +3,16 @@ title: 'Documentación para desarrolladores de Microsoft Teams: glosario'
 description: Obtenga información sobre los términos, significados y definiciones comunes que se usan en la documentación para desarrolladores de Microsoft Teams.
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: dd9da44439223fa9de7e795498dd6f67a7bc45e8
-ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
+ms.openlocfilehash: 74717387d83e32e240a21b83d87a89bcb4591145
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/20/2022
-ms.locfileid: "68615236"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791443"
 ---
 # <a name="glossary"></a>Glosario
 
-Términos y definiciones comunes que se usan en la documentación para desarrolladores de Teams.
+Términos y definiciones comunes que se usan en la documentación para desarrolladores de Microsoft Teams.
 
 ## <a name="a"></a>A
 

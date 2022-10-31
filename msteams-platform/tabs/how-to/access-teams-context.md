@@ -3,12 +3,12 @@ title: Obtener contexto para su pestaña
 description: Obtenga información sobre el contexto de la pestaña, el contexto del usuario, el equipo o la empresa, la información de acceso, la recuperación del contexto en canales privados o compartidos y el control del cambio de tema.
 ms.localizationpriority: high
 ms.topic: how-to
-ms.openlocfilehash: 2048f46e6cbe181a755df12b61c5153aacc21186
-ms.sourcegitcommit: bd30d33af59dd870a309ae72b4c4496c9c1f920d
+ms.openlocfilehash: f0a54dc749d1132918e3ec47ac614aff3ce8aab8
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2022
-ms.locfileid: "67635311"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791548"
 ---
 # <a name="get-context-for-your-tab"></a>Obtención del contexto de Teams para la pestaña
 
@@ -249,7 +249,7 @@ Si la página usa cualquiera de estos valores, el valor del `channel.membershipT
 Cuando la experiencia de usuario de contenido se cargue en un canal compartido, use los datos recibidos de `getContext` la llamada para los cambios de canal compartido. Si tab usa cualquiera de los valores siguientes, debe rellenar el `channelType` campo para determinar si la pestaña se carga en un canal compartido y responder correctamente.
 En el caso de los canales compartidos, el `groupId` valor es `null`, ya que el groupId del equipo host no refleja con precisión la pertenencia verdadera del canal compartido. Para solucionar este problema, las `hostTeamGroupID` propiedades y `hostTenantID` se agregan recientemente y son útiles para realizar llamadas de Microsoft Graph API para recuperar la pertenencia. `hostTeam` hace referencia al equipo que creó el canal compartido. `currentTeam` hace referencia al equipo desde el que el usuario actual tiene acceso al canal compartido.
 
-Para obtener más información sobre estos conceptos, vea [Canales compartidos](~/concepts/build-and-test/shared-channels.md).
+Para obtener más información sobre estos conceptos, consulte [canales compartidos](~/concepts/build-and-test/shared-channels.md).
 
 Use las siguientes `getContext` propiedades en canales compartidos:
 
@@ -271,7 +271,7 @@ Use las siguientes `getContext` propiedades en canales compartidos:
 |`userObjectId`|  La propiedad describe el identificador del usuario actual.|
 |`userPrincipalName`| La propiedad describe el UPN del usuario actual.|
 
-Para obtener más información sobre los canales compartidos, consulte [Canales compartidos](~/concepts/build-and-test/shared-channels.md).
+Para obtener más información sobre los canales compartidos, consulte [canales compartidos](~/concepts/build-and-test/shared-channels.md).
 
 ## <a name="handle-theme-change"></a>Controlar el cambio de tema
 

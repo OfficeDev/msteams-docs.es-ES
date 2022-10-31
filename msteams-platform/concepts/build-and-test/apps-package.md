@@ -3,16 +3,16 @@ title: Empaquetar la aplicación
 description: Obtenga información sobre cómo empaquetar la aplicación de Microsoft Teams y cargarla en Teams. Cree un paquete de aplicación, habilite la carga personalizada, asegúrese de que la aplicación se está ejecutando y sea accesible mediante HTTP.
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.openlocfilehash: 87f9e8c6447c8f2712eea40c7c9db2bda3459550
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: cd2bb1c2f0ff97a28f467334148c283142b2d535
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100199"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791457"
 ---
 # <a name="create-teams-app-package"></a>Crear un paquete de aplicación de Microsoft Teams
 
-Necesita un paquete de aplicación para distribuir la aplicación de Microsoft Teams. Un paquete válido es un archivo ZIP que contiene lo siguiente:
+Sin embargo, necesita un paquete de aplicación para distribuir la aplicación de Microsoft Teams. Un paquete válido es un archivo ZIP que contiene lo siguiente:
 
 * **Manifiesto de aplicación**: describe cómo se configura la aplicación, incluidas sus funcionalidades, los recursos necesarios y otros atributos importantes.
 * **Iconos de la aplicación**: cada paquete requiere un icono de color y contorno para la aplicación.

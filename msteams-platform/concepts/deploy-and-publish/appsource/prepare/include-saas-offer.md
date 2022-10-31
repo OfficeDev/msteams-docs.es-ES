@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 23327ea2765eb5496f8cfb157cdd194fcc13aaf7
-ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
+ms.openlocfilehash: 500dbd4b3677c802a19eb3d454aa35cad2791f3d
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "68243258"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791828"
 ---
 # <a name="include-a-saas-offer-with-your-teams-app"></a>Incluir una oferta de SaaS con la aplicación de Teams
 
@@ -192,7 +192,7 @@ Para obtener instrucciones completas, consulte [Crear la página de aterrizaje d
 
 Cuando alguien termine de comprar un plan de suscripción para la aplicación y quiera permanecer en Teams, sin dirigirlo a la página de aterrizaje, seleccione **Sí, me gustaría que Microsoft administrara las licencias de cliente en mi nombre**.
 
-Para obtener más información, consulte [Administración de licencias de primera persona](/platform/concepts/deploy-and-publish/appsource/prepare/first-party-license-management).
+Para obtener más información, consulte [Administración de licencias para aplicaciones de terceros en Teams](#manage-license-for-third-party-apps-in-teams).
 
 ### <a name="best-practices-for-landing-pages"></a>Procedimientos recomendados para páginas de aterrizaje
 

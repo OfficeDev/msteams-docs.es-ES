@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: v-ypalikila
 ms.date: 10/04/2022
-ms.openlocfilehash: 9d1a776432f728c1e56caa357089be6e47c17e4c
-ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
+ms.openlocfilehash: 11f465072d496f466df28c37b8eee7289bae4180
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2022
-ms.locfileid: "68560613"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791450"
 ---
 # <a name="live-share-canvas-overview"></a>Introducción al lienzo de Live Share
 
@@ -19,7 +19,7 @@ ms.locfileid: "68560613"
 
 En salas de conferencias y aulas de todo el mundo, las pizarras son una parte fundamental de la colaboración. Sin embargo, en los tiempos modernos, la pizarra ya no es suficiente. Con numerosas herramientas digitales como PowerPoint como punto focal de colaboración en la era moderna, es esencial habilitar el mismo potencial creativo.
 
-Para permitir una colaboración más fluida, Microsoft creó PowerPoint Live, que se ha convertido en un elemento fundamental para el funcionamiento de las personas en Teams. Los presentadores pueden anotar sobre diapositivas para que todos puedan ver, usando plumas, resaltadores y punteros láser para llamar la atención sobre los conceptos clave. Con live share canvas, la aplicación puede aportar la eficacia de PowerPoint Live herramientas de entrada manuscrita con un esfuerzo mínimo.
+Para permitir una colaboración más fluida, Microsoft creó PowerPoint Live, que se ha convertido en fundamental para cómo trabajan los usuarios en Microsoft Teams. Los presentadores pueden anotar sobre diapositivas para que todos puedan ver, usando plumas, resaltadores y punteros láser para llamar la atención sobre los conceptos clave. Con live share canvas, la aplicación puede aportar la eficacia de PowerPoint Live herramientas de entrada manuscrita con un esfuerzo mínimo.
 
 ## <a name="install"></a>Instalar
 

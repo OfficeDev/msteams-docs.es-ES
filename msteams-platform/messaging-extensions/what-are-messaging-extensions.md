@@ -5,12 +5,12 @@ description: Obtenga información sobre cómo se usan las extensiones de mensaje
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 766a135a55b3894c985a0701bb883d45519b496b
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 09dad55a4ca0b59e517f55e12f24d8ea8d687313
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100276"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791737"
 ---
 # <a name="message-extensions"></a>Extensiones de mensajes
 
@@ -238,7 +238,7 @@ async handleTeamsMessagingExtensionQuery(context, query) {
 |------------|-------------|----------------|------------|------------|
 | Extensión de mensajería con comandos basados en acciones | Este ejemplo muestra cómo crear una extensión de mensajería basada en acciones. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/51.teams-messaging-extensions-action) |
 | Extensión de mensajería con comandos basados en búsquedas | Este ejemplo muestra cómo crear una Extensión de mensajería Basada en búsquedas. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/50.teams-messaging-extension-search) |
-|Acción de extensión de mensajería para la programación de tareas|Este ejemplo muestra cómo programar una tarea a partir del comando de acción de extensión de mensajería y obtener una tarjeta de recordatorio en una fecha y hora programadas.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-message-reminder/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-message-reminder/nodejs)|
+|Acción de extensión de mensajería para la programación de tareas|Este ejemplo muestra cómo programar una tarea a partir del comando de acción de extensión de mensajería y obtener una tarjeta de recordatorio en una fecha y hora programadas.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-message-reminder/csharp)|[Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-message-reminder/nodejs)| ND |
 
 ## <a name="next-step"></a>Paso siguiente
 

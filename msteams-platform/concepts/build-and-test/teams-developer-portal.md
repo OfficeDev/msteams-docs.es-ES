@@ -4,12 +4,12 @@ description: En este artículo, obtenga más información sobre el Portal para d
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: b0619fc328e6bc30decfe5868692281037489654
-ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
+ms.openlocfilehash: 3c6444f041a996b908e2c6444fecf7e3dc68ee40
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/20/2022
-ms.locfileid: "68615138"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791807"
 ---
 # <a name="developer-portal-for-teams"></a>Portal para desarrolladores de Teams
 
@@ -26,8 +26,8 @@ El <a href="https://dev.teams.microsoft.com" target="_blank">portal para desarro
 
 El Portal para desarrolladores proporciona las siguientes maneras de registrar una aplicación de Teams:
 
-* Cree y registre una aplicación nueva.
-* Importe un paquete de aplicación existente.
+* [Cree y registre una aplicación nueva](#create-and-register-a-brand-new-app).
+* [Importe un paquete de aplicación existente](#import-an-existing-app).
 
 ### <a name="create-and-register-a-brand-new-app"></a>Creación y registro de una aplicación nueva
 

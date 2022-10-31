@@ -274,8 +274,6 @@
     - name: Compilar pestañas con tarjetas adaptables
       href: tabs/how-to/build-adaptive-card-tabs.md
       displayName: 'Slow load times, iFrame constartints, invoke activities, task module, task fetch, task submit, authentication'
-    - name: Uso de Fluid con Microsoft Teams
-      href: tabs/how-to/using-fluid-msteam.md
     - name: Expansión del vínculo de la pestaña y vista de fases
       href: tabs/tabs-link-unfurling.md
       displayName: Tab in stage view
@@ -570,6 +568,8 @@
     - name: Introducción
       href: /graph/toolkit/get-started/build-a-microsoft-teams-tab
       displayName: 'Access, report, MSAL2'
+    - name: Permisos de aplicación de Teams
+      href: graph-api/app-permissions/teams-app-permissions.md
     - name: Consentimiento específico del recurso
       href: graph-api/rsc/resource-specific-consent.md
       displayName: 'Permissions, delegated'

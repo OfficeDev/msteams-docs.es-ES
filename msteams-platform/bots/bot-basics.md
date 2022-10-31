@@ -5,18 +5,18 @@ description: Obtenga información sobre los eventos y controladores de actividad
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 4780c4c2ca3965186411f7927f1fb5b555647004
-ms.sourcegitcommit: b918181217995a47be34632e1051d0f4d4d481b0
+ms.openlocfilehash: 6599fbecd9166e053952bbbf70c7a2bea7ab48e3
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2022
-ms.locfileid: "67321211"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791681"
 ---
 # <a name="bot-activity-handlers"></a>Controladores de actividad de bots
 
 Este documento se basa en el artículo sobre [cómo funcionan los bots](https://aka.ms/how-bots-work) de la [documentación de Bot Framework](https://aka.ms/azure-bot-service-docs) principal. La principal diferencia entre los bots desarrollados para Microsoft Teams y el Bot Framework principal se encuentra en las características proporcionadas en Teams.
 
-Para organizar la lógica conversacional del bot, se usa un controlador de actividad. Las actividades se controlan de dos maneras mediante controladores de actividad de Teams y la lógica de bot. El controlador de actividad de Teams agrega compatibilidad con eventos e interacciones específicos de Teams. El objeto del bot contiene el razonamiento conversacional o la lógica de un turno y expone un controlador de turnos, que es el método que puede aceptar actividades entrantes desde el adaptador del bot.
+Se usa un controlador de actividad para organizar la lógica conversacional del bot. Las actividades se controlan de dos maneras mediante controladores de actividad de Teams y la lógica de bot. El controlador de actividad de Teams agrega compatibilidad con eventos e interacciones específicos de Teams. El objeto del bot contiene el razonamiento conversacional o la lógica de un turno y expone un controlador de turnos, que es el método que puede aceptar actividades entrantes desde el adaptador del bot.
 
 ## <a name="teams-activity-handlers"></a>Controladores de actividades de Teams
 
@@ -192,7 +192,7 @@ La lógica del bot procesa las actividades entrantes desde uno o varios de los c
 
 Los controladores de actividad son diferentes en el contexto de un equipo, ya que se agrega un nuevo miembro al equipo en lugar de una conversación.
 
-La lista de controladores definidos en `ActivityHandler` incluye lo siguiente:
+La lista de controladores definidos en `ActivityHandler` incluye los siguientes eventos:
 
 | Evento | Controlador | Descripción |
 | :-- | :-- | :-- |
@@ -208,7 +208,7 @@ La lista de controladores definidos en `ActivityHandler` incluye lo siguiente:
 
 #### <a name="teams-specific-activity-handlers"></a>Controladores de actividades específicas de Teams
 
-`TeamsActivityHandler` amplía la lista de controladores en la sección de controladores del Bot Framework principal para incluir lo siguiente:
+`TeamsActivityHandler` amplía la lista de controladores en la sección principal de controladores de Bot Framework para incluir los siguientes eventos:
 
 | Evento | Controlador | Descripción |
 | :-- | :-- | :-- |
@@ -221,7 +221,7 @@ La lista de controladores definidos en `ActivityHandler` incluye lo siguiente:
 
 #### <a name="teams-invoke-activities"></a>Actividades de invocación de Teams
 
-La lista de controladores de actividad de Teams a los que se llama desde el `OnInvokeActivityAsync` controlador de actividad de Teams incluye lo siguiente:
+La lista de controladores de actividad de Teams a los que se llama desde el `OnInvokeActivityAsync` controlador de actividad de Teams incluye los siguientes tipos de invocación:
 
 | Tipos de invocación                    | Controlador                              | Descripción                                                  |
 | :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |
@@ -245,7 +245,7 @@ Las actividades invoke enumeradas en esta sección son para bots conversacionale
 
 Los controladores de actividad son diferentes en el contexto de un equipo, ya que se agrega el nuevo miembro al equipo en lugar de una conversación.
 
-La lista de controladores definidos en `ActivityHandler` incluye lo siguiente:
+La lista de controladores definidos en `ActivityHandler` incluye los siguientes eventos:
 
 | Evento | Controlador | Descripción |
 | :-- | :-- | :-- |
@@ -260,7 +260,7 @@ La lista de controladores definidos en `ActivityHandler` incluye lo siguiente:
 
 #### <a name="teams-specific-activity-handlers"></a>Controladores de actividades específicas de Teams
 
-`TeamsActivityHandler` amplía la lista de controladores en la sección de controladores del Bot Framework principal para incluir lo siguiente:
+`TeamsActivityHandler` amplía la lista de controladores en la sección principal de controladores de Bot Framework para incluir los siguientes eventos:
 
 | Evento | Controlador | Descripción |
 | :-- | :-- | :-- |
@@ -297,7 +297,7 @@ Las actividades de invocación enumeradas en esta sección son para bots convers
 
 Los controladores de actividad son diferentes en el contexto de un equipo, ya que se agrega el nuevo miembro al equipo en lugar de una conversación.
 
-La lista de controladores definidos en `ActivityHandler` incluye lo siguiente:
+La lista de controladores definidos en `ActivityHandler` incluye los siguientes eventos:
 
 | Evento | Controlador | Descripción |
 | :-- | :-- | :-- |
@@ -313,7 +313,7 @@ La lista de controladores definidos en `ActivityHandler` incluye lo siguiente:
 
 #### <a name="teams-specific-activity-handlers"></a>Controladores de actividades específicas de Teams
 
-`TeamsActivityHandler` amplía la lista de controladores de la sección de controladores del Bot Framework principal para incluir lo siguiente:
+`TeamsActivityHandler` amplía la lista de controladores de la sección principal de controladores de Bot Framework para incluir los eventos siguientes:
 
 | Evento | Controlador | Descripción |
 | :-- | :-- | :-- |
@@ -326,7 +326,7 @@ La lista de controladores definidos en `ActivityHandler` incluye lo siguiente:
 
 #### <a name="teams-invoke-activities"></a>Actividades de invocación de Teams
 
-La lista de controladores de actividad de Teams a los que se llama desde el `on_invoke_activity` controlador de actividad de Teams incluye lo siguiente:
+La lista de controladores de actividad de Teams a los que se llama desde el `on_invoke_activity` controlador de actividad de Teams incluye los siguientes tipos de invocación:
 
 | Tipos de invocación                    | Controlador                              | Descripción                                                  |
 | :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |

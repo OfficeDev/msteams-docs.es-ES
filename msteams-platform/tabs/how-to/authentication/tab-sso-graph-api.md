@@ -4,12 +4,12 @@ description: Configure permisos y ámbitos adicionales con Microsoft Graph para 
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: pestañas de autenticación de teams Microsoft Azure Active Directory (Azure AD) Graph API ámbito del token de acceso a permisos delegados
-ms.openlocfilehash: 5315190787570f38ae2a469bf0c6a421c9003176
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: 11620e10ed736ce9fe88e3bb755acfbabfec3f47
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67780852"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791723"
 ---
 # <a name="extend-tab-app-with-microsoft-graph-permissions-and-scope"></a>Extender la aplicación de pestañas con permisos y ámbito de Microsoft Graph
 
@@ -82,7 +82,7 @@ Puede configurar la autenticación para varias plataformas siempre que la direcc
 
 ### <a name="to-configure-authentication-for-a-platform"></a>Para configurar la autenticación para una plataforma
 
-1. Abra la aplicación que registró en el el[Azure Portal](https://ms.portal.azure.com/).
+1. Abra la aplicación que registró en el [Azure Portal](https://ms.portal.azure.com/).
 
 1. Seleccione **Administrar****autenticación** > en el panel izquierdo.
 

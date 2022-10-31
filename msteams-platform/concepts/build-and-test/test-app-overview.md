@@ -3,12 +3,12 @@ title: Introducción a la prueba de su aplicación
 description: En este módulo, obtenga información sobre el proceso para probar y depurar la aplicación personalizada de Teams en Microsoft 365 y agregar datos de prueba al inquilino de Microsoft 365.
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.openlocfilehash: 3fa27881a081021fbb405208a5f7b4a259012aaf
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 7cb0d194cfa5cab503a632889b5449f086532afd
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144386"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791555"
 ---
 # <a name="test-your-app"></a>Probar la aplicación
 
@@ -20,7 +20,7 @@ Después de integrar la aplicación con Microsoft Teams, debe probarla antes de 
 
 ## <a name="prepare-your-microsoft-365-tenant"></a>Preparar el espacio empresarial de Microsoft 365
 
-Antes de comenzar a probar su aplicación, prepare su inquilino de prueba de Microsoft 365 y habilite la aplicación personalizada de Teams para que pueda cargar su aplicación. Debe inscribirse en el programa de desarrolladores de Microsoft 365 y gestionar la configuración de Teams para su organización. Configure su suscripción de desarrollador y configúrela mediante [preparar su inquilino de Microsoft 365](~/concepts/build-and-test/prepare-your-o365-tenant.md).
+Antes de empezar a probar la aplicación, prepare el inquilino de prueba de Microsoft 365 y habilite la aplicación personalizada de Teams para que pueda cargar la aplicación. Debe inscribirse en el programa de desarrolladores de Microsoft 365 y gestionar la configuración de Teams para su organización. Configure su suscripción de desarrollador y configúrela mediante [preparar su inquilino de Microsoft 365](~/concepts/build-and-test/prepare-your-o365-tenant.md).
 
 ## <a name="test-and-debug"></a>Probar y depurar
 

@@ -7,12 +7,12 @@ ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: 5f0e909c9b6fbccc1f1a9a886858177f4673f85f
-ms.sourcegitcommit: 707dad21dc3cf79ac831afe05096c0341bcf2fee
+ms.openlocfilehash: db6e3b99ab737b7ea8cac393e6ee3e0830cd0acc
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/20/2022
-ms.locfileid: "68653696"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791793"
 ---
 # <a name="debug-your-teams-app"></a>Depurar la aplicación de Teams
 
@@ -34,7 +34,7 @@ Durante el proceso de depuración:
 * Teams Toolkit comprueba los requisitos previos durante el proceso en segundo plano de depuración.
 * La aplicación de Teams está disponible para la versión preliminar en el cliente web de Teams localmente después de la depuración.
 * También puede personalizar la configuración de depuración para usar los puntos de conexión del bot, el certificado de desarrollo o el componente parcial de depuración para cargar la aplicación configurada.
-* Microsoft Visual Studio Code permite depurar pestañas, bots, extensiones de mensaje y Azure Functions.
+* Microsoft Visual Studio Code permite depurar pestañas, bots, extensiones de mensajes y Azure Functions.
 
 ## <a name="key-debug-features-of-teams-toolkit"></a>Características clave de depuración del kit de herramientas de Teams
 
@@ -64,7 +64,7 @@ Los puntos de interrupción en los códigos fuente de pestañas, bots, extension
 
 ### <a name="hot-reload"></a>Recarga activa
 
-Puede actualizar y guardar los códigos de origen de tab, bot, extensión de mensaje y Azure Functions al mismo tiempo que depura la aplicación de Teams. La aplicación se vuelve a cargar y el depurador vuelve a asociarse a los lenguajes de programación.
+Puede actualizar y guardar los códigos de origen de tabulación, bot, extensión de mensaje y Azure Functions al mismo tiempo que depura la aplicación teams. La aplicación se vuelve a cargar y el depurador vuelve a asociarse a los lenguajes de programación.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hot-reload.png" alt-text="recarga activa para códigos fuente" lightbox="../assets/images/teams-toolkit-v2/debug/hot-reload.png":::
 
@@ -84,7 +84,7 @@ Si ya se ha registrado en Microsoft 365, inicie sesión en Microsoft 365. Para o
 
 ### <a name="toggle-breakpoints"></a>Alternar puntos de interrupción
 
-Asegúrese de que puede alternar puntos de interrupción en los códigos de origen de pestañas, bots, extensiones de mensaje y Azure Functions para obtener más información, consulte [Alternancia de puntos de interrupción](#toggle-breakpoints).
+Asegúrese de que puede alternar los puntos de interrupción en los códigos de origen de pestañas, bots, extensiones de mensaje y Azure Functions para obtener más información, consulte [Alternar puntos de interrupción](#toggle-breakpoints).
 
 ## <a name="customize-debug-settings"></a>Personalizar la configuración de depuración
 
@@ -237,8 +237,8 @@ Teams Toolkit automatiza los servicios de inicio de aplicaciones, inicia la depu
 | &nbsp; | Visual Studio 2022, versión 17.3 | Puede instalar la edición enterprise de Visual Studio e instalar la carga de trabajo "ASP.NET" y las herramientas de desarrollo de Microsoft Teams. |
 | &nbsp; | Kit de herramientas de Teams | Extensión de Visual Studio que crea un scaffolding de proyecto para la aplicación. Use la versión más reciente. |
 | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams para colaborar con todos los usuarios con los que trabaja a través de aplicaciones de chat, reuniones, llamadas, todo en un solo lugar. |
-| &nbsp; | [Preparar el espacio empresarial de Microsoft 365](../concepts/build-and-test/prepare-your-o365-tenant.md) | Acceso a la cuenta de Teams con los permisos adecuados para instalar una aplicación. |
-| &nbsp; | [Cuenta de desarrollador de Microsoft 365](/../concepts/build-and-test/prepare-your-o365-tenant) | Acceso a la cuenta de Teams con los permisos adecuados para instalar una aplicación. |
+| &nbsp; | [Preparar el espacio empresarial de Microsoft 365](~/concepts/build-and-test/prepare-your-o365-tenant.md) | Acceso a la cuenta de Teams con los permisos adecuados para instalar una aplicación. |
+| &nbsp; | [Cuenta de desarrollador de Microsoft 365](~/concepts/build-and-test/prepare-your-o365-tenant.md) | Acceso a la cuenta de Teams con los permisos adecuados para instalar una aplicación. |
 | &nbsp; | Herramientas de Azure y [cli de Microsoft Azure](/cli/azure/install-azure-cli) | Herramientas de Azure para acceder a datos almacenados o para implementar un back-end basado en la nube para la aplicación de Teams en Azure. |
 |&nbsp;  | **Optional** | &nbsp; |
 |&nbsp; |[Ngrok](https://ngrok.com/) | Ngrok se usa para reenviar mensajes externos de Azure Bot Framework a la máquina local.|
@@ -264,16 +264,16 @@ En la imagen siguiente se muestran la alternancia de puntos de interrupción:
 
 ### <a name="hot-reload"></a>Recarga activa
 
-Seleccione **Recarga** activa para aplicar los cambios en la aplicación de Teams cuando quiera actualizar y guardar los códigos de origen simultáneamente durante la depuración.
+Seleccione **Recarga activa** para aplicar los cambios en la aplicación de Teams cuando quiera actualizar y guardar los códigos de origen simultáneamente durante la depuración.
 
 :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-hot-reload.png" alt-text="Seleccionar icono de recarga activa":::
 
-Seleccione la opción **Recarga activa en Guardar archivo** en la lista desplegable para habilitar la recarga activa automática.
+Seleccione la opción **Recarga activa en Guardar** archivo en la lista desplegable para habilitar la recarga activa automática.
 
 :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-hot-reload-filesave.png" alt-text="Seleccionar recarga activa al guardar archivos":::
   
    > [!Tip]
-   > Para obtener más información sobre la función recarga activa de Visual Studio durante la depuración, puede visitar <https://aka.ms/teamsfx-vs-hotreload>.
+   > Para obtener más información sobre Recarga activa función de Visual Studio durante la depuración, puede visitar <https://aka.ms/teamsfx-vs-hotreload>.
 
 ### <a name="stop-debugging"></a>Detener depuración
 
@@ -305,7 +305,7 @@ Puede agregar **environmentVariables** al archivo **launchSettings.json** .
 
 Puede iniciar la aplicación de Teams como una aplicación web en lugar de ejecutarse en el cliente de Teams.
 
-1. Seleccione **Propiedades** > **launchSettings.json** en समाधान अन्वेषक panel del proyecto.
+1. Seleccione **Propiedades** > **launchSettings.json** en Explorador de soluciones panel del proyecto.
 1. Quite " **launchUrl"** del archivo.
 
    :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-launch-teamsapp-webapp.png" alt-text="Iniciar equipos como una aplicación web mediante la eliminación de launchurl" lightbox="../assets/images/debug-teams-app/vs-localdebug-launch-teamsapp-webapp.png":::
