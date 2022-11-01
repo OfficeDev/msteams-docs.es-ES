@@ -29,7 +29,7 @@ Seleccione icono del Kit de herramientas de Teams :::image type="icon" source="~
    > [!NOTE]
    > La aplicación se hospeda mediante recursos de Azure.
    >
-   >Para obtener más información, consulte [Creación de un grupo de recursos](/azure/azure-resource-manager/management/manage-resource-groups-portal.).
+   >Para obtener más información, consulte [Creación de un grupo de recursos.](/azure/azure-resource-manager/management/manage-resource-groups-portal)
 
     Un cuadro de diálogo le advierte de que se pueden incurrir en costos al ejecutar recursos en Azure.
 
