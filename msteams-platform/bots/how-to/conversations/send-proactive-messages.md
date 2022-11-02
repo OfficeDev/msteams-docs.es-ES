@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo enviar mensajes proactivos con el 
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: ff2a4310f2dea57fd5fd1d2550474c3361bf8a90
-ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
+ms.openlocfilehash: 7e50719e9befd807127a1eae4022b4af67a9fc00
+ms.sourcegitcommit: d58f670fed6ff217c52d2e00c0bee441fcb96920
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2022
-ms.locfileid: "68791464"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68819686"
 ---
 # <a name="proactive-messages"></a>Mensajes proactivos
 
@@ -25,7 +25,7 @@ Un mensaje proactivo es cualquier mensaje enviado por un bot que no responde a u
 >
 > * Para enviar un mensaje proactivo, se recomienda empezar con [la creación de un bot de notificación con JavaScript](../../../sbs-gs-notificationbot.yml) o un [ejemplo de notificación de webhook entrante](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/incoming-webhook-notification). Para empezar, descargue [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) explore. Para obtener más información, vea [Documentos del kit de herramientas de Teams](../../../toolkit/teams-toolkit-fundamentals.md).
 >
-> * Actualmente, los bots están disponibles en Government Community Cloud (GCC) y GCC-High, pero no en el Departamento de defensa (DOD). Para los mensajes proactivos, los bots deben utilizar los siguientes puntos de conexión para los entornos de la nube de administración pública: <br> -GCC: `https://smba.infra.gcc.teams.microsoft.com/gcc`<br> - GCCH: `https://smba.infra.gov.teams.microsoft.us/gcch`.
+> * Actualmente, los bots están disponibles en Government Community Cloud (GCC) y GCC-High, pero no en el Departamento de defensa (DOD). Para los mensajes proactivos, los bots deben utilizar los siguientes puntos de conexión para los entornos de la nube de administración pública: <br> -GCC: `https://smba.infra.gcc.teams.microsoft.com/gcc`<br> - GCCH: `https://smba.infra.gov.teams.microsoft.us/gcch`
 
 Para enviar un mensaje proactivo a un usuario, un chat de grupo o un equipo, el bot debe tener el acceso necesario para enviar el mensaje. La aplicación que contiene el bot debe instalarse en primer lugar en un chat de grupo o de equipo.
 
@@ -44,7 +44,7 @@ Los fragmentos de código de la sección [de ejemplos](#samples) son para crear 
 
 ## <a name="get-the-user-id-team-id-or-channel-id"></a>Obtener el id. de usuario, id. de equipo o id. de canal
 
-Para crear una conversación o un subproceso de conversación en un canal, debe tener el identificador correcto. Puede recibir o recuperar este identificador mediante cualquiera de las siguientes maneras:
+Puede crear una nueva conversación con un usuario o un subproceso de conversación en un canal y debe tener el identificador correcto. Puede recibir o recuperar este identificador mediante cualquiera de las siguientes maneras:
 
 * Cuando la aplicación se instala en un contexto determinado, recibe una [`onMembersAdded` actividad](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
 * Cuando se agrega un nuevo usuario a un contexto donde está instalada la aplicación, recibe una [`onMembersAdded` actividad](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
@@ -60,7 +60,17 @@ Cree la conversación, después de tener la información del usuario o del canal
 
 ## <a name="create-the-conversation"></a>Crear la conversación
 
-Cree la conversación si no existe o no conoce .`conversationId` Cree la conversación solo una vez y almacene el `conversationId` valor o `conversationReference` el objeto.
+Puede crear la conversación si no existe o no conoce .`conversationId` Cree la conversación solo una vez y almacene el `conversationId` valor o `conversationReference` el objeto.
+
+Para crear la conversación, necesita , `userId``tenantId`y `serviceUrl`.
+
+Para `serviceUrl`, use el valor de una actividad entrante que desencadena el flujo o una de las direcciones URL de servicio globales. `serviceUrl` Si no está disponible en una actividad entrante que desencadena el escenario proactivo, use los siguientes puntos de conexión de dirección URL globales:
+
+* Público: `https://smba.trafficmanager.net/teams/`
+* GCC: `https://smba.infra.gcc.teams.microsoft.com/gcc`
+* GCCH: `https://smba.infra.gov.teams.microsoft.us/gcch`
+
+Para obtener un ejemplo de código, vea la llamada `CreateConversationAsync` en el [**ejemplo**](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/57.teams-conversation-bot/Bots/TeamsConversationBot.cs).
 
 Puede obtener la conversación cuando la aplicación se instala por primera vez. Una vez creada la conversación, [obtenga el identificador de conversación](#get-the-conversation-id). `conversationId` está disponible en los eventos de actualización de conversación.
 
@@ -337,7 +347,7 @@ En la tabla siguiente se proporciona un ejemplo de código sencillo que incorpor
 |---------------|--------------|--------|-------------|--------|
 | Conceptos básicos de conversación de Teams  | Muestra los conceptos básicos de las conversaciones de Teams, incluido el envío de mensajes proactivos individuales.| [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/57.teams-conversation-bot) |
 | Iniciar nuevo hilo en un canal | Muestra cómo crear un nuevo hilo en un canal. | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/58.teams-start-new-thread-in-channel) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/javascript_nodejs/58.teams-start-new-thread-in-channel) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/58.teams-start-thread-in-channel) |
-| Instalación proactiva de la aplicación y envío de notificaciones proactivas | En este ejemplo se muestra cómo puede usar la instalación proactiva de la aplicación para usuarios y enviar notificaciones proactivas mediante una llamada a las API de Microsoft Graph. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/nodejs) | ND |
+| Instalación proactiva de la aplicación y envío de notificaciones proactivas | En este ejemplo se muestra cómo puede usar la instalación proactiva de la aplicación para usuarios y enviar notificaciones proactivas mediante una llamada a las API de Microsoft Graph. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/csharp) | [Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/nodejs) | ND |
 | Mensajería proactiva | Este es un ejemplo que muestra cómo guardar la información de referencia de conversación del usuario para enviar un mensaje de recordatorio proactivo mediante bots. | ND | [Ver](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging-teamsfx) | ND |
 
 > [!div class="nextstepaction"]

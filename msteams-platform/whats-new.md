@@ -4,12 +4,12 @@ description: Obtenga información sobre las nuevas características para desarro
 ms.topic: reference
 ms.localizationpriority: high
 zone_pivot_groups: What-new-features
-ms.openlocfilehash: 95dc1e09eb54880e1e3412947914d263f3792fb1
-ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
+ms.openlocfilehash: 54f5c515c9ce9831df09a58087a37fe637ff6c49
+ms.sourcegitcommit: d58f670fed6ff217c52d2e00c0bee441fcb96920
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2022
-ms.locfileid: "68791590"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68819693"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Novedades para desarrolladores en Microsoft Teams
 
@@ -29,15 +29,9 @@ Descubra las características de la plataforma de Microsoft Teams que están dis
 
 Características de la plataforma teams que están disponibles para todos los desarrolladores de aplicaciones.
 
-**Octubre de 2022**
+**Noviembre de 2022**
 
-* ***27 de octubre de 2022***: [Introducción al bot de flujo de trabajo para Teams](sbs-gs-workflow-bot.yml)
-* ***26 de octubre de 2022***: [Compilación de una aplicación de firma de documentos en la reunión](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#build-an-in-meeting-document-signing-app)
-* ***19 de octubre de 2022***: [Portal para desarrolladores para Teams ya está disponible para los inquilinos de GCC](concepts/build-and-test/teams-developer-portal.md).
-* ***13 de octubre de 2022***: [Configure NavBar y cree un menú de desbordamiento para varias acciones](concepts/design/personal-apps.md#configure-and-add-multiple-actions-in-navbar).
-* ***13 de octubre de 2022***: [botón Configurar atrás de una aplicación](concepts/design/personal-apps.md#configure-back-button).
-* ***12 de octubre de 2022***: [las aplicaciones se admiten en reuniones instantáneas, llamadas uno a uno y llamadas grupales.](apps-in-teams-meetings/teams-apps-in-meetings.md)
-* ***12 de octubre de 2022***: [Lienzo de Live Share](apps-in-teams-meetings/teams-live-share-canvas.md)
+***2 de noviembre de 2022***: [compatibilidad con el enrutamiento global para las API de bot](bots/how-to/conversations/send-proactive-messages.md#create-the-conversation).
 
 :::column-end:::
 :::row-end:::
@@ -48,7 +42,13 @@ Características de la plataforma teams que están disponibles para todos los de
 
 | **Date** | **Actualizar** | **Buscar aquí** |
 | -------- | --------- | ----------------|
-| 10/26/2022 | Cree una aplicación en la reunión para permitir que los participantes de la reunión firmen documentos en tiempo real. | Compilación de aplicaciones para reuniones y llamadas de Teams > Habilitar y configurar aplicaciones para reuniones de Teams > Compilación de aplicaciones para la fase de reunión de Teams > [Creación de una aplicación de firma de documentos en la reunión](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#build-an-in-meeting-document-signing-app) |
+| 10/27/2022 | Introducción al bot de flujo de trabajo para Teams. | Herramientas y SDK > Kit de herramientas de Teams > Usar kit de herramientas de Teams para crear la aplicación > Desarrollar la aplicación de Teams > Crear aplicación de varias funcionalidades > [Crear bot de flujo de trabajo de Teams](sbs-gs-workflow-bot.yml) |
+| 10/26/2022 | Cree una aplicación en la reunión para permitir que los participantes de la reunión firmen documentos en tiempo real. | Compilación de aplicaciones para reuniones y llamadas de Teams > Habilitar y configurar aplicaciones para reuniones de Teams > [Fase de compilación de aplicaciones para teams](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#build-an-in-meeting-document-signing-app) |
+| 10/19/2022| El Portal para desarrolladores de Teams ya está disponible para los inquilinos de GCC. | [Información general](concepts/build-and-test/teams-developer-portal.md) sobre herramientas y SDK > Portal para desarrolladores para Teams >|
+| 10/13/2022| Configure NavBar y cree un menú de desbordamiento para varias acciones. | Diseñar la aplicación > funcionalidades de la aplicación > [aplicaciones personales](concepts/design/personal-apps.md#configure-and-add-multiple-actions-in-navbar)|
+| 10/13/2022| Configurar el botón Atrás de una aplicación. | Diseñar la aplicación > funcionalidades de la aplicación > [aplicaciones personales](concepts/design/personal-apps.md#configure-back-button)|
+| 10/12/2022| Las aplicaciones se admiten en reuniones instantáneas, llamadas uno a uno y llamadas de grupo. | Crear aplicaciones para reuniones y llamadas de Teams > [Información general](apps-in-teams-meetings/teams-apps-in-meetings.md)|
+| 10/12/2022| Lienzo de Live Share | Creación de aplicaciones para reuniones y llamadas de Teams > colaboración mejorada con Live Share > [Canvas](apps-in-teams-meetings/teams-live-share-canvas.md)|
 | 09/30/2022|Administrar licencias de SaaS para aplicaciones de terceros en Teams.|Monetizar la aplicación > Incluir una oferta de SaaS con la aplicación de Teams > [Administrar licencia para aplicaciones de terceros en Teams](concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md#manage-license-for-third-party-apps-in-teams)|
 | 09/29/2022|La aplicación móvil de Teams ahora admite descargas de archivos en dispositivos locales.|Integración de funcionalidades de dispositivo > Integración de funcionalidades multimedia > [descarga de archivos en dispositivos móviles de Teams](concepts/device-capabilities/media-capabilities.md#file-download-on-teams-mobile)|
 | 09/16/2022|Las tarjetas adaptables de las extensiones de mensaje basadas en búsqueda ahora admiten Acciones universales.|Compilación de extensiones de mensaje > comandos de búsqueda > [Acciones universales para extensiones de mensaje basadas en búsqueda](messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md)|
