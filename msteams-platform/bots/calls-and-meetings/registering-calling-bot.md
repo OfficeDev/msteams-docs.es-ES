@@ -3,12 +3,12 @@ title: Registro de llamadas y bots de reuniones para Microsoft teams
 description: Obtenga información sobre cómo registrar un nuevo bot de llamadas de audio y vídeo para Microsoft Teams, crear un nuevo bot o agregar funcionalidad de llamadas, agregar permisos de grafos. Ejemplo para crear una llamada, unirse a una reunión y una llamada de transferencia.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 3fe8d0adde45242738b8023c5478c24769561d1c
-ms.sourcegitcommit: 53818e55dfe0dbdf874d578a40982f7db444f89b
+ms.openlocfilehash: 6ee71c6ca790bdc2016c02143256e2d21b9595f2
+ms.sourcegitcommit: 88fb2e9a18de3bd84e3c604ff235fc753c8de8f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2022
-ms.locfileid: "68319940"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68817980"
 ---
 # <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>Registro de llamadas y bots de reuniones para Microsoft teams
 
@@ -100,7 +100,7 @@ You can rely on an administrator to grant the permissions your app needs at the 
 
 ## <a name="step-by-step-guide"></a>Guía paso a paso
 
-Siga la guía [paso a paso](../../sbs-calling-and-meeting.yml) para configurar llamadas y reuniones en un bot.
+Siga la [guía paso a paso](../../sbs-calling-and-meeting.yml) para configurar el bot de llamadas y reuniones de Teams.
 
 ## <a name="next-step"></a>Paso siguiente
 
