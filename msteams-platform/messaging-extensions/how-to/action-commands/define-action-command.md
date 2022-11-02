@@ -5,12 +5,12 @@ description: Aprenda a definir comandos de acción de extensión de mensajería 
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 7fbfc848c8ba59f46d3651996e46c37c8076ca76
-ms.sourcegitcommit: c74e1e12175969c75e112a580949f96d2610c24e
+ms.openlocfilehash: b4d40e3a3ba4f684a0b34fcebab21f988d79de87
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2022
-ms.locfileid: "68160646"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68820097"
 ---
 # <a name="define-message-extension-action-commands"></a>Definir comandos de acción de extensión de mensajería
 
@@ -30,7 +30,7 @@ Antes de crear el comando de acción, debe decidir los siguientes factores:
 Vea el siguiente vídeo para obtener información sobre cómo definir comandos de acción de extensión de mensaje:
 <br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OANG]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OANG>]
 <br>
 
 ## <a name="select-action-command-invoke-locations"></a>Seleccionar ubicaciones de invocación de comando de acción
@@ -168,7 +168,7 @@ Si usa una vista web incrustada, opcionalmente puede agregar el objeto para capt
 #### <a name="app-manifest-example"></a>Ejemplo de manifiesto de aplicación
 
 Esta sección no es un ejemplo del manifiesto completo. Para ver el esquema de manifiesto de aplicación completo, consulte [esquema de manifiesto de aplicación](~/resources/schema/manifest-schema.md). A continuación se muestra un ejemplo de un `composeExtensions` objeto que define dos comandos de acción:
- 
+
 ```json
 ...
 "composeExtensions": [
@@ -245,3 +245,11 @@ Si usa los parámetros o una vista web incrustada con un `taskInfo` objeto , el 
 
 > [!div class="nextstepaction"]
 > [Responde al envío del módulo de tareas](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
+
+## <a name="see-also"></a>Vea también
+
+* [Tarjetas](../../../task-modules-and-cards/what-are-cards.md)
+* [Módulos de tareas](../../../task-modules-and-cards/what-are-task-modules.md)
+* [Esquema del manifiesto de la aplicación de Teams](../../../resources/schema/manifest-schema.md)
+* [Portal para desarrolladores de Teams](../../../concepts/build-and-test/teams-developer-portal.md)
+* [Extensiones de mensajes](../../what-are-messaging-extensions.md)

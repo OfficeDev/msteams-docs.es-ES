@@ -5,12 +5,12 @@ description: Aprenda a habilitar la pestaña para volver a configurarla después
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 40d6024d01b608c99347e9df65883906d7cb276d
-ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
+ms.openlocfilehash: 423cc386ca416fe116eb0bcb62c1238cae5547ff
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2022
-ms.locfileid: "68560452"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68819943"
 ---
 # <a name="create-a-removal-page"></a>Crear una página de eliminación
 
@@ -127,7 +127,9 @@ Después de ejecutar el controlador de eliminación, `removeEvent.notifySuccess(
 
 ## <a name="see-also"></a>Vea también
 
-* [Pestañas de Teams](~/tabs/what-are-tabs.md)
-* [Crear una pestaña personal](~/tabs/how-to/create-personal-tab.md)
-* [Crear una pestaña de grupo o canal personalizado](~/tabs/how-to/create-channel-group-tab.md)
-* [Creación de una página de configuración](~/tabs/how-to/create-tab-pages/configuration-page.md)
+* [Pestañas de compilación para Teams](../../what-are-tabs.md)
+* [Esquema del manifiesto de la aplicación de Teams](../../../resources/schema/manifest-schema.md)
+* [RemoveEvent (interfaz)](/javascript/api/@microsoft/teams-js/pages.config.removeevent)
+* [Obtención del contexto de Teams para la pestaña](../access-teams-context.md)
+* [Crear una pestaña personal](../create-personal-tab.md)
+* [Crear una pestaña de canal o una pestaña de grupo](../create-channel-group-tab.md)

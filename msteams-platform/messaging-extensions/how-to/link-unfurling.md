@@ -5,12 +5,12 @@ description: Agregue un vínculo que se desplegue con la extensión de mensajer�
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 57d3ed45bebfc221f376bf7e08aef73a5b4c40ae
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: c706bd4caf8ab7859fb0c8f9b5b9e8f337a3b269
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100633"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68820153"
 ---
 # <a name="add-link-unfurling"></a>Añadir una extensión de enlace
 
@@ -30,7 +30,7 @@ La extensión de mensajes de Azure DevOps usa la apertura de vínculos para busc
 
 Consulte el siguiente vídeo para obtener más información sobre la desplegamiento de vínculos:
 <br>
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OFZG]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OFZG>]
 <br>
 
 ## <a name="add-link-unfurling-to-your-app-manifest"></a>Agregue el enlace que se abre al manifiesto de su aplicación
@@ -197,5 +197,7 @@ Siga la [guía paso a paso](../../sbs-botbuilder-linkunfurling.yml) para abrir v
 
 ## <a name="see-also"></a>Consulte también
 
-* [Tarjetas](~/task-modules-and-cards/what-are-cards.md)
-* [Abra del vínculo de las pestañas y la Vista de fases](~/tabs/tabs-link-unfurling.md)
+* [Extensiones de mensajes](../what-are-messaging-extensions.md)
+* [Tarjetas adaptables](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
+* [Expansión del vínculo de pestañas y la Vista de fases](../../tabs/tabs-link-unfurling.md)
+* [composeExtensions](../../resources/schema/manifest-schema.md#composeextensions)

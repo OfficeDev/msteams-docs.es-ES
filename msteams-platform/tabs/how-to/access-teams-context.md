@@ -3,12 +3,12 @@ title: Obtener contexto para su pestaña
 description: Obtenga información sobre el contexto de la pestaña, el contexto del usuario, el equipo o la empresa, la información de acceso, la recuperación del contexto en canales privados o compartidos y el control del cambio de tema.
 ms.localizationpriority: high
 ms.topic: how-to
-ms.openlocfilehash: f0a54dc749d1132918e3ec47ac614aff3ce8aab8
-ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
+ms.openlocfilehash: d4dee147da2fd0091e038526ca56d66a9b80f7e5
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2022
-ms.locfileid: "68791548"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68820111"
 ---
 # <a name="get-context-for-your-tab"></a>Obtención del contexto de Teams para la pestaña
 
@@ -286,8 +286,9 @@ El `theme` argumento de la función es una cadena con un valor de `default`, `da
 
 ## <a name="see-also"></a>Vea también
 
-* [Directrices de diseño de pestañas](../../tabs/design/tabs.md)
-* [Pestañas de Teams](~/tabs/what-are-tabs.md)
-* [Crear una pestaña personal](~/tabs/how-to/create-personal-tab.md)
-* [Crear una pestaña de grupo o de canal](~/tabs/how-to/create-channel-group-tab.md)
-* [Uso de módulos de tareas en pestañas](~/task-modules-and-cards/task-modules/task-modules-tabs.md)
+* [Pestañas de compilación para Teams](../what-are-tabs.md)
+* [Diseñar la pestaña para Microsoft Teams](../design/tabs.md)
+* [Habilitación del inicio de sesión único para la aplicación de pestañas](authentication/tab-sso-overview.md)
+* [Microsoft Teams Connect canales compartidos](../../concepts/build-and-test/shared-channels.md)
+* [Esquema del manifiesto de la aplicación de Teams](../../resources/schema/manifest-schema.md)
+* [Uso de módulos de tareas en pestañas](../../task-modules-and-cards/task-modules/task-modules-tabs.md)

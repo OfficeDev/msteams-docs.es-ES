@@ -5,12 +5,12 @@ description: Obtenga información sobre la vista de fase, un componente de inter
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 57ff75ac5861f6f348f676c85cc8ac702ece9842
-ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
+ms.openlocfilehash: 2563cfd266b967bd8c55c24491165c9979bad145
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2022
-ms.locfileid: "68791569"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68820090"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>Expansión del vínculo de la pestaña y vista de fases
 
@@ -158,7 +158,8 @@ Codificado
 
 ## <a name="see-also"></a>Consulte también
 
-* [Vínculo extensiones de mensaje desenlazándose](~/messaging-extensions/how-to/link-unfurling.md)
-* [Pestañas de Teams](~/tabs/what-are-tabs.md)
-* [Crear una pestaña personal](~/tabs/how-to/create-personal-tab.md)
-* [Crear una pestaña de grupo o canal personalizado](~/tabs/how-to/create-channel-group-tab.md)
+* [Pestañas de compilación para Teams](what-are-tabs.md)
+* [Añadir una extensión de enlace](../messaging-extensions/how-to/link-unfurling.md)
+* [composeExtensions](../resources/schema/manifest-schema.md#composeextensions)
+* [Compilar pestañas con tarjetas adaptables](how-to/build-adaptive-card-tabs.md)
+* [Crear vínculos profundos](../concepts/build-and-test/deep-links.md)

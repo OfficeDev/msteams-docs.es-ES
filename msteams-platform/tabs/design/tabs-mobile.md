@@ -3,12 +3,12 @@ title: Pestañas en dispositivos móviles
 description: Obtenga información sobre cómo funcionan las pestañas en los clientes de Microsoft Teams (móvil) de Android e iOS, su autenticación, su conexión de ancho de banda bajo, las pruebas o la distribución.
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: 0dbb74d5c2854897f82708aa83a0c49df4f28890
-ms.sourcegitcommit: bd96080c78f25eb0a67ce176df5e255be348f7b1
+ms.openlocfilehash: 8dac56cd609466c116f39baf5dc9d9a7970645ec
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2022
-ms.locfileid: "68575771"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68820083"
 ---
 # <a name="tabs-on-mobile"></a>Pestañas en dispositivos móviles
 
@@ -80,8 +80,12 @@ Si va a transferir localmente la aplicación o publicarla en el catálogo de apl
 
 ## <a name="see-also"></a>Vea también
 
-* [Directrices de diseño de pestañas](~/tabs/design/tabs.md)
-* [Pestañas de Teams](~/tabs/what-are-tabs.md)
-* [Crear una pestaña personal](~/tabs/how-to/create-personal-tab.md)
-* [Crear una pestaña de grupo o de canal](~/tabs/how-to/create-channel-group-tab.md)
-* [Planeamiento de dispositivos móviles de Teams: Teams](~/concepts/design/plan-responsive-tabs-for-teams-mobile.md)
+* [Pestañas de compilación para Teams](../what-are-tabs.md)
+* [Compilar pestañas con tarjetas adaptables](../how-to/build-adaptive-card-tabs.md)
+* [Crear una pestaña personal](../how-to/create-personal-tab.md)
+* [Planear pestañas con capacidad de respuesta para dispositivo móvil de Teams](../../concepts/design/plan-responsive-tabs-for-teams-mobile.md)
+* [Diseñar la pestaña para Microsoft Teams](tabs.md)
+* [DevTools para pestañas de Microsoft Teams](../how-to/developer-tools.md)
+* [Probar la aplicación](../../concepts/build-and-test/test-app-overview.md)
+* [Distribución de la aplicación de Microsoft Teams](../../concepts/deploy-and-publish/apps-publish-overview.md)
+* [Crear un paquete de aplicación de Microsoft Teams](../../concepts/build-and-test/apps-package.md)

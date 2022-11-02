@@ -5,12 +5,12 @@ description: Obtenga información sobre cómo quitar márgenes alrededor de pest
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
-ms.openlocfilehash: 715c6b735323e442490de8634384054be565e7a8
-ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
+ms.openlocfilehash: ba203cd89904acde77e1d9971175afc19c47d24d
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2022
-ms.locfileid: "67450446"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68820076"
 ---
 # <a name="tab-margin-changes"></a>Cambios del margen de pestaña
 
@@ -50,7 +50,6 @@ No, debes proporcionar tu propio relleno o márgenes a la izquierda y a la derec
 
 ## <a name="see-also"></a>Vea también
 
-* [Pestañas de Teams](~/tabs/what-are-tabs.md)
-* [Crear una pestaña personal](~/tabs/how-to/create-personal-tab.md)
-* [Crear una pestaña de grupo o de canal](~/tabs/how-to/create-channel-group-tab.md)
-* [Pestañas en dispositivos móviles](~/tabs/design/tabs-mobile.md)
+* [Pestañas de compilación para Teams](../tabs/what-are-tabs.md)
+* [Crear una pestaña personal](../tabs/how-to/create-personal-tab.md)
+* [Crear una pestaña de canal o una pestaña de grupo](../tabs/how-to/create-channel-group-tab.md)

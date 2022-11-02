@@ -5,12 +5,12 @@ description: Obtenga información sobre cómo crear y enviar módulos de tareas.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: d6e85a52af435d131bea0a700ccf13b536a30b9a
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 08629f59979923a397c08809fc20b50c81a30c58
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100318"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68820118"
 ---
 # <a name="create-and-send-task-module"></a>Crear y enviar el módulo de tareas
 
@@ -995,4 +995,9 @@ private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
 
 ## <a name="see-also"></a>Consulte también
 
-[Definir comandos de acción](~/messaging-extensions/how-to/action-commands/define-action-command.md)
+* [Tarjetas](../../../task-modules-and-cards/what-are-cards.md)
+* [Selector de usuarios en Tarjetas adaptables](../../../task-modules-and-cards/cards/people-picker.md)
+* [Módulos de tareas](../../../task-modules-and-cards/what-are-task-modules.md)
+* [Esquema del manifiesto de la aplicación de Teams](../../../resources/schema/manifest-schema.md)
+* [Definir comandos de acción de extensión de mensajería](define-action-command.md)
+* [Extensiones de mensajes](../../what-are-messaging-extensions.md)

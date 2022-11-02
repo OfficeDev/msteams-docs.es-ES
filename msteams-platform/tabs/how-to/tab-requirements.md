@@ -5,12 +5,12 @@ description: En este artículo, aprenderá los requisitos previos para crear la 
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 77714171491896f5d61088a20ab7c324227606c1
-ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
+ms.openlocfilehash: 4471d88b7f9b0fd6364c833f6b3dd910aadb300a
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2022
-ms.locfileid: "68791815"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68819964"
 ---
 # <a name="prerequisites"></a>Requisitos previos
 
@@ -65,5 +65,7 @@ Ahora vamos a crear la pestaña. Pero primero seleccione la pestaña que prefier
 
 ## <a name="see-also"></a>Consulte también
 
-* [Pestañas de Teams](~/tabs/what-are-tabs.md)
+* [Pestañas de compilación para Teams](../what-are-tabs.md)
+* [Cree su primera aplicación de pestaña con JavaScript](../../sbs-gs-javascript.yml)
+* [Registrar la aplicación de pestaña en Azure AD](authentication/tab-sso-register-aad.md)
 * [Pestañas en dispositivos móviles](~/tabs/design/tabs-mobile.md)

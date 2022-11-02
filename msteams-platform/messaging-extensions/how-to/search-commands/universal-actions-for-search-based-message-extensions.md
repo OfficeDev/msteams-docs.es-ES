@@ -5,12 +5,12 @@ description: En este artículo, obtenga información sobre Acciones universales 
 ms.topic: conceptual
 ms.author: v-ypalikila
 ms.localizationpriority: medium
-ms.openlocfilehash: 78b8c525b51603245fc379a826fa0cc11cbc5fd8
-ms.sourcegitcommit: 176bbca74ba46b7ac298899d19a2d75087fb37c1
+ms.openlocfilehash: 18f5b783797d69144aac82e5ebd95fc30dad57a2
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2022
-ms.locfileid: "68376595"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68819971"
 ---
 # <a name="universal-actions-for-search-based-message-extensions"></a>Acciones universales para extensiones de mensajes basadas en búsqueda
 
@@ -130,4 +130,5 @@ Ejemplo de un flujo de usuario de instalación dinámica de ME y JIT:
 ## <a name="see-also"></a>Vea también
 
 * [Extensiones de mensajes](../../what-are-messaging-extensions.md)
+* [Tarjetas adaptables](../../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
 * [Acciones universales para tarjetas adaptables](../../../task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Overview.md)

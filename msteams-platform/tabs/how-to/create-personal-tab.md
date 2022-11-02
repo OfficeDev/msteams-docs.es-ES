@@ -6,12 +6,12 @@ ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 187f1b40c60d8f7d88b75e6f666239ab70717cf6
-ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
+ms.openlocfilehash: 5afb145bdba5639b71a7b56ac8884dc465127d35
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2022
-ms.locfileid: "68560739"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68820006"
 ---
 # <a name="create-a-personal-tab"></a>Crear una pestaña personal
 
@@ -625,8 +625,10 @@ Si crea un bot con un ámbito **personal**, aparecerá en la primera posición d
 
 ## <a name="see-also"></a>Consulte también
 
-* [Pestañas de Teams](~/tabs/what-are-tabs.md)
-* [Pestañas en dispositivos móviles](~/tabs/design/tabs-mobile.md)
-* [Compilar pestañas con tarjetas adaptables](~/tabs/how-to/build-adaptive-card-tabs.md)
-* [Crear pestañas de conversación](~/tabs/how-to/conversational-tabs.md)
+* [Pestañas de compilación para Teams](../what-are-tabs.md)
+* [Crear una pestaña de canal o una pestaña de grupo](create-channel-group-tab.md)
 * [Compartir en Teams desde una aplicación personal o una pestaña](~/concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md)
+* [Portal para desarrolladores de Teams](../../concepts/build-and-test/teams-developer-portal.md)
+* [Esquema del manifiesto de la aplicación de Teams](../../resources/schema/manifest-schema.md)
+* [Compilar pestañas con tarjetas adaptables](build-adaptive-card-tabs.md)
+* [Pestañas en dispositivos móviles](../design/tabs-mobile.md)

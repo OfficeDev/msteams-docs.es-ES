@@ -6,12 +6,12 @@ ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 2ad44d0c43df7193106474fc3b6534d9ddde5bfc
-ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
+ms.openlocfilehash: 56243743f4c26995eb5bcf30bba7eeaaeccbbedc
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2022
-ms.locfileid: "68791667"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68820013"
 ---
 # <a name="create-a-channel-tab-or-group-tab"></a>Crear una pestaña de canal o una pestaña de grupo
 
@@ -680,9 +680,8 @@ Asegúrese de mantener el símbolo del sistema con ngrok en ejecución y tome no
 
 ## <a name="see-also"></a>Consulte también
 
-* [Pestañas de Teams](~/tabs/what-are-tabs.md)
-* [Crear una pestaña personal](~/tabs/how-to/create-personal-tab.md)
-* [Pestañas en dispositivos móviles](~/tabs/design/tabs-mobile.md)
-* [Compilar pestañas con tarjetas adaptables](~/tabs/how-to/build-adaptive-card-tabs.md)
-* [Crear una página de eliminación](~/tabs/how-to/create-tab-pages/removal-page.md)
+* [Pestañas de compilación para Teams](../what-are-tabs.md)
+* [Crear una pestaña personal](create-personal-tab.md)
+* [Portal para desarrolladores de Teams](../../concepts/build-and-test/teams-developer-portal.md)
+* [Compilar pestañas con tarjetas adaptables](build-adaptive-card-tabs.md)
 * [Agregar una página de SharePoint como pestaña en Teams](https://support.microsoft.com/en-us/office/add-a-sharepoint-page-list-or-document-library-as-a-tab-in-teams-131edef1-455f-4c67-a8ce-efa2ebf25f0b)

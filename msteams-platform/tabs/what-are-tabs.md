@@ -5,12 +5,12 @@ description: Aprenda a crear pestañas, páginas web incrustadas en Microsoft Te
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 0bf8593c4cb27b54893c88c5f47bf1cbd489f9a0
-ms.sourcegitcommit: 6b262c2044b7c5f6f99e64c5cee11a5b28a00139
+ms.openlocfilehash: cd8e57a0773a5c1b8cd145176de703018c4e45e7
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2022
-ms.locfileid: "68772511"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68819992"
 ---
 # <a name="build-tabs-for-teams"></a>Pestañas de compilación para Teams
 
@@ -90,9 +90,7 @@ Puede tener varios canales o pestañas de grupo y hasta 16 pestañas personales 
 
 ## <a name="see-also"></a>Vea también
 
-* [Pestañas personalizadas en Microsoft Teams](/microsoftteams/built-in-custom-tabs#develop-custom-tabs)
-* [Solicitar permisos de dispositivo](../concepts/device-capabilities/native-device-permissions.md)
-* [Integrar capacidades multimedia](../concepts/device-capabilities/media-capabilities.md)
-* [Integrar un escáner qr o de código de barras](../concepts/device-capabilities/qr-barcode-scanner-capability.md)
-* [Integrar capacidades de ubicación](../concepts/device-capabilities/location-capability.md)
+* [Diseñar la pestaña para Microsoft Teams](design/tabs.md)
+* [Funciones del dispositivo](../concepts/device-capabilities/device-capabilities-overview.md)
 * [Pestañas en dispositivos móviles](design/tabs-mobile.md#tabs-on-mobile)
+* [Funcionalidades de la aplicación asignadas a características](../concepts/design/map-use-cases.md#app-capabilities-mapped-to-features)

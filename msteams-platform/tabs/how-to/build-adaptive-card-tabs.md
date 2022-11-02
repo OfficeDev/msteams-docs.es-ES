@@ -5,18 +5,18 @@ description: Aprenda a crear pestañas con tarjetas adaptables donde el front-en
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: c69ca5f366e973fcd17e04ef490514526bef0f96
-ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
+ms.openlocfilehash: 31aecc7ab7744d0b45061d2434d8709c776c52e8
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2022
-ms.locfileid: "68499289"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68820132"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>Compilar pestañas con tarjetas adaptables
 
 > [!IMPORTANT]
 >
-> Actualmente, las pestañas con Tarjetas adaptables solo se admiten como aplicaciones personales.
+> Las pestañas con tarjetas adaptables solo se admiten como aplicaciones personales.
 
 Al desarrollar una pestaña con el método tradicional, podría encontrarse con estas incidencias:
 
@@ -45,7 +45,7 @@ Antes de empezar a usar Tarjetas adaptables para crear pestañas, debe:
 Las aplicaciones personales que representan pestañas deben incluir una matriz de `staticTabs` en su manifiesto de aplicación. Las pestañas de tarjeta adaptable se representan cuando se proporciona la propiedad `contentBotId` en la definición de `staticTab`. Las definiciones de pestañas estáticas deben contener un `contentBotId`especificando una pestaña tarjeta adaptable o un `contentUrl`especificando una experiencia típica de pestaña de contenido web hospedada.
 
 > [!NOTE]
-> La propiedad `contentBotId` está disponible actualmente en la versión 1.9 ó posterior del manifiesto.
+> La `contentBotId` propiedad está disponible en la versión de manifiesto 1.9 o posterior.
 
 Proporcione la propiedad `contentBotId` con el `botId` con el que debe comunicarse la pestaña Tarjeta adaptable. El `entityId` configurado para la pestaña Tarjeta adaptable se envía en el parámetro `tabContext` de cada solicitud de invocación y se puede usar para diferenciar las pestañas de tarjeta adaptables con tecnología del mismo bot. Para obtener más información sobre otros campos de definición de pestañas estáticas, vea [esquema de manifiesto](../../resources/schema/manifest-schema.md#statictabs).
 
@@ -437,9 +437,8 @@ En el código siguiente se muestra un ejemplo de solicitud reemitido:
 
 ## <a name="see-also"></a>Consulte también
 
-* [Tarjeta adaptable](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
-* [Pestañas de Teams](~/tabs/what-are-tabs.md)
-* [Crear una pestaña personal](~/tabs/how-to/create-personal-tab.md)
-* [Crear una pestaña de grupo o de canal](~/tabs/how-to/create-channel-group-tab.md)
-* [Pestañas en dispositivos móviles](~/tabs/design/tabs-mobile.md)
-* [Comentarios de finalización de formularios](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)
+* [Pestañas de compilación para Teams](../what-are-tabs.md)
+* [Pestañas en dispositivos móviles](../design/tabs-mobile.md)
+* [Tarjetas](../../task-modules-and-cards/what-are-cards.md)
+* [Uso de módulos de tareas en pestañas](../../task-modules-and-cards/task-modules/task-modules-tabs.md)
+* [Comentarios de finalización de formularios](../../bots/how-to/conversations/conversation-messages.md#form-completion-feedback)

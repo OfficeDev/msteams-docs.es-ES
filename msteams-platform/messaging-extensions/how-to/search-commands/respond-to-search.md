@@ -5,12 +5,12 @@ description: Obtenga información sobre cómo responder al comando de búsqueda 
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: bc1034db9a5b63d861f1abbe98f22c73556710b2
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 97fe20097e98a015759ba030004fb8c0b3b5e3f9
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100563"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68819950"
 ---
 # <a name="respond-to-search-command"></a>Responder a consultas de comandos de búsqueda
 
@@ -424,6 +424,8 @@ La consulta predeterminada tiene la misma estructura que cualquier consulta de u
 > [!div class="nextstepaction"]
 > [Adición de autenticación a una extensión de mensaje](~/messaging-extensions/how-to/add-authentication.md)
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-[Agregar configuración a una extensión de mensaje](~/get-started/first-message-extension.md)
+* [Extensiones de mensajes](../../what-are-messaging-extensions.md)
+* [Cree su primera aplicación de pestaña con JavaScript](../../../sbs-gs-javascript.yml)
+* [composeExtensions](../../../resources/schema/manifest-schema.md#composeextensions)

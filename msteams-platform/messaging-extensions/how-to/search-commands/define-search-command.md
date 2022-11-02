@@ -5,12 +5,12 @@ description: Obtenga información sobre los comandos de búsqueda de extensión 
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: c126d6436c5fb091804c92caeb2876c09392bd9b
-ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
+ms.openlocfilehash: 9ec7ea734e331fcfb563702d18284f4831c369f6
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2022
-ms.locfileid: "68791835"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68820181"
 ---
 # <a name="define-message-extension-search-commands"></a>Definición de comandos de búsqueda de extensión de mensaje
 
@@ -24,7 +24,7 @@ Los comandos de búsqueda de extensión de mensaje permiten a los usuarios busca
 Vea el siguiente vídeo para obtener información sobre cómo definir comandos de búsqueda de extensión de mensaje:
 <br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OIvK]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OIvK>]
 <br>
 
 ## <a name="select-search-command-invoke-locations"></a>Selección de ubicaciones de invocación de comandos de búsqueda
@@ -161,3 +161,11 @@ Siga la [guía paso a paso](../../../sbs-messagingextension-searchcommand.yml) p
 
 > [!div class="nextstepaction"]
 > [Responda a los comandos de búsqueda](~/messaging-extensions/how-to/search-commands/respond-to-search.md).
+
+## <a name="see-also"></a>Vea también
+
+* [Tarjetas](../../../task-modules-and-cards/what-are-cards.md)
+* [Módulos de tareas](../../../task-modules-and-cards/what-are-task-modules.md)
+* [Esquema del manifiesto de la aplicación de Teams](../../../resources/schema/manifest-schema.md)
+* [Portal para desarrolladores de Teams](../../../concepts/build-and-test/teams-developer-portal.md)
+* [Extensiones de mensajes](../../what-are-messaging-extensions.md)

@@ -5,12 +5,12 @@ description: Crear página de configuración para recopilar información del usu
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 51e5ef0a6752ab70ede4d2da699f78910c08f6c9
-ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
+ms.openlocfilehash: 6cd9ed8572b3df2db4a727225159774156008fa6
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2022
-ms.locfileid: "68791708"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68820174"
 ---
 # <a name="create-a-configuration-page"></a>Creación de una página de configuración
 
@@ -340,8 +340,9 @@ Si decide que su pestaña de canal o grupo aparezca en los clientes móviles de 
 
 ## <a name="see-also"></a>Consulte también
 
-* [Pestañas de Teams](~/tabs/what-are-tabs.md)
-* [Crear una pestaña personal](~/tabs/how-to/create-personal-tab.md)
-* [Crear una pestaña de grupo o canal personalizado](~/tabs/how-to/create-channel-group-tab.md)
-* [Creación de una página de contenido](~/tabs/how-to/create-tab-pages/content-page.md)
-* [Pestañas en dispositivos móviles](~/tabs/design/tabs-mobile.md)
+* [Pestañas de compilación para Teams](../../what-are-tabs.md)
+* [Actualizar el manifiesto para el SSO y versión preliminar de la aplicación](../authentication/tab-sso-manifest.md)
+* [Configuración de la autenticación de IdP de OAuth de terceros](../authentication/auth-tab-aad.md)
+* [Crear Conectores de Office 365](../../../webhooks-and-connectors/how-to/connectors-creating.md)
+* [Obtención del contexto de Teams para la pestaña](../access-teams-context.md)
+* [Pestañas en dispositivos móviles](../../design/tabs-mobile.md)

@@ -5,12 +5,12 @@ description: Obtenga información sobre cómo responder a la acción de envío d
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 472bde652e60a8029bd54c7a1360412ab9710ada
-ms.sourcegitcommit: bb15ce26cd65bec90991b703069424ab4b4e1a61
+ms.openlocfilehash: 96ba10d59eccbc95a73455641425a01a9f3f2c47
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2022
-ms.locfileid: "68772310"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68820146"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>Responder a la acción de envío del módulo de tareas
 
@@ -616,4 +616,6 @@ La sección siguiente es una descripción de las entidades de la matriz `OnBehal
 
 ## <a name="see-also"></a>Consulte también
 
-[Responder a consultas de comandos de búsqueda](~/messaging-extensions/how-to/search-commands/respond-to-search.md)
+* [Esquema del manifiesto de la aplicación de Teams](../../../resources/schema/manifest-schema.md)
+* [Responder a consultas de comandos de búsqueda](../search-commands/respond-to-search.md)
+* [Extensiones de mensajes](../../what-are-messaging-extensions.md)

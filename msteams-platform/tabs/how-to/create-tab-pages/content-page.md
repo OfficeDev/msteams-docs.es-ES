@@ -5,12 +5,12 @@ description: Obtenga información sobre la página web dentro del cliente de Tea
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 5dcc46567e14d183437982c7ffde26528c836810
-ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
+ms.openlocfilehash: 4074b3bb4499cca2453a9d928a83b1cd04f5c064
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2022
-ms.locfileid: "68791541"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68820167"
 ---
 # <a name="create-a-content-page"></a>Creación de una página de contenido
 
@@ -139,8 +139,8 @@ Para mostrar el indicador de carga:
 
 ## <a name="see-also"></a>Consulte también
 
-* [Pestañas de Teams](~/tabs/what-are-tabs.md)
-* [Crear una pestaña personal](~/tabs/how-to/create-personal-tab.md)
-* [Expansión del vínculo de pestañas y la Vista de fases](~/tabs/tabs-link-unfurling.md)
-* [Creación de una página de configuración](~/tabs/how-to/create-tab-pages/configuration-page.md)
+* [Pestañas de compilación para Teams](../../what-are-tabs.md)
+* [Crear una pestaña personal](../create-personal-tab.md)
+* [Crear una pestaña de canal o una pestaña de grupo](../create-channel-group-tab.md)
+* [Esquema del manifiesto de la aplicación de Teams](../../../resources/schema/manifest-schema.md)
 * [DevTools para pestañas de Microsoft Teams](~/tabs/how-to/developer-tools.md)

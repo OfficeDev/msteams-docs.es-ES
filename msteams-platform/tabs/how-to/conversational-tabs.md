@@ -5,12 +5,12 @@ description: Aprenda a crear pestañas conversacionales en Microsoft Teams para 
 ms.topic: conceptual
 ms.author: lomeybur
 ms.localizationpriority: high
-ms.openlocfilehash: 37816fab1f8ca402e806dec3ec5cca77dd15cf95
-ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
+ms.openlocfilehash: fa54221a413b19704d80ec62feb1cf068e42d1a0
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2022
-ms.locfileid: "67450425"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68820125"
 ---
 # <a name="create-conversational-tabs"></a>Crear pestañas de conversación
 
@@ -108,8 +108,8 @@ También puede escuchar un evento cuando los usuarios **seleccionan Cerrar (X)**
 
 ## <a name="see-also"></a>Vea también
 
-* [Pestañas de Teams](~/tabs/what-are-tabs.md)
-* [Crear una pestaña personal](~/tabs/how-to/create-personal-tab.md)
-* [Crear una pestaña de grupo o de canal](~/tabs/how-to/create-channel-group-tab.md)
+* [Pestañas de compilación para Teams](../what-are-tabs.md)
+* [Crear una pestaña personal](create-personal-tab.md)
+* [Crear una pestaña de canal o una pestaña de grupo](create-channel-group-tab.md)
+* [Compilar pestañas con tarjetas adaptables](build-adaptive-card-tabs.md)
 * [Pestañas en dispositivos móviles](~/tabs/design/tabs-mobile.md)
-* [Compilar pestañas con tarjetas adaptables](~/tabs/how-to/build-adaptive-card-tabs.md)
