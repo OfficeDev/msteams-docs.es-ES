@@ -7,12 +7,12 @@ ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 07/29/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: 03d101df114d3f7564c78c433d01191172e180c9
-ms.sourcegitcommit: 3aaccc48906fc6f6fbf79916af5664bf55537250
+ms.openlocfilehash: e079f023d931af48d5c06151c585a059c3f7f803
+ms.sourcegitcommit: c3601696cced9aadc764f1e734646ee7711f154c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "68295987"
+ms.lasthandoff: 11/03/2022
+ms.locfileid: "68833082"
 ---
 # <a name="install-teams-toolkit"></a>Instalación del kit de herramientas de Teams
 
@@ -132,6 +132,6 @@ Ahora que el kit de herramientas de Teams está instalado, visite [Creación de 
 * [Preparación para compilar aplicaciones mediante el kit de herramientas de Microsoft Teams](build-environments.md)
 * [Aprovisionamiento de recursos en la nube mediante el kit de herramientas de Teams](provision.md)
 * [Implementar la aplicación de Teams en la nube](deploy.md)
-* [Creación de una nueva aplicación de Teams en Visual Studio](create-new-teams-app-for-Visual-Studio.md)
+* [Creación de una nueva aplicación de Teams en Visual Studio](create-new-project.md#create-new-teams-app-in-visual-studio)
 * [Aprovisionamiento de recursos en la nube mediante Visual Studio](provision-cloud-resources.md)
-* [Implementación de una aplicación de Teams en la nube mediante Visual Studio](deploy-teams-app.md)
+* [Implementación de una aplicación de Teams en la nube mediante Visual Studio](deploy.md#deploy-teams-app-to-the-cloud-using-visual-studio)

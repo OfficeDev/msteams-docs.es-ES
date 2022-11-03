@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
-ms.openlocfilehash: 412b7bfedb6ba39f1d38f42aac56cc793ea385b1
-ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
+ms.openlocfilehash: 1870f42a4f5d6589603d31dae955aa6d487b0305
+ms.sourcegitcommit: c3601696cced9aadc764f1e734646ee7711f154c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67617279"
+ms.lasthandoff: 11/03/2022
+ms.locfileid: "68833187"
 ---
 # <a name="prerequisites-for-creating-your-teams-app"></a>Requisitos previos para crear la aplicación de Teams
 
@@ -52,7 +52,7 @@ Asegúrese de que tiene las siguientes cuentas antes de empezar a compilar la ap
 | Cuentas | Para usar| Para el tipo de entorno|
 | --- | --- |
 |[Cuenta de Microsoft 365 con una suscripción válida](#microsoft-365-developer-program)|Cuenta de desarrollador de Teams al desarrollar una aplicación.| JavaScript y SPFx|
-|[Cuenta de Azure](accounts.md#azure-account-to-host-backend-resources)|Recursos de back-end en Azure.| JavaScript y SPFx|
+|[Cuenta de Azure](#azure-account)|Recursos de back-end en Azure.| JavaScript y SPFx|
 |[Cuenta de administrador del sitio de colección de SharePoint](#sharepoint-collection-site-administrator-account) |Implementación para el hospedaje.| SPFx|
 
 ### <a name="microsoft-365-developer-program"></a>Programa de desarrolladores de Microsoft 365

@@ -7,12 +7,12 @@ ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: a0174d113d441e2318f4f9f4165211f46df1876e
-ms.sourcegitcommit: ea7b7b8ebb4b2acdd0b9a3411c59a9a91a06f409
+ms.openlocfilehash: 6c3e44de4d63911dff5481ab859019aea37559d1
+ms.sourcegitcommit: c3601696cced9aadc764f1e734646ee7711f154c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2022
-ms.locfileid: "68350464"
+ms.lasthandoff: 11/03/2022
+ms.locfileid: "68833201"
 ---
 # <a name="provision-cloud-resources"></a>Aprovisionar recursos en la nube
 
@@ -308,7 +308,7 @@ Los pasos siguientes le ayudan a aprovisionar recursos en la nube mediante Visua
 
 1. Seleccione **Iniciar sesión** para iniciar sesión en su cuenta de Azure.
 
-   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-prepare1.png" alt-text="Inicio de sesión en Microsoft 365":::
+   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-prepare1.png" alt-text="Iniciar sesión en Microsoft 365":::
 
     > [!NOTE]
     > Si ya ha iniciado sesión, se muestra el nombre de usuario o puede seleccionar el mismo para cambiar su cuenta.
@@ -589,6 +589,6 @@ Si recibe un error de permiso insuficiente cuando Teams Toolkit intenta agregar 
 * [Implementar la aplicación de Teams en la nube](deploy.md)
 * [Administrar varios entornos](TeamsFx-multi-env.md)
 * [Colaborar con otros desarrolladores en proyectos de Teams](TeamsFx-collaboration.md)
-* [Implementación de una aplicación de Teams en la nube mediante Visual Studio](deploy-teams-app.md)
+* [Implementación de una aplicación de Teams en la nube mediante Visual Studio](deploy.md#deploy-teams-app-to-the-cloud-using-visual-studio)
 * [Edición del manifiesto de aplicación de Teams mediante Visual Studio](VS-TeamsFx-preview-and-customize-app-manifest.md)
-* [Depuración local de aplicaciones de Teams para Visual Studio](debug-teams-app-visual-studio.md)
+* [Depuración local de aplicaciones de Teams para Visual Studio](debug-local.md#debug-your-teams-app-locally-using-visual-studio)

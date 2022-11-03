@@ -3,12 +3,12 @@ title: Introducción a las acciones universales para tarjetas adaptables
 description: Obtenga información sobre acciones universales para tarjetas adaptables, como vistas específicas del usuario, compatibilidad con flujos de trabajo secuenciales y mucho más para entornos de escritorio y móviles.
 ms.topic: overview
 ms.localizationpriority: medium
-ms.openlocfilehash: 9c04ed4726840bd3d1637555d1bb021f31bf2e25
-ms.sourcegitcommit: 19f3e4e9088d0a07c9b567e76640d498b9d1981f
+ms.openlocfilehash: 4ee3210391f3a8aaba4b74d3d07ee6507789afed
+ms.sourcegitcommit: c3601696cced9aadc764f1e734646ee7711f154c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67786979"
+ms.lasthandoff: 11/03/2022
+ms.locfileid: "68833061"
 ---
 # <a name="universal-actions-for-adaptive-cards"></a>Acciones universales para tarjetas adaptables
 
@@ -41,7 +41,13 @@ En la imagen siguiente se muestra el modelo de acción incoherente actual:
 
 :::image type="content" source="~/assets/images/adaptive-cards/current-teams-outlook-action-model.png" alt-text="Modelo de acción incoherente":::
 
-Con acciones universales para tarjetas adaptables, puede usar para el `Action.Execute` control de acciones en distintas plataformas. `Action.Execute` funciona en centros de conectividad, incluidos Teams y Outlook. Además, se puede devolver una tarjeta adaptable como respuesta para una `Action.Execute` solicitud de invocación desencadenada.
+Con acciones universales para tarjetas adaptables, puede usar para el `Action.Execute` control de acciones en distintas plataformas.
+
+`Action.Execute` funciona en todos los centros, incluidos Teams y Outlook, y no es un reemplazo de `Action.Submit`. Por ejemplo, si desea que un sistema externo realice una acción y el resultado de la acción se debe devolver a la conversación mediante [la extensión de mensajería](../../../messaging-extensions/what-are-messaging-extensions.md), `Action.Execute` no se admite.
+
+Para las [tarjetas desplegadas de vínculos](../../../messaging-extensions/how-to/link-unfurling.md) , como las tarjetas de héroe y miniatura, debe llamar a `Action.Submit`.
+
+Además, se puede devolver una tarjeta adaptable como respuesta para una `Action.Execute` solicitud de invocación desencadenada.
 
 En la imagen siguiente se muestra el nuevo modelo de acción universal:
 

@@ -7,23 +7,23 @@ ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/24/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: 786bfd318f1cefa4329e54b5a19cba89a823bb5b
-ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
+ms.openlocfilehash: cb3508bdd22f9d05c48e71b1b90ec4ffbf4c56af
+ms.sourcegitcommit: c3601696cced9aadc764f1e734646ee7711f154c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/20/2022
-ms.locfileid: "68615341"
+ms.lasthandoff: 11/03/2022
+ms.locfileid: "68833166"
 ---
 # <a name="teams-toolkit-overview"></a>Información general del kit de herramientas de Teams
 
 Teams Toolkit facilita la introducción al desarrollo de aplicaciones para Microsoft Teams mediante Visual Studio y Visual Studio Code.
 
-* Empezar con una plantilla de proyecto o desde un ejemplo
-* Ahorrar tiempo de instalación con el registro y la configuración de aplicaciones automatizados
-* Ejecución y depuración en Teams directamente desde herramientas conocidas
-* Valores predeterminados inteligentes para hospedar en Azure mediante la infraestructura como código y Bicep
-* Creación de configuraciones únicas como desarrollo, pruebas y producción mediante la característica Entornos
-* Traiga la aplicación a su organización o a la Tienda de aplicaciones de Teams mediante herramientas de publicación integradas
+* Comience con una plantilla de proyecto o desde un ejemplo.
+* Ahorre tiempo de instalación con el registro y la configuración de aplicaciones automatizados.
+* Ejecute y depure en Teams directamente desde herramientas conocidas.
+* Valores predeterminados inteligentes para hospedar en Azure mediante la infraestructura como código y Bicep.
+* Cree configuraciones únicas como desarrollo, pruebas y producción mediante la característica Entornos.
+* Traiga la aplicación a su organización o a la App Store de Teams mediante herramientas de publicación integradas.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey2.png" alt-text="Recorrido del usuario del kit de herramientas de Teams" lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey2.png":::
 
@@ -82,6 +82,6 @@ Acceda rápidamente al Portal para desarrolladores de Teams, donde puede configu
 
 ## <a name="see-also"></a>Vea también
 
-* [Creación de una nueva aplicación de Teams en Visual Studio](create-new-teams-app-for-Visual-Studio.md)
+* [Creación de una nueva aplicación de Teams en Visual Studio](create-new-project.md)
 * [Aprovisionamiento de recursos en la nube mediante Visual Studio](provision-cloud-resources.md)
-* [Implementación de una aplicación de Teams en la nube mediante Visual Studio](deploy-teams-app.md)
+* [Implementación de una aplicación de Teams en la nube mediante Visual Studio](deploy.md)
