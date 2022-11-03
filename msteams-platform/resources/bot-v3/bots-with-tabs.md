@@ -4,12 +4,12 @@ description: En este artículo, aprenderá a usar pestañas y bots juntos, a cre
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 03/15/2018
-ms.openlocfilehash: 47a8ba3081fa629c650dfdf588e4b0c60600561e
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: f993f3d8deb8b8a781c96627bf63c2eed350e6c8
+ms.sourcegitcommit: c3601696cced9aadc764f1e734646ee7711f154c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189738"
+ms.lasthandoff: 11/03/2022
+ms.locfileid: "68833026"
 ---
 # <a name="combine-bots-with-tabs"></a>Combinación de bots con pestañas
 
@@ -19,12 +19,12 @@ Los bots y las pestañas funcionan juntos y, a menudo, se combinan en un único 
 
 ## <a name="associating-user-identities-across-bot-and-tab"></a>Asociación de identidades de usuario entre bots y pestañas
 
-Por ejemplo: supongamos que la aplicación de pestaña usa un sistema de identificadores propietario para proteger su contenido. Supongamos que también tiene un bot que puede interactuar con el usuario. Normalmente, querrá mostrar contenido en la pestaña que sea específico del usuario de visualización. El desafío es que es probable que el identificador de usuario del sistema sea diferente del identificador de usuario Microsoft Teams. ¿Cómo asocia estas dos identidades?
+Por ejemplo: supongamos que la aplicación de pestaña usa un sistema de identificadores propietario para proteger su contenido. Supongamos que también tiene un bot que puede interactuar con el usuario. Normalmente, querrá mostrar contenido en la pestaña que sea específico del usuario de visualización. El desafío es que es probable que el identificador de usuario del sistema sea diferente del identificador de usuario de Microsoft Teams. ¿Cómo asocia estas dos identidades?
 En general, el enfoque recomendado es iniciar sesión con el bot con el mismo sistema de identidad que se usa para proporcionar autenticación para el contenido de la pestaña. Puede implementar a través de la acción de inicio de sesión, que normalmente inicia sesión en el usuario a través de un flujo de OAuth.
 
-Este flujo funciona mejor si el proveedor de identidades implementa el protocolo OAuth 2.0. A continuación, puede asociar el identificador de usuario de Teams a las credenciales del usuario de su propio servicio de identidad.
+Este flujo funciona mejor si el proveedor de identidades implementa el protocolo OAuth 2.0. A continuación, puede asociar el identificador de usuario de Teams con las credenciales del usuario de su propio servicio de identidad.
 
-   ![Asociar identidades](~/assets/images/bots/associating_contexts.png)
+   :::image type="content" source="../../assets/images/bots/associating_contexts.png" alt-text="Captura de pantalla que muestra las identidades asociadas.":::
 
 ## <a name="constructing-deep-links-to-tabs-in-messages-from-your-bot"></a>Creación de vínculos profundos a pestañas en mensajes del bot
 
@@ -33,7 +33,7 @@ Quiere usar pestañas para mostrar más contenido que pueda caber dentro de una 
 Los vínculos profundos se basan en un entityId, que es un valor opaco que se asigna a una entidad única del sistema. Cuando se crea la pestaña, se almacena un estado simple. Por ejemplo, marca en el back-end que indica que la pestaña se crea en el canal. Cuando el bot construye un mensaje, puede tener como destino el entityId asociado a esa pestaña.
 
 > [!NOTE]
-> en los chats personales, dado que las pestañas son "estáticas" e instaladas con la aplicación, siempre se puede asumir su existencia y, por tanto, construir vínculos profundos en consecuencia.
+> En los chats personales, como las pestañas son *estáticas* e instaladas con la aplicación, siempre se puede asumir su existencia y, por tanto, construir vínculos profundos en consecuencia.
 
 ## <a name="sending-notifications-for-tab-updates"></a>Envío de notificaciones para actualizaciones de pestañas
 

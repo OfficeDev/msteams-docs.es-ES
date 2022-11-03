@@ -7,12 +7,12 @@ ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: 8ed7d882ba7d58862539e77bfc8b6ea5277a3729
-ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
+ms.openlocfilehash: 234aa5ae8c118f323f8f0436f6b7226c490baa7c
+ms.sourcegitcommit: c3601696cced9aadc764f1e734646ee7711f154c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2022
-ms.locfileid: "68499247"
+ms.lasthandoff: 11/03/2022
+ms.locfileid: "68833054"
 ---
 # <a name="create-a-new-teams-project"></a>Creación de un nuevo proyecto de Teams
 
@@ -274,4 +274,4 @@ Puede ver las plantillas de aplicación de Teams ya rellenadas en Teams Toolkit 
 * [Requisitos previos para todos los tipos de entorno y creación de la aplicación de Teams](tools-prerequisites.md)
 * [Preparación para compilar aplicaciones mediante el kit de herramientas de Microsoft Teams](build-environments.md)
 * [Aprovisionamiento de recursos en la nube mediante Visual Studio](provision-cloud-resources.md)
-* [Implementación de una aplicación de Teams en la nube mediante Visual Studio](deploy-teams-app.md)
+* [Implementación de una aplicación de Teams en la nube mediante Visual Studio](deploy.md#deploy-teams-app-to-the-cloud-using-visual-studio)
