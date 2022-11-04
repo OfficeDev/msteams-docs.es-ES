@@ -7,12 +7,12 @@ ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: db6e3b99ab737b7ea8cac393e6ee3e0830cd0acc
-ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
+ms.openlocfilehash: 111f45a8ed0b5246a75d1a1adbda9b124c1e9578
+ms.sourcegitcommit: c3601696cced9aadc764f1e734646ee7711f154c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2022
-ms.locfileid: "68791793"
+ms.lasthandoff: 11/03/2022
+ms.locfileid: "68833152"
 ---
 # <a name="debug-your-teams-app"></a>Depurar la aplicación de Teams
 
@@ -237,8 +237,8 @@ Teams Toolkit automatiza los servicios de inicio de aplicaciones, inicia la depu
 | &nbsp; | Visual Studio 2022, versión 17.3 | Puede instalar la edición enterprise de Visual Studio e instalar la carga de trabajo "ASP.NET" y las herramientas de desarrollo de Microsoft Teams. |
 | &nbsp; | Kit de herramientas de Teams | Extensión de Visual Studio que crea un scaffolding de proyecto para la aplicación. Use la versión más reciente. |
 | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams para colaborar con todos los usuarios con los que trabaja a través de aplicaciones de chat, reuniones, llamadas, todo en un solo lugar. |
-| &nbsp; | [Preparar el espacio empresarial de Microsoft 365](~/concepts/build-and-test/prepare-your-o365-tenant.md) | Acceso a la cuenta de Teams con los permisos adecuados para instalar una aplicación. |
-| &nbsp; | [Cuenta de desarrollador de Microsoft 365](~/concepts/build-and-test/prepare-your-o365-tenant.md) | Acceso a la cuenta de Teams con los permisos adecuados para instalar una aplicación. |
+| &nbsp; | [Preparar el espacio empresarial de Microsoft 365](../concepts/build-and-test/prepare-your-o365-tenant.md) | Acceso a la cuenta de Teams con los permisos adecuados para instalar una aplicación. |
+| &nbsp; | [Cuenta de desarrollador de Microsoft 365](../concepts/build-and-test/prepare-your-o365-tenant.md) | Acceso a la cuenta de Teams con los permisos adecuados para instalar una aplicación. |
 | &nbsp; | Herramientas de Azure y [cli de Microsoft Azure](/cli/azure/install-azure-cli) | Herramientas de Azure para acceder a datos almacenados o para implementar un back-end basado en la nube para la aplicación de Teams en Azure. |
 |&nbsp;  | **Optional** | &nbsp; |
 |&nbsp; |[Ngrok](https://ngrok.com/) | Ngrok se usa para reenviar mensajes externos de Azure Bot Framework a la máquina local.|

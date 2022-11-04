@@ -5,12 +5,12 @@ description: En este módulo, aprenderá a publicar aplicaciones de Teams median
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 6188072b2d4ca73aae4e7ea91715869d968a9b9c
-ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
+ms.openlocfilehash: d6333afb6d62fc832310c165c30970254998e91e
+ms.sourcegitcommit: c3601696cced9aadc764f1e734646ee7711f154c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67616750"
+ms.lasthandoff: 11/03/2022
+ms.locfileid: "68833159"
 ---
 # <a name="publish-teams-apps-using-teams-toolkit"></a>Publicar aplicaciones de Teams con el kit de herramientas de Teams
 
@@ -79,20 +79,20 @@ Los pasos siguientes le ayudan a publicar la aplicación desde el kit de herrami
      * Seleccione **Publicar en Teams** en **IMPLEMENTACIÓN** en la vista de árbol del kit de herramientas de Teams.
      * Escriba el desencadenador **Teams: Publicar en Teams** desde la paleta de comandos.
 
-  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-publish.png" alt-text="Seleccione Publicar.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-publish.png" alt-text="Seleccione Publicar.":::
 
-2 Seleccione **Instalar para su organización**.
+1. Seleccione **Instalar para su organización**.
 
-  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/installforyourorganization.png" alt-text="Instalar para la organización":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/installforyourorganization.png" alt-text="Instalar para la organización":::
 
-  Ahora la aplicación se publica correctamente en el portal de administración y verá el siguiente aviso:
+   Ahora la aplicación se publica correctamente en el portal de administración y verá el siguiente aviso:
 
-  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/confirm-publish.png" alt-text="Confirmar publicación":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/confirm-publish.png" alt-text="Confirmar publicación":::
 
-  Ahora la aplicación está disponible en el Centro de administración de **Administrar aplicaciones** de Microsoft Teams, donde usted y el administrador pueden revisarla y aprobarla.
+Ahora la aplicación está disponible en el Centro de administración de **Administrar aplicaciones** de Microsoft Teams, donde usted y el administrador pueden revisarla y aprobarla.
 
-  > [!NOTE]
-  > La aplicación aún no se publica en la tienda de aplicaciones de la organización. El paso envía la aplicación al Centro de administración de Microsoft Teams, donde puede aprobarla para publicarla en la tienda de aplicaciones de su organización.
+> [!NOTE]
+> La aplicación aún no se publica en la tienda de aplicaciones de la organización. El paso envía la aplicación al Centro de administración de Microsoft Teams, donde puede aprobarla para publicarla en la tienda de aplicaciones de su organización.
 
 ### <a name="approve-on-admin-center"></a>Aprobar en Administración Center
 

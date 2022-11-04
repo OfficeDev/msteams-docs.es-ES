@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/03/2022
-ms.openlocfilehash: ee1d3ee3a4f545a6c988c421fb18626a4a7276b7
-ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
+ms.openlocfilehash: 721b3a30bcc8c2fa49bb06491f4ab24bbeb844fd
+ms.sourcegitcommit: c3601696cced9aadc764f1e734646ee7711f154c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67617331"
+ms.lasthandoff: 11/03/2022
+ms.locfileid: "68833005"
 ---
 # <a name="sideload-and-test-app-in-teams-environment"></a>Instalación local y prueba de la aplicación en el entorno de Teams
 
@@ -63,7 +63,7 @@ Para aprovisionar e implementar recursos destinados a Azure dentro de CI/CD, deb
 Siga estos pasos para crear entidades de servicio de Azure:
 
 1. Registre una aplicación de Microsoft Azure Active Directory (Azure AD) en un solo inquilino.
-2. Asigne un rol a la aplicación de Azure AD para acceder a su suscripción de Azure. Se recomienda el rol `Contributor`.
+2. Assign a role to your Azure AD application to access your Azure subscription. The `Contributor` role is recommended.
 3. Crear una nueva aplicación de Azure AD para el complemento
 
 > [!TIP]
@@ -77,4 +77,4 @@ Para obtener más información, consulte [Directrices de entidades de servicio d
 
 ## <a name="see-also"></a>Vea también
 
-* [Publicar aplicaciones de Teams con el kit de herramientas de Teams](publish.md)
+[Publicar aplicaciones de Teams con el kit de herramientas de Teams](publish.md)

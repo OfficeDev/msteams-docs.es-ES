@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo enviar un mensaje, acciones sugeri
 ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: 99594722225350e102b47d7a77314212192f7820
-ms.sourcegitcommit: 75ce5a6f7540775b768f69a9cf18dac17e5055d4
+ms.openlocfilehash: 16849a9e8ed97854e91934aef9de463eb355fec5
+ms.sourcegitcommit: c3601696cced9aadc764f1e734646ee7711f154c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2022
-ms.locfileid: "68657628"
+ms.lasthandoff: 11/03/2022
+ms.locfileid: "68833208"
 ---
 # <a name="messages-in-bot-conversations"></a>Mensajes en conversaciones de bot
 
@@ -18,7 +18,7 @@ Cada mensaje de una conversación es un `Activity` objeto de tipo `messageType: 
 Las conversaciones básicas se controlan a través del conector de Bot Framework, una única API REST. Esta API permite que el bot se comunique con Teams y otros canales. El SDK de Bot Builder proporciona las siguientes características:
 
 * Fácil acceso al conector de Bot Framework.
-* Funcionalidad adicional para administrar el flujo y el estado de la conversación.
+* Funcionalidad para administrar el flujo y el estado de la conversación.
 * Formas sencillas de incorporar servicios cognitivos, como el procesamiento de lenguaje natural (NLP).
 
 El bot recibe mensajes de Teams mediante la `Text` propiedad y envía una o varias respuestas de mensaje a los usuarios.
@@ -460,18 +460,19 @@ Asegúrese de controlar estos errores correctamente en la aplicación de Teams. 
 | 400 | **Código**: `Bad Argument` <br/> **Mensaje**: *específico del escenario | Carga de solicitud no válida proporcionada por el bot. Consulte el mensaje de error para obtener detalles específicos. | No | Vuelva a evaluar la carga de la solicitud para ver si hay errores. Compruebe el mensaje de error devuelto para obtener más información. |
 | 401 | **Código**: `BotNotRegistered` <br/> **Mensaje**: No se encontró ningún registro para este bot. | No se encontró el registro de este bot. | No | Compruebe el identificador y la contraseña del bot. Asegúrese de que el identificador del bot (id. de AAD) está registrado en el Portal para desarrolladores de Teams o mediante el registro del canal de bot de Azure en Azure con el canal "Teams" habilitado.|
 | 403 | **Código**: `BotDisabledByAdmin` <br/> **Mensaje**: El administrador de inquilinos deshabilitó este bot | El administrador de inquilinos ha bloqueado las interacciones entre el usuario y la aplicación del bot. El administrador de inquilinos debe permitir la aplicación para el usuario dentro de las directivas de la aplicación. Para obtener más información, consulte [Directivas de aplicación](/microsoftteams/app-policies). | No | Deje de publicar en la conversación hasta que un usuario inicie explícitamente la interacción con el bot en la conversación, lo que indica que el bot ya no está bloqueado. |
-| 403 | **Código**: `BotNotInConversationRoster` <br/> **Mensaje**: El bot no forma parte de la lista de conversaciones. | El bot no forma parte de la conversación. La aplicación debe volver a instalarse en la conversación. | No | Antes de intentar enviar solicitudes de conversación adicionales, espere un [`installationUpdate`](~/bots/how-to/conversations/subscribe-to-conversation-events.md#install-update-event) evento, lo que indica que el bot se ha vuelto a agregar.|
+| 403 | **Código**: `BotNotInConversationRoster` <br/> **Mensaje**: El bot no forma parte de la lista de conversaciones. | El bot no forma parte de la conversación. La aplicación debe volver a instalarse en la conversación. | No | Antes de intentar enviar otra solicitud de conversación, espere un [`installationUpdate`](~/bots/how-to/conversations/subscribe-to-conversation-events.md#install-update-event) evento, lo que indica que el bot se ha vuelto a agregar.|
 | 403 | **Código**: `ConversationBlockedByUser` <br/> **Mensaje**: El usuario bloqueó la conversación con el bot. | El usuario ha bloqueado el bot en un chat personal o un canal a través de la configuración de moderación. | No | Elimine la conversación de la memoria caché. Deje de intentar publicar en las conversaciones hasta que un usuario inicie explícitamente la interacción con el bot en la conversación, lo que indica que el bot ya no está bloqueado. |
+| 403 |**Código**: `InvalidBotApiHost` <br/> **Mensaje**: Host de api de bot no válido. Para los inquilinos de GCC, llame a `https://smba.infra.gcc.teams.microsoft.com`.|El bot llamó al punto de conexión de API público para una conversación que pertenece a un inquilino de GCC.| No | Actualice la dirección URL del servicio de la conversación a y vuelva a `https://smba.infra.gcc.teams.microsoft.com` intentar la solicitud.|
 | 403 | **Código**: `NotEnoughPermissions` <br/> **Mensaje**: *específico del escenario | El bot no tiene los permisos necesarios para realizar la acción solicitada. | No | Determine la acción necesaria del mensaje de error. |
 | 404 | **Código**: `ActivityNotFoundInConversation` <br/> **Mensaje**: No se encontró la conversación. | No se encontró el identificador de mensaje proporcionado en la conversación. El mensaje no existe o se ha eliminado. | No | Compruebe si el identificador de mensaje enviado es un valor esperado. Quite el identificador si se ha almacenado en caché. |
 | 404 | **Código**: `ConversationNotFound` <br/> **Mensaje**: No se encontró la conversación. | No se encontró la conversación, ya que no existe o se ha eliminado. | No | Compruebe si el identificador de conversación enviado es un valor esperado. Quite el identificador si se ha almacenado en caché. |
-| 412 | **Código**: `PreconditionFailed` <br/> **Mensaje**: Error de condición previa, inténtelo de nuevo. | Error de condición previa en una de nuestras dependencias debido a varias operaciones simultáneas en la misma conversación. | Yes | Vuelva a intentarlo con retroceso exponencial. |
+| 412 | **Código**: `PreconditionFailed` <br/> **Mensaje**: Error de condición previa, inténtelo de nuevo. | Error de condición previa en una de nuestras dependencias debido a varias operaciones simultáneas en la misma conversación. | Sí | Vuelva a intentarlo con retroceso exponencial. |
 | 413 | **Código**: `MessageSizeTooBig` <br/> **Mensaje**: tamaño del mensaje demasiado grande. | El tamaño de la solicitud entrante era demasiado grande. Para obtener más información, consulte [Dar formato a los mensajes del bot](/microsoftteams/platform/bots/how-to/format-your-bot-messages). | No | Reduzca el tamaño de la carga. |
-| 429 | **Código**: `Throttled` <br/> **Mensaje**: Demasiadas solicitudes. También devuelve cuándo volver a intentarlo después. | El bot envió demasiadas solicitudes. Para obtener más información, consulte [límite de velocidad](/microsoftteams/platform/bots/how-to/rate-limit). | Yes | Vuelva a intentar usar el `Retry-After` encabezado para determinar el tiempo de retroceso. |
+| 429 | **Código**: `Throttled` <br/> **Mensaje**: Demasiadas solicitudes. También devuelve cuándo volver a intentarlo después. | El bot envió demasiadas solicitudes. Para obtener más información, consulte [límite de velocidad](/microsoftteams/platform/bots/how-to/rate-limit). | Sí | Vuelva a intentar usar el `Retry-After` encabezado para determinar el tiempo de retroceso. |
 | 500 | **Código**: `ServiceError` <br/> **Mensaje**: *varios | Error interno del servidor. | No | Informe del problema en la [comunidad de desarrolladores](~/feedback.md#developer-community-help). |
-| 502 | **Código**: `ServiceError` <br/> **Mensaje**: *varios | Problema de dependencia de servicio. | Yes | Vuelva a intentarlo con retroceso exponencial. Si el problema persiste, informe del problema en la [comunidad de desarrolladores](~/feedback.md#developer-community-help). |
-| 503 | | El servicio no está disponible. | Yes | Vuelva a intentarlo con retroceso exponencial. Si el problema persiste, informe del problema en la [comunidad de desarrolladores](~/feedback.md#developer-community-help). |
-| 504 | | Tiempo de espera de la puerta de enlace. | Yes | Vuelva a intentarlo con retroceso exponencial. Si el problema persiste, informe del problema en la [comunidad de desarrolladores](~/feedback.md#developer-community-help). |
+| 502 | **Código**: `ServiceError` <br/> **Mensaje**: *varios | Problema de dependencia de servicio. | Sí | Vuelva a intentarlo con retroceso exponencial. Si el problema persiste, informe del problema en la [comunidad de desarrolladores](~/feedback.md#developer-community-help). |
+| 503 | | El servicio no está disponible. | Sí | Vuelva a intentarlo con retroceso exponencial. Si el problema persiste, informe del problema en la [comunidad de desarrolladores](~/feedback.md#developer-community-help). |
+| 504 | | Tiempo de espera de la puerta de enlace. | Sí | Vuelva a intentarlo con retroceso exponencial. Si el problema persiste, informe del problema en la [comunidad de desarrolladores](~/feedback.md#developer-community-help). |
 
 ### <a name="status-codes-retry-guidance"></a>Guía de reintento de códigos de estado
 
@@ -479,6 +480,7 @@ La guía general de reintentos para cada código de estado se muestra en la tabl
 
 |Código de estado | Estrategia de reintento |
 |----------------|-----------------|
+| 403 | Vuelva a intentarlo llamando a la API `https://smba.infra.gcc.teams.microsoft.com` de GCC para `InvalidBotApiHost`.|
 | 412 | Vuelva a intentarlo con el retroceso exponencial. |
 | 429 | Vuelva a intentar usar el `Retry-After` encabezado para determinar el tiempo de espera en segundos y entre solicitudes, si está disponible. De lo contrario, vuelva a intentar usar el retroceso exponencial con el identificador de subproceso, si es posible. |
 | 502 | Vuelva a intentarlo con el retroceso exponencial. |

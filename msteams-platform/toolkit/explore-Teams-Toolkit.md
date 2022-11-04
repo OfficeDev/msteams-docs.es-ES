@@ -7,12 +7,12 @@ ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 07/29/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: 0126953ac43b463460dcfd07c66354d39b53d690
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: 0fa31c52b206738cfb174519fc6d3c445b604a8e
+ms.sourcegitcommit: c3601696cced9aadc764f1e734646ee7711f154c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67781050"
+ms.lasthandoff: 11/03/2022
+ms.locfileid: "68833131"
 ---
 # <a name="explore-teams-toolkit"></a>Exploración del kit de herramientas de Teams
 
@@ -183,11 +183,11 @@ Después de crear el proyecto de Teams, puede realizar las siguientes funciones 
 
 |Función  |Descripción  |
 |---------|---------|
-|Preparación de dependencias de aplicaciones de Teams     |Antes de realizar una depuración local, realice este paso, le ayudará a configurar las dependencias de depuración local y a registrar la aplicación de Teams en la plataforma Teams. Necesita una cuenta de Microsoft 365. Para obtener más información, vea [Depurar la aplicación de Teams localmente mediante Visual Studio](debug-teams-app-visual-studio.md).         |
+|Preparación de dependencias de aplicaciones de Teams     |Antes de realizar una depuración local, realice este paso, le ayudará a configurar las dependencias de depuración local y a registrar la aplicación de Teams en la plataforma Teams. Necesita una cuenta de Microsoft 365. Para obtener más información, vea [Depurar la aplicación de Teams localmente mediante Visual Studio](debug-local.md).         |
 |Abrir archivo de manifiesto     |Para abrir el archivo de manifiesto de Teams, puede mantener el puntero sobre los parámetros para obtener una vista previa de los valores. Para obtener más información, vea [Editar manifiesto de aplicación de Teams mediante Visual Studio](VS-TeamsFx-preview-and-customize-app-manifest.md).         |
 |Actualizar manifiesto en el Portal para desarrolladores de Teams     |Al actualizar el archivo de manifiesto, solo puede volver a implementar el archivo de manifiesto en Azure sin volver a implementar todo el proyecto. Use este comando para actualizar los cambios al control remoto. Para obtener más información, vea [Editar manifiesto de aplicación de Teams mediante Visual Studio](VS-TeamsFx-preview-and-customize-app-manifest.md).       |
 |Aprovisionamiento en la nube     |Esta opción le ayuda a crear recursos de Azure que hospedan la aplicación de Teams. Para obtener más información, consulte [Aprovisionamiento de recursos en la nube mediante Visual Studio](provision-cloud-resources.md).        |
-|Implementación en la nube     |Esta opción le ayuda a copiar el código en los recursos de Azure creados cuando hizo "Aprovisionamiento en la nube". Para obtener más información, consulte [Implementación de una aplicación de Teams en la nube mediante Visual Studio](deploy-teams-app.md).        |
+|Implementación en la nube     |Esta opción le ayuda a copiar el código en los recursos de Azure creados cuando hizo "Aprovisionamiento en la nube". Para obtener más información, consulte [Implementación de una aplicación de Teams en la nube mediante Visual Studio](deploy.md#deploy-teams-app-to-the-cloud-using-visual-studio).        |
 |Versión preliminar en Teams     |Esta opción inicia el cliente web de Teams y le permite obtener una vista previa de la aplicación teams en su explorador.         |
 |Paquete de aplicación zip     |Esta opción genera un paquete de aplicación de Teams en la `Build` carpeta del proyecto. Puede cargar el paquete en el cliente de Teams y ejecutar la aplicación teams.         |
 
@@ -199,9 +199,9 @@ Después de crear el proyecto de Teams, puede realizar las siguientes funciones 
 * [Crear una nueva aplicación de Teams con el Kit de herramientas de Teams](create-new-project.md)
 * [Preparación para compilar aplicaciones mediante el kit de herramientas de Microsoft Teams](build-environments.md)
 * [Aprovisionamiento de recursos en la nube mediante el kit de herramientas de Teams](provision.md)
-* [Creación de una nueva aplicación de Teams en Visual Studio](create-new-teams-app-for-Visual-Studio.md)
+* [Creación de una nueva aplicación de Teams en Visual Studio](create-new-project.md#create-new-teams-app-in-visual-studio)
 * [Aprovisionamiento de recursos en la nube mediante Visual Studio](provision-cloud-resources.md)
-* [Implementación de una aplicación de Teams en la nube mediante Visual Studio](deploy-teams-app.md)
+* [Implementación de una aplicación de Teams en la nube mediante Visual Studio](deploy.md#deploy-teams-app-to-the-cloud-using-visual-studio)
 
 <!--  
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/ui-elements.png" alt-text="UI Elements":::

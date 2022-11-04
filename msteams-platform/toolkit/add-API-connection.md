@@ -6,12 +6,12 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: Overview
 ms.date: 05/20/2022
-ms.openlocfilehash: 5933227f9ba4c8b684d624a8857304c044761578
-ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
+ms.openlocfilehash: 6377f7d8a38054dacca76c0f87e39e51f466d925
+ms.sourcegitcommit: c3601696cced9aadc764f1e734646ee7711f154c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67616812"
+ms.lasthandoff: 11/03/2022
+ms.locfileid: "68833145"
 ---
 # <a name="integrate-existing-third-party-apis"></a>Integración de API de terceros existentes
 
@@ -127,4 +127,4 @@ Teams Toolkit le ayuda a arrancar código de ejemplo para acceder a las API, si 
 
 ## <a name="see-also"></a>Vea también
 
-* [Publicar aplicaciones de Teams con el kit de herramientas de Teams](publish.md)
+[Publicar aplicaciones de Teams con el kit de herramientas de Teams](publish.md)
